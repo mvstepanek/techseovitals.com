@@ -20,7 +20,7 @@ export default function Home() {
         <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
           {/* Background decorative elements */}
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 pointer-events-none">
             <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40"></div>
             <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30"></div>
             <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25"></div>
@@ -497,82 +497,51 @@ export default function Home() {
                 <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">3 Simple Steps</span> to Success
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                A proven process that takes you from slow, underperforming website to a high-converting revenue machine.
+                Investing in optimization today creates remarkable returns tomorrow.
               </p>
-              <div className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full text-lg font-medium bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
-                </svg>
-                "Investing in optimization today creates remarkable returns tomorrow."
-              </div>
             </div>
             
             <div className="relative">
-              {/* Connection Lines */}
-              <div className="hidden md:block absolute top-20 left-1/2 transform -translate-x-1/2 w-full max-w-4xl">
-                <svg className="w-full h-24" viewBox="0 0 400 100" fill="none">
-                  <path d="M100 50 Q200 20 300 50" stroke="#E5E7EB" strokeWidth="2" strokeDasharray="5,5" fill="none"/>
-                </svg>
-              </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
                 <div className="text-center group">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl mx-auto flex items-center justify-center text-2xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      1
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
+                  <div className="w-36 h-14 bg-gradient-to-r from-blue-500 to-blue-600 rounded-3xl mx-auto flex items-center justify-center text-xs font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-8">
+                    <span>1. START</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Free Discovery Call</h3>
                   <p className="text-gray-600 leading-relaxed">
                     30-minute consultation to understand your goals, current challenges, and growth opportunities. No sales pressure, just honest insights.
                   </p>
-                  <div className="mt-6 text-blue-600 font-semibold text-sm">
-                    ✓ 100% free  ✓ No commitment
+                  <div className="mt-6 text-blue-600 font-semibold text-sm flex justify-center gap-6">
+                    <span>✓ 100% free</span>
+                    <span>✓ No commitment</span>
                   </div>
                 </div>
                 
                 <div className="text-center group">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-3xl mx-auto flex items-center justify-center text-2xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      2
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                      </svg>
-                    </div>
+                  <div className="w-36 h-14 bg-gradient-to-r from-green-500 to-green-600 rounded-3xl mx-auto flex items-center justify-center text-xs font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-8">
+                    <span>2. ANALYZE</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Deep Technical Audit</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Comprehensive analysis of your site's technical health, performance bottlenecks, and SEO opportunities.
                   </p>
-                  <div className="mt-6 text-green-600 font-semibold text-sm">
-                    ✓ 50+ data points  ✓ Prioritized roadmap
+                  <div className="mt-6 text-green-600 font-semibold text-sm flex justify-center gap-6">
+                    <span>✓ 50+ data points</span>
+                    <span>✓ Prioritized roadmap</span>
                   </div>
                 </div>
                 
                 <div className="text-center group">
-                  <div className="relative mb-8">
-                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-3xl mx-auto flex items-center justify-center text-2xl font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300">
-                      3
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
+                  <div className="w-36 h-14 bg-gradient-to-r from-purple-500 to-purple-600 rounded-3xl mx-auto flex items-center justify-center text-xs font-bold text-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-8">
+                    <span>3. IMPLEMENT</span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Support</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Detailed action plan with ongoing support to ensure successful implementation and measurable results.
                   </p>
-                  <div className="mt-6 text-purple-600 font-semibold text-sm">
-                    ✓ Expert guidance  ✓ Proven results
+                  <div className="mt-6 text-purple-600 font-semibold text-sm flex justify-center gap-6">
+                    <span>✓ Expert guidance</span>
+                    <span>✓ Proven results</span>
                   </div>
                 </div>
               </div>
@@ -583,7 +552,7 @@ export default function Home() {
                 href="/book-consultation/"
                 className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-primary to-primary-dark px-8 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary/30"
               >
-                <span className="relative z-10">Start Your Transformation Today</span>
+                <span className="relative z-10">Schedule Free Consultation</span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               </Link>
             </div>
@@ -612,6 +581,9 @@ export default function Home() {
               <div className="group relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                  <div className="absolute top-4 right-4">
+                    <div className="text-xs text-gray-400">Verified Review</div>
+                  </div>
                   <div className="flex items-start gap-6 mb-6">
                     <div className="relative">
                       <Image
@@ -631,10 +603,6 @@ export default function Home() {
                         </div>
                       </div>
                       <p className="text-gray-600 text-sm font-medium">CEO, LiveAgent & Post Affiliate Pro</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <div className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-medium">SaaS</div>
-                        <div className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded-full font-medium">High Traffic</div>
-                      </div>
                     </div>
                   </div>
                   
@@ -645,29 +613,15 @@ export default function Home() {
                     </blockquote>
                   </div>
                   
-                  <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        <span>Performance boost</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                        <span>SEO optimization</span>
-                      </div>
-                    </div>
-                    <div className="text-xs text-gray-400">Verified Review</div>
-                  </div>
                 </div>
               </div>
               
               <div className="group relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                  <div className="absolute top-4 right-4">
+                    <div className="text-xs text-gray-400">Verified Review</div>
+                  </div>
                   <div className="flex items-start gap-6 mb-6">
                     <div className="relative">
                       <Image
@@ -687,10 +641,6 @@ export default function Home() {
                         </div>
                       </div>
                       <p className="text-gray-600 text-sm font-medium">CMO, Quality Unit</p>
-                      <div className="flex items-center gap-2 mt-2">
-                        <div className="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-medium">Enterprise</div>
-                        <div className="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-medium">Competitive Edge</div>
-                      </div>
                     </div>
                   </div>
                   
@@ -701,52 +651,31 @@ export default function Home() {
                     </blockquote>
                   </div>
                   
-                  <div className="flex items-center justify-between mt-6 pt-6 border-t border-gray-100">
-                    <div className="flex items-center gap-4 text-sm text-gray-600">
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                        </svg>
-                        <span>Competitive advantage</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <svg className="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                        <span>Expert level</span>
-                      </div>
-                    </div>
-                    <div className="text-xs text-gray-400">Verified Review</div>
-                  </div>
                 </div>
               </div>
             </div>
             
             <div className="text-center mt-12">
-              <div className="inline-flex items-center gap-3 text-gray-600">
-                <div className="flex items-center gap-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span className="text-sm font-medium">50+ satisfied clients</span>
+              <div className="flex items-center justify-center gap-2 text-gray-600">
+                <div className="flex text-yellow-400 text-sm">
+                  {'★'.repeat(5)}
                 </div>
-                <div className="w-1 h-4 bg-gray-300"></div>
-                <div className="flex items-center gap-1">
-                  <div className="flex text-yellow-400 text-sm">
-                    {'★'.repeat(5)}
-                  </div>
-                  <span className="text-sm font-medium">5.0 average rating</span>
-                </div>
+                <span className="text-sm font-medium">50+ businesses trust me</span>
               </div>
             </div>
           </div>
         </section>
 
+        {/* Section Separator */}
+        <div className="border-t border-gray-200"></div>
+
         {/* Final CTA */}
         <section className="py-24 bg-white relative overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-20 w-32 h-32 bg-purple-100 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-100 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-full blur-3xl opacity-50"></div>
+            <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-150 to-indigo-150 rounded-full blur-3xl opacity-50"></div>
           </div>
           
           <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -764,14 +693,14 @@ export default function Home() {
               </h2>
               
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-                Stop losing customers to poor performance. Get a comprehensive technical SEO audit and discover exactly how to boost your conversions and revenue.
+                Stop losing customers to poor performance, search, and AI visibility. Get a comprehensive technical SEO audit and discover exactly how to boost your conversions and revenue.
               </p>
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <Link
                   href="/book-consultation/"
-                  className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-purple-300/50"
+                  className="group relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-primary-dark px-8 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary/30"
                 >
                   <span className="relative z-10">Get Free Website Check</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -792,17 +721,17 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
                 <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
                     </svg>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">100% Free</h3>
-                  <p className="text-sm text-gray-600 text-center">Comprehensive audit with no hidden costs</p>
+                  <p className="text-sm text-gray-600 text-center">Website check with no hidden costs</p>
                 </div>
 
                 <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100/50 border border-blue-200">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3" />
                     </svg>
                   </div>
@@ -822,35 +751,11 @@ export default function Home() {
               </div>
               
               {/* Social proof */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-600">
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-1">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                  </div>
-                  <span className="font-semibold">50+ success stories</span>
+              <div className="flex items-center justify-center gap-2 text-gray-600">
+                <div className="flex text-yellow-400 text-sm">
+                  {'★'.repeat(5)}
                 </div>
-                <div className="w-1 h-4 bg-gray-300 hidden sm:block"></div>
-                <div className="flex items-center gap-2">
-                  <div className="flex text-yellow-500">
-                    {'★'.repeat(5)}
-                  </div>
-                  <span className="font-semibold">5.0 rating</span>
-                </div>
-                <div className="w-1 h-4 bg-gray-300 hidden sm:block"></div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="font-semibold">Trusted by 100+ businesses</span>
-                </div>
+                <span className="text-sm font-medium">50+ businesses trust me</span>
               </div>
             </div>
           </div>
@@ -876,105 +781,66 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <article className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src="/images/blog-thumbnails/ttfb-thumbnail.jpg"
-                    alt="TTFB Technical SEO Guide"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full">Performance</span>
+                <Link href="/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/">
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src="/images/blog-thumbnails/ttfb-thumbnail.jpg"
+                      alt="TTFB Technical SEO Guide"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                    Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization
-                  </h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
-                    Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href="/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/" 
-                      className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors group"
-                    >
-                      <span>Read Article</span>
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                    <div className="text-xs text-gray-400">5 min read</div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                      Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+                      Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance.
+                    </p>
                   </div>
-                </div>
+                </Link>
               </article>
 
               <article className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src="/images/blog-thumbnails/multilingual-thumbnail.jpg"
-                    alt="Multilingual Website Technical SEO Guide"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-green-500 text-white text-xs font-semibold rounded-full">International SEO</span>
+                <Link href="/blog/multilingual-website-essentials-technical-seo-guide/">
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src="/images/blog-thumbnails/multilingual-thumbnail.jpg"
+                      alt="Multilingual Website Technical SEO Guide"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                    Multilingual Website Essentials: A Technical SEO Guide
-                  </h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
-                    A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href="/blog/multilingual-website-essentials-technical-seo-guide/" 
-                      className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors group"
-                    >
-                      <span>Read Article</span>
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                    <div className="text-xs text-gray-400">7 min read</div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                      Multilingual Website Essentials: A Technical SEO Guide
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+                      A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.
+                    </p>
                   </div>
-                </div>
+                </Link>
               </article>
 
               <article className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image
-                    src="/images/blog-thumbnails/crawlability-thumbnail.jpg"
-                    alt="Improving Crawlability Guide"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 bg-purple-500 text-white text-xs font-semibold rounded-full">Crawling</span>
+                <Link href="/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/">
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src="/images/blog-thumbnails/crawlability-thumbnail.jpg"
+                      alt="Improving Crawlability Guide"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                </div>
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
-                    Improving Crawlability: Help Google and ChatGPT Find Your Business Website
-                  </h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
-                    Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <Link 
-                      href="/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/" 
-                      className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors group"
-                    >
-                      <span>Read Article</span>
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </Link>
-                    <div className="text-xs text-gray-400">6 min read</div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
+                      Improving Crawlability: Help Google and ChatGPT Find Your Business Website
+                    </h3>
+                    <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+                      Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially.
+                    </p>
                   </div>
-                </div>
+                </Link>
               </article>
             </div>
             
@@ -993,86 +859,89 @@ export default function Home() {
         </section>
 
         {/* Newsletter CTA */}
-        <section className="relative py-24 bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-700 overflow-hidden">
+        <section className="relative py-24 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700 overflow-hidden">
           {/* Background decorative elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-2xl rotate-45 opacity-20"></div>
+            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse" style={{
+              animation: 'pulse 20s ease-in-out infinite, bounce 25s ease-in-out infinite'
+            }}></div>
+            <div className="absolute bottom-20 right-20 w-48 h-48 bg-white/5 rounded-full blur-3xl" style={{
+              animation: 'pulse 18s ease-in-out infinite reverse'
+            }}></div>
+            <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-2xl rotate-45 opacity-20" style={{
+              animation: 'bounce 22s ease-in-out infinite'
+            }}></div>
+            <div className="absolute top-16 right-1/4 w-20 h-20 bg-gradient-to-br from-indigo-300 to-purple-400 rounded-3xl rotate-12 opacity-15" style={{
+              animation: 'pulse 24s ease-in-out infinite'
+            }}></div>
+            <div className="absolute bottom-40 left-1/4 w-28 h-28 bg-white/8 rounded-full blur-2xl" style={{
+              animation: 'bounce 26s ease-in-out infinite reverse'
+            }}></div>
+            <div className="absolute top-1/3 right-10 w-16 h-16 bg-gradient-to-br from-purple-300 to-indigo-300 rounded-2xl rotate-45 opacity-25" style={{
+              animation: 'pulse 21s ease-in-out infinite, bounce 28s ease-in-out infinite reverse'
+            }}></div>
           </div>
-          
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
+
+          <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-white/20 text-white border border-white/30 backdrop-blur-sm mb-6">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Join 2,500+ Technical SEO Professionals
+                Newsletter
               </div>
 
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-                Get <span className="text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text">Free Weekly</span> Technical SEO Insights
+                Get <span className="text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text">Biweekly</span> Technical SEO Insights
               </h2>
-              <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                Join thousands of business owners and marketers who receive actionable technical SEO strategies, performance optimization tips, and revenue-boosting insights every week.
+              <p className="text-xl text-purple-100 mb-10 leading-relaxed max-w-3xl mx-auto">
+                Join business owners, marketers, SEO professionals, and developers who receive actionable technical SEO strategies, performance optimization tips, and revenue-boosting insights every two weeks.
               </p>
               
               {/* Newsletter form */}
-              <div className="max-w-lg mx-auto mb-8">
+              <div className="max-w-3xl mx-auto mb-8">
                 <form action="/thank-you-for-subscribing/" method="POST" className="flex flex-col sm:flex-row gap-4">
-                  <div className="flex-1 relative">
+                  <div className="flex-1">
+                    <input
+                      type="text"
+                      name="first_name"
+                      required
+                      placeholder="First name"
+                      className="w-full px-6 py-4 text-lg border-0 rounded-2xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg"
+                    />
+                  </div>
+                  <div className="flex-1">
                     <input
                       type="email"
                       name="email"
                       required
-                      placeholder="Enter your business email"
+                      placeholder="Business email"
                       className="w-full px-6 py-4 text-lg border-0 rounded-2xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg"
                     />
                   </div>
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold py-4 px-8 rounded-2xl hover:from-yellow-300 hover:to-orange-400 transition-all shadow-lg hover:shadow-xl hover:scale-105 transform whitespace-nowrap"
+                    className="bg-white text-purple-600 font-bold py-4 px-8 rounded-2xl hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl whitespace-nowrap"
                   >
-                    Get Free Insights
+                    Subscribe
                   </button>
                 </form>
               </div>
 
-              {/* Social proof and benefits */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-purple-200 mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="flex -space-x-1">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-green-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-500 border-2 border-white flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                  </div>
-                  <span className="text-sm font-medium">2,500+ subscribers</span>
+              {/* Social proof */}
+              <div className="flex items-center justify-center gap-2 text-purple-200 mb-4">
+                <div className="flex text-yellow-300 text-sm">
+                  {'★'.repeat(5)}
                 </div>
-                <div className="w-1 h-4 bg-white/30 hidden sm:block"></div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                  <span className="text-sm font-medium">Weekly actionable tips</span>
-                </div>
-                <div className="w-1 h-4 bg-white/30 hidden sm:block"></div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <span className="text-sm font-medium">100% private & secure</span>
-                </div>
+                <span className="text-sm font-medium">250+ people trust this newsletter</span>
               </div>
 
-              <p className="text-sm text-purple-300">
-                No spam, ever. Unsubscribe with one click. Join the community of technical SEO professionals driving real business results.
+              <p className="text-sm text-purple-300 mb-2">
+                No spam, ever. Unsubscribe at any time.
+              </p>
+              <p className="text-xs text-purple-300">
+                By subscribing, I agree to the <Link href="/privacy-policy/" className="underline hover:text-white transition-colors">Privacy Policy</Link> and <Link href="/terms-and-conditions/" className="underline hover:text-white transition-colors">Terms and Conditions</Link>.
               </p>
             </div>
           </div>
