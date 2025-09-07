@@ -160,7 +160,7 @@ export default function Home() {
               <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
@@ -230,10 +230,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-red-400">
-                <div className="absolute -top-3 -right-3 w-16 h-16 bg-red-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">💸</span>
-                </div>
+              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
                 <div className="mb-4">
                   <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-red-100 text-red-700 mb-3">
                     Amazon Study
@@ -247,10 +244,7 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-orange-400">
-                <div className="absolute -top-3 -right-3 w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">📱</span>
-                </div>
+              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
                 <div className="mb-4">
                   <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-orange-100 text-orange-700 mb-3">
                     Google Study
@@ -264,10 +258,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border-l-4 border-purple-400">
-                <div className="absolute -top-3 -right-3 w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🛒</span>
-                </div>
+              <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
                 <div className="mb-4">
                   <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-purple-100 text-purple-700 mb-3">
                     Industry Research
@@ -282,12 +273,15 @@ export default function Home() {
               </div>
             </div>
             <div className="text-center mt-12">
-              <div className="inline-flex items-center gap-2 px-6 py-3 bg-red-50 border border-red-200 rounded-full">
-                <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <Link
+                href="/book-consultation/"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
-                <span className="text-red-700 font-semibold text-sm">Don't let a slow website kill your business</span>
-              </div>
+                <span>Don't Let a Slow Website Kill Your Business</span>
+              </Link>
             </div>
           </div>
         </section>
@@ -321,7 +315,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Developer Background</h3>
-                      <p className="text-gray-600">6+ years as a web developer gives me deep technical knowledge that most SEO consultants lack. I understand code, not just theory.</p>
+                      <p className="text-gray-600">10+ years as a web developer gives me deep technical knowledge that most SEO consultants lack. I understand code, not just theory.</p>
                     </div>
                   </div>
                   
@@ -345,7 +339,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Results</h3>
-                      <p className="text-gray-600">Consistently delivered 15-45% revenue increases and 2-3x conversion improvements for clients across industries.</p>
+                      <p className="text-gray-600">Consistently delivered significant revenue increases and meaningful conversion improvements for clients across industries.</p>
                     </div>
                   </div>
                 </div>
@@ -386,10 +380,15 @@ export default function Home() {
                     "Under Martin's leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts have consistently yielded remarkable results."
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
                     <div>
-                      <div className="font-semibold text-gray-900">LinkedIn Recommendation</div>
-                      <div className="text-sm text-gray-500">Former colleague testimonial</div>
+                      <Link 
+                        href="https://www.linkedin.com/in/techseovitals/#recommendations"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                      >
+                        LinkedIn Recommendation
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -414,17 +413,17 @@ export default function Home() {
               <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
                 You can't fix what you can't measure. Every successful optimization starts with understanding exactly what's broken, what's working, and what opportunities exist.
               </p>
-              <div className="inline-flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col items-center gap-4">
                 <Link
                   href="/book-consultation/"
                   className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-primary to-primary-dark px-8 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary/30"
                 >
-                  <span className="relative z-10">Get Your Free Audit</span>
+                  <span className="relative z-10">Get Free Website Check</span>
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
                 </Link>
-                <div className="flex items-center justify-center gap-2 text-gray-600">
-                  <span className="text-sm">✓ Comprehensive analysis</span>
-                  <span className="text-sm">✓ Actionable insights</span>
+                <div className="flex items-center justify-center gap-4 text-gray-600">
+                  <span className="text-sm">✓ Free consultation</span>
+                  <span className="text-sm">✓ No commitment</span>
                 </div>
               </div>
             </div>
