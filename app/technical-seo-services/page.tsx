@@ -21,10 +21,15 @@ export default function TechnicalSEOServices() {
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
           {/* Background decorative elements */}
           <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40 animate-pulse"></div>
-            <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30"></div>
-            <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25"></div>
-            <div className="absolute top-1/2 right-20 w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl rotate-45 opacity-20 animate-bounce"></div>
+            <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40" style={{
+              animation: 'pulse 20s ease-in-out infinite, bounce 25s ease-in-out infinite'
+            }}></div>
+            <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30" style={{
+              animation: 'pulse 18s ease-in-out infinite reverse'
+            }}></div>
+            <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25" style={{
+              animation: 'pulse 22s ease-in-out infinite, bounce 28s ease-in-out infinite reverse'
+            }}></div>
           </div>
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -114,7 +119,7 @@ export default function TechnicalSEOServices() {
                       </div>
                       <div>
                         <h3 className="font-bold text-gray-900">Technical SEO Audit</h3>
-                        <p className="text-sm text-gray-600">From $1,500</p>
+                        <p className="text-sm text-gray-600">From $2,500</p>
                       </div>
                     </div>
                     
@@ -125,8 +130,8 @@ export default function TechnicalSEOServices() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900">SEO Monitoring</h3>
-                        <p className="text-sm text-gray-600">From $1,500/month</p>
+                        <h3 className="font-bold text-gray-900">Technical SEO Monitoring</h3>
+                        <p className="text-sm text-gray-600">From $2,000/month</p>
                       </div>
                     </div>
                     
@@ -137,8 +142,8 @@ export default function TechnicalSEOServices() {
                         </svg>
                       </div>
                       <div>
-                        <h3 className="font-bold text-gray-900">Migration Planning</h3>
-                        <p className="text-sm text-gray-600">From $3,500</p>
+                        <h3 className="font-bold text-gray-900">Website Migration Planning</h3>
+                        <p className="text-sm text-gray-600">From $4,500</p>
                       </div>
                     </div>
                   </div>
@@ -155,11 +160,14 @@ export default function TechnicalSEOServices() {
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-gray-100">
-                  <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                <div className="absolute -top-6 -right-6 bg-white rounded-2xl shadow-lg p-3 border border-gray-100">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-gray-800">Available for projects</span>
+                  </div>
                 </div>
-                <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">10+</span>
+                <div className="absolute -bottom-6 -left-6 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl px-4 py-3 shadow-lg text-center">
+                  <div className="text-white font-bold text-sm whitespace-nowrap">10+ Years Experience</div>
                 </div>
               </div>
             </div>
@@ -185,7 +193,17 @@ export default function TechnicalSEOServices() {
             </div>
 
             {/* Technical SEO Audit */}
-            <div className="mb-24">
+            <div className="mb-32 relative">
+              {/* Background decorative elements */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-16 left-16 w-32 h-32 bg-green-200 rounded-full blur-3xl opacity-30" style={{
+                  animation: 'pulse 20s ease-in-out infinite, bounce 25s ease-in-out infinite'
+                }}></div>
+                <div className="absolute bottom-20 right-20 w-24 h-24 bg-green-300 rounded-full blur-3xl opacity-25" style={{
+                  animation: 'pulse 18s ease-in-out infinite reverse'
+                }}></div>
+              </div>
+              
               <div className="text-center mb-16">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Technical SEO Audit</h3>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -193,104 +211,82 @@ export default function TechnicalSEOServices() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {/* Essential Audit */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300">
+              <div className="max-w-7xl mx-auto">
+                <div className="group relative bg-white rounded-3xl p-12 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Essential Audit</h4>
-                  <div className="text-4xl font-bold text-green-600 mb-4">$1,500</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">Perfect for quick wins and immediate impact on your website's performance.</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      List of up to three most critical issues
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Detailed implementation guidance
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      30-minute one-on-one consultation call
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Get Essential Audit
-                  </Link>
-                  <div className="flex items-center gap-2 text-green-600 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Quick wins for immediate ROI
-                  </div>
-                </div>
-
-                {/* Full Audit */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-                  </div>
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Full Audit</h4>
-                  <div className="text-4xl font-bold text-primary mb-1">Starting at $2,500</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">Complete optimization roadmap to maximize your website's revenue potential.</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Full list of tasks to get maximum revenue potential
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Detailed implementation guidance
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      60-minute one-on-one consultation call
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Get Full Audit
-                  </Link>
-                  <div className="flex items-center gap-2 text-blue-600 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Comprehensive business transformation
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mb-8">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-3xl font-bold text-gray-900 mb-4">Complete Technical SEO Audit</h4>
+                      <div className="mb-6">
+                        <div className="text-sm text-gray-500 mb-1">Starting at</div>
+                        <div className="text-5xl font-bold text-green-600">$2,500</div>
+                      </div>
+                      <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                        Comprehensive analysis and optimization roadmap to maximize your website's revenue potential and search performance.
+                      </p>
+                      <Link
+                        href="/book-consultation/"
+                        className="inline-flex items-center rounded-2xl bg-gradient-to-r from-green-600 to-green-700 px-8 py-4 text-lg font-bold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      >
+                        Get Your Audit
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
+                    </div>
+                    <div>
+                      <ul className="space-y-4 text-gray-700">
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Comprehensive Technical Analysis</h5>
+                            <p className="text-gray-600">Full audit covering crawlability, indexability, site speed, mobile-friendliness, and technical issues impacting your rankings.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Actionable Implementation Plan</h5>
+                            <p className="text-gray-600">Detailed task list with priority ranking and step-by-step implementation guidance your team can follow.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">60-Minute Strategy Consultation</h5>
+                            <p className="text-gray-600">One-on-one call to review findings, discuss priorities, and plan implementation strategy.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Technical SEO Monitoring */}
-            <div className="mb-24">
+            <div className="mb-32 relative">
+              {/* Background decorative elements */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-20 right-16 w-28 h-28 bg-orange-200 rounded-full blur-3xl opacity-30" style={{
+                  animation: 'pulse 22s ease-in-out infinite, bounce 28s ease-in-out infinite reverse'
+                }}></div>
+                <div className="absolute bottom-16 left-20 w-32 h-32 bg-yellow-200 rounded-full blur-3xl opacity-25" style={{
+                  animation: 'pulse 24s ease-in-out infinite reverse'
+                }}></div>
+              </div>
+              
               <div className="text-center mb-16">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Technical SEO Monitoring</h3>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -298,110 +294,82 @@ export default function TechnicalSEOServices() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {/* Basic Monitoring */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-orange-200 hover:shadow-lg transition-all duration-300">
+              <div className="max-w-7xl mx-auto">
+                <div className="group relative bg-white rounded-3xl p-12 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Basic Monitoring</h4>
-                  <div className="text-4xl font-bold text-orange-600 mb-4">$1,500</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">per month (3-month minimum) - Perfect for smaller websites</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Monthly technical health monitoring
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Priority issues identification
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      30-minute monthly consultation call
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Start Basic Monitoring
-                  </Link>
-                  <div className="flex items-center gap-2 text-orange-600 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Perfect for growing businesses
-                  </div>
-                </div>
-
-                {/* Premium Monitoring */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">Most Comprehensive</span>
-                  </div>
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Premium Monitoring</h4>
-                  <div className="text-4xl font-bold text-primary mb-1">$2,000</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">per month (3-month minimum) - Complete optimization oversight</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Comprehensive technical health monitoring
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Complete monthly optimization roadmaps
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      60-minute monthly strategy consultation
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Priority email support
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Start Premium Monitoring
-                  </Link>
-                  <div className="flex items-center gap-2 text-purple-600 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Maximum revenue optimization
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-3xl flex items-center justify-center mb-8">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                      </div>
+                      <h4 className="text-3xl font-bold text-gray-900 mb-4">Ongoing Technical SEO Monitoring</h4>
+                      <div className="mb-6">
+                        <div className="text-sm text-gray-500 mb-1">Starting at</div>
+                        <div className="text-5xl font-bold text-orange-600">$2,000<span className="text-2xl text-gray-600">/month</span></div>
+                      </div>
+                      <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                        Continuous oversight and optimization to maintain peak website performance and maximize your search visibility.
+                      </p>
+                      <Link
+                        href="/book-consultation/"
+                        className="inline-flex items-center rounded-2xl bg-gradient-to-r from-orange-600 to-yellow-600 px-8 py-4 text-lg font-bold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      >
+                        Start Monitoring
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
+                    </div>
+                    <div>
+                      <ul className="space-y-4 text-gray-700">
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Continuous Website Monitoring</h5>
+                            <p className="text-gray-600">24/7 monitoring of your website's technical health, performance metrics, and search engine visibility.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Monthly Optimization Reports</h5>
+                            <p className="text-gray-600">Detailed monthly reports with actionable tasks and optimization opportunities to maximize revenue.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Priority Support & Consultation</h5>
+                            <p className="text-gray-600">60-minute monthly strategy calls plus priority email support for urgent issues.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Website Migration Plan */}
-            <div className="mb-20">
+            <div className="mb-32 relative">
+              {/* Background decorative elements */}
+              <div className="absolute inset-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-24 left-12 w-36 h-36 bg-indigo-200 rounded-full blur-3xl opacity-30" style={{
+                  animation: 'pulse 26s ease-in-out infinite, bounce 30s ease-in-out infinite'
+                }}></div>
+                <div className="absolute bottom-12 right-16 w-28 h-28 bg-purple-200 rounded-full blur-3xl opacity-25" style={{
+                  animation: 'pulse 20s ease-in-out infinite reverse'
+                }}></div>
+              </div>
+              
               <div className="text-center mb-16">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Website Migration Plan</h3>
                 <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -409,103 +377,65 @@ export default function TechnicalSEOServices() {
                 </p>
               </div>
               
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                {/* Standard Migration */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-indigo-200 hover:shadow-lg transition-all duration-300">
+              <div className="max-w-7xl mx-auto">
+                <div className="group relative bg-white rounded-3xl p-12 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Standard Migration</h4>
-                  <div className="text-4xl font-bold text-indigo-600 mb-4">Starting at $3,500</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">Perfect for straightforward website migrations</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Basic migration strategy and planning
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Post-migration audit
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Email support during migration
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Plan Standard Migration
-                  </Link>
-                  <div className="flex items-center gap-2 text-indigo-600 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Secure and reliable migration
-                  </div>
-                </div>
-
-                {/* Enterprise Migration */}
-                <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                    <span className="bg-gray-800 text-white px-4 py-2 rounded-full text-sm font-semibold">High-Risk Migrations</span>
-                  </div>
-                  <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity"></div>
-                  <div className="w-14 h-14 bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Migration</h4>
-                  <div className="text-4xl font-bold text-gray-800 mb-1">Starting at $4,500</div>
-                  <p className="text-gray-600 leading-relaxed mb-6">Complete migration protection for complex websites</p>
-                  <ul className="text-left space-y-3 text-gray-600 mb-8">
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Comprehensive migration strategy with risk analysis
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Detailed post-migration audit & optimization
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      24/7 support throughout migration process
-                    </li>
-                    <li className="flex items-center">
-                      <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      90-day post-migration monitoring
-                    </li>
-                  </ul>
-                  <Link
-                    href="/book-consultation/"
-                    className="w-full inline-flex justify-center rounded-xl bg-gradient-to-r from-primary to-primary-dark px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-dark transition-all"
-                  >
-                    Plan Enterprise Migration
-                  </Link>
-                  <div className="flex items-center gap-2 text-gray-700 font-semibold mt-4">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
-                    </svg>
-                    Maximum protection for complex migrations
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                      <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-3xl flex items-center justify-center mb-8">
+                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                        </svg>
+                      </div>
+                      <h4 className="text-3xl font-bold text-gray-900 mb-4">Complete Website Migration Planning</h4>
+                      <div className="mb-6">
+                        <div className="text-sm text-gray-500 mb-1">Starting at</div>
+                        <div className="text-5xl font-bold text-indigo-600">$4,500</div>
+                      </div>
+                      <p className="text-xl text-gray-600 leading-relaxed mb-8">
+                        Comprehensive migration strategy with risk management to protect your rankings, traffic, and revenue during the transition.
+                      </p>
+                      <Link
+                        href="/book-consultation/"
+                        className="inline-flex items-center rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-700 px-8 py-4 text-lg font-bold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      >
+                        Plan Your Migration
+                        <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </Link>
+                    </div>
+                    <div>
+                      <ul className="space-y-4 text-gray-700">
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-indigo-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Detailed Migration Strategy</h5>
+                            <p className="text-gray-600">Comprehensive plan with risk analysis, timeline, and step-by-step implementation guidance.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-indigo-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Post-Migration Audit & Optimization</h5>
+                            <p className="text-gray-600">Complete technical SEO audit after migration with optimization tasks to maximize performance.</p>
+                          </div>
+                        </li>
+                        <li className="flex items-start gap-4">
+                          <svg className="w-6 h-6 text-indigo-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          <div>
+                            <h5 className="font-semibold text-lg mb-2">Continuous Support & Monitoring</h5>
+                            <p className="text-gray-600">Ongoing support throughout the migration process plus 90-day monitoring period.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
