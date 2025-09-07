@@ -68,34 +68,9 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   );
 }
 
-interface DropdownMenuProps {
-  items: NavigationItem[];
-  isOpen: boolean;
-}
-
-function DropdownMenu({ items, isOpen }: DropdownMenuProps) {
-  if (!isOpen) return null;
-
-  return (
-    <div className="absolute left-0 top-full z-10 mt-2 w-80 rounded-lg bg-white shadow-lg ring-1 ring-black/5">
-      <div className="p-2">
-        {items.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary"
-          >
-            {item.name}
-          </Link>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   return (
     <>
@@ -125,22 +100,29 @@ export default function Header() {
               {mainNavigation.map((item) => (
                 <div
                   key={item.name}
-                  className="relative"
-                  onMouseEnter={() => item.children && setActiveDropdown(item.name)}
-                  onMouseLeave={() => setActiveDropdown(null)}
+                  className="relative group"
                 >
                   {item.children ? (
                     <div>
-                      <button className="flex items-center text-gray-700 hover:text-primary">
+                      <button className="flex items-center text-gray-700 hover:text-primary transition-colors">
                         {item.name}
                         <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
-                      <DropdownMenu
-                        items={item.children}
-                        isOpen={activeDropdown === item.name}
-                      />
+                      <div className="absolute left-0 top-full z-10 mt-2 w-80 rounded-lg bg-white shadow-lg ring-1 ring-black/5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div className="p-2">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              href={child.href}
+                              className="block rounded-lg px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors"
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   ) : (
                     <Link
@@ -155,10 +137,10 @@ export default function Header() {
               
               {/* CTA Button */}
               <Link
-                href="/book-consultation/"
+                href="/contact/"
                 className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-dark transition-colors"
               >
-                Book Free Consultation
+                Contact Me
               </Link>
             </nav>
 

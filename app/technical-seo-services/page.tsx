@@ -23,9 +23,16 @@ export default function TechnicalSEOServices() {
                 Technical SEO Services
               </h1>
               <p className="mt-6 text-xl text-gray-600 leading-8">
-                Fast and well-optimized websites are key to delivering positive user experiences. 
-                Prevent issues that can negatively impact your revenue with expert technical SEO services.
+                Technical SEO Audit and Monitoring for agencies, e-commerce and business websites.
               </p>
+              <div className="mt-6 p-4 bg-yellow-50 border-l-4 border-yellow-400">
+                <p className="text-lg text-gray-800">
+                  Fast and well-optimized websites are key to delivering positive user experiences to your visitors, who may become customers and bring new revenue potential.
+                </p>
+                <p className="mt-2 text-lg font-semibold text-red-700">
+                  Remember that even a single mistake related to technical SEO can undermine years of investment in your website and business.
+                </p>
+              </div>
               <div className="mt-10 flex items-center gap-6">
                 <Link
                   href="/book-consultation/"
@@ -76,25 +83,19 @@ export default function TechnicalSEOServices() {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Up to 100 pages analyzed
+                        List of up to three most important issues
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        3 critical issues addressed
+                        Detailed information on how to solve them
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        30-minute consultation
-                      </li>
-                      <li className="flex items-center">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Detailed implementation guides
+                        30-minute one-on-one call
                       </li>
                     </ul>
                     <Link
@@ -119,31 +120,19 @@ export default function TechnicalSEOServices() {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Comprehensive website analysis
+                        Full list of tasks to get maximum revenue potential of the website
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Full list of improvement tasks
+                        Detailed information on how to solve them
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        60-minute consultation
-                      </li>
-                      <li className="flex items-center">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Tailored, actionable tasks
-                      </li>
-                      <li className="flex items-center">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Support for internal teams
+                        60-minute one-on-one call
                       </li>
                     </ul>
                     <Link
@@ -177,25 +166,25 @@ export default function TechnicalSEOServices() {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Continuous website monitoring
+                        Continuous monitoring of your website
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Monthly technical SEO audit
+                        List of tasks to get maximum revenue potential of the website
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        60-minute monthly consultation
+                        Detailed information on how to solve them
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Proactive issue identification
+                        60-minute one-on-one call
                       </li>
                     </ul>
                     <Link
@@ -228,13 +217,7 @@ export default function TechnicalSEOServices() {
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
-                        Detailed migration strategy
-                      </li>
-                      <li className="flex items-center">
-                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Risk management planning
+                        Detailed migration plan with risk management
                       </li>
                       <li className="flex items-center">
                         <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -247,6 +230,12 @@ export default function TechnicalSEOServices() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         Continuous support
+                      </li>
+                      <li className="flex items-center">
+                        <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        List of tasks for further optimizations to get maximum potential from the website
                       </li>
                     </ul>
                     <Link
@@ -305,6 +294,54 @@ export default function TechnicalSEOServices() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+                What Our Clients Say
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Viktor Zeman Testimonial */}
+              <div className="bg-gray-50 p-8 rounded-2xl">
+                <blockquote className="text-lg text-gray-700 mb-6">
+                  "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-semibold text-lg">VZ</span>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <div className="font-semibold text-gray-900">Viktor Zeman</div>
+                    <div className="text-gray-600">CEO, LiveAgent & Post Affiliate Pro</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Daniel Pison Testimonial */}
+              <div className="bg-gray-50 p-8 rounded-2xl">
+                <blockquote className="text-lg text-gray-700 mb-6">
+                  "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in terms of website quality. I consider him one of the greatest technical SEO experts on the market."
+                </blockquote>
+                <div className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                      <span className="text-primary font-semibold text-lg">DP</span>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <div className="font-semibold text-gray-900">Daniel Pison</div>
+                    <div className="text-gray-600">CMO, Quality Unit</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Process Section */}
         <section className="py-20 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -321,27 +358,27 @@ export default function TechnicalSEOServices() {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full text-xl font-bold mb-6">
                   1
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Initial Consultation</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Start with Consultation</h3>
                 <p className="text-gray-600">
-                  We start with understanding your business goals, current challenges, and technical requirements.
+                  Schedule free initial consultation. Discuss expectations, business, and website. Formalize partnership with agreement and first payment.
                 </p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full text-xl font-bold mb-6">
                   2
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Preparation and Execution</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Preparation and Executing</h3>
                 <p className="text-gray-600">
-                  Thorough analysis and preparation followed by systematic execution of the audit or monitoring plan.
+                  Obtain necessary access (e.g., Google Search Console). Begin delivering services. Timeframe depends on services and website size.
                 </p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-primary text-white rounded-full text-xl font-bold mb-6">
                   3
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Ongoing Support</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Staying Safe and Ahead</h3>
                 <p className="text-gray-600">
-                  Continuous support and guidance to ensure successful implementation and sustained improvements.
+                  Present results and tasks. Discuss prioritizing issues. Avoid draining company resources. Consultations available during implementation.
                 </p>
               </div>
             </div>

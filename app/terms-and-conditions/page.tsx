@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
 import CookieConsent from '@/components/ui/cookie-consent';
@@ -13,134 +14,120 @@ export default function TermsAndConditions() {
     <>
       <SEOHead seo={seo} />
       <MainLayout>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/5 via-white to-secondary py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center">
+        {/* Content Section */}
+        <section className="py-20 bg-white">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                 Terms and Conditions
               </h1>
-              <p className="mt-6 text-xl text-gray-600">
-                Last updated: January 1, 2024
+              <p className="mt-6 text-lg text-gray-600">
+                Effective Date: May 12, 2025
               </p>
             </div>
-          </div>
-        </section>
 
-        {/* Content Section */}
-        <section className="py-16 bg-white">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="prose prose-lg prose-primary mx-auto">
-              <h2>Agreement to Terms</h2>
-              <p>
-                By accessing and using the TechSEO Vitals website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
-              </p>
-
-              <h2>Services</h2>
-              <p>TechSEO Vitals provides technical SEO consulting services, including but not limited to:</p>
-              <ul>
-                <li>Technical SEO audits and analysis</li>
-                <li>Website performance optimization recommendations</li>
-                <li>Core Web Vitals improvement strategies</li>
-                <li>Website migration planning and support</li>
-                <li>Ongoing technical SEO monitoring</li>
-                <li>Training and educational resources</li>
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">1. Definitions</h2>
+              <ul className="list-disc pl-6 mb-8">
+                <li><strong>"Company"</strong> refers to mountain explorer, s. r. o., a Slovak company.</li>
+                <li><strong>"Content"</strong> refers to text, images, graphics, and other materials on the Site.</li>
+                <li><strong>"Services"</strong> refers to all services offered by the Company.</li>
+                <li><strong>"Site"</strong> refers to the website www.techseovitals.com.</li>
+                <li><strong>"User"</strong> or <strong>"You"</strong> refers to the person or entity using our Services.</li>
               </ul>
 
-              <h2>Service Agreement</h2>
-              <h3>Scope of Work</h3>
-              <p>
-                All services will be provided according to the scope of work agreed upon in writing between TechSEO Vitals and the client. Any changes to the scope of work must be agreed upon in writing by both parties.
-              </p>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">2. Company Information</h2>
+              <div className="mb-8">
+                <p className="mb-2"><strong>mountain explorer, s. r. o.</strong></p>
+                <p className="mb-2">Karpatske namestie 7770/10A</p>
+                <p className="mb-2">83106 Bratislava</p>
+                <p className="mb-2">Slovakia (European Union)</p>
+                <p className="mb-4"><strong>ID:</strong> 53226119</p>
+              </div>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">3. Services</h2>
               
-              <h3>Payment Terms</h3>
-              <ul>
-                <li>Payment is due according to the terms specified in the service agreement</li>
-                <li>All prices are in USD unless otherwise specified</li>
-                <li>Late payments may incur additional charges</li>
-                <li>Refunds are provided according to our refund policy</li>
+              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">3.1 Paid Services</h3>
+              <ul className="list-disc pl-6 mb-6">
+                <li><strong>Technical SEO Audit:</strong> Analysis of your website's technical performance</li>
+                <li><strong>Consulting Services:</strong> Ongoing technical SEO guidance and support</li>
+                <li><strong>Migration Support:</strong> Website migration planning and execution guidance</li>
               </ul>
 
-              <h3>Delivery</h3>
-              <p>
-                Services will be delivered according to the timeline agreed upon in the service agreement. While we strive to meet all deadlines, delivery times are estimates and may be subject to change based on project complexity and client responsiveness.
-              </p>
-
-              <h2>Client Responsibilities</h2>
-              <p>Clients are responsible for:</p>
-              <ul>
-                <li>Providing accurate and complete information about their website and business</li>
-                <li>Providing timely access to necessary systems, accounts, and personnel</li>
-                <li>Reviewing and implementing recommendations in a timely manner</li>
-                <li>Communicating any concerns or questions promptly</li>
-                <li>Making payment according to agreed terms</li>
+              <h3 className="text-xl font-semibold text-gray-900 mt-8 mb-4">3.2 Free Services</h3>
+              <ul className="list-disc pl-6 mb-8">
+                <li><strong>TechSEO Vitals Newsletter:</strong> Free bi-weekly technical SEO insights</li>
               </ul>
 
-              <h2>Intellectual Property</h2>
-              <p>
-                All methodologies, tools, templates, and processes developed by TechSEO Vitals remain the intellectual property of TechSEO Vitals. Clients receive a license to use deliverables for their specific website and business operations.
-              </p>
-
-              <h2>Confidentiality</h2>
-              <p>
-                Both parties agree to maintain the confidentiality of any proprietary or sensitive information shared during the course of the engagement. This includes but is not limited to business strategies, technical implementations, and performance data.
-              </p>
-
-              <h2>Limitation of Liability</h2>
-              <p>
-                TechSEO Vitals provides recommendations and guidance based on industry best practices and experience. However, we cannot guarantee specific outcomes or results. Our liability is limited to the amount paid for services.
-              </p>
-
-              <h2>Results Disclaimer</h2>
-              <p>
-                While we use proven strategies and best practices, search engine optimization results can vary based on numerous factors including but not limited to:
-              </p>
-              <ul>
-                <li>Industry competition</li>
-                <li>Website implementation quality</li>
-                <li>Search engine algorithm changes</li>
-                <li>Market conditions</li>
-                <li>Timeline for implementation</li>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">4. Payment Terms</h2>
+              <ul className="list-disc pl-6 mb-8">
+                <li>Payment is due within 7 days of invoice date</li>
+                <li>All fees are non-refundable unless otherwise specified</li>
+                <li>Services may be suspended for accounts with overdue payments</li>
+                <li>Prices are subject to change with 30 days notice</li>
               </ul>
 
-              <h2>Termination</h2>
-              <p>
-                Either party may terminate the agreement with written notice according to the terms specified in the service agreement. Upon termination, all work completed to date will be delivered, and payment for completed work is due.
-              </p>
-
-              <h2>Force Majeure</h2>
-              <p>
-                Neither party will be liable for any failure or delay in performance under this Agreement which is due to an event of Force Majeure. Force Majeure means any cause beyond a party's control including but not limited to acts of God, natural disasters, war, or government regulations.
-              </p>
-
-              <h2>Governing Law</h2>
-              <p>
-                These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction where TechSEO Vitals operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
-              </p>
-
-              <h2>Privacy</h2>
-              <p>
-                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the website and services, to understand our practices.
-              </p>
-
-              <h2>Changes to Terms</h2>
-              <p>
-                We reserve the right to modify these terms and conditions at any time. Changes will be effective immediately upon posting to the website. Your continued use of the service constitutes acceptance of any changes.
-              </p>
-
-              <h2>Severability</h2>
-              <p>
-                If any provision of these terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the remainder of these terms will remain in full force and effect.
-              </p>
-
-              <h2>Contact Information</h2>
-              <p>
-                If you have any questions about these Terms and Conditions, please contact us at:
-              </p>
-              <ul>
-                <li>Email: martin@techseovitals.com</li>
-                <li>Website: <a href="/contact/">Contact Form</a></li>
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">5. Data Usage and Confidentiality</h2>
+              <p className="mb-4">We may:</p>
+              <ul className="list-disc pl-6 mb-6">
+                <li>Use anonymized client data for research and content creation</li>
+                <li>Reference general project outcomes without identifying clients</li>
+                <li>Process data through AI and machine learning systems with appropriate safeguards</li>
               </ul>
+              <p className="mb-8">All confidential business information shared during engagements will be protected and not disclosed without permission.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">6. Limitation of Liability</h2>
+              <p className="mb-4">Our services are advisory in nature. We cannot guarantee:</p>
+              <ul className="list-disc pl-6 mb-6">
+                <li>Specific search engine ranking improvements</li>
+                <li>Specific traffic or revenue increases</li>
+                <li>Immunity from search engine algorithm changes</li>
+              </ul>
+              <p className="mb-8">Our total liability is limited to the amount paid for services in the 12 months preceding any claim.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">7. Client Responsibilities</h2>
+              <p className="mb-4">Clients must:</p>
+              <ul className="list-disc pl-6 mb-8">
+                <li>Provide accurate information about their website and business</li>
+                <li>Implement recommendations properly and in a timely manner</li>
+                <li>Grant necessary access to tools and platforms as required</li>
+                <li>Communicate concerns or questions promptly</li>
+              </ul>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">8. Intellectual Property</h2>
+              <p className="mb-8">Our methodologies, tools, and processes remain our intellectual property. Clients receive usage rights for their specific implementation but may not resell or redistribute our proprietary methods.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">9. Termination</h2>
+              <p className="mb-8">Either party may terminate services with 30 days written notice. Outstanding work will be completed, and final payment is due within 7 days of termination.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">10. Force Majeure</h2>
+              <p className="mb-8">Neither party is liable for delays or failures caused by circumstances beyond reasonable control, including natural disasters, government actions, or technical failures.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">11. Governing Law</h2>
+              <p className="mb-8">These terms are governed by Slovak law. Disputes will be resolved in the courts of Bratislava, Slovakia.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">12. Privacy Policy</h2>
+              <p className="mb-8">Your use of our services is also governed by our Privacy Policy, which explains how we collect and use your information.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">13. Changes to Terms</h2>
+              <p className="mb-8">We may update these terms periodically. Changes will be posted on this page with an updated effective date. Continued use constitutes acceptance of updated terms.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">14. Severability</h2>
+              <p className="mb-8">If any provision is found unenforceable, it will be modified to the minimum extent necessary, and the remainder of these terms will remain in effect.</p>
+
+              <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">15. Contact Information</h2>
+              <p className="mb-4">For questions about these terms:</p>
+              <ul className="list-disc pl-6 mb-8">
+                <li>Email: <a href="mailto:martin@techseovitals.com" className="text-primary hover:text-primary-dark">martin@techseovitals.com</a></li>
+                <li>Contact Form: <Link href="/contact/" className="text-primary hover:text-primary-dark">www.techseovitals.com/contact/</Link></li>
+                <li>Mail: mountain explorer, s. r. o., Karpatske namestie 7770/10A, 83106 Bratislava, Slovakia</li>
+              </ul>
+
+              <div className="mt-16 pt-8 border-t border-gray-200">
+                <p className="text-sm text-gray-500">
+                  By using our services, you acknowledge that you have read and agree to these terms and conditions.
+                </p>
+              </div>
             </div>
           </div>
         </section>

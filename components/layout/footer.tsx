@@ -46,7 +46,7 @@ export default function Footer() {
           <div className="space-y-8 xl:col-span-1">
             <Logo variant="dark" className="max-w-[200px]" />
             <p className="text-sm leading-6 text-gray-300">
-              Technical SEO and Web Performance consultant helping businesses improve their search rankings and website speed.
+              Experienced technical SEO and web performance consultant with over a decade of web development experience.
             </p>
             <div className="flex space-x-6">
               {footerNavigation.social.map((item) => (
@@ -63,62 +63,71 @@ export default function Footer() {
               ))}
             </div>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
-                <ul className="mt-6 space-y-4">
-                  {footerNavigation.services.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-white">Resources</h3>
-                <ul className="mt-6 space-y-4">
-                  {footerNavigation.resources.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="mt-16 grid grid-cols-1 gap-8 xl:col-span-2 xl:mt-0 md:grid-cols-3">
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">TechSEO Vitals</h3>
+              <ul className="mt-6 space-y-4">
+                {footerNavigation.techseoVitals.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
-                <ul className="mt-6 space-y-4">
-                  {footerNavigation.company.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.href}
-                        className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
+              <ul className="mt-6 space-y-4">
+                {footerNavigation.services.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Free Resources</h3>
+              <ul className="mt-6 space-y-4">
+                {footerNavigation.resources.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
         <div className="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-400">
-            &copy; 2024 TechSEO Vitals. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
+            <p className="text-xs leading-5 text-gray-400">
+              &copy; 2024 - 2025 TechSEO Vitals. All rights reserved.
+            </p>
+            <div className="mt-4 sm:mt-0 flex space-x-6">
+              {footerNavigation.legal.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </footer>

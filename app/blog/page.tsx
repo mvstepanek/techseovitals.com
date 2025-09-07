@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
@@ -5,69 +6,44 @@ import CookieConsent from '@/components/ui/cookie-consent';
 import { generatePageSEO } from '@/lib/seo';
 
 const seo = generatePageSEO({
-  title: 'Technical SEO Blog - Expert Tips & Insights | TechSEO Vitals',
-  description: 'Read the latest technical SEO insights, Core Web Vitals optimization tips, and web performance strategies from Martin Štěpánek.',
+  title: 'Blog | TechSEO Vitals With Martin Stepanek',
+  description: 'Learn new things about technical SEO and web performance and grow your business.',
 }, '/blog/');
 
-// Sample blog posts - in a real app, this would come from a CMS or database
+// Blog posts from original website
 const blogPosts = [
   {
-    title: "Complete Guide to Core Web Vitals Optimization in 2024",
-    excerpt: "Learn how to optimize Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS) for better user experience and search rankings.",
-    date: "2024-01-15",
-    readTime: "12 min read",
-    category: "Core Web Vitals",
-    slug: "complete-guide-core-web-vitals-optimization-2024"
-  },
-  {
-    title: "JavaScript Performance: Why Your Site is Slow and How to Fix It",
-    excerpt: "Discover the most common JavaScript performance issues that slow down websites and learn practical solutions to improve loading times.",
-    date: "2024-01-08",
+    title: "Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization",
+    excerpt: "Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance.",
+    date: "2025-08-05",
     readTime: "8 min read",
-    category: "Performance",
-    slug: "javascript-performance-optimization-guide"
+    category: "Technical SEO",
+    slug: "why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization",
+    thumbnail: "/images/blog-thumbnails/ttfb-thumbnail.jpg"
   },
   {
-    title: "Website Migration Checklist: 15 Steps to Avoid SEO Disasters",
-    excerpt: "A comprehensive checklist to ensure your website migration doesn't hurt your search rankings, based on 10+ years of successful projects.",
-    date: "2024-01-01",
-    readTime: "15 min read",
-    category: "Migration",
-    slug: "website-migration-checklist-avoid-seo-disasters"
-  },
-  {
-    title: "Mobile-First Indexing: Technical SEO Essentials",
-    excerpt: "Everything you need to know about mobile-first indexing and how to optimize your website for Google's mobile-first approach.",
-    date: "2023-12-25",
+    title: "Multilingual Website Essentials: A Technical SEO Guide",
+    excerpt: "A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.",
+    date: "2025-07-23",
     readTime: "10 min read",
-    category: "Mobile SEO",
-    slug: "mobile-first-indexing-technical-seo-essentials"
+    category: "Technical SEO",
+    slug: "multilingual-website-essentials-technical-seo-guide",
+    thumbnail: "/images/blog-thumbnails/multilingual-thumbnail.jpg"
   },
   {
-    title: "Image Optimization for Web Performance: WebP, Lazy Loading & More",
-    excerpt: "Master image optimization techniques including modern formats, lazy loading, and responsive images for faster websites.",
-    date: "2023-12-18",
-    readTime: "11 min read",
-    category: "Performance",
-    slug: "image-optimization-web-performance-guide"
-  },
-  {
-    title: "Structured Data & Schema Markup: Complete Implementation Guide",
-    excerpt: "Learn how to implement structured data and schema markup to improve your search engine visibility and rich snippet appearance.",
-    date: "2023-12-11",
-    readTime: "14 min read",
-    category: "Structured Data",
-    slug: "structured-data-schema-markup-implementation-guide"
+    title: "Improving Crawlability: Help Google and ChatGPT Find Your Business Website",
+    excerpt: "Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially.",
+    date: "2025-07-09",
+    readTime: "12 min read",
+    category: "Technical SEO",
+    slug: "improving-crawlability-help-google-and-chatgpt-find-your-business-website",
+    thumbnail: "/images/blog-thumbnails/crawlability-thumbnail.jpg"
   }
 ];
 
 const categories = [
   "All Posts",
-  "Core Web Vitals",
-  "Performance",
-  "Migration",
-  "Mobile SEO",
-  "Structured Data"
+  "Technical SEO"
 ];
 
 export default function Blog() {
@@ -84,7 +60,7 @@ export default function Blog() {
                 <span className="text-primary">Blog</span>
               </h1>
               <p className="mt-6 text-xl text-gray-600 leading-8">
-                Expert insights on technical SEO, Core Web Vitals, and web performance optimization to help your business grow.
+                Learn new things about technical SEO and web performance and grow your business.
               </p>
             </div>
           </div>
@@ -100,7 +76,16 @@ export default function Blog() {
             </div>
             
             <div className="max-w-4xl mx-auto">
-              <article className="bg-gradient-to-br from-primary/5 to-secondary rounded-2xl p-8 md:p-12">
+              <article className="bg-gradient-to-br from-primary/5 to-secondary rounded-2xl overflow-hidden">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={blogPosts[0].thumbnail}
+                    alt={blogPosts[0].title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-8 md:p-12">
                 <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
                   <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
                     {blogPosts[0].category}
@@ -123,6 +108,7 @@ export default function Blog() {
                 >
                   Read Full Post
                 </Link>
+                </div>
               </article>
             </div>
           </div>
@@ -154,6 +140,14 @@ export default function Blog() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.slice(1).map((post, index) => (
                 <article key={post.slug} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={post.thumbnail}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="p-6">
                     <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
                       <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
@@ -189,10 +183,10 @@ export default function Blog() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Never Miss a Post
+                TechSEO Vitals Newsletter
               </h2>
               <p className="text-xl text-gray-600 mb-8">
-                Get weekly technical SEO insights and new blog posts delivered to your inbox.
+                Improve conversions and increase your revenue through your website! Get free insights to help you maximize your website's potential.
               </p>
               
               <div className="max-w-md mx-auto">
@@ -208,7 +202,7 @@ export default function Blog() {
                     type="submit"
                     className="bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors focus:outline-none focus:ring-4 focus:ring-primary/20"
                   >
-                    Subscribe
+                    Subscribe Now
                   </button>
                 </form>
                 <p className="text-sm text-gray-500 mt-4">
@@ -219,75 +213,6 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* Popular Resources */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                Popular Resources
-              </h2>
-              <p className="mt-4 text-xl text-gray-600">
-                Free guides and checklists to improve your technical SEO
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gray-50 p-8 rounded-xl text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Technical SEO Checklist</h3>
-                <p className="text-gray-600 mb-6">
-                  50+ actionable items to optimize your website's technical foundation.
-                </p>
-                <Link
-                  href="/technical-seo-checklist/"
-                  className="text-primary hover:text-primary-dark font-medium"
-                >
-                  Download Free →
-                </Link>
-              </div>
-              
-              <div className="bg-gray-50 p-8 rounded-xl text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Migration Checklist</h3>
-                <p className="text-gray-600 mb-6">
-                  Protect your search rankings during website migrations.
-                </p>
-                <Link
-                  href="/website-migration-checklist/"
-                  className="text-primary hover:text-primary-dark font-medium"
-                >
-                  Get Guide →
-                </Link>
-              </div>
-              
-              <div className="bg-gray-50 p-8 rounded-xl text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Metrics</h3>
-                <p className="text-gray-600 mb-6">
-                  5 web performance metrics every business owner should track.
-                </p>
-                <Link
-                  href="/5-web-performance-metrics-every-business-owner-should-track/"
-                  className="text-primary hover:text-primary-dark font-medium"
-                >
-                  Learn More →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-primary">
