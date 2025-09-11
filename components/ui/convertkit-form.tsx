@@ -20,7 +20,7 @@ export default function ConvertKitForm({
   className = ""
 }: ConvertKitFormProps) {
   return (
-    <div className={`w-full max-w-lg mx-auto ${className}`}>
+    <div className={`w-full max-w-2xl mx-auto ${className}`}>
       {title && (
         <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{title}</h3>
       )}
@@ -28,38 +28,33 @@ export default function ConvertKitForm({
         <p className="text-gray-600 mb-6 text-center">{description}</p>
       )}
       
-      <form className="space-y-4">
-        <div>
-          <input 
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg bg-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-            name="first_name" 
-            placeholder={firstNamePlaceholder}
-            required 
-            type="text" 
-          />
-        </div>
+      <div className="space-y-4">
+        <input 
+          className="w-full px-6 py-4 text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+          name="first_name" 
+          placeholder={firstNamePlaceholder}
+          required 
+          type="text" 
+        />
         
-        <div>
-          <input 
-            className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg bg-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-            name="email_address" 
-            placeholder={emailPlaceholder}
-            required 
-            type="email" 
-          />
-        </div>
+        <input 
+          className="w-full px-6 py-4 text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary/20 focus:border-primary transition-all duration-200"
+          name="email_address" 
+          placeholder={emailPlaceholder}
+          required 
+          type="email" 
+        />
         
         <button 
           type="submit"
-          className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-md hover:shadow-lg"
+          className="w-full rounded-xl bg-gradient-to-r from-primary to-primary-dark px-8 py-4 text-lg font-bold text-white shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5"
         >
           {buttonText}
         </button>
-      </form>
+      </div>
       
-      <p className="text-xs text-gray-500 text-center mt-4 leading-relaxed">
-        No spam, ever. Unsubscribe at any time.
-        <br />
+      <p className="text-sm text-gray-500 text-center mt-4">
+        No spam, ever. Unsubscribe at any time.<br />
         By subscribing, I agree to the Privacy Policy and Terms and Conditions.
       </p>
 
