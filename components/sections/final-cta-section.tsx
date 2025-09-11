@@ -20,7 +20,7 @@ interface FinalCTASectionProps {
     text: string;
     href: string;
     icon?: React.ReactNode;
-  };
+  } | React.ReactNode;
   benefits?: BenefitItem[];
   socialProof?: {
     icon: React.ReactNode;
@@ -66,7 +66,7 @@ export default function FinalCTASection({
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          <div className="flex flex-col items-center gap-4">
             {primaryCTA && (
               <Link
                 href={primaryCTA.href}
@@ -78,15 +78,22 @@ export default function FinalCTASection({
             )}
             
             {secondaryCTA && (
-              <Link
-                href={secondaryCTA.href}
-                className="group inline-flex items-center gap-2 px-6 py-4 text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors"
-              >
-                <span>{secondaryCTA.text}</span>
-                {secondaryCTA.icon}
-              </Link>
+              typeof secondaryCTA === 'object' && 'href' in secondaryCTA ? (
+                <Link
+                  href={secondaryCTA.href}
+                  className="group inline-flex items-center gap-2 px-6 py-4 text-lg font-semibold text-purple-600 hover:text-purple-700 transition-colors"
+                >
+                  <span>{secondaryCTA.text}</span>
+                  {secondaryCTA.icon}
+                </Link>
+              ) : (
+                secondaryCTA
+              )
             )}
           </div>
+          
+          {/* Spacing for benefits or social proof */}
+          <div className="mb-16"></div>
 
           {/* Benefits grid */}
           {benefits && benefits.length > 0 && (
