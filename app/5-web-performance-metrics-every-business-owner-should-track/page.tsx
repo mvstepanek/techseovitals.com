@@ -1,12 +1,13 @@
-import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
 import CookieConsent from '@/components/ui/cookie-consent';
+import ConvertKitForm from '@/components/ui/convertkit-form';
+import WhyTechnicalSEOSection from '@/components/sections/why-technical-seo-section';
 import { generatePageSEO } from '@/lib/seo';
 
 const seo = generatePageSEO({
   title: '5 Web Performance Metrics Every Business Owner Should Track | TechSEO Vitals',
-  description: 'Learn the 5 essential web performance metrics that directly impact your business revenue. Free guide with actionable tips to improve your website\'s performance.',
+  description: 'Technical SEO together with web performance optimizations creates a stable foundation for your website. Download our comprehensive guide.',
 }, '/5-web-performance-metrics-every-business-owner-should-track/');
 
 export default function WebPerformanceMetrics() {
@@ -14,81 +15,126 @@ export default function WebPerformanceMetrics() {
     <>
       <SEOHead seo={seo} />
       <MainLayout>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary/5 via-white to-secondary py-20 lg:py-32">
+        {/* Hero Section - Using homepage hero pattern with form instead of image */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
+          <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
+          {/* Background decorative elements */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40"></div>
+            <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25"></div>
+          </div>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                5 Web Performance Metrics Every{' '}
-                <span className="text-primary">Business Owner</span>{' '}
-                Should Track
-              </h1>
-              <p className="mt-6 text-xl text-gray-600 leading-8">
-                Discover the performance metrics that directly impact your revenue and learn how to improve them for better business results.
-              </p>
-              <div className="mt-10">
-                <Link
-                  href="#download"
-                  className="rounded-lg bg-primary px-8 py-4 text-lg font-semibold text-white shadow-md hover:bg-primary-dark focus:outline-none focus:ring-4 focus:ring-primary/20 transition-all"
-                >
-                  Download Free Guide
-                </Link>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="max-w-2xl">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-purple-600 text-white mb-6">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  Maximize Your Website Revenue Potential
+                </div>
+                <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
+                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">5 Web Performance</span> Metrics Every Business Owner Should Track
+                </h1>
+                <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
+                  Technical SEO together with web performance optimizations creates a stable foundation for your website. Convert happy users into customers.
+                </p>
+                <div className="mt-10 flex flex-col gap-4">
+                  <div className="flex items-center gap-3 text-gray-600">
+                    <div className="flex -space-x-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full border-2 border-white"></div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full border-2 border-white"></div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full border-2 border-white"></div>
+                      <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full border-2 border-white"></div>
+                    </div>
+                    <span className="text-sm font-medium">Used by performance experts</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Form Section (replacing image) */}
+              <div className="relative lg:ml-8">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl opacity-30"></div>
+                <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold mb-2">
+                      <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Get Instant Access</span>
+                    </h3>
+                    <p className="text-gray-600">Enter your details to download immediately</p>
+                  </div>
+                  
+                  <ConvertKitForm
+                    formId="1b414d8dc5"
+                    firstNamePlaceholder="First name"
+                    emailPlaceholder="Business email"
+                    buttonText="Download Free Guide"
+                    className=""
+                  />
+                  
+                  <div className="mt-6 flex items-center justify-center gap-6 text-sm text-gray-500">
+                    <span>✓ Instant access</span>
+                    <span>✓ Free forever</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why It Matters */}
-        <section className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                Why Performance Metrics Matter for Your Business
-              </h2>
+        {/* Why This Guide Section - Using the homepage WhyTechnicalSEO pattern */}
+        <WhyTechnicalSEOSection
+          badge="What You'll Learn"
+          badgeIcon={
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          }
+          title={
+            <>
+              Transform Your Website Into a <span className="text-primary">Performance Powerhouse</span>
+            </>
+          }
+          description="Fast, optimized websites increase user engagement, leading to longer site visits and higher revenue. Unlock your website's full potential."
+          secondaryCTA={
+            <div className="flex items-center justify-center gap-4 text-gray-600">
+              <span className="text-sm">✓ 5 critical metrics</span>
+              <span className="text-sm">✓ Actionable insights</span>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
-                  </svg>
-                </div>
-                <div className="text-3xl font-bold text-red-600 mb-2">1% Revenue</div>
-                <div className="text-lg font-medium text-gray-900 mb-2">Lost per 100ms Delay</div>
-                <p className="text-gray-600">
-                  Amazon's study shows that every 100ms delay costs up to 1% in revenue
-                </p>
-              </div>
-              
-              <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                  </svg>
-                </div>
-                <div className="text-3xl font-bold text-red-600 mb-2">50%+</div>
-                <div className="text-lg font-medium text-gray-900 mb-2">Abandon Slow Sites</div>
-                <p className="text-gray-600">
-                  Over 50% of mobile users abandon sites that take longer than 3 seconds to load
-                </p>
-              </div>
-              
-              <div className="text-center p-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
-                  <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.29-1.009-5.824-2.562M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div className="text-3xl font-bold text-red-600 mb-2">79%</div>
-                <div className="text-lg font-medium text-gray-900 mb-2">Won't Return</div>
-                <p className="text-gray-600">
-                  79% of shoppers experiencing performance issues are less likely to buy again
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+          }
+          benefits={[
+            {
+              icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+              </svg>,
+              iconGradient: "bg-gradient-to-br from-green-500 to-green-600",
+              hoverBorderColor: "green",
+              title: "Higher Revenue",
+              description: "Fast, optimized websites increase user engagement, leading to longer site visits and higher revenue. Every 100ms delay costs up to 1% in revenue.",
+              metric: "1% revenue per 100ms",
+              metricColor: "green"
+            },
+            {
+              icon: <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>,
+              iconGradient: "bg-gradient-to-br from-blue-500 to-blue-600",
+              hoverBorderColor: "blue",
+              title: "Better Conversions",
+              description: "Passing Core Web Vitals unlocks your website's full potential and significantly improves conversion rates. Better performance means more customers.",
+              metric: "7% conversion boost",
+              metricColor: "blue"
+            },
+            {
+              icon: <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>,
+              iconGradient: "bg-gradient-to-br from-purple-500 to-purple-600",
+              hoverBorderColor: "purple",
+              title: "Improved SEO",
+              description: "Well-optimized websites are more appealing to users and search engines. Core Web Vitals are a direct Google ranking factor.",
+              metric: "Higher search rankings",
+              metricColor: "purple"
+            }
+          ]}
+        />
 
         {/* The 5 Metrics */}
         <section className="py-20 bg-gray-50">
@@ -306,87 +352,49 @@ export default function WebPerformanceMetrics() {
           </div>
         </section>
 
-        {/* Download Section */}
-        <section id="download" className="py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-primary/5 to-secondary rounded-2xl p-8 md:p-12">
-                <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                    Get the Complete Guide
-                  </h2>
-                  <p className="text-lg text-gray-600">
-                    Download our comprehensive guide with tools, benchmarks, and action plans for each metric.
-                  </p>
-                </div>
+        {/* Final CTA Section - Homepage Style */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          {/* Background decorative elements */}
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-150 to-indigo-150 rounded-full blur-3xl opacity-50"></div>
+          </div>
+          
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-purple-600 text-white mb-8">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Maximize Your Website Performance
+              </div>
 
-                <form className="max-w-md mx-auto" action="/thank-you-for-subscribing/" method="POST">
-                  <div className="space-y-4">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Enter your email address"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                        First Name (Optional)
-                      </label>
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
-                        placeholder="Enter your first name"
-                      />
-                    </div>
-                    <input type="hidden" name="resource" value="web-performance-metrics-guide" />
-                    <button
-                      type="submit"
-                      className="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-primary-dark transition-colors focus:outline-none focus:ring-4 focus:ring-primary/20"
-                    >
-                      Download Free Guide
-                    </button>
-                  </div>
-                  <p className="text-sm text-gray-500 text-center mt-4">
-                    No spam, unsubscribe at any time. Read our{' '}
-                    <Link href="/privacy-policy/" className="text-primary hover:text-primary-dark">
-                      privacy policy
-                    </Link>
-                    .
-                  </p>
-                </form>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Get Your Free <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Performance Guide</span>
+              </h2>
+              
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+                Join dozens of business owners who are already tracking these metrics. Create a stable foundation for your website success.
+              </p>
+              
+              {/* ConvertKit Form */}
+              <div className="max-w-2xl mx-auto">
+                <div className="bg-gradient-to-br from-slate-50 to-blue-50/30 p-8 rounded-3xl shadow-xl border border-gray-200">
+                  <ConvertKitForm
+                    formId="1b414d8dc5"
+                    firstNamePlaceholder="First name"
+                    emailPlaceholder="Business email"
+                    buttonText="Download Your Free Guide Now"
+                    className=""
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-primary">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Need Help Improving These Metrics?
-            </h2>
-            <p className="mt-4 text-xl text-purple-100 max-w-2xl mx-auto">
-              Get a comprehensive performance audit and optimization plan from an expert.
-            </p>
-            <div className="mt-10">
-              <Link
-                href="/book-consultation/"
-                className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-md hover:bg-gray-50 transition-all"
-              >
-                Schedule Free Consultation
-              </Link>
-            </div>
-          </div>
-        </section>
 
         <CookieConsent />
       </MainLayout>

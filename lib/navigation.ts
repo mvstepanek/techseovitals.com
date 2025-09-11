@@ -6,15 +6,6 @@ export interface NavigationItem {
 
 export const mainNavigation: NavigationItem[] = [
   { name: 'Services', href: '/technical-seo-services/' },
-  {
-    name: 'Free Checklists',
-    href: '#',
-    children: [
-      { name: 'Technical SEO Checklist', href: '/technical-seo-checklist/' },
-      { name: 'Website Migration Checklist', href: '/website-migration-checklist/' },
-      { name: 'Metrics Every Business Owner Should Track', href: '/5-web-performance-metrics-every-business-owner-should-track/' },
-    ],
-  },
   { name: 'Newsletter', href: '/newsletter/' },
   { name: 'Blog', href: '/blog/' },
   { name: 'About Me', href: '/technical-seo-consultant/' },

@@ -74,17 +74,36 @@ export default function Header() {
 
   return (
     <>
-      {/* Webinar Banner */}
+      {/* Resources Banner */}
       <div className="bg-gradient-to-r from-primary to-primary-dark text-white">
         <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center text-center text-sm font-medium">
-            <span className="mr-2">🎯</span>
-            <Link
-              href="/free-webinar-why-your-mobile-web-performance-determines-your-revenue/"
-              className="hover:underline"
-            >
-              Free Webinar: Why Your Mobile Web Performance Determines Your Revenue
-            </Link>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold bg-white/20 text-white mr-4">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              Free Resources
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-4">
+              <Link
+                href="/technical-seo-checklist/"
+                className="hover:underline"
+              >
+                Technical SEO Checklist
+              </Link>
+              <span className="text-primary-light">•</span>
+              <Link
+                href="/website-migration-checklist/"
+                className="hover:underline"
+              >
+                Website Migration Checklist
+              </Link>
+              <span className="text-primary-light">•</span>
+              <Link
+                href="/5-web-performance-metrics-every-business-owner-should-track/"
+                className="hover:underline"
+              >
+                5 Web Performance Metrics For Business Owners
+              </Link>
+            </div>
           </div>
         </div>
       </div>
