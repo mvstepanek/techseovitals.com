@@ -19,10 +19,8 @@ export default function CrawlabilityGuide() {
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div className="text-center mb-16">
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 mb-6">
-                <span className="bg-primary text-white px-3 py-1 rounded-full text-xs font-medium">
-                  Technical SEO
-                </span>
                 <time>July 9, 2025</time>
+                <span className="text-gray-300">•</span>
                 <span>12 min read</span>
               </div>
               

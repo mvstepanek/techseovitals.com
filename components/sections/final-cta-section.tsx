@@ -39,7 +39,7 @@ export default function FinalCTASection({
   socialProof
 }: FinalCTASectionProps) {
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden border-t border-gray-200">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl"></div>
