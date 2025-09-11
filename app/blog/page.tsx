@@ -16,37 +16,105 @@ const seo = generatePageSEO({
 const blogPosts = [
   {
     title: "Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization",
-    excerpt: "Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance.",
+    excerpt: "TTFB optimization is not just a technical exercise; it's a crucial investment in your website's success. Reducing TTFB creates a foundation for an exceptional user experience.",
     date: "2025-08-05",
     readTime: "8 min read",
     category: "Technical SEO",
     slug: "why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization",
-    thumbnail: "/images/blog-thumbnails/ttfb-thumbnail.jpg"
+    thumbnail: "/images/blog-thumbnails/why-you-should-care-about-your-ttfb.jpg"
   },
   {
     title: "Multilingual Website Essentials: A Technical SEO Guide",
-    excerpt: "A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.",
+    excerpt: "A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions. However, while businesses focus on translations, the technical foundation often gets overlooked.",
     date: "2025-07-23",
-    readTime: "10 min read",
+    readTime: "6 min read",
     category: "Technical SEO",
     slug: "multilingual-website-essentials-technical-seo-guide",
-    thumbnail: "/images/blog-thumbnails/multilingual-thumbnail.jpg"
+    thumbnail: "/images/blog-thumbnails/thumbnail-multilingual-website-essentials.jpg"
   },
   {
     title: "Improving Crawlability: Help Google and ChatGPT Find Your Business Website",
-    excerpt: "Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially.",
+    excerpt: "Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially. When you fall behind on keeping up with these evolving demands, your brand and website can disappear from major platforms, such as Google, Bing and ChatGPT.",
     date: "2025-07-09",
-    readTime: "12 min read",
+    readTime: "7 min read",
     category: "Technical SEO",
     slug: "improving-crawlability-help-google-and-chatgpt-find-your-business-website",
-    thumbnail: "/images/blog-thumbnails/crawlability-thumbnail.jpg"
+    thumbnail: "/images/blog-thumbnails/thumbnail-help-google-chatgpt.jpg"
+  },
+  {
+    title: "Technical SEO Checklist for Website Migrations and Redesigns",
+    excerpt: "A detailed technical SEO checklist for successfully managing website migrations, minimizing risks, and maintaining business and SEO performance through careful planning and monitoring.",
+    date: "2025-06-26",
+    readTime: "12 min read",
+    category: "Technical SEO",
+    slug: "technical-seo-checklist-for-website-migrations-and-redesigns",
+    thumbnail: "/images/blog-thumbnails/thumbnail-techseo-checklist-migrations.jpg"
+  },
+  {
+    title: "Essential Technical SEO Monitoring to Protect Your Business",
+    excerpt: "Implementing regular Technical SEO Monitoring can save your business significant money and prevent major problems before their impact becomes difficult to reverse.",
+    date: "2025-06-12",
+    readTime: "7 min read",
+    category: "Technical SEO",
+    slug: "essential-technical-seo-monitoring-to-protect-your-business",
+    thumbnail: "/images/blog-thumbnails/thumbnail-technical-seo-monitoring.jpg"
+  },
+  {
+    title: "Mobile Optimization: The Key to E-commerce Excellence",
+    excerpt: "Mobile optimization has transformed online shopping. With over 60% of web traffic from mobile devices and global mobile e-commerce sales projected to reach $4.32 trillion, businesses must prioritize mobile-first design to succeed.",
+    date: "2025-05-29",
+    readTime: "20 min read",
+    category: "Technical SEO",
+    slug: "mobile-optimization-the-key-to-e-commerce-excellence",
+    thumbnail: "/images/blog-thumbnails/thumbnail-mobile-optimization.jpg"
+  },
+  {
+    title: "The Essential Technical SEO Checklist I Developed for Client Success",
+    excerpt: "A comprehensive technical SEO checklist representing the most impactful elements that truly deserve attention, focusing on areas that genuinely matter for search visibility and user experience.",
+    date: "2025-05-15",
+    readTime: "30 min read",
+    category: "Technical SEO",
+    slug: "the-essential-technical-seo-checklist-i-developed-for-client-success",
+    thumbnail: "/images/blog-thumbnails/essential-technical-seo-checklist.jpg"
+  },
+  {
+    title: "The Invisible Drivers of E-commerce Success: Technical SEO and Web Performance Optimization",
+    excerpt: "A comprehensive exploration of how technical SEO and web performance optimization drive e-commerce success, focusing on the critical relationship between site speed, user experience, and conversion rates.",
+    date: "2025-05-01",
+    readTime: "12 min read",
+    category: "Technical SEO",
+    slug: "the-invisible-drivers-of-e-commerce-success-technical-seo-and-web-performance-optimization",
+    thumbnail: "/images/blog-thumbnails/og-invisible-drivers-of-ecommerce-success.png"
+  },
+  {
+    title: "How Core Web Vitals Boost Your Conversions and Revenue",
+    excerpt: "Core Web Vitals are not just technical metrics but powerful indicators of user experience that directly impact business outcomes, with data showing improved scores lead to higher engagement and increased revenue.",
+    date: "2025-04-16",
+    readTime: "12 min read",
+    category: "Technical SEO",
+    slug: "how-core-web-vitals-boost-your-conversions-and-revenue",
+    thumbnail: "/images/blog-thumbnails/og-boost-your-revenue-by-improving-cwv.jpg"
+  },
+  {
+    title: "Understanding Google and AI Crawling: Why Your Business Might Be Overlooked Online",
+    excerpt: "Learn why your business might be invisible online, understand how Google and AI crawlers work, and discover actionable strategies to improve your website's visibility and search rankings.",
+    date: "2025-04-02",
+    readTime: "15 min read",
+    category: "Technical SEO",
+    slug: "understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online",
+    thumbnail: "/images/blog-thumbnails/understanding-google-ai-crawling.jpg"
+  },
+  {
+    title: "Why Do Technical SEO and Web Performance Matter for Every Business?",
+    excerpt: "Imagine you're an online business investing in ads and attracting thousands of visitors, only for them to leave frustrated because something is wrong. This can be related to technical SEO, web performance, or even accessibility.",
+    date: "2025-03-19",
+    readTime: "10 min read",
+    category: "Technical SEO",
+    slug: "why-do-technical-seo-and-web-performance-matter-for-every-business",
+    thumbnail: "/images/blog-thumbnails/technical-seo-web-performance-matter.jpg"
   }
 ];
 
-const categories = [
-  "All Posts",
-  "Technical SEO"
-];
 
 export default function Blog() {
   return (
