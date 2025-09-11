@@ -55,7 +55,7 @@ export default function ConvertKitForm({
       
       <p className="text-sm text-gray-500 text-center mt-4">
         No spam, ever. Unsubscribe at any time.<br />
-        By subscribing, I agree to the Privacy Policy and Terms and Conditions.
+        By subscribing, I agree to the <a href="/privacy-policy" className="underline hover:no-underline">Privacy Policy</a> and <a href="/terms-and-conditions" className="underline hover:no-underline">Terms and Conditions</a>.
       </p>
 
       <script async data-uid={formId} src="https://techseovitals.ck.page/1b414d8dc5/index.js"></script>
