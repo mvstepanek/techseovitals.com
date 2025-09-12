@@ -2,6 +2,7 @@ import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
 import CookieConsent from '@/components/ui/cookie-consent';
+import FinalCTASection from '@/components/sections/final-cta-section';
 import { generatePageSEO } from '@/lib/seo';
 
 const seo = generatePageSEO({
@@ -685,96 +686,7 @@ Sitemap: https://example.com/sitemap.xml`}
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 bg-primary">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Struggling with Crawlability Issues?
-            </h2>
-            <p className="mt-4 text-xl text-purple-100 max-w-2xl mx-auto">
-              Get a comprehensive crawlability audit and action plan to ensure Google, AI crawlers, and users can find your content.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/book-consultation/"
-                className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-md hover:bg-gray-50 transition-all"
-              >
-                Schedule Crawlability Audit
-              </Link>
-              <Link
-                href="/technical-seo-checklist/"
-                className="rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:text-primary transition-all"
-              >
-                Get Technical SEO Checklist
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Posts */}
-        <section className="py-20 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                More Technical SEO Guides
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
-                      Technical SEO
-                    </span>
-                    <time>August 5, 2025</time>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance.
-                  </p>
-                  
-                  <Link
-                    href="/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
-              
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium">
-                      Technical SEO
-                    </span>
-                    <time>July 23, 2025</time>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Multilingual Website Essentials: A Technical SEO Guide
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.
-                  </p>
-                  
-                  <Link
-                    href="/blog/multilingual-website-essentials-technical-seo-guide/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
+        <FinalCTASection />
 
         <CookieConsent />
       </MainLayout>

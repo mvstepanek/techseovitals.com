@@ -2,6 +2,7 @@ import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
 import CookieConsent from '@/components/ui/cookie-consent';
+import FinalCTASection from '@/components/sections/final-cta-section';
 import { generatePageSEO } from '@/lib/seo';
 
 const seo = generatePageSEO({
@@ -53,116 +54,147 @@ export default function TechnicalSEOChecklistMigrations() {
                 </p>
               </div>
 
-              {/* Placeholder Content */}
-              <div className="mb-16 bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Pre-Migration Planning</h2>
-                <p className="text-gray-700 mb-6">
-                  [Content placeholder: Detailed pre-migration planning steps including inventory assessment, timeline development, and risk analysis]
-                </p>
-                
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Technical Implementation</h2>
-                <p className="text-gray-700 mb-6">
-                  [Content placeholder: Technical implementation guidelines including redirects, crawl management, and server configuration]
-                </p>
-                
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Post-Migration Monitoring</h2>
-                <p className="text-gray-700">
-                  [Content placeholder: Post-migration monitoring strategies including performance tracking, error identification, and recovery procedures]
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-primary">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Planning a Website Migration?
-            </h2>
-            <p className="mt-4 text-xl text-purple-100 max-w-2xl mx-auto">
-              Get expert guidance to ensure your migration preserves SEO value and achieves your business goals without risking your search rankings.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/book-consultation/"
-                className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-md hover:bg-gray-50 transition-all"
-              >
-                Schedule Migration Consultation
-              </Link>
-              <Link
-                href="/technical-seo-checklist/"
-                className="rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:text-primary transition-all"
-              >
-                Get Complete SEO Checklist
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Posts */}
-        <section className="py-20 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                More Technical SEO Guides
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <time>July 9, 2025</time>
-                    <span className="text-gray-300">•</span>
-                    <span>12 min read</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Improving Crawlability: Help Google and ChatGPT Find Your Business Website
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially.
-                  </p>
-                  
-                  <Link
-                    href="/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Pre-Migration Planning</h2>
               
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <time>July 23, 2025</time>
-                    <span className="text-gray-300">•</span>
-                    <span>6 min read</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Multilingual Website Essentials: A Technical SEO Guide
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions.
-                  </p>
-                  
-                  <Link
-                    href="/blog/multilingual-website-essentials-technical-seo-guide/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                The foundation of any successful migration lies in thorough planning. Before making any changes, conduct a comprehensive audit of your current website to understand what you're working with and what risks you face.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Content and URL Inventory</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Start by cataloging every important page on your website:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• High-traffic pages (from Google Analytics)</li>
+                <li>• High-converting pages (from conversion tracking)</li>
+                <li>• Top-ranking pages (from search console data)</li>
+                <li>• Internal linking patterns and site architecture</li>
+                <li>• Existing meta tags, structured data, and technical SEO elements</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Risk Assessment</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Identify potential problem areas before they impact your business:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Pages with complex URL structures that may be difficult to redirect</li>
+                <li>• High-value pages that generate significant traffic or conversions</li>
+                <li>• Technical dependencies that could break during migration</li>
+                <li>• Third-party integrations that may need reconfiguration</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Technical Implementation</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                The technical execution phase requires precision and attention to detail. Small oversights during implementation can result in significant traffic losses.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Redirect Strategy</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Implement a comprehensive redirect plan that preserves SEO value:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Use 301 redirects for permanent moves to transfer link equity</li>
+                <li>• Create 1:1 redirects whenever possible rather than generic redirects</li>
+                <li>• Test all redirects before going live</li>
+                <li>• Avoid redirect chains that slow down page loading</li>
+                <li>• Implement redirects at the server level for optimal performance</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Technical SEO Preservation</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Ensure all technical SEO elements transfer correctly:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Migrate all meta titles and descriptions</li>
+                <li>• Preserve structured data markup</li>
+                <li>• Update internal linking to reflect new URL structure</li>
+                <li>• Maintain XML sitemaps with new URLs</li>
+                <li>• Update robots.txt file for new site structure</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Performance Optimization</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Use migration as an opportunity to improve technical performance:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Optimize images and implement next-generation formats</li>
+                <li>• Minimize HTTP requests and optimize resource loading</li>
+                <li>• Implement or improve caching strategies</li>
+                <li>• Ensure mobile responsiveness meets current standards</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Post-Migration Monitoring</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                The weeks following a migration are critical for identifying and resolving issues quickly. Comprehensive monitoring helps you catch problems before they significantly impact your business.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Traffic and Performance Monitoring</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Track key metrics to ensure migration success:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Organic search traffic levels compared to pre-migration</li>
+                <li>• Page load speeds and Core Web Vitals scores</li>
+                <li>• Crawl errors and indexing issues in Search Console</li>
+                <li>• Conversion rates and goal completions</li>
+                <li>• Internal search queries revealing broken user journeys</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Error Detection and Resolution</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Quickly identify and fix issues that emerge:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Monitor 404 errors and implement additional redirects as needed</li>
+                <li>• Check for broken internal links throughout the site</li>
+                <li>• Verify proper functioning of forms, search, and interactive elements</li>
+                <li>• Test user flows to ensure complete customer journeys work correctly</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Recovery Procedures</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-6">Have a plan ready for when things don't go as expected:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Maintain backups and rollback procedures</li>
+                <li>• Prepare communication templates for stakeholders</li>
+                <li>• Document quick fixes for common migration issues</li>
+                <li>• Establish clear escalation procedures for urgent problems</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Conclusion</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                Website migrations don't have to result in traffic losses or business disruption. With proper planning, careful execution, and comprehensive monitoring, migrations can actually improve your site's performance while achieving your business objectives.
+              </p>
+              
+              <p className="text-lg leading-8 text-gray-700">
+                The key is treating migration as a systematic process rather than a single event, with each phase building on the previous one to ensure long-term success.
+              </p>
+
             </div>
           </div>
         </section>
+
+        {/* Final CTA Section */}
+        <FinalCTASection
+          badge="Ready to Transform Your Business?"
+          badgeIcon={
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          }
+          title={
+            <>
+              Turn Your Website Into a <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Revenue Engine</span>
+            </>
+          }
+          description="Stop losing customers to poor performance, search, and AI visibility. Get a comprehensive technical SEO audit and discover exactly how I can boost your conversions and revenue."
+          primaryCTA={{
+            text: "Schedule Free Consultation",
+            href: "/book-consultation/"
+          }}
+          secondaryCTA={
+            <div className="flex items-center justify-center gap-4 text-gray-600">
+              <span className="text-sm">✓ Free consultation</span>
+              <span className="text-sm">✓ No commitment</span>
+            </div>
+          }
+        />
 
         <CookieConsent />
       </MainLayout>

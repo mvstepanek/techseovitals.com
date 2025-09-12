@@ -2,6 +2,7 @@ import Link from 'next/link';
 import MainLayout from '@/components/layout/main-layout';
 import SEOHead from '@/components/seo/seo-head';
 import CookieConsent from '@/components/ui/cookie-consent';
+import FinalCTASection from '@/components/sections/final-cta-section';
 import { generatePageSEO } from '@/lib/seo';
 
 const seo = generatePageSEO({
@@ -53,121 +54,145 @@ export default function WhyTechnicalSEOMatters() {
                 </p>
               </div>
 
-              {/* Placeholder Content */}
-              <div className="mb-16 bg-gray-50 p-8 rounded-xl">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">The Business Case for Technical Excellence</h2>
-                <p className="text-gray-700 mb-6">
-                  [Content placeholder: Analysis of how technical SEO and performance directly impact business outcomes including revenue, customer acquisition, and competitive advantage]
-                </p>
-                
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Hidden Costs of Poor Performance</h2>
-                <p className="text-gray-700 mb-6">
-                  [Content placeholder: Real-world examples of how technical issues cost businesses money through lost conversions, decreased search visibility, and wasted marketing spend]
-                </p>
-                
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Foundation for Growth</h2>
-                <p className="text-gray-700 mb-6">
-                  [Content placeholder: How technical SEO and performance optimization create a foundation that amplifies all other business initiatives]
-                </p>
-                
-                <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-12">Getting Started: Prioritizing Improvements</h2>
-                <p className="text-gray-700">
-                  [Content placeholder: Practical guidance for businesses on where to start with technical improvements and how to prioritize efforts for maximum impact]
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-primary">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Build a Technical Foundation That Drives Growth
-            </h2>
-            <p className="mt-4 text-xl text-purple-100 max-w-2xl mx-auto">
-              Stop losing potential customers to technical barriers. Create a technical foundation that supports and amplifies your business objectives.
-            </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/book-consultation/"
-                className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-primary shadow-md hover:bg-gray-50 transition-all"
-              >
-                Assess My Technical Foundation
-              </Link>
-              <Link
-                href="/technical-seo-checklist/"
-                className="rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white hover:bg-white hover:text-primary transition-all"
-              >
-                Get Business SEO Guide
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Related Posts */}
-        <section className="py-20 bg-gray-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                More Business-Focused SEO Guides
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <time>May 15, 2025</time>
-                    <span className="text-gray-300">•</span>
-                    <span>30 min read</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    The Essential Technical SEO Checklist I Developed for Client Success
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    A comprehensive technical SEO checklist representing the most impactful elements that truly deserve attention.
-                  </p>
-                  
-                  <Link
-                    href="/blog/the-essential-technical-seo-checklist-i-developed-for-client-success/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">The Business Case for Technical Excellence</h2>
               
-              <article className="bg-white rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="p-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-4">
-                    <time>June 12, 2025</time>
-                    <span className="text-gray-300">•</span>
-                    <span>7 min read</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    Essential Technical SEO Monitoring to Protect Your Business
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-6">
-                    Implementing regular Technical SEO Monitoring can save your business significant money and prevent major problems.
-                  </p>
-                  
-                  <Link
-                    href="/blog/essential-technical-seo-monitoring-to-protect-your-business/"
-                    className="text-primary hover:text-primary-dark font-medium"
-                  >
-                    Read more →
-                  </Link>
-                </div>
-              </article>
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                Technical SEO and web performance aren't abstract concepts—they're direct drivers of business success. When your website loads quickly, search engines can find your content, and users can complete their intended actions without friction, every other business initiative becomes more effective.
+              </p>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                Consider the compound effect: improved page speed reduces bounce rates, which improves search rankings, which increases organic traffic, which provides more conversion opportunities. Each technical improvement creates a ripple effect that amplifies your marketing investments and customer acquisition efforts.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Revenue Impact of Performance</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Research consistently shows direct correlations between technical performance and business outcomes:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Amazon found that every 100ms of latency cost them 1% in sales</li>
+                <li>• Google discovered that 53% of mobile users abandon sites that take longer than 3 seconds to load</li>
+                <li>• Pinterest reduced load times by 40% and increased search engine traffic by 15%</li>
+                <li>• Walmart saw a 2% increase in conversions for every 1 second of improvement</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Hidden Costs of Poor Performance</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                The cost of technical issues extends far beyond what most businesses realize. While obvious problems like server downtime get immediate attention, subtle performance issues silently drain resources and limit growth potential.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Wasted Marketing Investment</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Poor technical performance essentially burns marketing budget:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Paid traffic that bounces due to slow loading wastes ad spend</li>
+                <li>• Search engines penalize slow sites, reducing organic visibility</li>
+                <li>• Social media campaigns fail when linked pages don't load properly</li>
+                <li>• Email marketing suffers when recipients can't access linked content</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Disadvantage</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Technical issues create gaps that competitors can exploit:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Customers compare site experiences and choose faster alternatives</li>
+                <li>• Search engines favor technically superior sites in rankings</li>
+                <li>• Mobile users expect seamless experiences across devices</li>
+                <li>• Trust erodes when technical problems create frustrating experiences</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Foundation for Growth</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                Think of technical SEO and performance as the foundation of a building. No matter how beautiful the structure above, a weak foundation limits what's possible and threatens the entire investment.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Amplifying Marketing Efforts</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Strong technical foundations multiply the effectiveness of marketing initiatives:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Content marketing succeeds when search engines can properly index articles</li>
+                <li>• Social campaigns work better when shared links load instantly</li>
+                <li>• Email marketing converts higher when landing pages perform well</li>
+                <li>• PPC campaigns achieve better Quality Scores with fast-loading landing pages</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Supporting Business Scaling</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Technical excellence enables sustainable growth:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Proper site architecture supports adding new products and services</li>
+                <li>• Optimized performance handles increased traffic without degradation</li>
+                <li>• Search visibility grows as technical foundations strengthen over time</li>
+                <li>• User experience improvements reduce support costs and increase satisfaction</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Getting Started: Prioritizing Improvements</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                The prospect of improving technical SEO and performance can feel overwhelming, especially for businesses without dedicated technical teams. The key is starting with improvements that deliver the highest impact relative to effort required.
+              </p>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">High-Impact First Steps</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Begin with these foundational improvements:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-6">
+                <li>• Audit current page speeds using Google PageSpeed Insights</li>
+                <li>• Optimize images with appropriate formats and compression</li>
+                <li>• Ensure mobile responsiveness meets current standards</li>
+                <li>• Fix broken links and eliminate crawl errors</li>
+                <li>• Implement basic structured data for key pages</li>
+              </ul>
+              
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Measuring Progress and ROI</h3>
+              <p className="text-lg leading-8 text-gray-700 mb-4">Track improvements using business-relevant metrics:</p>
+              
+              <ul className="space-y-2 text-gray-700 mb-8">
+                <li>• Conversion rates before and after technical improvements</li>
+                <li>• Organic search traffic growth over time</li>
+                <li>• Average session duration and bounce rate improvements</li>
+                <li>• Mobile traffic engagement and conversion rates</li>
+                <li>• Customer support tickets related to website issues</li>
+              </ul>
+
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Conclusion</h2>
+              
+              <p className="text-lg leading-8 text-gray-700 mb-6">
+                Technical SEO and web performance matter because they determine whether your business can effectively reach and serve customers online. In an increasingly digital world, technical excellence isn't a luxury—it's a competitive necessity.
+              </p>
+              
+              <p className="text-lg leading-8 text-gray-700">
+                Every business investment in marketing, customer service, and product development depends on a technical foundation that works. By prioritizing technical SEO and performance, you create the conditions for sustainable growth and ensure that your other business initiatives can achieve their full potential.
+              </p>
+
             </div>
           </div>
         </section>
+
+        {/* Final CTA Section */}
+        <FinalCTASection
+          badge="Ready to Transform Your Business?"
+          badgeIcon={
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          }
+          title={
+            <>
+              Turn Your Website Into a <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Revenue Engine</span>
+            </>
+          }
+          description="Stop losing customers to poor performance, search, and AI visibility. Get a comprehensive technical SEO audit and discover exactly how I can boost your conversions and revenue."
+          primaryCTA={{
+            text: "Schedule Free Consultation",
+            href: "/book-consultation/"
+          }}
+          secondaryCTA={
+            <div className="flex items-center justify-center gap-4 text-gray-600">
+              <span className="text-sm">✓ Free consultation</span>
+              <span className="text-sm">✓ No commitment</span>
+            </div>
+          }
+        />
 
         <CookieConsent />
       </MainLayout>
