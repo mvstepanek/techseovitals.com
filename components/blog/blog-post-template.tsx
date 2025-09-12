@@ -23,7 +23,7 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
       <MainLayout>
         {/* Hero Section */}
         <article className="bg-gradient-to-br from-primary/5 via-white to-secondary">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-8 lg:pb-12">
             <div className="text-center mb-16">
               {/* Meta information */}
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 mb-6">
