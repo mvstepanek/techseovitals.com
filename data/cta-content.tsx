@@ -27,7 +27,13 @@ export const ctaContent = {
     primaryCTA: {
       text: "Schedule Free Consultation",
       href: "/book-consultation/"
-    }
+    },
+    secondaryCTA: (
+      <div className="flex items-center justify-center gap-4 text-gray-600">
+        <span className="text-sm">✓ Free consultation</span>
+        <span className="text-sm">✓ No commitment</span>
+      </div>
+    )
   },
 
   business: {

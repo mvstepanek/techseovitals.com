@@ -3,7 +3,7 @@ title: "Why You Should Care About Your TTFB: A Technical SEO Guide to Optimizati
 description: "Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance. Learn optimization strategies."
 date: "2025-08-05"
 slug: "why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/why-you-should-care-about-your-ttfb.jpg"
 ---
 

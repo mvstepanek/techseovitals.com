@@ -14,8 +14,8 @@ export async function GET() {
     <link>${baseUrl}/blog/</link>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />
     <language>en-us</language>
-    <managingEditor>martin@techseovitals.com (Martin Štěpánek)</managingEditor>
-    <webMaster>martin@techseovitals.com (Martin Štěpánek)</webMaster>
+    <managingEditor>martin@techseovitals.com (Martin Stepanek)</managingEditor>
+    <webMaster>martin@techseovitals.com (Martin Stepanek)</webMaster>
     <lastBuildDate>${currentDate}</lastBuildDate>
     <pubDate>${currentDate}</pubDate>
     <ttl>60</ttl>
@@ -33,7 +33,7 @@ export async function GET() {
       <link>${baseUrl}/blog/why-you-should-care-about-your-ttfb/</link>
       <guid>${baseUrl}/blog/why-you-should-care-about-your-ttfb/</guid>
       <pubDate>${new Date('2024-02-15').toISOString()}</pubDate>
-      <author>martin@techseovitals.com (Martin Štěpánek)</author>
+      <author>martin@techseovitals.com (Martin Stepanek)</author>
       <category>Core Web Vitals</category>
       <category>Web Performance</category>
     </item>
@@ -44,7 +44,7 @@ export async function GET() {
       <link>${baseUrl}/blog/multilingual-website-essentials/</link>
       <guid>${baseUrl}/blog/multilingual-website-essentials/</guid>
       <pubDate>${new Date('2024-02-01').toISOString()}</pubDate>
-      <author>martin@techseovitals.com (Martin Štěpánek)</author>
+      <author>martin@techseovitals.com (Martin Stepanek)</author>
       <category>Technical SEO</category>
       <category>Internationalization</category>
     </item>
@@ -55,7 +55,7 @@ export async function GET() {
       <link>${baseUrl}/blog/improving-crawlability/</link>
       <guid>${baseUrl}/blog/improving-crawlability/</guid>
       <pubDate>${new Date('2024-01-15').toISOString()}</pubDate>
-      <author>martin@techseovitals.com (Martin Štěpánek)</author>
+      <author>martin@techseovitals.com (Martin Stepanek)</author>
       <category>Technical SEO</category>
       <category>Crawling</category>
     </item>
@@ -66,7 +66,7 @@ export async function GET() {
       <link>${baseUrl}/blog/core-web-vitals-optimization-guide/</link>
       <guid>${baseUrl}/blog/core-web-vitals-optimization-guide/</guid>
       <pubDate>${new Date('2024-01-01').toISOString()}</pubDate>
-      <author>martin@techseovitals.com (Martin Štěpánek)</author>
+      <author>martin@techseovitals.com (Martin Stepanek)</author>
       <category>Core Web Vitals</category>
       <category>SEO</category>
     </item>

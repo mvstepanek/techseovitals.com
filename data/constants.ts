@@ -12,7 +12,7 @@ export const companyInfo = {
 
 export const contactInfo = {
   email: "martin@techseovitals.com",
-  author: "Martin Štěpánek"
+  author: "Martin Stepanek"
 } as const;
 
 export const socialLinks = {

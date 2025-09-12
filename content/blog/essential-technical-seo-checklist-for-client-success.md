@@ -3,7 +3,7 @@ title: "The Essential Technical SEO Checklist I Developed for Client Success"
 description: "A comprehensive technical SEO checklist representing the most impactful elements that truly deserve attention, focusing on areas that genuinely matter for search visibility and user experience."
 date: "2025-05-15"
 slug: "essential-technical-seo-checklist-for-client-success"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/essential-technical-seo-checklist.jpg"
 ---
 

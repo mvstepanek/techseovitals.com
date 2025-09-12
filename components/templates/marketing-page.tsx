@@ -38,11 +38,25 @@ interface MarketingPageProps {
     badgeIcon?: React.ReactNode;
     title: React.ReactNode;
     description: string;
-    primaryCTA: {
+    primaryCTA?: {
       text: string;
       href: string;
     };
-    secondaryCTA?: React.ReactNode;
+    secondaryCTA?: {
+      text: string;
+      href: string;
+      icon?: React.ReactNode;
+    } | React.ReactNode;
+    benefits?: {
+      icon: React.ReactNode;
+      iconGradient: string;
+      title: string;
+      description: string;
+    }[];
+    socialProof?: {
+      icon: React.ReactNode;
+      text: string;
+    };
   };
 }
 

@@ -10,8 +10,8 @@ import NewsletterSection from '@/components/sections/newsletter-section';
 import { generatePageSEO, generatePersonJsonLd } from '@/lib/seo';
 
 const seo = generatePageSEO({
-  title: 'About Martin Štěpánek - Technical SEO & Web Performance Consultant',
-  description: 'Meet Martin Štěpánek, expert Technical SEO consultant with 10+ years experience. Specializing in Core Web Vitals, page speed optimization, and helping businesses grow through better website performance.',
+  title: 'About Martin Stepanek - Technical SEO & Web Performance Consultant',
+  description: 'Meet Martin Stepanek, expert Technical SEO consultant with 10+ years experience. Specializing in Core Web Vitals, page speed optimization, and helping businesses grow through better website performance.',
   jsonLd: generatePersonJsonLd(),
 }, '/technical-seo-consultant/');
 
@@ -26,7 +26,7 @@ export default function TechnicalSEOConsultant() {
           badgeIcon={<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>}
           title={
             <>
-              Meet Martin Štěpánek,{' '}
+              Meet Martin Stepanek,{' '}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Technical SEO Expert
               </span>
@@ -287,8 +287,7 @@ export default function TechnicalSEOConsultant() {
               title: "CEO",
               company: "LiveAgent & Post Affiliate Pro",
               quote: "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives that drove significant improvements in our organic search performance.",
-              rating: 5,
-              verified: true
+              rating: 5
             },
             {
               avatar: {
@@ -299,8 +298,7 @@ export default function TechnicalSEOConsultant() {
               title: "CMO",
               company: "Quality Unit",
               quote: "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality and search visibility.",
-              rating: 5,
-              verified: true
+              rating: 5
             }
           ]}
           socialProof={{

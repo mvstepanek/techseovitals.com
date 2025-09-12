@@ -3,7 +3,7 @@ title: "How Core Web Vitals Boost Your Conversions and Revenue"
 description: "Core Web Vitals are not just technical metrics but powerful indicators of user experience that directly impact business outcomes, with data showing improved scores lead to higher engagement and increased revenue."
 date: "2025-04-16"
 slug: "how-core-web-vitals-boost-your-conversions-and-revenue"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/og-boost-your-revenue-by-improving-cwv.jpg"
 ---
 

@@ -3,7 +3,7 @@ title: "The Invisible Drivers of E-commerce Success: Technical SEO and Web Perfo
 description: "A comprehensive exploration of how technical SEO and web performance optimization drive e-commerce success, focusing on the critical relationship between site speed, user experience, and conversion rates."
 date: "2025-05-01"
 slug: "the-invisible-drivers-of-e-commerce-success-technical-seo-and-web-performance-optimization"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/og-invisible-drivers-of-ecommerce-success.png"
 ---
 

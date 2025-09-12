@@ -45,7 +45,7 @@ export default function Home() {
           }
           image={{
             src: "/images/martin-stepanek-seo.jpg",
-            alt: "Martin Štěpánek - Technical SEO Expert",
+            alt: "Martin Stepanek - Technical SEO Expert",
             width: 500,
             height: 500
           }}
@@ -203,7 +203,7 @@ export default function Home() {
           ]}
           image={{
             src: "/images/martin-stepanek-mountains.jpg",
-            alt: "Martin Štěpánek - Technical SEO Expert in the Mountains",
+            alt: "Martin Stepanek - Technical SEO Expert in the Mountains",
             width: 500,
             height: 600
           }}

@@ -3,7 +3,7 @@ title: "Improving Crawlability: Help Google and ChatGPT Find Your Business Websi
 description: "Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially. Learn how to optimize for Google and AI crawlers."
 date: "2025-07-09"
 slug: "improving-crawlability-help-google-and-chatgpt-find-your-business-website"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/thumbnail-help-google-chatgpt.jpg"
 ---
 

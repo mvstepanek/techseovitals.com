@@ -94,7 +94,7 @@ export function generateBlogPostJsonLd(post: {
     },
     publisher: {
       '@type': 'Person',
-      name: 'Martin Štěpánek',
+      name: 'Martin Stepanek',
       url: 'https://www.techseovitals.com/',
       logo: {
         '@type': 'ImageObject',
@@ -113,7 +113,7 @@ export function generatePersonJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Martin Štěpánek',
+    name: 'Martin Stepanek',
     jobTitle: 'Technical SEO & Web Performance Consultant',
     description: 'Expert Technical SEO consultant specializing in Core Web Vitals, page speed optimization, and search rankings.',
     url: 'https://www.techseovitals.com/technical-seo-consultant/',
@@ -151,7 +151,7 @@ export function generateOrganizationJsonLd() {
     image: 'https://www.techseovitals.com/images/og-default.jpg',
     founder: {
       '@type': 'Person',
-      name: 'Martin Štěpánek',
+      name: 'Martin Stepanek',
     },
     areaServed: 'Worldwide',
     serviceType: [

@@ -64,7 +64,7 @@ export default function WhyMeSection({
             <div className="space-y-8">
               {expertise.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className={`w-12 h-12 ${item.iconGradient} rounded-2xl flex items-center justify-center flex-shrink-0`}>
+                  <div className={`w-16 h-16 ${item.iconGradient} rounded-2xl flex items-center justify-center flex-shrink-0`}>
                     {item.icon}
                   </div>
                   <div>

@@ -3,7 +3,7 @@ title: "Mobile Optimization: The Key to E-commerce Excellence"
 description: "Mobile optimization has transformed online shopping. With over 60% of web traffic from mobile devices and global mobile e-commerce sales projected to reach $4.32 trillion, businesses must prioritize mobile-first design to succeed."
 date: "2025-05-29"
 slug: "mobile-optimization-the-key-to-e-commerce-excellence"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/thumbnail-mobile-optimization.jpg"
 ---
 

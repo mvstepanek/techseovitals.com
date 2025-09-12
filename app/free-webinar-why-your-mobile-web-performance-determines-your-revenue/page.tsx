@@ -53,7 +53,7 @@ export default function FreeWebinar() {
                     <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
-                    <span className="text-gray-700">Live Q&A with technical SEO expert Martin Štěpánek</span>
+                    <span className="text-gray-700">Live Q&A with technical SEO expert Martin Stepanek</span>
                   </div>
                 </div>
                 
@@ -68,7 +68,7 @@ export default function FreeWebinar() {
               <div className="relative">
                 <Image
                   src="/images/martin-stepanek.jpg"
-                  alt="Martin Štěpánek - Technical SEO Consultant"
+                  alt="Martin Stepanek - Technical SEO Consultant"
                   width={500}
                   height={500}
                   priority
@@ -330,14 +330,14 @@ export default function FreeWebinar() {
                 <div className="mb-6">
                   <Image
                     src="/images/martin-stepanek.jpg"
-                    alt="Martin Štěpánek"
+                    alt="Martin Stepanek"
                     width={120}
                     height={120}
                     className="rounded-full mx-auto"
                   />
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Martin Štěpánek</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Martin Stepanek</h3>
                 <p className="text-lg text-gray-600 mb-6">
                   Technical SEO & Web Performance Consultant
                 </p>

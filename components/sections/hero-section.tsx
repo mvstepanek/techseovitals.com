@@ -36,8 +36,8 @@ export default function HeroSection({
 }: HeroSectionProps) {
   return (
     <HeroSectionWrapper>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="max-w-2xl">
+      <div className={`grid gap-16 items-center ${image ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 justify-center text-center'}`}>
+        <div className={image ? "max-w-4xl" : "max-w-4xl mx-auto"}>
           {badge && (
             <Badge variant="gradient" icon={badgeIcon} className="mb-6">
               {badge}
@@ -46,10 +46,10 @@ export default function HeroSection({
             <h1 className="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
               {title}
             </h1>
-            <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
+            <p className={`mt-8 text-xl text-gray-600 leading-relaxed max-w-lg ${!image ? 'mx-auto' : ''}`}>
               {description}
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
+            <div className={`mt-10 flex flex-col sm:flex-row gap-4 ${!image ? 'justify-center items-center' : ''}`}>
               {primaryCTA && (
                 <Button variant="cta" href={primaryCTA.href}>
                   {primaryCTA.text}

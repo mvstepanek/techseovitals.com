@@ -11,7 +11,6 @@ interface Testimonial {
   company: string;
   quote: string;
   rating?: number;
-  verified?: boolean;
 }
 
 interface TestimonialsSectionProps {
@@ -55,11 +54,6 @@ export default function TestimonialsSection({
             <div key={index} className="group relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                {testimonial.verified && (
-                  <div className="absolute top-4 right-4">
-                    <div className="text-xs text-gray-400">Verified Review</div>
-                  </div>
-                )}
                 <div className="flex items-start gap-6 mb-6">
                   <div className="relative">
                     <Image

@@ -93,7 +93,7 @@ export default function FinalCTASection({
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-green-50 to-green-100/50 border border-green-200">
-                <div className={`w-12 h-12 ${benefit.iconGradient} rounded-2xl flex items-center justify-center mb-4`}>
+                <div className={`w-16 h-16 ${benefit.iconGradient} rounded-2xl flex items-center justify-center mb-4`}>
                   {benefit.icon}
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>

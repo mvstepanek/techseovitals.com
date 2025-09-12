@@ -3,7 +3,7 @@ title: "Why Do Technical SEO and Web Performance Matter for Every Business?"
 description: "Imagine you're an online business investing in ads and attracting thousands of visitors, only for them to leave frustrated because something is wrong. This can be related to technical SEO, web performance, or even accessibility."
 date: "2025-03-19"
 slug: "why-do-technical-seo-and-web-performance-matter-for-every-business"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/technical-seo-web-performance-matter.jpg"
 ---
 

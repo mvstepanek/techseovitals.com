@@ -32,6 +32,16 @@ export default function WhyTechnicalSEOSection({
   secondaryCTA,
   benefits
 }: WhyTechnicalSEOSectionProps) {
+  const getMetricTextClasses = (color: string) => {
+    const colorMap: Record<string, string> = {
+      blue: 'text-blue-600',
+      green: 'text-green-600',
+      purple: 'text-purple-600',
+      red: 'text-red-600',
+      orange: 'text-orange-600'
+    };
+    return colorMap[color] || 'text-gray-600';
+  };
   return (
     <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -67,14 +77,14 @@ export default function WhyTechnicalSEOSection({
           {benefits.map((benefit, index) => (
             <div key={index} className={`group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-${benefit.hoverBorderColor}-200 hover:shadow-lg transition-all duration-300`}>
               <div className={`absolute -top-4 -right-4 w-24 h-24 ${benefit.iconGradient} rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity`}></div>
-              <div className={`w-14 h-14 ${benefit.iconGradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div className={`w-16 h-16 ${benefit.iconGradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 {benefit.icon}
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
                 {benefit.description}
               </p>
-              <div className={`flex items-center gap-2 text-${benefit.metricColor}-600 font-semibold`}>
+              <div className={`flex items-center gap-2 font-semibold ${getMetricTextClasses(benefit.metricColor)}`}>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
                 </svg>

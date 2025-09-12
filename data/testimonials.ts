@@ -8,7 +8,6 @@ export interface Testimonial {
   company: string;
   quote: string;
   rating: number;
-  verified: boolean;
 }
 
 export const testimonials = {
@@ -21,8 +20,7 @@ export const testimonials = {
     title: "CEO",
     company: "LiveAgent & Post Affiliate Pro",
     quote: "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-    rating: 5,
-    verified: true
+    rating: 5
   },
   daniel: {
     avatar: {
@@ -33,8 +31,7 @@ export const testimonials = {
     title: "CMO",
     company: "Quality Unit",
     quote: "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market.",
-    rating: 5,
-    verified: true
+    rating: 5
   }
 } as const;
 

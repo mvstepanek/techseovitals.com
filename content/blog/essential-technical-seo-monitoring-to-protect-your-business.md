@@ -3,7 +3,7 @@ title: "Essential Technical SEO Monitoring to Protect Your Business"
 description: "Implementing regular Technical SEO Monitoring can save your business significant money and prevent major problems before their impact becomes difficult to reverse."
 date: "2025-06-12"
 slug: "essential-technical-seo-monitoring-to-protect-your-business"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/thumbnail-technical-seo-monitoring.jpg"
 ---
 

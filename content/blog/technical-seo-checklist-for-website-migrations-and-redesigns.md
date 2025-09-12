@@ -3,7 +3,7 @@ title: "Technical SEO Checklist for Website Migrations and Redesigns"
 description: "A detailed technical SEO checklist for successfully managing website migrations, minimizing risks, and maintaining business and SEO performance through careful planning and monitoring."
 date: "2025-06-26"
 slug: "technical-seo-checklist-for-website-migrations-and-redesigns"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/thumbnail-techseo-checklist-migrations.jpg"
 ---
 

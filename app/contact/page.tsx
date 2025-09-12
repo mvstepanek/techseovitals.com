@@ -11,8 +11,8 @@ import { testimonialsList } from '@/data/testimonials';
 import { companyInfo } from '@/data/constants';
 
 const seo = generatePageSEO({
-  title: 'Contact Martin Štěpánek - Technical SEO Consultant | Get In Touch',
-  description: 'Contact Martin Štěpánek for technical SEO consulting, website performance optimization, and Core Web Vitals improvement. Multiple ways to get in touch for your project needs.',
+  title: 'Contact Martin Stepanek - Technical SEO Consultant | Get In Touch',
+  description: 'Contact Martin Stepanek for technical SEO consulting, website performance optimization, and Core Web Vitals improvement. Multiple ways to get in touch for your project needs.',
   jsonLd: generateOrganizationJsonLd(),
 }, '/contact/');
 
@@ -219,8 +219,7 @@ export default function Contact() {
                 title: "CEO",
                 company: "LiveAgent & Post Affiliate Pro",
                 quote: "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-                rating: 5,
-                verified: true
+                rating: 5
               },
               {
                 avatar: {
@@ -231,8 +230,7 @@ export default function Contact() {
                 title: "CMO",
                 company: "Quality Unit",
                 quote: "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market.",
-                rating: 5,
-                verified: true
+                rating: 5
               }
             ]}
             socialProof={{

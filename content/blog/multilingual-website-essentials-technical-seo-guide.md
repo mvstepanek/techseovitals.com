@@ -3,7 +3,7 @@ title: "Multilingual Website Essentials: A Technical SEO Guide"
 description: "A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions. Complete technical SEO guide."
 date: "2025-07-23"
 slug: "multilingual-website-essentials-technical-seo-guide"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/thumbnail-multilingual-website-essentials.jpg"
 ---
 

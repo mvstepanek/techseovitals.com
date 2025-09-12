@@ -1,7 +1,7 @@
 import { MarketingPage } from '@/components/templates/marketing-page';
 import { Icons, GradientText } from '@/components/ui';
 import { testimonials } from '@/data/testimonials';
-import { ctaContent, socialProof } from '@/data/cta-content';
+import { socialProof } from '@/data/cta-content';
 import { companyLogos, badges } from '@/data/constants';
 import { generatePageSEO, generateOrganizationJsonLd } from '@/lib/seo';
 import ServicesGridSection from '@/components/sections/services-grid-section';
@@ -42,7 +42,7 @@ export default function TechnicalSEOServices() {
         ),
         image: {
           src: "/images/martin-stepanek-seo.jpg",
-          alt: "Martin Štěpánek - Technical SEO Expert",
+          alt: "Martin Stepanek - Technical SEO Expert",
           width: 500,
           height: 500
         },
@@ -51,7 +51,62 @@ export default function TechnicalSEOServices() {
           icon: <div className={badges.available.className}></div>
         }
       }}
-      finalCTA={ctaContent.primary}
+      finalCTA={{
+        badge: "Ready to Transform Your Business?",
+        badgeIcon: (
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        ),
+        title: (
+          <>
+            Let's Transform Your Website Into a <GradientText>Revenue Engine</GradientText>
+          </>
+        ),
+        description: "Stop losing customers to poor performance and search visibility. Get a comprehensive technical SEO audit and discover exactly how to boost your conversions and revenue.",
+        primaryCTA: {
+          text: "Schedule Free Consultation",
+          href: "/book-consultation/"
+        },
+        secondaryCTA: (
+          <div className="flex items-center justify-center gap-4 text-gray-600">
+            <span className="text-sm">✓ Free consultation</span>
+            <span className="text-sm">✓ No commitment</span>
+          </div>
+        ),
+        benefits: [
+          {
+            icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4" />
+            </svg>,
+            iconGradient: "bg-gradient-to-br from-green-500 to-green-600",
+            title: "100% Free",
+            description: "Website check with no hidden costs"
+          },
+          {
+            icon: <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3" />
+            </svg>,
+            iconGradient: "bg-gradient-to-br from-blue-500 to-blue-600",
+            title: "30 Minutes",
+            description: "Quick call to discuss your biggest opportunities"
+          },
+          {
+            icon: <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>,
+            iconGradient: "bg-gradient-to-br from-purple-500 to-purple-600",
+            title: "Immediate Value",
+            description: "Actionable insights you can implement today"
+          }
+        ],
+        socialProof: {
+          icon: <div className="flex text-yellow-400 text-sm">
+            {'★'.repeat(5)}
+          </div>,
+          text: "50+ businesses trust me"
+        }
+      }}
     >
 
         <ServicesGridSection

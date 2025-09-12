@@ -25,13 +25,6 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
         <article className="bg-gradient-to-br from-primary/5 via-white to-secondary">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
             <div className="text-center mb-16">
-              {/* Breadcrumb */}
-              <div className="flex items-center justify-center space-x-2 text-sm text-gray-500 mb-6">
-                <Link href="/blog/" className="hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </div>
-
               {/* Meta information */}
               <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 mb-6">
                 <time dateTime={post.date}>
@@ -41,8 +34,6 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                     day: 'numeric'
                   })}
                 </time>
-                <span className="text-gray-300">•</span>
-                <span>By {post.author}</span>
               </div>
               
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl mb-8">
@@ -70,6 +61,30 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                 </div>
               </div>
             )}
+
+            {/* Navigation and Share */}
+            <div className="mt-8 flex items-center justify-between">
+              <Link 
+                href="/blog/" 
+                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                All Blog Posts
+              </Link>
+              <div className="text-sm text-gray-500">
+                Share this post on{' '}
+                <a 
+                  href={`https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.techseovitals.com/blog/${post.slug}/`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary-dark font-semibold"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -84,11 +99,15 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
             {/* Author Bio */}
             <div className="mt-16 p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-3xl border border-gray-200">
               <div className="flex items-start gap-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl font-bold text-primary">M</span>
-                </div>
+                <Image
+                  src="/images/martin-stepanek-seo.jpg"
+                  alt="Martin Stepanek - Technical SEO Expert"
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-full flex-shrink-0 border-2 border-white shadow-lg"
+                />
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">About Martin Štěpánek</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">About Martin Stepanek</h3>
                   <p className="text-gray-600 leading-relaxed mb-4">
                     Technical SEO consultant helping businesses improve their search visibility and website performance. 
                     With a background in web development and years of SEO experience, I focus on the technical aspects 
@@ -101,42 +120,11 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
                     >
                       Learn More About Martin →
                     </Link>
-                    <Link 
-                      href="/book-consultation/" 
-                      className="text-primary hover:text-primary-dark font-semibold transition-colors"
-                    >
-                      Book Consultation →
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Related Posts Navigation */}
-            <div className="mt-16 pt-8 border-t border-gray-200">
-              <div className="flex items-center justify-between">
-                <Link 
-                  href="/blog/" 
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  All Blog Posts
-                </Link>
-                <div className="text-sm text-gray-500">
-                  Share this post on{' '}
-                  <a 
-                    href={`https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.techseovitals.com/blog/${post.slug}/`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:text-primary-dark font-semibold"
-                  >
-                    LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 

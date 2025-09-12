@@ -19,7 +19,7 @@ export default function Blog() {
     <MarketingPage
       seo={seo}
       hero={{
-        badge: "Technical SEO Blog",
+        badge: "Expert Insights",
         badgeIcon: <Icons.Document size="sm" />,
         title: (
           <>
@@ -27,11 +27,7 @@ export default function Blog() {
             <span className={designTokens.gradients.primaryText}>Blog</span>
           </>
         ),
-        description: "Learn new things about technical SEO and web performance and grow your business. Get actionable insights, tips, and strategies.",
-        primaryCTA: {
-          text: "Browse Articles",
-          href: "#blog-posts"
-        }
+        description: "Learn new things about technical SEO and web performance and grow your business. Get actionable insights, tips, and strategies."
       }}
       finalCTA={ctaContent.primary}
     >

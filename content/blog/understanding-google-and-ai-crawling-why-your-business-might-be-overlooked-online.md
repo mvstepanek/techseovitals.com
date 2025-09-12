@@ -3,7 +3,7 @@ title: "Understanding Google and AI Crawling: Why Your Business Might Be Overloo
 description: "Learn why your business might be invisible online, understand how Google and AI crawlers work, and discover actionable strategies to improve your website's visibility and search rankings."
 date: "2025-04-02"
 slug: "understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online"
-author: "Martin Štěpánek"
+author: "Martin Stepanek"
 image: "/images/blog-thumbnails/understanding-google-ai-crawling.jpg"
 ---
 
