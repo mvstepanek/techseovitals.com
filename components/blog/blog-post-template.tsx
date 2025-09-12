@@ -62,17 +62,8 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
               </div>
             )}
 
-            {/* Navigation and Share */}
-            <div className="mt-8 flex items-center justify-between">
-              <Link 
-                href="/blog/" 
-                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-semibold transition-colors"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                All Blog Posts
-              </Link>
+            {/* Share */}
+            <div className="mt-4 flex justify-end">
               <div className="text-sm text-gray-500">
                 Share this post on{' '}
                 <a 
