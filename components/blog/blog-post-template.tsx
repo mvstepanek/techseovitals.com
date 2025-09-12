@@ -83,7 +83,21 @@ export default function BlogPostTemplate({ post }: BlogPostTemplateProps) {
         <section className="bg-white py-20">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <div 
-              className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-8 prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-code:text-primary prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-blockquote:border-l-primary prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-600 prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:text-gray-700"
+              className="text-lg leading-7 text-gray-700 max-w-none
+              [&>h2]:text-3xl [&>h2]:font-extrabold [&>h2]:text-gray-900 [&>h2]:mt-12 [&>h2]:mb-6 [&>h2]:leading-tight [&>h2]:tracking-tight
+              [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:text-gray-900 [&>h3]:mt-8 [&>h3]:mb-4 [&>h3]:leading-snug
+              [&>p]:mb-6 [&>p]:leading-7 [&>p]:text-gray-700
+              [&>ul]:my-6 [&>ul]:pl-6 [&>ul]:list-disc [&>ul]:list-outside [&>ul]:space-y-2
+              [&>ol]:my-6 [&>ol]:pl-6 [&>ol]:list-decimal [&>ol]:list-outside [&>ol]:space-y-2
+              [&>ul>li]:leading-relaxed [&>ul>li]:text-gray-700 [&>ul>li]:mb-2 [&>ul>li]:ml-0
+              [&>ol>li]:leading-relaxed [&>ol>li]:text-gray-700 [&>ol>li]:mb-2 [&>ol>li]:ml-0
+              [&>a]:text-primary [&>a]:no-underline [&>a]:font-medium hover:[&>a]:underline
+              [&>strong]:text-gray-900 [&>strong]:font-semibold
+              [&>code]:text-primary [&>code]:bg-gray-100 [&>code]:px-2 [&>code]:py-1 [&>code]:rounded [&>code]:text-sm [&>code]:font-mono [&>code]:font-medium
+              [&>pre]:bg-gray-900 [&>pre]:text-gray-100 [&>pre]:rounded-xl [&>pre]:p-4 [&>pre]:my-6 [&>pre]:overflow-x-auto [&>pre]:font-mono [&>pre]:text-sm
+              [&>pre>code]:bg-transparent [&>pre>code]:text-inherit [&>pre>code]:p-0 [&>pre>code]:rounded-none
+              [&>blockquote]:relative [&>blockquote]:bg-white [&>blockquote]:border [&>blockquote]:border-gray-200 [&>blockquote]:rounded-xl [&>blockquote]:px-6 [&>blockquote]:py-5 [&>blockquote]:my-8 [&>blockquote]:shadow-md [&>blockquote]:shadow-gray-100 [&>blockquote]:text-gray-800 [&>blockquote]:font-medium [&>blockquote]:text-lg [&>blockquote]:leading-relaxed [&>blockquote]:before:absolute [&>blockquote]:before:top-0 [&>blockquote]:before:left-0 [&>blockquote]:before:w-1 [&>blockquote]:before:h-full [&>blockquote]:before:bg-gradient-to-b [&>blockquote]:before:from-primary [&>blockquote]:before:to-purple-600 [&>blockquote]:before:rounded-l-xl
+              [&>hr]:border-0 [&>hr]:border-t [&>hr]:border-gray-200 [&>hr]:my-12"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
