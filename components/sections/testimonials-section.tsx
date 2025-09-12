@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SectionWrapper, Badge } from '@/components/ui';
 
 interface Testimonial {
   avatar: {
@@ -34,15 +35,13 @@ export default function TestimonialsSection({
   socialProof
 }: TestimonialsSectionProps) {
   return (
-    <section className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          {badge && (
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-purple-600 text-white mb-6">
-              {badgeIcon}
-              {badge}
-            </div>
-          )}
+    <SectionWrapper variant="default" size="xl">
+      <div className="text-center mb-16">
+        {badge && (
+          <Badge variant="gradient" icon={badgeIcon} className="mb-6">
+            {badge}
+          </Badge>
+        )}
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             {title}
           </h2>
@@ -104,7 +103,6 @@ export default function TestimonialsSection({
             </div>
           </div>
         )}
-      </div>
-    </section>
+    </SectionWrapper>
   );
 }

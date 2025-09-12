@@ -1,6 +1,4 @@
-import MainLayout from '@/components/layout/main-layout';
-import SEOHead from '@/components/seo/seo-head';
-import CookieConsent from '@/components/ui/cookie-consent';
+import { PageWrapper } from '@/components/templates/page-wrapper';
 import HeroSection from '@/components/sections/hero-section';
 import TrustedBySection from '@/components/sections/trusted-by-section';
 import WhyTechnicalSEOSection from '@/components/sections/why-technical-seo-section';
@@ -17,7 +15,7 @@ import { getRecentBlogPosts } from '@/lib/blog';
 import { testimonialsList } from '@/data/testimonials';
 import { ctaContent, socialProof } from '@/data/cta-content';
 import { companyLogos, badges } from '@/data/constants';
-import Icons from '@/components/ui/icons';
+import { Icons } from '@/components/ui';
 
 const seo = generatePageSEO({
   title: 'TechSEO Vitals - Increase your Revenue with Technical SEO',
@@ -28,9 +26,7 @@ const seo = generatePageSEO({
 export default function Home() {
   const recentBlogPosts = getRecentBlogPosts(3);
   return (
-    <>
-      <SEOHead seo={seo} />
-      <MainLayout>
+    <PageWrapper seo={seo}>
         {/* Hero Section */}
         <HeroSection
           badge="10+ Years Making Websites Better"
@@ -464,8 +460,6 @@ export default function Home() {
           }}
         />
 
-        <CookieConsent />
-      </MainLayout>
-    </>
+    </PageWrapper>
   );
 }

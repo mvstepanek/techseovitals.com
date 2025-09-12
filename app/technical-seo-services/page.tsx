@@ -1,5 +1,5 @@
 import { MarketingPage } from '@/components/templates/marketing-page';
-import { Icons } from '@/components/ui';
+import { Icons, GradientText } from '@/components/ui';
 import { testimonials } from '@/data/testimonials';
 import { ctaContent, socialProof } from '@/data/cta-content';
 import { companyLogos, badges } from '@/data/constants';
@@ -26,9 +26,7 @@ export default function TechnicalSEOServices() {
         title: (
           <>
             Technical SEO Services That Drive{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Real Revenue
-            </span>
+            <GradientText>Real Revenue</GradientText>
           </>
         ),
         description: "Comprehensive Technical SEO audits, monitoring, and migration planning for agencies, e-commerce, and business websites. Transform your website into a revenue-generating machine.",
@@ -61,7 +59,7 @@ export default function TechnicalSEOServices() {
           badgeIcon={<Icons.Document size="sm" />}
           title={
             <>
-              Technical SEO <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
+              Technical SEO <GradientText>Services</GradientText>
             </>
           }
           description="Comprehensive solutions tailored to your business needs and goals"
@@ -150,7 +148,7 @@ export default function TechnicalSEOServices() {
           badgeIcon={<Icons.Shield size="sm" />}
           title={
             <>
-              What Makes Me <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Different</span>
+              What Makes Me <GradientText>Different</GradientText>
             </>
           }
           description="10+ years of proven experience delivering measurable results for businesses like yours"
@@ -187,7 +185,7 @@ export default function TechnicalSEOServices() {
           badgeIcon={<Icons.Chat size="sm" />}
           title={
             <>
-              Real Results from <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Real Clients</span>
+              Real Results from <GradientText>Real Clients</GradientText>
             </>
           }
           description=""
@@ -201,7 +199,7 @@ export default function TechnicalSEOServices() {
           badgeIcon={<Icons.Lightning size="sm" />}
           title={
             <>
-              How I <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Work With You</span>
+              How I <GradientText>Work With You</GradientText>
             </>
           }
           description="My proven 3-step process ensures maximum impact and measurable results"
