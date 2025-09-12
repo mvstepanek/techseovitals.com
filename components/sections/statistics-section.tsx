@@ -27,6 +27,28 @@ export default function StatisticsSection({
   ctaHref,
   ctaIcon
 }: StatisticsSectionProps) {
+  const getSourceBadgeClasses = (color: string) => {
+    const colorMap: Record<string, string> = {
+      red: 'bg-red-100 text-red-700',
+      orange: 'bg-orange-100 text-orange-700',
+      purple: 'bg-purple-100 text-purple-700',
+      blue: 'bg-blue-100 text-blue-700',
+      green: 'bg-green-100 text-green-700'
+    };
+    return colorMap[color] || 'bg-gray-100 text-gray-700';
+  };
+
+  const getValueColorClasses = (color: string) => {
+    const colorMap: Record<string, string> = {
+      red: 'text-red-500',
+      orange: 'text-orange-500',
+      purple: 'text-purple-500',
+      blue: 'text-blue-500',
+      green: 'text-green-500'
+    };
+    return colorMap[color] || 'text-gray-500';
+  };
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/30"></div>
@@ -43,10 +65,10 @@ export default function StatisticsSection({
           {stats.map((stat, index) => (
             <div key={index} className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
               <div className="mb-4">
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-${stat.sourceColor}-100 text-${stat.sourceColor}-700 mb-3`}>
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 ${getSourceBadgeClasses(stat.sourceColor)}`}>
                   {stat.source}
                 </div>
-                <div className={`text-4xl font-bold text-${stat.valueColor}-500 mb-2`}>{stat.value}</div>
+                <div className={`text-4xl font-bold mb-2 ${getValueColorClasses(stat.valueColor)}`}>{stat.value}</div>
                 <div className="text-sm text-gray-500 mb-4">{stat.metric}</div>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{stat.title}</h3>
