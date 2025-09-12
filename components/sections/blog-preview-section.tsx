@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { BlogPostMetadata } from '@/lib/blog';
+import { SectionHeader } from '@/components/ui/section-header';
+import { designTokens } from '@/lib/design-tokens';
 
 interface BlogPreviewSectionProps {
   badge?: string;
@@ -24,26 +26,18 @@ export default function BlogPreviewSection({
   viewAllIcon
 }: BlogPreviewSectionProps) {
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          {badge && (
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-purple-600 text-white mb-6">
-              {badgeIcon}
-              {badge}
-            </div>
-          )}
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            {title}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {description}
-          </p>
-        </div>
+    <section className={`${designTokens.containers.section} ${designTokens.gradients.blogPreview}`}>
+      <div className={designTokens.containers.maxWidth}>
+        <SectionHeader
+          badge={badge}
+          badgeIcon={badgeIcon}
+          title={title}
+          description={description}
+        />
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className={designTokens.grid.blog}>
           {posts.map((post, index) => (
-            <article key={post.slug} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+            <article key={post.slug} className={`group ${designTokens.card.elevated} overflow-hidden`}>
               <Link href={`/blog/${post.slug}/`}>
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image

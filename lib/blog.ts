@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkHtml from 'remark-html';
 import remarkGfm from 'remark-gfm';
-import remarkPrism from 'remark-prism';
+// import remarkPrism from 'remark-prism';
 
 const blogDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -72,7 +72,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     // Process markdown content
     const processedContent = await remark()
       .use(remarkGfm)
-      .use(remarkPrism)
+      // .use(remarkPrism) // Temporarily disabled due to Next.js compatibility issues
       .use(remarkHtml, { sanitize: false })
       .process(matterResult.content);
     const contentHtml = processedContent.toString();

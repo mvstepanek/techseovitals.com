@@ -7,6 +7,8 @@ import TestimonialsSection from '@/components/sections/testimonials-section';
 import NewsletterSection from '@/components/sections/newsletter-section';
 import FinalCTASection from '@/components/sections/final-cta-section';
 import { generatePageSEO, generateOrganizationJsonLd } from '@/lib/seo';
+import { testimonialsList } from '@/data/testimonials';
+import { companyInfo } from '@/data/constants';
 
 const seo = generatePageSEO({
   title: 'Contact Martin Štěpánek - Technical SEO Consultant | Get In Touch',
@@ -173,18 +175,18 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Company Details</h3>
                   <div className="space-y-2 text-gray-700">
-                    <p><span className="font-semibold">Business Name:</span> mountain explorer, s. r. o.</p>
-                    <p><span className="font-semibold">Business ID:</span> 53226119</p>
-                    <p><span className="font-semibold">VAT ID:</span> SK2121306704</p>
+                    <p><span className="font-semibold">Business Name:</span> {companyInfo.name}</p>
+                    <p><span className="font-semibold">Business ID:</span> {companyInfo.businessId}</p>
+                    <p><span className="font-semibold">VAT ID:</span> {companyInfo.vatId}</p>
                   </div>
                 </div>
                 
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">Address</h3>
                   <div className="space-y-2 text-gray-700">
-                    <p>Karpatske namestie 7770/10A</p>
-                    <p>83106 Bratislava</p>
-                    <p>Slovakia (European Union)</p>
+                    <p>{companyInfo.address.street}</p>
+                    <p>{companyInfo.address.postalCode} {companyInfo.address.city}</p>
+                    <p>{companyInfo.address.country}</p>
                   </div>
                 </div>
               </div>

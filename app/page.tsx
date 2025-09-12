@@ -14,6 +14,10 @@ import BlogPreviewSection from '@/components/sections/blog-preview-section';
 import NewsletterSection from '@/components/sections/newsletter-section';
 import { generatePageSEO, generateOrganizationJsonLd } from '@/lib/seo';
 import { getRecentBlogPosts } from '@/lib/blog';
+import { testimonialsList } from '@/data/testimonials';
+import { ctaContent, socialProof } from '@/data/cta-content';
+import { companyLogos, badges } from '@/data/constants';
+import Icons from '@/components/ui/icons';
 
 const seo = generatePageSEO({
   title: 'TechSEO Vitals - Increase your Revenue with Technical SEO',
@@ -30,15 +34,8 @@ export default function Home() {
         {/* Hero Section */}
         <HeroSection
           badge="10+ Years Making Websites Better"
-          badgeIcon={<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>}
-          title={
-            <>
-              Turn Your Website Into a{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Revenue Machine
-              </span>
-            </>
-          }
+          badgeIcon={<div className={badges.pulse.className}></div>}
+          title={ctaContent.primary.title}
           description="Stop losing customers to slow, hard-to-crawl, and poorly optimized websites. Get expert Technical SEO that fixes indexing issues, boosts performance, and drives real revenue growth."
           primaryCTA={{
             text: "Get Free Website Check",
@@ -46,10 +43,8 @@ export default function Home() {
           }}
           secondaryCTA={
             <div className="flex items-center gap-3 text-gray-600">
-              <div className="flex text-yellow-400">
-                {'★'.repeat(5)}
-              </div>
-              <span className="text-sm font-medium">50+ businesses trust me</span>
+              {socialProof.businesses.icon}
+              <span className="text-sm font-medium">{socialProof.businesses.text}</span>
             </div>
           }
           image={{
@@ -60,42 +55,17 @@ export default function Home() {
           }}
           statusBadge={{
             text: "Available for projects",
-            icon: <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+            icon: <div className={badges.available.className}></div>
           }}
         />
 
         {/* Trusted By Section */}
-        <TrustedBySection
-          logos={[
-            {
-              src: "/images/company-logos/touchit-logo.png",
-              alt: "TOUCHIT",
-              width: 140,
-              height: 50
-            },
-            {
-              src: "/images/company-logos/post-affiliate-pro-logo.png",
-              alt: "Post Affiliate Pro",
-              width: 140,
-              height: 50
-            },
-            {
-              src: "/images/company-logos/liveagent-logo.png",
-              alt: "LiveAgent",
-              width: 140,
-              height: 50
-            }
-          ]}
-        />
+        <TrustedBySection logos={companyLogos.main} />
 
         {/* Why Technical SEO? */}
         <WhyTechnicalSEOSection
           badge="Why Technical SEO?"
-          badgeIcon={
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          }
+          badgeIcon={<Icons.Lightning size="sm" />}
           title={
             <>
               Turn Visitors Into <span className="text-primary">Paying Customers</span>
@@ -377,38 +347,8 @@ export default function Home() {
             </>
           }
           description="See how I've helped businesses transform their websites into high-performing revenue machines."
-          testimonials={[
-            {
-              avatar: {
-                src: "/images/testimonials/viktor-zeman-real.webp",
-                alt: "Viktor Zeman"
-              },
-              name: "Viktor Zeman",
-              title: "CEO",
-              company: "LiveAgent & Post Affiliate Pro",
-              quote: "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-              rating: 5,
-              verified: true
-            },
-            {
-              avatar: {
-                src: "/images/testimonials/daniel-pison.jpeg",
-                alt: "Daniel Pison"
-              },
-              name: "Daniel Pison",
-              title: "CMO",
-              company: "Quality Unit",
-              quote: "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in terms of website quality. I consider him one of the greatest technical SEO experts on the market.",
-              rating: 5,
-              verified: true
-            }
-          ]}
-          socialProof={{
-            icon: <div className="flex text-yellow-400 text-sm">
-              {'★'.repeat(5)}
-            </div>,
-            text: "50+ businesses trust me"
-          }}
+          testimonials={testimonialsList}
+          socialProof={socialProof.businesses}
         />
 
         {/* Section Separator */}
@@ -476,11 +416,7 @@ export default function Home() {
         {/* Blog Preview */}
         <BlogPreviewSection
           badge="Expert Insights"
-          badgeIcon={
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-            </svg>
-          }
+          badgeIcon={<Icons.Document size="sm" />}
           title={
             <>
               Latest <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Technical SEO</span> Insights

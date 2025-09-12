@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { SectionHeader } from '@/components/ui/section-header';
+import { designTokens } from '@/lib/design-tokens';
 
 interface AuditBenefit {
   icon: React.ReactNode;
@@ -33,21 +35,16 @@ export default function WhyAuditSection({
   benefits
 }: WhyAuditSectionProps) {
   return (
-    <section className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className={`${designTokens.containers.section} bg-white`}>
+      <div className={designTokens.containers.maxWidth}>
         <div className="text-center mb-16">
-          {badge && (
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-purple-600 text-white mb-6">
-              {badgeIcon}
-              {badge}
-            </div>
-          )}
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            {title}
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-            {description}
-          </p>
+          <SectionHeader
+            badge={badge}
+            badgeIcon={badgeIcon}
+            title={title}
+            description={description}
+            className="mb-10"
+          />
           <div className="flex flex-col items-center gap-4">
             {primaryCTA && (
               <Link
