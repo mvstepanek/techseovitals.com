@@ -1,22 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
-
-interface BlogPost {
-  href: string;
-  thumbnail: {
-    src: string;
-    alt: string;
-  };
-  title: string;
-  excerpt: string;
-}
+import { BlogPostMetadata } from '@/lib/blog';
 
 interface BlogPreviewSectionProps {
   badge?: string;
   badgeIcon?: React.ReactNode;
   title: React.ReactNode;
   description: string;
-  posts: BlogPost[];
+  posts: BlogPostMetadata[];
   viewAllText?: string;
   viewAllHref?: string;
   viewAllIcon?: React.ReactNode;
@@ -52,22 +43,32 @@ export default function BlogPreviewSection({
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post, index) => (
-            <article key={index} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-              <Link href={post.href}>
+            <article key={post.slug} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+              <Link href={`/blog/${post.slug}/`}>
                 <div className="relative h-48 w-full overflow-hidden">
                   <Image
-                    src={post.thumbnail.src}
-                    alt={post.thumbnail.alt}
+                    src={post.image}
+                    alt={post.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-8">
+                  {/* Meta Info */}
+                  <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                    <time dateTime={post.date}>
+                      {new Date(post.date).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'short',
+                        day: 'numeric'
+                      })}
+                    </time>
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
-                    {post.excerpt}
+                    {post.description}
                   </p>
                 </div>
               </Link>

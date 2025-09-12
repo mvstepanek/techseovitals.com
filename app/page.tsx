@@ -13,6 +13,7 @@ import FinalCTASection from '@/components/sections/final-cta-section';
 import BlogPreviewSection from '@/components/sections/blog-preview-section';
 import NewsletterSection from '@/components/sections/newsletter-section';
 import { generatePageSEO, generateOrganizationJsonLd } from '@/lib/seo';
+import { getRecentBlogPosts } from '@/lib/blog';
 
 const seo = generatePageSEO({
   title: 'TechSEO Vitals - Increase your Revenue with Technical SEO',
@@ -21,6 +22,7 @@ const seo = generatePageSEO({
 }, '/');
 
 export default function Home() {
+  const recentBlogPosts = getRecentBlogPosts(3);
   return (
     <>
       <SEOHead seo={seo} />
@@ -485,35 +487,7 @@ export default function Home() {
             </>
           }
           description="Stay ahead with actionable technical SEO strategies, performance optimization tips, and industry best practices."
-          posts={[
-            {
-              href: "/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/",
-              thumbnail: {
-                src: "/images/blog-thumbnails/ttfb-thumbnail.jpg",
-                alt: "TTFB Technical SEO Guide"
-              },
-              title: "Why You Should Care About Your TTFB: A Technical SEO Guide to Optimization",
-              excerpt: "Time to First Byte, commonly known as TTFB, stands as the most critical metric in technical SEO and overall web performance."
-            },
-            {
-              href: "/blog/multilingual-website-essentials-technical-seo-guide/",
-              thumbnail: {
-                src: "/images/blog-thumbnails/multilingual-thumbnail.jpg",
-                alt: "Multilingual Website Technical SEO Guide"
-              },
-              title: "Multilingual Website Essentials: A Technical SEO Guide",
-              excerpt: "A multilingual website allows visitors to experience your content in their native language, creating trust and connection that drives conversions."
-            },
-            {
-              href: "/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/",
-              thumbnail: {
-                src: "/images/blog-thumbnails/crawlability-thumbnail.jpg",
-                alt: "Improving Crawlability Guide"
-              },
-              title: "Improving Crawlability: Help Google and ChatGPT Find Your Business Website",
-              excerpt: "Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially."
-            }
-          ]}
+          posts={recentBlogPosts}
           viewAllText="View All Articles"
           viewAllHref="/blog/"
           viewAllIcon={
