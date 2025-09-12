@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+
+# Disallow crawling of admin and development files
+Disallow: /.git/
+Disallow: /admin/
+Disallow: /.env
+Disallow: /config/
+
+# Allow important files
+Allow: /feed.xml
+Allow: /sitemap.xml
+Allow: /images/
+Allow: /css/
+Allow: /js/

@@ -1,0 +1,71 @@
+{{- $badge := .Get "badge" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $primaryCTA := .Get "primaryCTA" | default "Get Started" -}}
+{{- $primaryHref := .Get "primaryHref" | default "/book-consultation/" -}}
+{{- $secondaryCTA := .Get "secondaryCTA" -}}
+{{- $secondaryHref := .Get "secondaryHref" -}}
+{{- $bgColor := .Get "bgColor" | default "bg-gray-50" -}}
+
+<section class="section {{ $bgColor }}">
+  <div class="container-custom text-center">
+    {{- if $badge }}
+    <div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+      {{- if (.Get "badgeIcon") }}
+        {{- .Get "badgeIcon" | safeHTML -}}
+        <span class="ml-2">{{ $badge }}</span>
+      {{- else }}
+        {{ $badge }}
+      {{- end }}
+    </div>
+    {{- end }}
+    
+    {{- if $title }}
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+      {{ $title | markdownify }}
+    </h2>
+    {{- end }}
+    
+    {{- if $description }}
+    <p class="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+      {{ $description }}
+    </p>
+    {{- end }}
+    
+    <!-- CTAs -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
+      <a href="{{ $primaryHref }}" class="btn-primary group">
+        {{ $primaryCTA }}
+        <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+      
+      {{- if and $secondaryCTA $secondaryHref }}
+      <a href="{{ $secondaryHref }}" class="btn-secondary group">
+        {{ $secondaryCTA }}
+        {{- if (.Get "secondaryIcon") }}
+          {{- .Get "secondaryIcon" | safeHTML -}}
+        {{- end }}
+      </a>
+      {{- end }}
+    </div>
+    
+    <!-- Benefits -->
+    {{- if (.Get "benefits") }}
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      {{- .Get "benefits" | safeHTML -}}
+    </div>
+    {{- end }}
+    
+    <!-- Social Proof -->
+    {{- if (.Get "socialProof") }}
+    <div class="flex items-center justify-center gap-3 text-gray-600 mt-8">
+      <div class="flex text-yellow-400 text-sm">
+        {{ "★★★★★" }}
+      </div>
+      <span class="text-sm font-medium">50+ businesses trust me</span>
+    </div>
+    {{- end }}
+  </div>
+</section>

@@ -1,0 +1,4 @@
+{{- $date := .date -}}
+{{- $format := .format | default "January 2, 2006" -}}
+
+{{- $date.Format $format -}}

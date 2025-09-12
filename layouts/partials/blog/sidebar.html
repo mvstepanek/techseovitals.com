@@ -1,0 +1,125 @@
+<div class="space-y-8">
+  <!-- About Widget -->
+  <div class="card p-6">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">About the Author</h3>
+    <div class="flex items-start gap-4 mb-4">
+      <img 
+        src="/images/martin-stepanek-seo.jpg" 
+        alt="Martin Stepanek"
+        class="w-16 h-16 rounded-full object-cover"
+        loading="lazy"
+      />
+      <div>
+        <h4 class="font-semibold text-gray-900">{{ site.Params.author }}</h4>
+        <p class="text-sm text-gray-600">Technical SEO Expert</p>
+      </div>
+    </div>
+    <p class="text-sm text-gray-600 mb-4">
+      {{ site.Params.socialProof.yearsExperience }} years of experience helping businesses improve their search rankings and website performance.
+    </p>
+    <a href="/technical-seo-consultant/" class="text-sm text-primary font-semibold hover:underline">
+      Learn more about me →
+    </a>
+  </div>
+
+  <!-- Recent Posts Widget -->
+  {{- $recentPosts := first 5 (where site.RegularPages "Type" "blog") }}
+  {{- if $recentPosts }}
+  <div class="card p-6">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">Recent Posts</h3>
+    <div class="space-y-4">
+      {{- range $recentPosts }}
+      <article class="flex gap-3">
+        {{- if .Params.image }}
+        <div class="flex-shrink-0">
+          <img 
+            src="{{ .Params.image }}" 
+            alt="{{ .Title }}"
+            class="w-16 h-16 object-cover rounded"
+            loading="lazy"
+          />
+        </div>
+        {{- end }}
+        <div class="flex-1 min-w-0">
+          <h4 class="text-sm font-medium text-gray-900 mb-1 leading-tight">
+            <a href="{{ .Permalink }}" class="hover:text-primary transition-colors">
+              {{ .Title | truncate 60 }}
+            </a>
+          </h4>
+          <p class="text-xs text-gray-500">
+            {{ .Date.Format "Jan 2, 2006" }}
+          </p>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+  <!-- Popular Tags Widget -->
+  {{- $tags := site.Taxonomies.tags }}
+  {{- if $tags }}
+  <div class="card p-6">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
+    <div class="flex flex-wrap gap-2">
+      {{- range $name, $taxonomy := $tags }}
+        {{- if gt $taxonomy.Count 1 }}
+        <a 
+          href="{{ "/tags/" | relURL }}{{ $name | urlize }}/" 
+          class="inline-flex items-center px-2.5 py-1.5 rounded text-xs font-medium bg-gray-100 hover:bg-primary hover:text-white transition-colors"
+        >
+          {{ $name }} ({{ $taxonomy.Count }})
+        </a>
+        {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+
+  <!-- Newsletter Signup Widget -->
+  <div class="card p-6 bg-gradient-to-br from-primary to-primary-dark text-white">
+    <h3 class="text-lg font-semibold mb-4">Get More Insights</h3>
+    <p class="text-sm text-white/90 mb-4">
+      Join {{ site.Params.socialProof.newsletterSubscribers }} others and get biweekly technical SEO tips delivered to your inbox.
+    </p>
+    
+    <form 
+      action="https://techseo-vitals.ck.page/newsletter-signup" 
+      method="post"
+      data-form-type="newsletter"
+      class="space-y-3"
+    >
+      <input 
+        type="email" 
+        name="email_address"
+        required
+        placeholder="Your email address"
+        class="w-full px-3 py-2 rounded text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
+      />
+      <button 
+        type="submit"
+        class="w-full px-4 py-2 bg-white text-primary hover:bg-gray-100 font-semibold rounded text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-white/50"
+      >
+        Subscribe Now
+      </button>
+    </form>
+    
+    <p class="text-xs text-white/70 mt-3">
+      No spam, ever. Unsubscribe at any time.
+    </p>
+  </div>
+
+  <!-- Contact Widget -->
+  <div class="card p-6 border-primary border-2">
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">Need Help?</h3>
+    <p class="text-sm text-gray-600 mb-4">
+      Ready to improve your website's technical SEO? Let's discuss your specific needs.
+    </p>
+    <a 
+      href="/book-consultation/" 
+      class="block w-full text-center px-4 py-2 bg-primary hover:bg-primary-dark text-white font-semibold rounded transition-colors"
+    >
+      Schedule Free Consultation
+    </a>
+  </div>
+</div>

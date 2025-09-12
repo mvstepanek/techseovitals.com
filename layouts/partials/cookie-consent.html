@@ -1,0 +1,84 @@
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 transform translate-y-full transition-transform duration-300 ease-in-out" style="display: none;">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+    <div class="flex-1 mb-4 sm:mb-0 sm:mr-6">
+      <p class="text-sm">
+        We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
+        <a href="{{ "/privacy-policy/" | relURL }}" class="underline hover:no-underline">Learn more</a>
+      </p>
+    </div>
+    <div class="flex space-x-3">
+      <button 
+        id="cookie-decline" 
+        class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+      >
+        Decline
+      </button>
+      <button 
+        id="cookie-accept" 
+        class="px-4 py-2 text-sm font-medium bg-primary hover:bg-primary-dark text-white rounded transition-colors"
+      >
+        Accept
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  // Check if user has already made a choice
+  const cookieConsent = localStorage.getItem('cookieConsent');
+  const banner = document.getElementById('cookie-consent');
+  
+  if (!cookieConsent && banner) {
+    // Show the banner after a short delay
+    setTimeout(function() {
+      banner.style.display = 'block';
+      setTimeout(function() {
+        banner.style.transform = 'translateY(0)';
+      }, 100);
+    }, 2000);
+  }
+  
+  // Handle accept button
+  const acceptBtn = document.getElementById('cookie-accept');
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'accepted');
+      hideBanner();
+      
+      // Enable analytics if accepted
+      if (window.gtag) {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
+    });
+  }
+  
+  // Handle decline button
+  const declineBtn = document.getElementById('cookie-decline');
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'declined');
+      hideBanner();
+      
+      // Disable analytics if declined
+      if (window.gtag) {
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied'
+        });
+      }
+    });
+  }
+  
+  function hideBanner() {
+    if (banner) {
+      banner.style.transform = 'translateY(100%)';
+      setTimeout(function() {
+        banner.style.display = 'none';
+      }, 300);
+    }
+  }
+})();
+</script>

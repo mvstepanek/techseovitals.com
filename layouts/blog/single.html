@@ -1,0 +1,193 @@
+{{ define "main" }}
+<main id="main" class="focus:outline-none" tabindex="-1">
+  <article>
+    <!-- Header -->
+    <header class="section-sm bg-gray-50">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <!-- Breadcrumbs -->
+          <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-6">
+            <a href="/" class="hover:text-primary">Home</a>
+            <span>›</span>
+            <a href="/blog/" class="hover:text-primary">Blog</a>
+            <span>›</span>
+            <span class="text-gray-700">{{ .Title }}</span>
+          </nav>
+          
+          <!-- Meta -->
+          <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+              {{ .Date.Format "January 2, 2006" }}
+            </time>
+            {{- if .Params.author }}
+            <span>•</span>
+            <span>By {{ .Params.author }}</span>
+            {{- end }}
+            {{- if .ReadingTime }}
+            <span>•</span>
+            <span>{{ .ReadingTime }} min read</span>
+            {{- end }}
+          </div>
+          
+          <!-- Title -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            {{ .Title }}
+          </h1>
+          
+          <!-- Description -->
+          {{- if .Description }}
+          <p class="text-xl text-gray-600 leading-relaxed mb-8">
+            {{ .Description }}
+          </p>
+          {{- end }}
+          
+          <!-- Tags -->
+          {{- if .Params.tags }}
+          <div class="flex flex-wrap gap-2">
+            {{- range .Params.tags }}
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
+              {{ . }}
+            </span>
+            {{- end }}
+          </div>
+          {{- end }}
+        </div>
+      </div>
+    </header>
+
+    <!-- Featured Image -->
+    {{- if .Params.image }}
+    <div class="container-custom mb-12">
+      <div class="max-w-4xl mx-auto">
+        <img 
+          src="{{ .Params.image }}" 
+          alt="{{ .Title }}"
+          class="w-full h-auto rounded-lg shadow-lg"
+          loading="eager"
+        />
+      </div>
+    </div>
+    {{- end }}
+
+    <!-- Content -->
+    <div class="section bg-white">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <div class="prose prose-lg max-w-none">
+            {{ .Content }}
+          </div>
+          
+          <!-- Author Bio -->
+          <div class="border-t border-gray-200 pt-8 mt-12">
+            <div class="flex items-start gap-4">
+              <img 
+                src="/images/martin-stepanek-seo.jpg" 
+                alt="Martin Stepanek"
+                class="w-16 h-16 rounded-full object-cover"
+                loading="lazy"
+              />
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                  {{ .Params.author | default site.Params.author }}
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Technical SEO & Web Performance Consultant with 10+ years of experience helping businesses improve their search rankings and website speed.
+                </p>
+                <div class="flex items-center gap-4">
+                  {{- with site.Params.linkedin }}
+                  <a href="https://linkedin.com/in/{{ . }}/" class="text-gray-400 hover:text-primary transition-colors" target="_blank" rel="noopener">
+                    <span class="sr-only">LinkedIn</span>
+                    {{ partial "icons/linkedin.html" $ }}
+                  </a>
+                  {{- end }}
+                  {{- with site.Params.twitter }}
+                  <a href="https://twitter.com/{{ . }}" class="text-gray-400 hover:text-primary transition-colors" target="_blank" rel="noopener">
+                    <span class="sr-only">Twitter</span>
+                    {{ partial "icons/twitter.html" $ }}
+                  </a>
+                  {{- end }}
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Share Buttons -->
+          <div class="border-t border-gray-200 pt-8 mt-8">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold text-gray-900">Share this article</h3>
+              <div class="flex items-center gap-4">
+                <!-- Twitter -->
+                <a 
+                  href="https://twitter.com/intent/tweet?text={{ .Title | urlquery }}&url={{ .Permalink }}" 
+                  target="_blank" 
+                  rel="noopener"
+                  class="text-gray-400 hover:text-blue-500 transition-colors"
+                >
+                  <span class="sr-only">Share on Twitter</span>
+                  {{ partial "icons/twitter.html" . }}
+                </a>
+                
+                <!-- LinkedIn -->
+                <a 
+                  href="https://www.linkedin.com/sharing/share-offsite/?url={{ .Permalink }}" 
+                  target="_blank" 
+                  rel="noopener"
+                  class="text-gray-400 hover:text-blue-600 transition-colors"
+                >
+                  <span class="sr-only">Share on LinkedIn</span>
+                  {{ partial "icons/linkedin.html" . }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    {{- $related := .Site.RegularPages.Related . | first 3 }}
+    {{- if $related }}
+    <section class="section bg-gray-50">
+      <div class="container-custom">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">Related Articles</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {{- range $related }}
+            <article class="card">
+              {{- if .Params.image }}
+              <div class="aspect-w-16 aspect-h-9 mb-4">
+                <img 
+                  src="{{ .Params.image }}" 
+                  alt="{{ .Title }}"
+                  class="w-full h-48 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              {{- end }}
+              
+              <div class="p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3 leading-tight">
+                  <a href="{{ .Permalink }}" class="hover:text-primary transition-colors">
+                    {{ .Title }}
+                  </a>
+                </h3>
+                <p class="text-gray-600 text-sm mb-4">
+                  {{ .Summary | truncate 120 }}
+                </p>
+                <div class="text-xs text-gray-500">
+                  {{ .Date.Format "Jan 2, 2006" }}
+                </div>
+              </div>
+            </article>
+            {{- end }}
+          </div>
+        </div>
+      </div>
+    </section>
+    {{- end }}
+  </article>
+
+  <!-- CTA Section -->
+  {{ partial "sections/final-cta-section.html" . }}
+</main>
+{{ end }}

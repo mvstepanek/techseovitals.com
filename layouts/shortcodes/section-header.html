@@ -1,0 +1,29 @@
+{{- $badge := .Get "badge" -}}
+{{- $title := .Get "title" -}}
+{{- $description := .Get "description" -}}
+{{- $centered := .Get "centered" | default "true" -}}
+
+<div class="{{ if eq $centered "true" }}text-center{{ end }} mb-16">
+  {{- if $badge }}
+  <div class="inline-flex items-center px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+    {{- if (.Get "badgeIcon") }}
+      {{- .Get "badgeIcon" | safeHTML -}}
+      <span class="ml-2">{{ $badge }}</span>
+    {{- else }}
+      {{ $badge }}
+    {{- end }}
+  </div>
+  {{- end }}
+  
+  {{- if $title }}
+  <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+    {{ $title | markdownify }}
+  </h2>
+  {{- end }}
+  
+  {{- if $description }}
+  <p class="text-xl text-gray-600 max-w-3xl {{ if eq $centered "true" }}mx-auto{{ end }}">
+    {{ $description }}
+  </p>
+  {{- end }}
+</div>

@@ -1,0 +1,45 @@
+{{- $text := .Get "text" -}}
+{{- $href := .Get "href" -}}
+{{- $style := .Get "style" | default "primary" -}}
+{{- $size := .Get "size" | default "md" -}}
+{{- $icon := .Get "icon" -}}
+{{- $target := .Get "target" -}}
+{{- $class := .Get "class" -}}
+
+{{- $styleClasses := dict
+  "primary" "btn-primary"
+  "secondary" "btn-secondary"
+  "outline" "btn-outline"
+  "ghost" "btn-ghost"
+-}}
+
+{{- $sizeClasses := dict
+  "sm" "px-3 py-1.5 text-sm"
+  "md" "px-4 py-2"
+  "lg" "px-6 py-3 text-lg"
+  "xl" "px-8 py-4 text-xl"
+-}}
+
+{{- $baseClass := index $styleClasses $style -}}
+{{- $sizeClass := index $sizeClasses $size -}}
+
+<a 
+  href="{{ $href }}"
+  class="{{ $baseClass }} {{ $sizeClass }} {{ $class }} group inline-flex items-center justify-center"
+  {{- if $target }} target="{{ $target }}"{{ end }}
+  {{- if eq $target "_blank" }} rel="noopener noreferrer"{{ end }}
+>
+  {{- if $icon -}}
+  <span class="mr-2">
+    {{ $icon | safeHTML }}
+  </span>
+  {{- end -}}
+  
+  {{ $text }}
+  
+  {{- if not $icon -}}
+  <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+  </svg>
+  {{- end -}}
+</a>

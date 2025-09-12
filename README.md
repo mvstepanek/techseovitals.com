@@ -1,149 +1,253 @@
-# TechSEO Vitals Website
+# TechSEO Vitals - Hugo Site
 
-A modern, performant Next.js website for TechSEO Vitals - Technical SEO and Web Performance consulting services.
+This is the Hugo migration of TechSEO Vitals website, a technical SEO and web performance consulting site. The site has been migrated from Next.js to Hugo v0.150.0 while maintaining identical design and functionality.
 
 ## 🚀 Features
 
-- **Next.js 15.5.2** with App Router and TypeScript
-- **Tailwind CSS v4** for modern, responsive styling
-- **Static Site Generation** - Fully static, ultra-fast loading
-- **SEO Optimized** - Complete meta tags, JSON-LD, OG graph
-- **Mobile-First** - Responsive design for all devices
-- **Performance Optimized** - Built for Core Web Vitals excellence
-- **Cookie Consent** - GDPR compliant cookie management
+- **Hugo v0.150.0** with advanced features
+- **Tailwind CSS** for styling
+- **Responsive Design** optimized for all devices
+- **SEO Optimized** with structured data and meta tags
+- **Performance Focused** with image optimization and asset pipelines
+- **Accessibility** with WCAG compliance features
+- **Modern JavaScript** with vanilla JS for interactions
 
 ## 📁 Project Structure
 
 ```
-├── app/                          # Next.js App Router pages
-│   ├── (pages)/                  # All website pages
-│   ├── globals.css              # Global styles with Tailwind
-│   ├── layout.tsx               # Root layout
-│   ├── sitemap.ts               # XML sitemap generation
-│   ├── robots.ts                # Robots.txt generation
-│   ├── manifest.ts              # Web app manifest
-│   └── feed.xml/route.ts        # RSS feed
-├── components/                   # React components
-│   ├── layout/                  # Layout components
-│   ├── seo/                     # SEO components
-│   └── ui/                      # UI components
-├── lib/                         # Utility libraries
-├── public/                      # Static assets
-└── types/                       # TypeScript definitions
+├── archetypes/          # Content templates
+├── assets/              # Source assets (CSS, JS, images)
+├── content/             # Site content (Markdown)
+├── data/               # Data files (YAML/JSON)
+├── layouts/            # Hugo templates
+│   ├── _default/       # Default templates
+│   ├── partials/       # Reusable template parts
+│   ├── shortcodes/     # Custom shortcodes
+│   └── blog/           # Blog-specific layouts
+├── static/             # Static files (copied as-is)
+├── hugo.toml           # Hugo configuration
+├── package.json        # Dependencies and scripts
+├── tailwind.config.js  # Tailwind CSS configuration
+└── postcss.config.js   # PostCSS configuration
 ```
 
-## 🛠 Development
+## 🛠️ Getting Started
 
+### Prerequisites
+
+- **Hugo Extended v0.150.0+** ([Install Hugo](https://gohugo.io/installation/))
+- **Node.js 18+** and **npm** for asset processing
+- **Git** for version control
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd techseovitals.com
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or use make
+   make install
+   ```
+
+3. **Start development server**
+   ```bash
+   hugo server --disableFastRender --navigateToChanged
+   # or use make
+   make dev
+   ```
+
+4. **Visit** http://localhost:1313
+
+### Available Commands
+
+#### Using npm scripts:
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm run start
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run clean     # Clean build artifacts
 ```
 
-## 📋 Available Scripts
-
+#### Using Makefile (recommended):
 ```bash
-npm run dev          # Start development server with Turbopack
-npm run build        # Build for production with static export
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npm run lint:fix     # Fix ESLint issues
-npm run format       # Format code with Prettier
-npm run type-check   # TypeScript type checking
-npm run check-all    # Run all checks (types, lint, format)
+make help         # Show available commands
+make dev          # Start development server
+make build        # Build for production
+make clean        # Clean build artifacts
+make preview      # Preview production build
+make lint         # Lint CSS
+make test         # Run tests and validation
+make new-post TITLE="Post Title"  # Create new blog post
+make new-page PATH="path/to/page" # Create new page
 ```
 
-## 🚀 Deployment
+## 🎨 Customization
 
-The website is configured for static export and can be deployed to any static hosting service:
+### Styling
 
-### Vercel (Recommended)
-```bash
-vercel deploy
+The site uses **Tailwind CSS** with custom design tokens defined in:
+- `tailwind.config.js` - Tailwind configuration
+- `assets/css/tailwind.css` - Custom CSS and utilities
+
+### Content
+
+- **Pages**: Add new pages in `content/`
+- **Blog Posts**: Add new posts in `content/blog/`
+- **Data**: Modify site data in `data/` directory
+
+### Templates
+
+- **Layouts**: Modify templates in `layouts/`
+- **Partials**: Reusable components in `layouts/partials/`
+- **Shortcodes**: Custom content elements in `layouts/shortcodes/`
+
+## 🔧 Advanced Features
+
+### Custom Shortcodes
+
+The site includes several custom shortcodes:
+
+```markdown
+<!-- Hero Section -->
+{{< hero-section 
+  title="Your Title"
+  description="Your description"
+  primaryCTA="Button Text"
+  primaryHref="/link/"
+>}}
+
+<!-- Call-to-Action Section -->
+{{< cta-section 
+  badge="Badge Text"
+  title="Section Title"
+  description="Description text"
+  primaryCTA="Button Text"
+  primaryHref="/link/"
+>}}
+
+<!-- Alert Box -->
+{{< alert type="info" title="Alert Title" >}}
+Alert content here
+{{< /alert >}}
+
+<!-- Highlight Box -->
+{{< highlight-box title="Box Title" color="primary" >}}
+Content here
+{{< /highlight-box >}}
+
+<!-- Custom Button -->
+{{< button 
+  text="Button Text" 
+  href="/link/" 
+  style="primary" 
+  size="md" 
+>}}
+
+<!-- YouTube Video -->
+{{< youtube "VIDEO_ID" title="Video Title" >}}
+
+<!-- Optimized Image -->
+{{< image 
+  src="/images/example.jpg" 
+  alt="Alt text" 
+  width="800" 
+  height="600" 
+  caption="Image caption" 
+>}}
 ```
+
+### Hugo Functions
+
+Custom functions available in templates:
+
+- `partial "functions/format-date.html"` - Date formatting
+- `partial "functions/reading-time.html"` - Calculate reading time
+- `partial "functions/truncate-words.html"` - Truncate text
+- `partial "functions/generate-toc.html"` - Generate table of contents
+
+## 📦 Deployment
 
 ### Netlify
-1. Connect your repository
-2. Set build command: `npm run build`
-3. Set publish directory: `out`
 
-### Any Static Host
+The site is configured for Netlify deployment:
+
+1. **Connect your repository** to Netlify
+2. **Build settings** are configured in `netlify.toml`
+3. **Environment variables** are set automatically
+
+### Vercel
+
+For Vercel deployment:
+
+1. **Connect your repository** to Vercel  
+2. **Build settings** are configured in `vercel.json`
+3. **Deploy** with `make deploy-vercel`
+
+### Manual Deployment
+
+1. **Build the site**
+   ```bash
+   make build
+   ```
+
+2. **Deploy the `public/` directory** to your hosting provider
+
+## 🔍 SEO Features
+
+- **Structured Data** (JSON-LD) for rich snippets
+- **Open Graph** and **Twitter Card** meta tags
+- **Canonical URLs** and proper meta descriptions
+- **XML Sitemap** and **RSS Feed** generation
+- **Robots.txt** with proper directives
+- **Performance optimization** for Core Web Vitals
+
+## 🚀 Performance
+
+The site is optimized for performance:
+
+- **Hugo Pipes** for asset processing
+- **Image optimization** with WebP support
+- **CSS/JS minification** and compression
+- **Lazy loading** for images and videos
+- **Service Worker** ready (optional)
+- **CDN-friendly** asset structure
+
+## 🧪 Testing
+
+Run tests and validation:
+
 ```bash
-npm run build
-# Upload the `out` directory to your hosting service
+make test           # Run all tests
+make lint           # Lint CSS
+make check-hugo     # Check Hugo configuration
+make stats          # Show site statistics
 ```
 
-## 📊 SEO Features
+## 📄 License
 
-- **XML Sitemap** - Auto-generated at `/sitemap.xml`
-- **Robots.txt** - SEO-friendly robots file at `/robots.txt`
-- **RSS Feed** - Blog feed at `/feed.xml`
-- **JSON-LD Schema** - Structured data for better search results
-- **Open Graph** - Social media optimization
-- **Meta Tags** - Complete SEO meta tags for all pages
-- **Canonical URLs** - Proper canonical link management
-
-## 🎨 Styling
-
-- **Tailwind CSS v4** with custom color scheme
-- **Primary Color**: Purple (`#7c3aed`)
-- **Mobile-First** responsive design
-- **Custom CSS Variables** for consistent theming
-
-## 📱 Pages Included
-
-1. **Homepage** - Hero section with value propositions
-2. **Services** - Technical SEO service offerings
-3. **Newsletter** - Newsletter signup page  
-4. **Blog** - Blog listing and content
-5. **About** - Technical SEO consultant information
-6. **Contact** - Contact form and information
-7. **Book Consultation** - Consultation booking
-8. **Legal Pages** - Privacy Policy & Terms
-9. **Free Resources** - Technical SEO checklists
-10. **Webinar** - Free webinar registration
-11. **Thank You Pages** - Conversion confirmation pages
-
-## 🔧 Configuration
-
-### Environment Variables
-Create `.env.local` for any environment-specific configuration:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://www.techseovitals.com
-```
-
-### Customization
-- Update colors in `app/globals.css`
-- Modify SEO defaults in `lib/seo.ts`  
-- Update navigation in `lib/navigation.ts`
-
-## 📈 Performance
-
-Built with performance best practices:
-- Static generation for fastest loading
-- Optimized images with Next.js Image component
-- `fetchpriority="high"` for LCP images
-- Minimal JavaScript bundle size
-- Efficient CSS with Tailwind
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Run `npm run check-all` to ensure code quality
-4. Commit your changes
-5. Push to the branch
-6. Create a Pull Request
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📄 License
+## 📞 Support
 
-This project is private and proprietary to TechSEO Vitals.
+For support and questions:
+
+- **Email**: martin@techseovitals.com
+- **Website**: [techseovitals.com](https://techseovitals.com)
+- **LinkedIn**: [Martin Stepanek](https://linkedin.com/in/techseovitals)
+
+---
+
+Built with ❤️ using Hugo v0.150.0

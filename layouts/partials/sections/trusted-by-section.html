@@ -1,0 +1,52 @@
+{{- $logos := site.Data.site.companyLogos.main -}}
+
+<section class="section-sm bg-white">
+  <div class="container-custom">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-4">
+        Trusted by Industry Leaders
+      </p>
+    </div>
+    
+    <!-- Company Logos -->
+    <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 opacity-60 hover:opacity-80 transition-opacity duration-300">
+      {{- range $logos }}
+      <div class="flex items-center justify-center">
+        <img 
+          src="{{ .src }}" 
+          alt="{{ .alt }}"
+          width="{{ .width }}"
+          height="{{ .height }}"
+          class="h-8 w-auto sm:h-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+          loading="lazy"
+        />
+      </div>
+      {{- end }}
+    </div>
+    
+    <!-- Additional trust indicators -->
+    <div class="flex flex-wrap items-center justify-center gap-8 mt-12 text-sm text-gray-500">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>10+ years experience</span>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <span>50+ websites optimized</span>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+        </svg>
+        <span>Proven ROI improvements</span>
+      </div>
+    </div>
+  </div>
+</section>

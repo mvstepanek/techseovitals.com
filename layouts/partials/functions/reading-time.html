@@ -1,0 +1,8 @@
+{{- $content := .content -}}
+{{- $wordsPerMinute := .wordsPerMinute | default 200 -}}
+
+{{- $wordCount := len (split (plainify $content) " ") -}}
+{{- $readingTime := div $wordCount $wordsPerMinute -}}
+{{- $readingTime = cond (lt $readingTime 1) 1 $readingTime -}}
+
+{{ $readingTime }}

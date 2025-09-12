@@ -1,0 +1,97 @@
+{{- $badge := .Get "badge" | default "10+ Years Making Websites Better" -}}
+{{- $title := .Get "title" | default "Transform Your Website Into a Revenue Engine" -}}
+{{- $description := .Get "description" | default "Stop losing customers to slow, hard-to-crawl, and poorly optimized websites." -}}
+{{- $primaryCTA := .Get "primaryCTA" | default "Get Free Website Check" -}}
+{{- $primaryHref := .Get "primaryHref" | default "/book-consultation/" -}}
+{{- $image := .Get "image" | default "/images/martin-stepanek-seo.jpg" -}}
+{{- $imageAlt := .Get "imageAlt" | default "Martin Stepanek - Technical SEO Expert" -}}
+
+<section class="relative pt-12 pb-20 sm:pt-16 sm:pb-24 overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
+  <div class="absolute inset-0 bg-pattern-dots opacity-40"></div>
+  
+  <div class="relative container-custom">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+      <!-- Content -->
+      <div class="mb-12 lg:mb-0">
+        <!-- Badge -->
+        {{- if $badge }}
+        <div class="inline-flex items-center px-3 py-1 bg-white rounded-full shadow-md border border-gray-200 mb-6">
+          {{- if (.Get "badgeIcon") }}
+            {{- .Get "badgeIcon" | safeHTML -}}
+          {{- else }}
+            <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+          {{- end }}
+          <span class="ml-2 text-sm font-medium text-gray-900">{{ $badge }}</span>
+        </div>
+        {{- end }}
+        
+        <!-- Headline -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+          {{ $title | markdownify }}
+        </h1>
+        
+        <!-- Description -->
+        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+          {{ $description }}
+        </p>
+        
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-8">
+          <a href="{{ $primaryHref }}" class="btn-primary group">
+            {{ $primaryCTA }}
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+          
+          {{- if (.Get "secondaryCTA") }}
+            {{- .Get "secondaryCTA" | safeHTML -}}
+          {{- else }}
+          <div class="flex items-center gap-3 text-gray-600">
+            <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-medium">✓ Free consultation</span>
+          </div>
+          {{- end }}
+        </div>
+        
+        <!-- Social Proof -->
+        <div class="flex items-center gap-3 text-gray-600">
+          <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+          </svg>
+          <span class="text-sm font-medium">50+ businesses trust me</span>
+        </div>
+      </div>
+      
+      <!-- Image -->
+      <div class="relative">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+          <img 
+            src="{{ $image }}" 
+            alt="{{ $imageAlt }}"
+            width="500"
+            height="500"
+            class="w-full h-auto object-cover"
+            loading="eager"
+          />
+          
+          <!-- Status Badge -->
+          <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span class="text-xs font-medium text-gray-900">Available for projects</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating elements for visual interest -->
+        <div class="absolute -top-6 -left-6 w-20 h-20 bg-primary/10 rounded-full blur-xl"></div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/10 rounded-full blur-xl"></div>
+      </div>
+    </div>
+  </div>
+</section>

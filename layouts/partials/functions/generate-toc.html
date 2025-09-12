@@ -1,0 +1,24 @@
+{{- $content := .content -}}
+{{- $minLevel := .minLevel | default 2 -}}
+{{- $maxLevel := .maxLevel | default 4 -}}
+
+{{- $headings := findRE "<h[2-6][^>]*>.*?</h[2-6]>" $content -}}
+{{- if $headings -}}
+<nav class="toc">
+  <h3 class="text-lg font-semibold text-gray-900 mb-4">Table of Contents</h3>
+  <ul class="space-y-2 text-sm">
+    {{- range $headings -}}
+      {{- $level := int (replaceRE "<h([2-6])[^>]*>.*?</h[2-6]>" "$1" .) -}}
+      {{- $text := replaceRE "<h[2-6][^>]*>(.*?)</h[2-6]>" "$1" . | plainify -}}
+      {{- $id := anchorize $text -}}
+      {{- if and (ge $level $minLevel) (le $level $maxLevel) -}}
+      <li class="{{ cond (eq $level 2) "" (printf "ml-%d" (mul (sub $level 2) 4)) }}">
+        <a href="#{{ $id }}" class="text-gray-600 hover:text-primary transition-colors">
+          {{ $text }}
+        </a>
+      </li>
+      {{- end -}}
+    {{- end -}}
+  </ul>
+</nav>
+{{- end -}}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body class="antialiased">
+    {{ partial "header.html" . }}
+    
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    
+    {{ partial "footer.html" . }}
+    {{ partial "scripts.html" . }}
+    {{ partial "cookie-consent.html" . }}
+  </body>
+</html>

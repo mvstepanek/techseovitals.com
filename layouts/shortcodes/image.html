@@ -1,0 +1,54 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $width := .Get "width" | default 800 -}}
+{{- $height := .Get "height" | default 600 -}}
+{{- $class := .Get "class" | default "w-full h-auto" -}}
+{{- $loading := .Get "loading" | default "lazy" -}}
+{{- $caption := .Get "caption" -}}
+{{- $webp := .Get "webp" | default "true" -}}
+
+{{- if $src -}}
+  {{- $image := resources.Get $src -}}
+  {{- if $image -}}
+    {{- $resized := $image.Resize (printf "%dx%d webp q85" $width $height) -}}
+    {{- $fallback := $image.Resize (printf "%dx%d jpg q85" $width $height) -}}
+    
+    <figure class="my-8">
+      <picture>
+        {{- if eq $webp "true" }}
+        <source srcset="{{ $resized.RelPermalink }}" type="image/webp">
+        {{- end }}
+        <img 
+          src="{{ $fallback.RelPermalink }}"
+          alt="{{ $alt }}"
+          width="{{ $width }}"
+          height="{{ $height }}"
+          class="{{ $class }}"
+          loading="{{ $loading }}"
+        />
+      </picture>
+      {{- if $caption }}
+      <figcaption class="text-sm text-gray-600 text-center mt-2">
+        {{ $caption | markdownify }}
+      </figcaption>
+      {{- end }}
+    </figure>
+  {{- else -}}
+    <!-- Fallback for external images -->
+    <figure class="my-8">
+      <img 
+        src="{{ $src }}"
+        alt="{{ $alt }}"
+        width="{{ $width }}"
+        height="{{ $height }}"
+        class="{{ $class }}"
+        loading="{{ $loading }}"
+      />
+      {{- if $caption }}
+      <figcaption class="text-sm text-gray-600 text-center mt-2">
+        {{ $caption | markdownify }}
+      </figcaption>
+      {{- end }}
+    </figure>
+  {{- end -}}
+{{- end -}}

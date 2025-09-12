@@ -1,0 +1,11 @@
+{{- $text := .text -}}
+{{- $limit := .limit | default 30 -}}
+{{- $suffix := .suffix | default "..." -}}
+
+{{- $words := split $text " " -}}
+{{- if gt (len $words) $limit -}}
+  {{- $truncated := delimit (first $limit $words) " " -}}
+  {{- printf "%s%s" $truncated $suffix -}}
+{{- else -}}
+  {{ $text }}
+{{- end -}}

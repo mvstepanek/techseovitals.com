@@ -1,0 +1,173 @@
+{{- $title := .Title -}}
+{{- if .IsHome -}}
+  {{- $title = site.Title -}}
+{{- else if eq .Title site.Title -}}
+  {{- $title = printf "%s - %s" .Title site.Title -}}
+{{- else -}}
+  {{- $title = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+
+{{- $description := .Description | default .Summary | default site.Params.description -}}
+{{- $keywords := .Params.keywords | default site.Params.keywords -}}
+{{- $canonical := .Permalink -}}
+{{- $image := .Params.image | default site.Params.ogImage | absURL -}}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+
+<!-- Basic SEO -->
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $description }}">
+<meta name="keywords" content="{{ $keywords }}">
+<meta name="author" content="{{ site.Params.author }}">
+<meta name="robots" content="{{ .Params.robots | default "index, follow" }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ $canonical }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ $canonical }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $description }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:locale" content="{{ site.Language.Lang }}">
+
+{{- if .IsPage -}}
+  {{- if .PublishDate }}
+  <meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  {{- if .Lastmod }}
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
+  {{- if .Params.author }}
+  <meta property="article:author" content="{{ .Params.author }}">
+  {{- end }}
+  {{- range .Params.tags }}
+  <meta property="article:tag" content="{{ . }}">
+  {{- end }}
+{{- end -}}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ $canonical }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $description }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{- with site.Params.twitter }}
+<meta name="twitter:site" content="@{{ . }}">
+<meta name="twitter:creator" content="@{{ . }}">
+{{- end }}
+
+<!-- Additional SEO -->
+<meta name="theme-color" content="#6366f1">
+<meta name="msapplication-TileColor" content="#6366f1">
+
+<!-- Icons -->
+<link rel="icon" href="{{ site.Params.favicon | absURL }}">
+<link rel="apple-touch-icon" href="{{ "/images/apple-touch-icon.png" | absURL }}">
+
+<!-- Feeds -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "feed.xml" | absURL }}">
+
+<!-- JSON-LD structured data -->
+{{- if .Params.jsonLd }}
+<script type="application/ld+json">
+{{ .Params.jsonLd | safeJS }}
+</script>
+{{- else if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ site.Params.schema.type }}",
+  "name": "{{ site.Params.schema.name }}",
+  "description": "{{ site.Params.schema.description }}",
+  "url": "{{ site.BaseURL }}",
+  "logo": "{{ site.Params.logo | absURL }}",
+  "image": "{{ site.Params.ogImage | absURL }}",
+  "founder": {
+    "@type": "Person",
+    "name": "{{ site.Params.schema.founder }}"
+  },
+  "areaServed": "{{ site.Params.schema.areaServed }}",
+  "serviceType": [
+    "Technical SEO Consulting",
+    "Web Performance Optimization",
+    "Core Web Vitals Improvement",
+    "SEO Auditing",
+    "Website Migration Support"
+  ],
+  "sameAs": [
+    "https://linkedin.com/in/{{ site.Params.linkedin }}/",
+    "https://bsky.app/profile/techseovitals.com",
+    "https://youtube.com/{{ site.Params.youtube }}"
+  ]
+}
+</script>
+{{- else if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ .Title }}",
+  "description": "{{ $description }}",
+  "image": ["{{ $image }}"],
+  "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Params.author | default site.Params.author }}",
+    "url": "{{ "/technical-seo-consultant/" | absURL }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "{{ site.Params.author }}",
+    "url": "{{ site.BaseURL }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.Params.logo | absURL }}"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ $canonical }}"
+  }{{- if .Params.tags }},
+  "keywords": "{{ delimit .Params.tags ", " }}"{{- end }}
+}
+</script>
+{{- end }}
+
+<!-- CSS Assets -->
+{{ $tailwindCSS := resources.Get "css/tailwind.css" | css.PostCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $tailwindCSS.RelPermalink }}" integrity="{{ $tailwindCSS.Data.Integrity }}">
+
+<!-- Preload critical resources -->
+{{- if site.Params.preloadFonts }}
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+{{- end }}
+
+<!-- DNS prefetch for external resources -->
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+<!-- Analytics -->
+{{- with site.Params.googleAnalytics }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ . }}');
+</script>
+{{- end }}
+
+{{- with site.Params.googleTagManager }}
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ . }}');</script>
+{{- end }}

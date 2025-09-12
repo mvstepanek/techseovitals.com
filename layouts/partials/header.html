@@ -1,0 +1,125 @@
+<!-- Resources Banner -->
+<div class="bg-gradient-to-r from-primary to-primary-dark text-white">
+  <div class="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-center text-center text-sm font-medium">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-semibold bg-white/20 text-white mr-4">
+        <div class="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+        Free Resources
+      </div>
+      <div class="flex flex-wrap items-center justify-center gap-1 sm:gap-4">
+        <a href="/technical-seo-checklist/" class="hover:underline">
+          Technical SEO Checklist
+        </a>
+        <span class="text-primary-light">•</span>
+        <a href="/website-migration-checklist/" class="hover:underline">
+          Website Migration Checklist
+        </a>
+        <span class="text-primary-light">•</span>
+        <a href="/5-web-performance-metrics-every-business-owner-should-track/" class="hover:underline">
+          5 Web Performance Metrics For Business Owners
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 bg-white shadow-sm">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="{{ "/" | relURL }}" class="flex items-center space-x-3 text-xl font-bold text-gray-900 hover:text-primary transition-colors">
+          {{ partial "icons/logo.html" . }}
+          <span>TechSEO Vitals</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex lg:items-center lg:space-x-8">
+        <a href="/technical-seo-services/" class="text-gray-700 hover:text-primary transition-colors">
+          Services
+        </a>
+        <a href="/newsletter/" class="text-gray-700 hover:text-primary transition-colors">
+          Newsletter
+        </a>
+        <a href="/blog/" class="text-gray-700 hover:text-primary transition-colors">
+          Blog
+        </a>
+        <a href="/technical-seo-consultant/" class="text-gray-700 hover:text-primary transition-colors">
+          About Me
+        </a>
+        
+        <!-- CTA Button -->
+        <a 
+          href="/contact/" 
+          class="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-dark transition-colors"
+        >
+          Contact Me
+        </a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button 
+        type="button" 
+        class="lg:hidden rounded-lg p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 mobile-menu-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Open menu</span>
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div class="mobile-menu hidden lg:hidden">
+    <div class="fixed inset-0 z-50">
+      <div class="fixed inset-0 bg-black/50 mobile-menu-overlay"></div>
+      <div class="fixed right-0 top-0 h-full w-full max-w-sm bg-white shadow-xl">
+        <div class="flex items-center justify-between border-b border-gray-200 p-4">
+          <div class="flex items-center space-x-3 text-xl font-bold text-gray-900">
+            {{ partial "icons/logo.html" . }}
+            <span>TechSEO Vitals</span>
+          </div>
+          <button class="mobile-menu-close rounded-lg p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav class="p-4">
+          <ul class="space-y-2">
+            <li>
+              <a href="/technical-seo-services/" class="block py-2 text-gray-900 hover:text-primary">
+                Services
+              </a>
+            </li>
+            <li>
+              <a href="/newsletter/" class="block py-2 text-gray-900 hover:text-primary">
+                Newsletter
+              </a>
+            </li>
+            <li>
+              <a href="/blog/" class="block py-2 text-gray-900 hover:text-primary">
+                Blog
+              </a>
+            </li>
+            <li>
+              <a href="/technical-seo-consultant/" class="block py-2 text-gray-900 hover:text-primary">
+                About Me
+              </a>
+            </li>
+            <li class="pt-4">
+              <a href="/contact/" class="block w-full text-center py-2 text-white bg-primary hover:bg-primary-dark rounded-lg transition-colors">
+                Contact Me
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
