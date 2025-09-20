@@ -2,6 +2,7 @@ import React from 'react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import ConvertKitForm from '../forms/ConvertKitForm';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface TrustSignalsProps {
   show: boolean;
@@ -67,7 +68,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
               {title}
             </h1>
 
-            <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">{description}</p>
+            <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg">{description}</p>
 
             {trustSignals?.show && (
               <div className="mt-10 flex flex-col gap-4">
@@ -78,7 +79,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                     <div className="flex -space-x-2">
                       {trustSignals.images ? (
                         trustSignals.images.map((image, index) => (
-                          <img
+                          <OptimizedImage
                             key={index}
                             src={image}
                             alt={`Industry leader ${index + 1}`}
@@ -105,12 +106,12 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
             <div className="absolute -inset-4 bg-gradient-to-r from-brand-600/20 to-brand-600/20 rounded-3xl blur-2xl opacity-30" />
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-3xl font-bold mb-3">
                   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                     {form.title}
                   </span>
                 </h3>
-                <p className="text-gray-600">{form.subtitle}</p>
+                <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>
 
               {form.dataAttributes && form.convertKitOptions ? (
@@ -149,7 +150,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                       </div>
                     ))}
 
-                    <Button type="submit" variant={form.submitButton.variant || 'primary'} className="w-full">
+                    <Button type="submit" variant={form.submitButton.variant || 'primary'} className="w-full AhrefsAnalytics-event-newsletter_signup">
                       <span>{form.submitButton.text}</span>
                     </Button>
                   </div>

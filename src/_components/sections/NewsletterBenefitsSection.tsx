@@ -1,11 +1,12 @@
 import React from 'react';
 import StatsGrid from '../business/StatsGrid';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const NewsletterBenefitsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
+        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -14,17 +15,16 @@ const NewsletterBenefitsSection: React.FC = () => (
               d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z"
             />
           </svg>
-          What You&apos;ll Learn
+          Why Subscribe
         </div>
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-          Join Website Owners Getting{' '}
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Real Results
+          Why Business Owners{' '}
+          <span className={COMMON_STYLES.gradientText}>
+            Trust This Newsletter
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          &quot;Your insights transformed how we think about user experience.&quot; - 3 benefits you can expect from
-          subscribing
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          A newsletter that transforms how you think about user experience and technical optimization.
         </p>
       </div>
       <StatsGrid
@@ -32,12 +32,12 @@ const NewsletterBenefitsSection: React.FC = () => (
           {
             value: '10+',
             label: 'Years Experience',
-            color: 'green',
+            color: 'blue',
           },
           {
             value: '2x',
             label: 'Monthly Frequency',
-            color: 'blue',
+            color: 'green',
           },
           {
             value: '100%',
@@ -47,9 +47,9 @@ const NewsletterBenefitsSection: React.FC = () => (
         ]}
       />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300">
+        <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
           <div className="mb-6">
-            <svg className="w-12 h-12 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-12 h-12 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -58,14 +58,15 @@ const NewsletterBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Gaining New Knowledge</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Decision Making</h3>
           <p className="text-gray-600 mb-6">
-            Learning new information is crucial for both personal and business growth. Stay ahead of the competition.
+            Stop second-guessing your technical choices. Get clear guidance on what works, what doesn&apos;t, and why it
+            matters for your specific situation.
           </p>
         </div>
-        <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
+        <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300">
           <div className="mb-6">
-            <svg className="w-12 h-12 text-blue-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-12 h-12 text-green-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -74,9 +75,10 @@ const NewsletterBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Staying Up-to-Date</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Competitive Advantage</h3>
           <p className="text-gray-600 mb-6">
-            Keeping current with recent industry changes is critical for the strategic decisions you need to make.
+            Learn optimization techniques most websites miss. Get ahead of changes before they impact your rankings and
+            discover opportunities others overlook.
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -85,10 +87,10 @@ const NewsletterBenefitsSection: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Getting Better Website</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Growth</h3>
           <p className="text-gray-600 mb-6">
-            Implementing knowledge from the newsletter will help your website grow, attract more visitors, and increase
-            revenue over time.
+            Watch your website transform with better user engagement, improved search visibility, and increased revenue
+            through proven optimization techniques.
           </p>
         </div>
       </div>

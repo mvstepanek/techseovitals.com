@@ -15,8 +15,9 @@ interface ServiceCardProps {
   features: ServiceFeature[];
   ctaText: string;
   ctaHref: string;
-  color: 'green' | 'orange' | 'indigo' | 'blue';
+  color: 'green' | 'orange' | 'indigo' | 'blue' | 'purple';
   id?: string;
+  commitment?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -31,6 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   ctaHref,
   color,
   id,
+  commitment,
 }) => {
   const getColorClasses = () => {
     switch (color) {
@@ -66,6 +68,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           focus: 'focus:ring-blue-300',
           checkmark: 'text-green-500',
         };
+      case 'purple':
+        return {
+          bg: 'from-purple-500 to-purple-600',
+          accent: 'from-purple-500 to-purple-600',
+          button: 'from-purple-600 to-purple-700',
+          focus: 'focus:ring-purple-300',
+          checkmark: 'text-green-500',
+        };
       default:
         return {
           bg: 'from-green-500 to-green-600',
@@ -93,7 +103,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       {id && <div className="text-center mb-10" id={id} />}
 
       <div className="max-w-7xl mx-auto">
-        <div className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300">
+        <div className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 pb-16 sm:pb-8 lg:pb-10 border-2 border-gray-200 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden sm:overflow-visible">
           <div
             className={`absolute -top-4 -right-4 w-16 sm:w-20 lg:w-24 h-16 sm:h-20 lg:h-24 bg-gradient-to-br ${colorClasses.accent} rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity`}
           />
@@ -106,23 +116,23 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 >
                   {icon}
                 </div>
-                <h4 className="text-xl sm:text-2xl font-sans font-bold text-gray-900">{title}</h4>
+                <h4 className="text-2xl sm:text-2xl font-sans font-bold text-gray-900">{title}</h4>
               </div>
 
               <div className="mb-4 sm:mb-5">
-                <div className="text-xs text-gray-500 mb-1">{priceLabel}</div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-sans font-bold text-gray-900">
+                <div className="text-sm text-gray-500 mb-1">{priceLabel}</div>
+                <div className="text-3xl sm:text-3xl lg:text-4xl font-sans font-bold text-gray-900">
                   {typeof price === 'string' ? price : `$${price.toLocaleString()}`}
-                  {priceUnit && <span className="text-base sm:text-lg lg:text-xl text-gray-600">{priceUnit}</span>}
+                  {priceUnit && <span className="text-base sm:text-lg lg:text-lg text-gray-600">{priceUnit}</span>}
                 </div>
               </div>
 
-              <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-5 sm:mb-6">
+              <p className="text-base sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-5 sm:mb-6">
                 {description}
               </p>
 
               <a
-                className={`inline-block w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-r ${colorClasses.button} px-4 sm:px-6 py-2 sm:py-3 text-center text-sm sm:text-base font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 ${colorClasses.focus}`}
+                className={`inline-block w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-r ${colorClasses.button} px-5 sm:px-6 py-2.5 sm:py-3 text-center text-base sm:text-base font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 ${colorClasses.focus}`}
                 href={ctaHref}
                 target="_self"
               >
@@ -146,14 +156,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                       />
                     </svg>
                     <div>
-                      <h5 className="font-semibold text-sm sm:text-base mb-1">{feature.title}</h5>
-                      <p className="text-sm sm:text-base text-gray-600">{feature.description}</p>
+                      <h5 className="font-semibold text-base sm:text-base mb-1">{feature.title}</h5>
+                      <p className="text-base sm:text-base text-gray-600">{feature.description}</p>
                     </div>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
+
+          {commitment && <div className="absolute bottom-4 right-4 text-xs text-gray-500">{commitment}</div>}
         </div>
       </div>
     </div>

@@ -7,30 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Open Sans Font Face Declarations */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/assets/fonts/opensans-400.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/assets/fonts/opensans-600.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/assets/fonts/opensans-700.woff2') format('woff2');
-}
+/* Font declarations now inline in head for optimal loading */
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -123,4 +100,3 @@ html {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
 }
 
-/* Removed unused btn-cta class */

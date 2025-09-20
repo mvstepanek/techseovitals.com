@@ -9,14 +9,13 @@ import FeatureGrid from './_components/business/FeatureGrid';
 import BrutalTruthSection from './_components/sections/BrutalTruthSection';
 import WhyChooseMeSection from './_components/sections/WhyChooseMeSection';
 import WhyAuditSection from './_components/sections/WhyAuditSection';
-import SimpleStepsSection from './_components/sections/SimpleStepsSection';
 import { COMMON_STYLES } from './_data/constants';
 
 export const data = {
   layout: 'base',
   title: 'TechSEO Vitals With Martin Stepanek',
   description:
-    "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.",
+    "Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.",
 };
 
 interface EleventyData {
@@ -27,6 +26,7 @@ interface EleventyData {
         description: string;
         permalink: string;
         date: string;
+        image?: string;
       };
       content: string;
     }>;
@@ -34,22 +34,34 @@ interface EleventyData {
 }
 
 const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
-  // Get latest 3 blog posts
-  const latestPosts = collections.blog.slice(0, 3).map(post => ({
-    title: post.data.title,
-    href: post.data.permalink,
-    image: `/assets/images/blog-thumbnails/${post.data.permalink
+  // Get latest 3 blog posts (sorted by date, newest first)
+  const sortedPosts = [...collections.blog].sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+  const latestPosts = sortedPosts.slice(0, 3).map(post => {
+    const permalink =
+      post.data.permalink ||
+      `/blog/${post.data.title
+        ?.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')}/`;
+    const fallbackImage = `/assets/images/blog/${permalink
       .split('/')
       .filter(p => p)
-      .pop()}.jpg`,
-    date: new Date(post.data.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }),
-    dateTime: post.data.date,
-    excerpt: post.data.description,
-  }));
+      .pop()}.jpg`;
+    return {
+      title: post.data.title,
+      href: permalink,
+      image: post.data.image || fallbackImage,
+      date: new Date(post.data.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }),
+      dateTime: post.data.date,
+      excerpt: post.data.description,
+    };
+  });
 
   return (
     <>
@@ -64,20 +76,20 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
               />
             </svg>
           ),
-          text: 'User Experience Strategist & Technical SEO Specialist',
+          text: '10+ Years of Industry Expertise',
         }}
         title={
           <>
             Transform Your Website Into a <span className={COMMON_STYLES.gradientText}>Revenue Engine</span>
           </>
         }
-        description="What's your user experience strategy? I help businesses transform technical barriers into competitive advantages, creating exceptional experiences that users love and revenue naturally follows."
+        description="When your site is fast, accessible, and easy to navigate, visitors stay longer and convert more. I combine technical SEO and performance optimization to create exceptional user experiences."
         primaryCta={{
           text: 'Get Free Website Check',
           href: '/contact/',
         }}
         image={{
-          src: '/assets/images/martinstepanek-techseo-5.jpg',
+          src: '/assets/images/martin-stepanek-6.jpg',
           alt: 'Martin Stepanek - Technical SEO Expert',
           loading: 'eager',
         }}
@@ -90,7 +102,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         }}
         statusBadge={{
           show: true,
-          text: 'Available for projects',
+          text: 'Currently taking new clients',
         }}
       />
 
@@ -99,22 +111,21 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
       <FeatureGrid
         badge={{
           icon: <div className="w-2 h-2 bg-white rounded-full" />,
-          text: 'Why Technical SEO?',
+          text: 'Why Technical Excellence Matters',
         }}
         title={
           <>
-            Turn Visitors Into <span className={COMMON_STYLES.gradientText}>Paying Customers</span>
+            Users First. <span className={COMMON_STYLES.gradientText}>Search Engines Follow</span>
           </>
         }
-        subtitle="Great user experience drives everything. When your site is fast and flawless, conversions increase and search engines naturally reward you."
+        subtitle="Great user experience drives everything. Technical SEO and performance optimization work together to boost engagement, and increase conversions. Websites that are technically excellent create better user experiences, leading to better visibility on search engines and AI platforms"
         cta={{
-          text: 'Start Your Transformation',
+          text: 'Get Free Website Check',
           href: '/contact/',
           trustSignals: ['Free consultation', 'No commitment'],
         }}
         backgroundColor="gray"
         columns={3}
-        bottomText="...and making visitors happy 😊"
         features={[
           {
             icon: (
@@ -122,10 +133,10 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>
             ),
-            title: 'Increase Revenue',
+            title: 'Turn Visitors Into Customers',
             description:
-              'Users expect speed and reliability. When your site delivers exceptional experiences, visitors stay longer, buy more, and become loyal customers who return.',
-            color: 'green',
+              'When visitors can easily find products and pages load instantly, they convert better. Optimizing technical SEO and web performance create a positive experience that drives revenue.',
+            color: 'blue',
           },
           {
             icon: (
@@ -133,10 +144,10 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
                 <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
               </svg>
             ),
-            title: 'Better Conversions',
+            title: 'Remove User Friction',
             description:
-              'Every millisecond matters to your users. Faster pages mean happier visitors who actually complete purchases instead of abandoning their carts in frustration.',
-            color: 'blue',
+              'Broken links, slow pages, and poor structure frustrate visitors. Technical optimization eliminates these barriers, ensuring every user journey is smooth from search to purchase.',
+            color: 'green',
           },
           {
             icon: (
@@ -149,9 +160,9 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
                 />
               </svg>
             ),
-            title: 'Improved Visibility',
+            title: 'Maximize Your Visibility',
             description:
-              'Well-structured, accessible websites serve everyone better. When users can easily find what they need, search engines and AI tools naturally understand and promote your content.',
+              'Well-structured sites rank better in Google and get recommended by AI systems like ChatGPT and Perplexity. Technical SEO excellence ensures maximum discoverability across all platforms.',
             color: 'purple',
           },
         ]}
@@ -163,9 +174,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
 
       <WhyAuditSection />
 
-      <SimpleStepsSection />
-
-      <TestimonialsSection />
+      <TestimonialsSection backgroundColor="bg-gray-50" />
 
       <CTASection
         badge={{
@@ -174,14 +183,14 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           ),
-          text: "What's Your User Experience Strategy?",
+          text: 'Ready to Delight Your Users?',
         }}
         title={
           <>
-            Transform Technical Barriers Into <span className={COMMON_STYLES.gradientText}>Competitive Advantages</span>
+            Give Visitors The Experience <span className={COMMON_STYLES.gradientText}>They Deserve</span>
           </>
         }
-        description="Performance issues are business risks. Get a comprehensive strategy that transforms technical barriers into competitive advantages your users will love."
+        description="Your users are struggling with issues you might not even see. Get a comprehensive technical audit that reveals exactly what's frustrating visitors and how to create a seamless experience while naturally improving your visibility in search engines and AI systems."
         primaryCta={{
           text: 'Start Your Transformation',
           href: '/contact/',
@@ -199,7 +208,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
               </svg>
             ),
             title: '100% Free',
-            description: 'Website check with no hidden costs',
+            description: 'Free website check with no hidden costs',
           },
           {
             icon: (

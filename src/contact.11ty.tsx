@@ -1,16 +1,15 @@
 import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
-import ContactForm from './_components/forms/ContactForm';
+import CalendlySection from './_components/sections/CalendlySection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
 import BusinessInfoSection from './_components/sections/BusinessInfoSection';
-import TestimonialsSection from './_components/sections/TestimonialsSection';
 import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
-  title: 'Contact | TechSEO Vitals',
+  title: 'Contact',
   description:
-    'Transform technical barriers into competitive advantages. Schedule a free consultation to discuss your user experience strategy with developer-led technical SEO expertise.',
+    'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
   permalink: '/contact/',
   layout: 'base',
 };
@@ -27,13 +26,13 @@ const ContactPage: React.FC = () => (
           Get In Touch With <span className={COMMON_STYLES.gradientText}>Martin</span>
         </>
       }
-      description="What's your user experience strategy? Let's discuss how to transform technical barriers into competitive advantages that delight users and drive revenue."
+      description="Ready to create experiences users actually love? Let's discuss how technical SEO and performance optimization can serve your visitors first while maximizing visibility in search engines and AI systems."
       primaryCta={{
-        text: 'Start Your Transformation',
-        href: '#contact-form',
+        text: 'Schedule Free Consultation',
+        href: '#schedule',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-2.jpg',
+        src: '/assets/images/martin-stepanek-3.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}
@@ -43,9 +42,8 @@ const ContactPage: React.FC = () => (
         text: 'Available for Projects',
       }}
     />
-    <ContactForm />
+    <CalendlySection />
     <ContactMethodsSection />
-    <TestimonialsSection backgroundColor="bg-gray-50" />
     <BusinessInfoSection backgroundColor="bg-white" />
     <NewsletterSection />
   </main>

@@ -24,7 +24,7 @@ const MigrationCTASection: React.FC = () => (
             Migration Checklist
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
           Join dozens of businesses that kept users happy during critical changes. Protect the trust you&apos;ve built
           with seamless transitions.
         </p>

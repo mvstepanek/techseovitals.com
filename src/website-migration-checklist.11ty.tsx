@@ -2,12 +2,12 @@ import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import MigrationBenefitsSection from './_components/sections/MigrationBenefitsSection';
-import ExperienceSection from './_components/sections/ExperienceSection';
+import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
-  title: 'Website Migration Checklist | TechSEO Vitals',
+  title: 'Website Migration Checklist',
   description:
-    'Ensure zero disruption for your users during critical changes. 45+ tasks to maintain the seamless experience your visitors trust throughout migrations.',
+    'Website migration checklist with 45+ essential tasks. Protect your search rankings and user experience during seamless website transitions.',
   permalink: '/website-migration-checklist/',
   layout: 'base',
 };
@@ -17,22 +17,22 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
     <HeroWithFormSection
       badge={{
         icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
-        text: 'Future-Proof Your User Experience',
+        text: 'Protect Your Digital Assets',
       }}
       title={
         <>
           Get Your <span className={COMMON_STYLES.gradientText}>Website Migration</span> Checklist
         </>
       }
-      description="Migration disasters destroy user trust. This roadmap eliminates risks and ensures seamless transitions that protect the experiences visitors rely on."
+      description="Most website migrations fail due to poor planning, causing traffic drops and lost revenue. This comprehensive checklist reduces migration risks while safeguarding your search visibility and business operations."
       trustSignals={{
         show: true,
         stars: true,
         text: '100+ people already using the checklist',
       }}
       form={{
-        title: 'Get Instant Access',
-        subtitle: 'Enter your details to download immediately',
+        title: 'Grab Your Free Checklist',
+        subtitle: 'Get the checklist delivered to your inbox',
         action: 'https://app.kit.com/forms/7945460/subscriptions',
         method: 'POST',
         fields: [
@@ -43,7 +43,7 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
             required: true,
           },
           {
-            placeholder: 'Business email',
+            placeholder: 'Email',
             type: 'email',
             name: 'email_address',
             required: true,
@@ -66,74 +66,7 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
 
     <MigrationBenefitsSection />
 
-    <div className="border-t border-gray-200">
-      <ExperienceSection
-        badge={{
-          icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
-          text: 'About Martin',
-        }}
-        title={
-          <>
-            What Makes Me <span className={COMMON_STYLES.gradientText}>Different</span>
-          </>
-        }
-        subtitle="I combine deep technical expertise with business acumen to deliver SEO strategies that directly impact your bottom line."
-        experiencePoints={[
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            ),
-            title: '10+ Years of Experience',
-            description:
-              'Over a decade of hands-on web development and technical SEO expertise, working with businesses of all sizes.',
-            color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-          },
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5H7A2 2 0 005 7v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
-            ),
-            title: 'Actionable Task Lists',
-            description:
-              'Detailed, prioritized action items with step-by-step guidance tailored to your internal resources and capabilities.',
-            color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-          },
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8-8 8-4-4-6 6" />
-              </svg>
-            ),
-            title: 'Revenue-Focused Approach',
-            description:
-              'Every optimization targets real business impact. I focus on improvements that directly increase conversions and revenue.',
-            color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-          },
-        ]}
-        image={{
-          src: '/assets/images/martinstepanek-techseo-4.jpg',
-          alt: 'Martin Stepanek - Technical SEO Consultant',
-        }}
-        statsBadge={{
-          icon: (
-            <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ),
-          title: '50+ Successful Projects',
-          subtitle: 'Trusted by businesses worldwide',
-        }}
-        backgroundColor="white"
-      />
-    </div>
+    <AboutMartinSection />
   </main>
 );
 

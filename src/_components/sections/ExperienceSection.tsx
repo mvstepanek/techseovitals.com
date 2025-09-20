@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../ui/Badge';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface ExperiencePoint {
   icon: React.ReactNode;
@@ -67,7 +68,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
 
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">{title}</h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
@@ -92,17 +93,19 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 rounded-3xl blur-xl" />
             <div className="relative">
-              <img
+              <OptimizedImage
                 src={image.src}
                 alt={image.alt}
-                width="800"
-                height="800"
+                width={800}
+                height={800}
                 className="w-full rounded-3xl shadow-2xl border-4 border-white"
                 loading="lazy"
                 decoding="async"
+                responsive={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               {statsBadge && (
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
+                <div className="absolute -bottom-3 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white rounded-2xl p-4 shadow-xl border border-gray-100 w-fit mx-auto sm:mx-0 sm:max-w-none">
                   <div className="flex items-center gap-3">
                     {statsBadge.showIcon !== false &&
                       (statsBadge.icon || <div className="w-4 h-4 bg-green-400 rounded-full" />)}

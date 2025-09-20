@@ -1,0 +1,133 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "_site",
+  "installCommand": "npm install",
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/services/website-migration-support/",
+      "destination": "/technical-seo-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/technical-seo-monitoring/",
+      "destination": "/technical-seo-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/technical-seo-audit/",
+      "destination": "/technical-seo-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/",
+      "destination": "/technical-seo-services/",
+      "permanent": true
+    },
+    {
+      "source": "/services/technical-seo-consulting/",
+      "destination": "/technical-seo-consultant/",
+      "permanent": true
+    },
+    {
+      "source": "/book-consultation/",
+      "destination": "/contact/",
+      "permanent": true
+    },
+    {
+      "source": "/youre-registered/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/751/why-do-technical-seo-and-web-performance-matter-for-every-business/",
+      "destination": "/blog/the-invisible-drivers-of-e-commerce-success-technical-seo-and-web-performance-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/47697/improving-crawlability-help-google-and-chatgpt-find-your-business-website/",
+      "destination": "/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/",
+      "permanent": true
+    },
+    {
+      "source": "/47754/the-roi-of-faster-content-how-lcp-transforms-bounce-rates-and-revenue/",
+      "destination": "/blog/the-roi-of-faster-content-how-lcp-transforms-bounce-rates-and-revenue/",
+      "permanent": true
+    },
+    {
+      "source": "/757/understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online/",
+      "destination": "/blog/understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online/",
+      "permanent": true
+    },
+    {
+      "source": "/763/how-core-web-vitals-boost-your-conversions-and-revenue/",
+      "destination": "/blog/how-core-web-vitals-boost-your-conversions-and-revenue/",
+      "permanent": true
+    },
+    {
+      "source": "/47675/mobile-optimization-the-key-to-e-commerce-excellence/",
+      "destination": "/blog/mobile-optimization-the-key-to-e-commerce-excellence/",
+      "permanent": true
+    },
+    {
+      "source": "/47707/why-you-should-care-about-your-ttfb-a-technical-seo-guide-to-optimization/",
+      "destination": "/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/",
+      "permanent": true
+    },
+    {
+      "source": "/47703/multilingual-website-essentials-a-technical-seo-guide/",
+      "destination": "/blog/multilingual-website-essentials-technical-seo-guide/",
+      "permanent": true
+    },
+    {
+      "source": "/47681/essential-technical-seo-monitoring-to-protect-your-business/",
+      "destination": "/blog/essential-technical-seo-monitoring-to-protect-your-business/",
+      "permanent": true
+    },
+    {
+      "source": "/47625/the-essential-technical-seo-checklist-i-developed-for-client-success/",
+      "destination": "/blog/the-essential-technical-seo-checklist-i-developed-for-client-success/",
+      "permanent": true
+    },
+    {
+      "source": "/47690/technical-seo-checklist-for-website-migrations-and-redesigns/",
+      "destination": "/blog/technical-seo-checklist-for-website-migrations-and-redesigns/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com https://calendar.google.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com https://calendar.google.com https://vercel.live https://www.youtube-nocookie.com https://app.kit.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, maxage=604800, stale-while-revalidate=2592000"
+        }
+      ]
+    }
+  ]
+}

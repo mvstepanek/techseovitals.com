@@ -1,113 +1,269 @@
 ---
-title: 'Terms and Conditions | TechSEO Vitals'
-description: 'Terms and Conditions'
+title: 'Terms and Conditions'
+description: 'Terms and conditions for using TechSEO Vitals website and services. Legal agreements, policies, and user responsibilities explained.'
 permalink: '/terms-and-conditions/'
 layout: 'page'
 ---
 
-**Last Updated: May 12, 2025**
+Welcome to www.techseovitals.com or www.technickeseo.sk (the “Website”).
 
-## 1. Definitions
+These Terms and Conditions (“Agreement”) constitute a legally binding agreement that sets forth the terms and conditions governing all visitors, users, clients, and customers (“You” or “Your”) who use the Website and our services. By using the Website or engaging our services, You acknowledge and agree to comply with all terms and conditions contained in this Agreement.
 
-- **"Company"** refers to mountain explorer, s. r. o., a Slovak company.
-- **"Content"** refers to text, images, graphics, and other materials on the Site.
-- **"Services"** refers to all services offered by the Company.
-- **"Site"** refers to the website [staging.techseovitals.com](https://staging.techseovitals.com).
-- **"User"** or **"You"** refers to the person or entity using our Services.
+This Agreement incorporates Our Privacy Policy by reference.
 
-## 2. Company Information
+**Please review this Agreement carefully as it affects Your legal rights and obligations.** By accessing or using the Website or engaging our services, You confirm that You have read, understood, and agreed to be bound by this Agreement. If You do not agree to these terms and conditions, You may not access or use the Website or our services.
 
-**mountain explorer, s. r. o.**
-Karpatske namestie 7770/10A
-83106 Bratislava
-Slovakia (European Union)
+## **1. Definitions**
 
-**ID:** 53226119
+The following definitions apply to these Terms and Conditions, Privacy Policy, and all related agreements:
 
-## 3. Services
+- “Company,” “Us,” “We,” and “Our” refer to mountain explorer, s.r.o., a company organized under the laws of Slovakia and based at Karpatske namestie 7770/10A, 83106 Bratislava, Slovakia (European Union), Company ID: 53226119.
+- “Content” means all information displayed on the Website, including but not limited to text, data, code, images, photographs, graphics, software, designs, and any other materials available on the Website or via email communication, including newsletters.
+- “Deliverables” means any reports, documents, recommendations, or other materials we provide as part of our Services.
+- “Invoice” means an itemized list of Services provided to You, detailing individual service amounts and the total sum due.
+- “Newsletter” means the free TechSEO Vitals newsletter service.
+- “Party” means either You or Us, and “Parties” means both You and Us collectively.
+- “Paid Services” means our paid services described in Section 2.1 or any custom services.
+- “Services” means both our Paid Services and free Newsletter.
+- “Service Agreement” means any specific agreement between You and Us detailing the Paid Services.
 
-### 3.1 Paid Services
+## **2. Services**
 
-- **Technical SEO Audit:** Analysis of your website's technical performance
-- **Consulting Services:** Ongoing technical SEO guidance and support
-- **Migration Support:** Website migration planning and execution guidance
+### **2.1 Service Provision**
 
-### 3.2 Free Services
+We offer the following services:
 
-- **TechSEO Vitals Newsletter:** Free bi-weekly technical SEO insights
+Paid Services include but are not limited to:
 
-## 4. Payment Terms
+- Technical SEO Audit
+- Technical SEO Monitoring
+- Technical SEO Consulting
+- Website Migration Support
 
-- Payment is due within 7 days of invoice date
-- All fees are non-refundable unless otherwise specified
-- Services may be suspended for accounts with overdue payments
-- Prices are subject to change with 30 days notice
+Free Services include but are not limited to:
 
-## 5. Data Usage and Confidentiality
+- TechSEO Vitals Newsletter
+
+### **2.2 Service Engagement**
+
+- All Paid Services require a formal agreement and advance payment before commencement
+- Service agreements may be executed via email or through authorized third-party service providers
+- The specific scope of work, deliverables, timelines, and fees shall be mutually agreed upon by authorized representatives of both Parties
+- We reserve the right to refuse service to anyone at our sole discretion
+- While we provide many services on a consultative basis, some services may include direct assistance or implementation support
+- We will make reasonable efforts to provide services within agreed timeframes, though exact timing may vary based on complexity and scope
+- We may require access to Your website, analytics, and other relevant platforms to provide services effectively
+
+### **2.3 Client Responsibilities**
+
+You agree to:
+
+- Provide accurate and complete information necessary for service delivery
+- Grant necessary access to websites, platforms, and data required for service provision
+- Respond to queries and requests for information promptly
+- Review and provide feedback on deliverables within agreed timeframes
+- Implement recommendations at Your own discretion and responsibility
+- Maintain confidentiality of our proprietary methodologies and recommendations
+
+## **3. Payments and Billing**
+
+### **3.1 Fees and Payments**
+
+**Paid Services:**
+
+- All payments shall be made in EUR unless otherwise specified
+- Payments are due within 7 days of Invoice date
+- For EU clients (VAT registered) and all non-EU clients, reverse charge mechanism applies
+- For EU clients not registered for VAT, applicable VAT rates will be charged
+- All prices are exclusive of VAT unless explicitly stated otherwise
+- Payments shall be made via bank transfer to our designated account or through mutually agreed financial services
+- Work will not commence until payment terms are agreed and any required advance payments are received
+
+**Free Services:**
+
+- The TechSEO Vitals Newsletter is provided at no charge.
+- We reserve the right to:
+    - Modify Newsletter frequency
+    - Alter Newsletter content and format
+    - Discontinue the Newsletter service
+    - Convert the Newsletter to a paid service with advance notice
+
+### **3.2 Late Payments**
+
+- Services may be suspended for overdue payments
+- Late payment fees may apply to overdue invoices
+- You are responsible for all costs associated with collecting overdue payments
+
+### **3.3 Refunds**
+
+- Due to the consultative nature of our services, fees are generally non-refundable
+- Specific refund terms may be outlined in individual Service Agreements
+- Pro-rata refunds for service termination may be considered at our discretion
+
+## **4. Intellectual Property Rights**
+
+### **4.1 Our Rights**
+
+- We retain ownership of all methodologies, processes, and know-how
+- You receive a non-exclusive license to use deliverables for business purposes
+- Implementation of recommendations does not transfer ownership of methodology
+
+### **4.2 Your Rights**
+
+- You retain all rights to Your existing website, content, and materials
+- You receive a non-exclusive license to use our deliverables for Your business purposes
+- Implementation of our recommendations does not transfer methodology ownership
+
+## **5. Confidentiality and Data Usage**
+
+### **5.1 Our Obligations**
+
+We agree to:
+
+- Maintain confidentiality of Your business information
+- Protect against unauthorized disclosure of sensitive data or analytics
+- Safeguard Your account credentials and access details
+
+### **5.2 Data Usage Rights**
+
+By engaging our services, You expressly grant us the following rights:
+
+**Data Usage:**
+
+We may anonymously use and share data from Google Search Console and other platforms for:
+
+- Case studies and white papers
+- Research purposes and industry analysis
+- Educational content and training materials
+- Marketing materials and promotional content
+- Analysis and processing using artificial intelligence (“AI”) and large language models (“LLM”) for:
+    - Conducting research and data analysis
+    - Identifying industry trends and patterns
+    - Improving service delivery and methodologies
+    - Creating aggregated industry reports
+- Any other professional purposes
+
+**Brand Usage:**
 
 We may:
 
-- Use anonymized client data for research and content creation
-- Reference general project outcomes without identifying clients
-- Process data through AI and machine learning systems with appropriate safeguards
+- Display Your company logo and name on our website
+- Include Your company logo and name in marketing materials
+- List Your company in our client portfolio
+- Use Your company name in client references
+- Any other professional purposes
 
-All confidential business information shared during engagements will be protected and not disclosed without permission.
+**AI Data Processing Safeguards:**
 
-## 6. Limitation of Liability
+We commit to:
 
-Our services are advisory in nature. We cannot guarantee:
+- Using only anonymized and aggregated data for AI and LLM processing
+- Excluding personally identifiable information and sensitive business data from AI processing
+- Maintaining appropriate security measures for AI tools
+- Regularly reviewing AI processing methods for data protection compliance
 
-- Specific search engine ranking improvements
-- Specific traffic or revenue increases
-- Immunity from search engine algorithm changes
+## **6. Limitations of Liability**
 
-Our total liability is limited to the amount paid for services in the 12 months preceding any claim.
+- Our liability for each service engagement is limited to the amount paid for that specific service
+- We provide recommendations based on best practices and professional judgment but cannot guarantee specific results
+- You acknowledge that search engine success requires ongoing effort, proper implementation, and adaptation to changing circumstances beyond our control
+- We are not liable for:
+    - Changes in search engine rankings
+    - Loss of current search engine positions
+    - Changes in organic traffic levels
+    - Impact of search engine algorithm updates
+    - Business losses including lost profits or revenue
+    - Implementation outcomes
+    - Results of website migrations
+    - Impact of technical changes on search performance
 
-## 7. Client Responsibilities
+## **7. Data Protection and Privacy**
 
-Clients must:
+### **7.1 Compliance Requirements**
 
-- Provide accurate information about their website and business
-- Implement recommendations properly and in a timely manner
-- Grant necessary access to tools and platforms as required
-- Communicate concerns or questions promptly
+Both Parties agree to comply with:
 
-## 8. Intellectual Property
+- The EU General Data Protection Regulation (GDPR)
+- The Company’s Privacy Policy
 
-Our methodologies, tools, and processes remain our intellectual property. Clients receive usage rights for their specific implementation but may not resell or redistribute our proprietary methods.
+### **7.2 AI/LLM Data Processing**
 
-## 9. Termination
+Our use of artificial intelligence and large language models for data processing shall:
 
-Either party may terminate services with 30 days written notice. Outstanding work will be completed, and final payment is due within 7 days of termination.
+- Comply with applicable data protection regulations
+- Maintain appropriate technical and organizational security measures
+- Follow industry best practices for AI data security
+- Adhere to safeguards outlined in Section 5
+- Align with Your privacy expectations
 
-## 10. Force Majeure
+## **8. Term and Termination**
 
-Neither party is liable for delays or failures caused by circumstances beyond reasonable control, including natural disasters, government actions, or technical failures.
+### **8.1 Termination by Us**
 
-## 11. Governing Law
+We may terminate services if:
 
-These terms are governed by Slovak law. Disputes will be resolved in the courts of Bratislava, Slovakia.
+- You breach any terms of this Agreement
+- Payment is not received by the due date
+- You fail to provide necessary access or information
+- You engage in abusive or unethical behavior
+- We determine we cannot provide value for Your specific needs
 
-## 12. Privacy Policy
+### **8.2 Termination by You**
 
-Your use of our services is also governed by our Privacy Policy, which explains how we collect and use your information.
+You may terminate services:
 
-## 13. Changes to Terms
+- According to Your Service Agreement terms
+- With written notice as specified in the Service Agreement
+- If we breach material terms of this Agreement
 
-We may update these terms periodically. Changes will be posted on this page with an updated effective date. Continued use constitutes acceptance of updated terms.
+### **8.3 Effect of Termination**
 
-## 14. Severability
+Upon termination:
 
-If any provision is found unenforceable, it will be modified to the minimum extent necessary, and the remainder of these terms will remain in effect.
+- You remain liable for fees incurred through the termination date
+- We will provide any completed deliverables You have paid for
+- Confidentiality obligations remain in effect
+- License to use our deliverables remains valid for paid services
 
-## 15. Contact Information
+## **9. Force Majeure**
 
-For questions about these terms:
+Neither Party shall be liable for delays caused by circumstances beyond reasonable control, including:
 
-- **Email:** [martin@techseovitals.com](mailto:martin@techseovitals.com)
-- **Contact Form:** [staging.techseovitals.com/contact/](/contact/)
-- **Mail:** mountain explorer, s. r. o., Karpatske namestie 7770/10A, 83106 Bratislava, Slovakia
+- Natural disasters
+- War or civil unrest
+- Pandemics or epidemics
+- Government actions or regulations
+- Internet or infrastructure failures
+- Other unforeseeable events
 
----
+## **10. General Provisions**
 
-By using our services, you acknowledge that you have read and agree to these terms and conditions.
+### **10.1 Governing Law**
+
+This Agreement is governed by the laws of Slovakia. Any disputes shall be resolved in the courts of Bratislava, Slovakia.
+
+### **10.2 Modifications**
+
+We may modify these terms with notice. Continued use of services constitutes acceptance of modified terms.
+
+### **10.3 Severability**
+
+If any provision is found invalid, the remaining provisions shall remain in full force and effect.
+
+## **11. Contact Information**
+
+For questions regarding these terms or our services, please contact:
+
+mountain explorer, s.r.o.
+
+Karpatske namestie 7770/10A
+
+83106 Bratislava
+
+Slovakia
+
+Email: martin@techseovitals.com
+
+***Last updated: September 23, 2025***
+
+**By engaging our services or using our Website, You acknowledge that You have read these terms, understand them, and agree to be bound by them. You further acknowledge that these terms represent the complete and exclusive statement of the agreement between us regarding our services.**

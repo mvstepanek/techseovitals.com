@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TopBar: React.FC = () => (
-  <div className="bg-primary-700 text-white">
+  <div className="text-white" style={{ backgroundColor: '#7607FF' }}>
     <div className="mx-auto max-w-7xl px-4 py-2 sm:px-6 lg:px-8">
       <div className="flex items-center justify-center text-center text-xs sm:text-sm font-medium">
         <div className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-white bg-opacity-20 text-white mr-2 sm:mr-4 flex-shrink-0">

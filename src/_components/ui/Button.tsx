@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'newsletter';
@@ -26,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary:
-      'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-purple-500/30',
+      `${COMMON_STYLES.gradientBg} text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-purple-500/30`,
     secondary:
       'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-green-300',
     outline: 'border-2 border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-500',
@@ -35,9 +36,9 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
+    sm: 'px-4 py-2.5 text-sm sm:px-5 sm:py-3',
     md: 'px-8 py-4 text-lg',
-    lg: 'px-8 py-4 text-xl',
+    lg: 'px-8 py-4 text-lg sm:px-10 sm:py-5 sm:text-xl',
   };
 
   const combinedClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;

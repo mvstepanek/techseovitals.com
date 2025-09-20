@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../ui/Badge';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface BlogPost {
   title: string;
@@ -26,7 +27,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
   badgeText = 'Expert Insights',
 }) => {
   return (
-    <section className="py-24 bg-white border-t border-gray-200">
+    <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {(showBadge || title || subtitle) && (
           <div className="text-center mb-16">
@@ -63,7 +64,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
               </h2>
             )}
 
-            {subtitle && <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>}
+            {subtitle && <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>}
           </div>
         )}
 
@@ -75,13 +76,15 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
             >
               <a href={post.href}>
                 <div className="relative h-48 w-full overflow-hidden">
-                  <img
+                  <OptimizedImage
                     alt={post.title}
                     loading="lazy"
-                    width="800"
-                    height="400"
+                    width={800}
+                    height={400}
                     decoding="async"
                     className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-full"
+                    responsive={true}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src={post.image}
                   />
                 </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from '../common/OptimizedImage';
 
 const WhyChooseMeSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -16,15 +17,14 @@ const WhyChooseMeSection: React.FC = () => (
           Why Me?
         </div>
         <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-          Track Record That{' '}
+          Technical SEO Expert Who{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Speaks for Itself
+            Delivers Real Results
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          10+ years transforming frustrated user experiences into delightful interactions that naturally drive business
-          growth.
-        </p>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+              I specialize in delivering measurable improvements that drive real business growth.<br/> 10+ years of experience optimizing websites for both search engines and exceptional user experiences.
+          </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
         <div>
@@ -41,29 +41,29 @@ const WhyChooseMeSection: React.FC = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Developer-Led Expertise</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Professional Web Development Skills</h3>
                 <p className="text-gray-600">
-                  10+ years building websites gives me insights most consultants lack. I understand both user
-                  frustrations and technical solutions.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">User Experience Focus</h3>
-                <p className="text-gray-600">
-                  4+ years optimizing websites that users love to use - where performance improvements create
-                  competitive advantages.
+                  I combine development expertise with SEO knowledge. Deep understanding of technical aspects and
+                  architecture enables me to solve complex challenges.
                 </p>
               </div>
             </div>
             <div className="flex items-start gap-4">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Comprehensive Technical Approach</h3>
+                <p className="text-gray-600">
+                  I specialize in both technical SEO and performance optimization. Every aspect of your site&apos;s
+                  technical foundation works together to maximize visibility across search engines and AI platforms.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
@@ -74,10 +74,10 @@ const WhyChooseMeSection: React.FC = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Proven Results</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Measurable Business Results</h3>
                 <p className="text-gray-600">
-                  Consistently delivered significant revenue increases and meaningful conversion improvements for
-                  clients across industries.
+                  From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase
+                  revenue and organic traffic by solving complex technical SEO challenges.
                 </p>
               </div>
             </div>
@@ -86,25 +86,27 @@ const WhyChooseMeSection: React.FC = () => (
         <div className="relative">
           <div className="absolute -inset-4 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 rounded-3xl blur-xl" />
           <div className="relative">
-            <img
-              src="/assets/images/martin-stepanek-mountains.jpg"
+            <OptimizedImage
+              src="/assets/images/martin-stepanek-1.jpg"
               alt="Martin Stepanek - Technical SEO Expert in the Mountains"
-              width="800"
-              height="800"
+              width={800}
+              height={800}
               className="w-full rounded-3xl shadow-2xl border-4 border-white"
               loading="lazy"
               decoding="async"
+              responsive={true}
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
-              <div className="flex items-center gap-3">
-                <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <div className="absolute -bottom-4 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 w-fit mx-auto sm:mx-0 sm:max-w-none">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
                     d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
                     clipRule="evenodd"
                   />
                 </svg>
-                <div className="text-sm font-bold text-gray-900">50+ Websites Successfully Optimized</div>
+                <div className="text-sm sm:text-sm font-bold text-gray-900">50+ Websites Successfully Optimized</div>
               </div>
             </div>
           </div>

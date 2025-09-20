@@ -1,0 +1,66 @@
+/* ConvertKit Form Styles */
+
+.formkit-alert:not(:empty) {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 24px !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  list-style: none !important;
+  margin: 16px auto !important;
+  background: rgba(34, 197, 94, 0.4) !important;
+  color: rgb(34, 197, 94) !important;
+  border: 1px solid rgba(34, 197, 94, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.15) !important;
+}
+
+.formkit-alert:not(:empty):before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: rgb(34, 197, 94) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 9.293l6.646-6.647a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e") !important;
+  background-size: 12px !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+.formkit-alert:empty {
+  display: none !important;
+}
+
+.formkit-alert--newsletter {
+  font-size: 14px !important;
+}
+
+.formkit-alert--checklist {
+  font-size: 16px !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(147, 51, 234, 0.3);
+  border-radius: 50%;
+  border-top-color: currentColor;
+  animation: spin 1s ease-in-out infinite;
+  vertical-align: middle;
+  margin-right: 8px;
+}

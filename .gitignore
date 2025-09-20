@@ -99,3 +99,7 @@ jspm_packages/
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Others
+.wrangler
+.claude

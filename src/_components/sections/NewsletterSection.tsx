@@ -1,6 +1,8 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import ConvertKitForm from '../forms/ConvertKitForm';
+import OptimizedImage from '../common/OptimizedImage';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface NewsletterSectionProps {
   className?: string;
@@ -9,7 +11,7 @@ interface NewsletterSectionProps {
 const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className = '' }) => {
   return (
     <section
-      className={`relative py-24 bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700 overflow-hidden ${className}`}
+      className={`relative py-24 ${COMMON_STYLES.gradientBgTriple} overflow-hidden ${className}`}
     >
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl animate-pulse" />
@@ -47,8 +49,8 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className = '' })
           </h2>
 
           <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Join business owners and developers who receive actionable strategies for creating exceptional user
-            experiences, performance optimization tips, and insights that naturally drive revenue growth.
+            Get actionable strategies that help business owners and developers create exceptional user experiences,
+            optimize technical SEO and performance, and drive revenue growth.
           </p>
 
           <div className="max-w-3xl mx-auto mb-8">
@@ -57,19 +59,19 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className = '' })
 
           <div className="flex items-center justify-center gap-4 mb-4">
             <div className="flex -space-x-3">
-              <img
-                src="/assets/images/testimonials/leader3.jpg"
-                alt="Industry leader 3"
+              <OptimizedImage
+                src="/assets/images/testimonials/mersudin-forbes.jpg"
+                alt="Mersudin Forbes"
                 className="w-10 h-10 rounded-full border-2 border-white/80 object-cover"
               />
-              <img
-                src="/assets/images/testimonials/leader2.jpg"
-                alt="Industry leader 2"
+              <OptimizedImage
+                src="/assets/images/testimonials/mark-williams-cook.jpg"
+                alt="Mark Williams-Cook"
                 className="w-10 h-10 rounded-full border-2 border-white/80 object-cover"
               />
-              <img
-                src="/assets/images/testimonials/leader1.jpg"
-                alt="Industry leader 1"
+              <OptimizedImage
+                src="/assets/images/testimonials/aleyda-solis.jpg"
+                alt="Aleyda Solis"
                 className="w-10 h-10 rounded-full border-2 border-white/80 object-cover"
               />
             </div>

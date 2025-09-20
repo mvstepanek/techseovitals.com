@@ -32,7 +32,6 @@ export const BUSINESS_CONSTANTS = {
   // Common headlines and taglines
   HEADLINES: {
     TRANSFORM_BARRIERS: 'Transform Technical Barriers Into Competitive Advantages',
-    REVENUE_ENGINE: 'Turn Your Website Into a Revenue Engine',
     UX_STRATEGY: "What's Your User Experience Strategy?",
     READY_TRANSFORM: 'Ready to Transform Your Business?',
   },
@@ -47,12 +46,12 @@ export const BUSINESS_CONSTANTS = {
 
   // Image paths
   IMAGES: {
-    MARTIN_TECHSEO_1: '/assets/images/martinstepanek-techseo-1.jpg',
-    MARTIN_TECHSEO_2: '/assets/images/martinstepanek-techseo-2.jpg',
-    MARTIN_TECHSEO_3: '/assets/images/martinstepanek-techseo-3.jpg',
-    MARTIN_TECHSEO_4: '/assets/images/martinstepanek-techseo-4.jpg',
-    MARTIN_TECHSEO_5: '/assets/images/martinstepanek-techseo-5.jpg',
-    MARTIN_MOUNTAINS: '/assets/images/martin-stepanek-mountains.jpg',
+    MARTIN_TECHSEO_1: '/assets/images/martin-stepanek-2.jpg',
+    MARTIN_TECHSEO_2: '/assets/images/martin-stepanek-3.jpg',
+    MARTIN_TECHSEO_3: '/assets/images/martin-stepanek-4.jpg',
+    MARTIN_TECHSEO_4: '/assets/images/martin-stepanek-5.jpg',
+    MARTIN_TECHSEO_5: '/assets/images/martin-stepanek-6.jpg',
+    MARTIN_MOUNTAINS: '/assets/images/martin-stepanek-1.jpg',
   },
 
   // Service pricing
@@ -75,25 +74,35 @@ export const BUSINESS_CONSTANTS = {
 
 // ConvertKit form configurations
 export const CONVERTKIT_FORMS = {
-  NEWSLETTER: {
-    action: 'https://app.kit.com/forms/7514069/subscriptions',
-    uid: '06e277ea9a',
+  'newsletter-section': {
     formId: '7514069',
+    uid: '06e277ea9a',
+    action: 'https://app.kit.com/forms/7514069/subscriptions',
+    successMessage: 'Great! Now check your email to confirm your subscription.',
   },
-  TECHNICAL_SEO_CHECKLIST: {
-    action: 'https://app.kit.com/forms/7969566/subscriptions',
-    uid: '6a3a12d7b3',
+  'newsletter-page': {
+    formId: '7514069',
+    uid: '06e277ea9a',
+    action: 'https://app.kit.com/forms/7514069/subscriptions',
+    successMessage: 'Great! Now check your email to confirm your subscription.',
+  },
+  'technical-seo-checklist': {
     formId: '7969566',
+    uid: '1b414d8dc5',
+    action: 'https://app.kit.com/forms/7969566/subscriptions',
+    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
   },
-  MIGRATION_CHECKLIST: {
-    action: 'https://app.kit.com/forms/7945460/subscriptions',
-    uid: '891c454eb6',
+  'website-migration-checklist': {
     formId: '7945460',
+    uid: '4ef42b0b85',
+    action: 'https://app.kit.com/forms/7945460/subscriptions',
+    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
   },
-  PERFORMANCE_METRICS: {
-    action: 'https://app.kit.com/forms/7945460/subscriptions',
-    uid: '891c454eb6',
-    formId: '7945460',
+  '5-web-performance-metrics': {
+    formId: '8513383',
+    uid: 'e7077aaed9',
+    action: 'https://app.kit.com/forms/8513383/subscriptions',
+    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the ebook.',
   },
 };
 
@@ -101,11 +110,16 @@ export const CONVERTKIT_FORMS = {
 export const COMMON_STYLES = {
   gradientText: 'bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent',
   gradientBg: 'bg-gradient-to-r from-purple-600 to-indigo-600',
+  gradientBgDiagonal: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+  gradientBgDiagonalBold: 'bg-gradient-to-br from-purple-600 to-indigo-600',
+  gradientBgLight: 'bg-gradient-to-r from-purple-200 to-indigo-200',
+  gradientBgVeryLight: 'bg-gradient-to-br from-purple-100 to-indigo-100',
+  gradientBgTriple: 'bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-700',
   gradientBgBlue: 'bg-gradient-to-r from-blue-500 to-cyan-600',
   gradientBgGreen: 'bg-gradient-to-r from-green-500 to-emerald-600',
   cardShadow: 'shadow-xl hover:shadow-2xl transition-all duration-300',
   cardHover: 'hover:shadow-lg transition-all duration-300',
-  blurredBlob: 'absolute bg-purple-200 rounded-full blur-3xl opacity-50',
+  blurredBlob: 'absolute bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full blur-3xl opacity-50',
   badge:
     'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg',
   buttonPrimary:
@@ -113,6 +127,53 @@ export const COMMON_STYLES = {
   heroImage: 'w-full rounded-3xl shadow-2xl border-4 border-white',
   sectionPadding: 'py-24',
   containerWidth: 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8',
+  featureCard: 'rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
+  featureCardWithBg: 'bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
+};
+
+// Design system tokens
+export const DESIGN_TOKENS = {
+  ANIMATION: {
+    FAST: 'duration-200',
+    DEFAULT: 'duration-300',
+    SLOW: 'duration-500',
+  },
+  ICON_SIZES: {
+    SMALL: 'w-8 h-8',
+    MEDIUM: 'w-12 h-12',
+    LARGE: 'w-16 h-16',
+    EXTRA_LARGE: 'w-20 h-20',
+  },
+  COLORS: {
+    THEME_COLOR: '#7c3aed',
+    SUCCESS_RGB: 'rgb(34, 197, 94)',
+    SVG_GRADIENT_START: '#8b5cf6',
+    SVG_GRADIENT_END: '#6366f1',
+  },
+};
+
+// Social media and external links
+export const SOCIAL_MEDIA = {
+  LINKEDIN_PROFILE: 'https://www.linkedin.com/in/techseovitals/',
+  LINKEDIN_RECOMMENDATIONS: 'https://www.linkedin.com/in/techseovitals/details/recommendations/',
+  BLUESKY: 'https://bsky.app/profile/techseovitals.com',
+  YOUTUBE: 'https://youtube.com/@techseovitals',
+};
+
+// Site configuration
+export const SITE_CONFIG = {
+  DOMAIN: process.env.NODE_ENV === 'development'
+    ? 'https://staging.techseovitals.com'
+    : 'https://www.techseovitals.com',
+  EMAIL: 'martin@techseovitals.com',
+  CALENDLY_URL: 'https://calendly.com/techseovitals/free-initial-consultation?primary_color=9333ea',
+};
+
+// Form success messages
+export const FORM_MESSAGES = {
+  NEWSLETTER_SUCCESS: 'Great! Now check your email to confirm your subscription.',
+  CHECKLIST_SUCCESS: 'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
+  EBOOK_SUCCESS: 'Great! Now check your email to confirm your subscription and I will send you a copy of the ebook.',
 };
 
 // Testimonials and social proof
@@ -122,13 +183,13 @@ export const TESTIMONIALS = {
     title: 'CEO, LiveAgent & Post Affiliate Pro',
     quote:
       "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-    image: '/assets/images/testimonials/viktor-zeman-real.webp',
+    image: '/assets/images/testimonials/viktor-zeman.jpg',
   },
   DANIEL_PISON: {
     name: 'Daniel Pison',
     title: 'CMO, Quality Unit',
     quote:
       "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market.",
-    image: '/assets/images/testimonials/daniel-pison.jpeg',
+    image: '/assets/images/testimonials/daniel-pison.jpg',
   },
 };

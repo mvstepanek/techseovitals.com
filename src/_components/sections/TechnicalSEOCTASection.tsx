@@ -19,7 +19,7 @@ const TechnicalSEOCTASection: React.FC = () => (
             Technical SEO Checklist
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
           Performance issues are business risks. Join dozens of businesses transforming technical barriers into
           competitive advantages that users love and revenue naturally follows.
         </p>

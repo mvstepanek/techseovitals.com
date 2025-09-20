@@ -1,27 +1,29 @@
 import React from 'react';
+import OptimizedImage from '../common/OptimizedImage';
 
 const AuthorBio: React.FC = () => (
   <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl border border-gray-200">
     <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-      <img
+      <OptimizedImage
         alt="Martin Stepanek - Technical SEO Expert"
         loading="lazy"
-        width="800"
-        height="800"
+        width={800}
+        height={800}
         decoding="async"
         className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex-shrink-0 border-2 border-white shadow-lg mx-auto sm:mx-0"
-        src="/assets/images/martinstepanek-techseo-5.jpg"
+        src="/assets/images/martin-stepanek-5.jpg"
       />
       <div className="flex-1 text-center sm:text-left">
         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Martin Stepanek</h3>
-        <p className="text-sm text-gray-500 font-semibold mb-3">Technical SEO Consultant & Web Performance Expert</p>
+        <p className="text-sm text-gray-500 font-semibold mb-3">Technical SEO and Web Performance Consultant</p>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
-          Helping businesses improve their search visibility and website performance. With a background in web
-          development and years of SEO experience, I focus on the technical aspects that drive real results.
+          With 10+ years building and optimizing websites, I&apos;ve learned that technical excellence drives business
+          success. I help companies maximize their website&apos;s potential through strategic technical SEO and
+          performance improvements that create better experiences for users and stronger results for businesses.
         </p>
-        <div className="flex justify-center sm:justify-start gap-4">
+        <div className="flex justify-center sm:justify-start gap-3 sm:ml-[-4px]">
           <a
-            href="https://linkedin.com/in/martin-stepanek-techseo/"
+            href="https://www.linkedin.com/in/techseovitals/"
             className="text-gray-400 hover:text-gray-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"

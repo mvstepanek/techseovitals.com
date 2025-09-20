@@ -21,7 +21,7 @@ const BlogPostCTA: React.FC = () => (
             Revenue Engine
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
           Don&apos;t let technical issues hold your business back. Get expert technical SEO guidance and turn your
           website into your most powerful sales tool.
         </p>

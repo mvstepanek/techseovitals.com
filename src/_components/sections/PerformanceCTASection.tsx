@@ -19,7 +19,7 @@ const PerformanceCTASection: React.FC = () => (
             Performance Guide
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
           Every millisecond shapes user perception. Learn which metrics reveal true user satisfaction and build
           performance strategies that create competitive advantages.
         </p>

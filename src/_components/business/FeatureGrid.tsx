@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../ui/Badge';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface Feature {
   icon: React.ReactNode;
@@ -68,7 +69,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
         return 'bg-gradient-to-br from-indigo-500 to-purple-600';
       case 'purple':
       default:
-        return 'bg-gradient-to-br from-purple-500 to-indigo-600';
+        return COMMON_STYLES.gradientBgDiagonal;
     }
   };
 
@@ -81,12 +82,12 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
 
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">{title}</h2>
 
-            {subtitle && <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">{subtitle}</p>}
+            {subtitle && <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">{subtitle}</p>}
 
             {cta && (
               <div className="flex flex-col items-center gap-4">
                 <a
-                  className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30"
+                  className={COMMON_STYLES.buttonPrimary}
                   href={cta.href}
                 >
                   <span className="relative z-10">{cta.text}</span>

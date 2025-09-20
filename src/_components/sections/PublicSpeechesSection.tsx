@@ -24,7 +24,7 @@ const PublicSpeechesSection: React.FC = () => (
           Public{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Speaking</span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Sharing knowledge and insights at industry conferences and events
         </p>
       </div>

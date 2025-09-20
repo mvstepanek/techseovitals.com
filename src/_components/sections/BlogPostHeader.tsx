@@ -1,13 +1,15 @@
 import React from 'react';
+import OptimizedImage from '../common/OptimizedImage';
 
 interface BlogPostHeaderProps {
   title?: string;
   description?: string;
   date?: string;
   permalink?: string;
+  image?: string;
 }
 
-const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink }) => (
+const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image }) => (
   <article className="bg-gradient-to-br from-primary-500/5 via-white to-primary-600/5">
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -26,20 +28,22 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
           {title}
         </h1>
         {description && (
-          <p className="text-lg sm:text-xl text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>
+          <p className="text-lg sm:text-lg text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>
         )}
       </div>
       <div className="relative">
         <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-3xl blur-2xl opacity-30" />
         <div className="relative">
-          <img
+          <OptimizedImage
             alt={title}
-            width="800"
-            height="400"
+            width={800}
+            height={400}
             loading="eager"
             decoding="async"
             className="w-full rounded-3xl shadow-2xl border-4 border-white object-cover"
-            src={`/assets/images/blog-thumbnails/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
+            src={image || `/assets/images/blog/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
+            responsive={true}
+            sizes="(max-width: 768px) 100vw, 800px"
           />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const SimpleStepsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
@@ -11,18 +12,18 @@ const SimpleStepsSection: React.FC = () => (
 
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
       <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
+        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}>
           <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
           How Does It Work?
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className={COMMON_STYLES.gradientText}>
             3 Simple Steps
           </span>
           <br />
           to Success
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Transform your website into the exceptional experience your users deserve.
         </p>
       </div>
@@ -172,7 +173,7 @@ const SimpleStepsSection: React.FC = () => (
 
       <div className="text-center mt-16">
         <a
-          className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30"
+          className={COMMON_STYLES.buttonPrimary}
           href="/contact/"
         >
           <span className="relative z-10">Get Free Website Check</span>

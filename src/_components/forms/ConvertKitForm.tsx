@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMMON_STYLES } from '../../_data/constants';
 
 // Form configurations mapping
 const FORM_CONFIG = {
@@ -62,13 +63,13 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
   // Default styling based on design type
   const defaultFieldClassName =
     design === 'newsletter'
-      ? 'formkit-input w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border-0 rounded-2xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg'
+      ? 'formkit-input w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border-0 rounded-xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg'
       : 'w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary-500 focus:ring-opacity-20 focus:border-primary-500 transition-all duration-200';
 
   const defaultButtonClassName =
     design === 'newsletter'
       ? 'formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-yellow-200 to-orange-200 text-purple-800 shadow-xl focus:ring-4 focus:ring-yellow-300/30 inline-flex items-center justify-center w-full sm:w-auto'
-      : 'formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full';
+      : `formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl ${COMMON_STYLES.gradientBg} text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full`;
 
   const defaultFormClassName =
     design === 'newsletter'
@@ -281,12 +282,20 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
                 className={fieldClassName || defaultFieldClassName}
                 name="email_address"
                 aria-label="Email Address"
-                placeholder="Business email"
+                placeholder="Email"
                 required
                 type="email"
               />
             </div>
-            <button type="submit" data-element="submit" className={buttonClassName || defaultButtonClassName}>
+            <button type="submit" data-element="submit" className={`${buttonClassName || defaultButtonClassName} ${
+              formType === 'technical-seo-checklist'
+                ? 'AhrefsAnalytics-event-techseo_checklist'
+                : formType === 'website-migration-checklist'
+                ? 'AhrefsAnalytics-event-migration_checklist'
+                : formType === '5-web-performance-metrics'
+                ? 'AhrefsAnalytics-event-business_metrics'
+                : 'AhrefsAnalytics-event-newsletter_signup'
+            }`}>
               <div className="formkit-spinner">
                 <div />
                 <div />

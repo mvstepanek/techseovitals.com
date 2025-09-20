@@ -1,4 +1,5 @@
 import React from 'react';
+import OptimizedImage from '../common/OptimizedImage';
 
 const Footer: React.FC = () => (
   <footer className="bg-gray-900" aria-labelledby="footer-heading">
@@ -9,22 +10,22 @@ const Footer: React.FC = () => (
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-6 sm:space-y-8 xl:col-span-1">
           <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label="TechSEO Vitals Home">
-            <img
-              alt=""
+            <OptimizedImage
+              alt="TechSEO Vitals"
               loading="lazy"
-              width="200"
-              height="50"
+              width={200}
+              height={50}
               className="h-auto w-auto"
-              src="/assets/logo-dark.svg"
+              src="/assets/techseovitals-logo-white.svg"
               aria-hidden="true"
             />
           </a>
           <p className="text-sm leading-6 text-gray-300 max-w-md" style={{ fontSize: '0.9375rem' }}>
             Experienced technical SEO and web performance consultant with over a decade of web development experience.
           </p>
-          <div className="flex space-x-4 sm:space-x-6">
+          <div className="flex space-x-3 sm:space-x-4" style={{ marginLeft: '-5px' }}>
             <a
-              href="https://linkedin.com/in/martin-stepanek-techseo/"
+              href="https://www.linkedin.com/in/techseovitals/"
               className="text-gray-400 hover:text-gray-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"

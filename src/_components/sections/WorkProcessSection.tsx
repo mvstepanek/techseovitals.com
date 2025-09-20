@@ -16,7 +16,7 @@ const WorkProcessSection: React.FC = () => (
             Work With You
           </span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
           My proven 3-step process transforms technical barriers into competitive advantages that users love
         </p>
       </div>

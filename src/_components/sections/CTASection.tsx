@@ -40,12 +40,12 @@ const CTASection: React.FC<CTASectionProps> = ({
   const bgClass = backgroundColor === 'gray' ? 'bg-gradient-to-br from-slate-50 to-blue-50/30' : 'bg-white';
 
   return (
-    <section className={`${COMMON_STYLES.sectionPadding} ${bgClass} relative overflow-hidden border-t border-gray-200`}>
+    <section className={`${COMMON_STYLES.sectionPadding} ${bgClass} relative overflow-hidden`}>
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />
         <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full blur-3xl opacity-50" />
+        <div className={`${COMMON_STYLES.blurredBlob} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96`} />
       </div>
 
       <div className={`relative ${COMMON_STYLES.containerWidth}`}>
@@ -60,7 +60,7 @@ const CTASection: React.FC<CTASectionProps> = ({
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
 
           {/* Description */}
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">{description}</p>
+          <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">{description}</p>
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-4 mb-16">

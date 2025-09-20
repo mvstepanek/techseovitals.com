@@ -1,6 +1,8 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
+import OptimizedImage from '../common/OptimizedImage';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface HeroSectionProps {
   badge: {
@@ -50,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   secondaryCta,
   successBadge,
   image,
-  rating = { show: true, text: '50+ businesses trust me' },
+  rating = { show: true, text: 'Trused by 50+ businesses' },
   statusBadge = { show: true, text: 'Available for projects' },
   layout = 'default',
 }) => {
@@ -67,15 +69,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div
           className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}
         >
-          <div className={layout === 'centered' ? 'max-w-4xl mx-auto' : 'max-w-4xl'}>
+          <div className={layout === 'centered' ? 'max-w-6xl mx-auto text-center' : 'max-w-4xl text-center sm:text-left'}>
             <Badge icon={badge.icon}>{badge.text}</Badge>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900 lg:text-6xl xl:text-7xl leading-tight mt-4 sm:mt-6">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-gray-900 leading-tight mt-4 sm:mt-6 ${layout === 'centered' ? 'text-center' : 'text-center sm:text-left'}`}>
               {title}
             </h1>
 
             <p
-              className={`mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-lg mx-auto' : 'max-w-lg'}`}
+              className={`mt-6 sm:mt-8 text-lg sm:text-lg text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-4xl mx-auto text-center' : 'max-w-lg text-center sm:text-left'}`}
             >
               {description}
             </p>
@@ -83,7 +85,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {primaryCta && (
               <div className={`mt-8 sm:mt-10 ${layout === 'centered' ? 'text-center' : ''}`}>
                 <div
-                  className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : ''}`}
+                  className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : 'justify-center sm:justify-start items-center'}`}
                 >
                   <Button href={primaryCta.href} target={primaryCta.target}>
                     {primaryCta.text}
@@ -112,12 +114,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {rating?.show && (
               <div className={`mt-8 ${layout === 'centered' ? 'text-center' : ''}`}>
                 {rating.isTestimonial ? (
-                  <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-3 border-l-4 border-purple-500 inline-block">
+                  <div className={`${COMMON_STYLES.gradientBgVeryLight} rounded-lg p-3 border-l-4 border-purple-500 inline-block`}>
                     <p className="text-sm font-medium text-gray-800 italic">
                       &quot;{rating.text}&quot;
                       {rating.source && (
                         <span className="text-gray-600 ml-1">
-                          —{' '}
+                          –{' '}
                           {rating.sourceLink ? (
                             <a
                               href={rating.sourceLink}
@@ -135,7 +137,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     </p>
                   </div>
                 ) : (
-                  <div className={`flex items-center gap-3 ${layout === 'centered' ? 'justify-center' : ''}`}>
+                  <div className={`flex items-center gap-3 ${layout === 'centered' ? 'justify-center' : 'justify-center sm:justify-start'}`}>
                     <div className="flex text-yellow-400 text-sm">★★★★★</div>
                     <span className="text-sm font-normal text-gray-600">{rating.text}</span>
                   </div>
@@ -148,20 +150,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="relative lg:ml-8">
               <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-brand-600/20 to-brand-700/20 rounded-3xl blur-2xl opacity-30" />
               <div className="relative">
-                <img
+                <OptimizedImage
                   src={image.src}
                   alt={image.alt}
-                  width="800"
-                  height="800"
+                  width={800}
+                  height={800}
                   className="w-full rounded-3xl shadow-2xl border-4 border-white"
                   loading={image.loading || 'eager'}
                   decoding="async"
+                  responsive={true}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {statusBadge?.show && (
-                  <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
+                  <div className="absolute -bottom-3 left-4 right-4 sm:-bottom-8 sm:-right-8 sm:left-auto bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 sm:mx-0 sm:max-w-xs w-fit sm:w-auto mx-auto">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                      <span className="text-sm font-bold text-gray-800">{statusBadge.text}</span>
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
+                      <span className="text-sm sm:text-sm font-bold text-gray-800">{statusBadge.text}</span>
                     </div>
                   </div>
                 )}

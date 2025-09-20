@@ -4,15 +4,14 @@ import HeroSection from './_components/sections/HeroSection';
 import ExperienceSection from './_components/sections/ExperienceSection';
 import PublicSpeechesSection from './_components/sections/PublicSpeechesSection';
 import NewsletterSection from './_components/sections/NewsletterSection';
-import ConsultantServicesSection from './_components/sections/ConsultantServicesSection';
+import ServicesSection from './_components/sections/ServicesSection';
 import TestimonialsSection from './_components/sections/TestimonialsSection';
-import FAQSection from './_components/sections/FAQSection';
 import CTASection from './_components/sections/CTASection';
 
 export const data = {
-  title: 'Technical SEO Consultant | TechSEO Vitals',
+  title: 'Technical SEO Consultant',
   description:
-    'User experience expert with 10+ years creating fast, reliable websites. I help businesses delight their visitors while naturally improving revenue and visibility.',
+    'Expert technical SEO consultant with 10+ years experience. Get proven strategies that boost rankings, traffic, and conversions for your business.',
   permalink: '/technical-seo-consultant/',
   layout: 'base',
 };
@@ -26,20 +25,20 @@ const TechnicalSEOConsultantPage: React.FC = () => (
       }}
       title={
         <>
-          Meet Martin Stepanek,{' '}
+          Martin Stepanek,{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Technical SEO Expert
           </span>
         </>
       }
-      description="What's your user experience strategy? With 10+ years as both developer and SEO specialist, I help businesses eliminate technical barriers and create experiences that users love and revenue naturally follows."
+      description="I help businesses create websites that prioritizes both user satisfaction and revenue performance."
       primaryCta={{
         text: 'Get Free Website Check',
         href: '/contact/',
         target: '_self',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-3.jpg',
+        src: '/assets/images/martin-stepanek-4.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}
@@ -52,7 +51,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
       }}
       statusBadge={{
         show: true,
-        text: 'Available for projects',
+        text: 'Accepting new clients',
       }}
     />
     <TestimonialsSection />
@@ -67,7 +66,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
             What Makes Me <span className={COMMON_STYLES.gradientText}>Different</span>
           </>
         }
-        subtitle="I combine developer-level technical expertise with strategic SEO thinking to create competitive advantages that delight users and drive business growth."
+        subtitle="I combine deep development expertise with technical SEO knowledge. This combination allows me to solve complex optimization challenges that drive measurable business growth."
         experiencePoints={[
           {
             icon: (
@@ -75,10 +74,10 @@ const TechnicalSEOConsultantPage: React.FC = () => (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
             ),
-            title: '10+ Years Creating Better Experiences',
+            title: 'Professional Web Development Skills',
             description:
-              'A decade perfecting the art of fast, accessible websites that users love and search engines naturally reward.',
-            color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+              'Over a decade of hands-on development experience combined with deep technical SEO expertise. I solve complex challenges from enterprise migrations to advanced JavaScript optimization.',
+            color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
           },
           {
             icon: (
@@ -91,10 +90,10 @@ const TechnicalSEOConsultantPage: React.FC = () => (
                 />
               </svg>
             ),
-            title: 'User-First Improvements',
+            title: 'Actionable Implementation Guides',
             description:
-              'Every recommendation focuses on what matters most to your visitors, with clear steps your team can implement.',
-            color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+              'Get detailed, prioritized task lists with step-by-step guidance and code examples. Your team can implement improvements immediately with clear, practical instructions.',
+            color: 'bg-gradient-to-br from-green-500 to-emerald-600',
           },
           {
             icon: (
@@ -102,14 +101,14 @@ const TechnicalSEOConsultantPage: React.FC = () => (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8-8 8-4-4-6 6" />
               </svg>
             ),
-            title: 'Experience Drives Revenue',
+            title: 'Revenue-Focused Strategy',
             description:
-              'Happy users become customers. I focus on creating delightful experiences that naturally boost conversions.',
-            color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+              'Every optimization targets measurable business impact. I prioritize improvements that directly increase conversions, user engagement, and bottom-line revenue growth.',
+            color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
           },
         ]}
         image={{
-          src: '/assets/images/martin-stepanek-mountains.jpg',
+          src: '/assets/images/martin-stepanek-1.jpg',
           alt: 'Martin Stepanek - Technical SEO Consultant',
         }}
         statsBadge={{
@@ -134,8 +133,16 @@ const TechnicalSEOConsultantPage: React.FC = () => (
       />
     </div>
     <PublicSpeechesSection />
-    <ConsultantServicesSection />
-    <FAQSection />
+    <ServicesSection
+      title={
+        <>
+          How I Can{' '}
+          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            Help Your Business
+          </span>
+        </>
+      }
+    />
     <CTASection
       badge={{
         icon: (
@@ -153,7 +160,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
           </span>
         </>
       }
-      description="Performance issues are business risks. Get a comprehensive strategy that transforms technical barriers into competitive advantages your users will love."
+      description="Your competitors are stealing your traffic while you struggle with technical issues. Get the expert help that turns your website into an unstoppable growth machine."
       primaryCta={{
         text: 'Get Free Website Check',
         href: '/contact/',
@@ -171,7 +178,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
             </svg>
           ),
           title: '100% Free',
-          description: 'Website check with no hidden costs',
+          description: 'Free website check with no hidden costs',
         },
         {
           icon: (

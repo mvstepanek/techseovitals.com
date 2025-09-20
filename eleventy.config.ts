@@ -3,9 +3,10 @@ import { renderToStaticMarkup } from "react-dom/server";
 import type { UserConfig } from "@11ty/eleventy";
 
 export default function (eleventyConfig: any): UserConfig {
-  // Add blog collection
+  // Add blog collection sorted by date (newest first)
   eleventyConfig.addCollection("blog", function(collectionApi: any) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
+    return collectionApi.getFilteredByGlob("src/blog/*.md")
+      .sort((a: any, b: any) => b.date - a.date);
   });
 
   // Add support for TSX/JSX templates
@@ -15,7 +16,7 @@ export default function (eleventyConfig: any): UserConfig {
     compile: function () {
       return async function (data: any) {
         let content = await this.defaultRenderer(data);
-        return renderToStaticMarkup(content);
+        return '<!DOCTYPE html>\n' + renderToStaticMarkup(content);
       };
     },
   });
@@ -78,46 +79,66 @@ export default function (eleventyConfig: any): UserConfig {
     });
   }
 
-  // HTML Minification
+  // HTML Minification (optimized)
   eleventyConfig.addTransform("htmlmin", async function(content: string, outputPath: string) {
-    if (outputPath && outputPath.endsWith(".html")) {
+    if (outputPath && outputPath.endsWith(".html") && process.env.NODE_ENV === 'production') {
       const { minify } = await import("html-minifier-terser");
       return minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true,
         minifyCSS: true,
-        minifyJS: true,
+        minifyJS: {
+          // Only minify inline JS, not external scripts
+          mangle: false,
+          compress: {
+            drop_console: false,
+          }
+        },
         removeRedundantAttributes: true,
         removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true
+        removeStyleLinkTypeAttributes: true,
+        // Preserve some attributes for better performance
+        keepClosingSlash: false,
+        caseSensitive: false,
+        minifyURLs: false
       });
     }
     return content;
   });
 
-  // JS Minification for inline scripts
+  // JS Minification for inline scripts (optimized)
   eleventyConfig.addTransform("jsmin", async function(content: string, outputPath: string) {
-    if (outputPath && outputPath.endsWith(".html") && content.includes("<script>")) {
+    if (outputPath && outputPath.endsWith(".html") && content.includes("<script>") && process.env.NODE_ENV === 'production') {
       const { minify } = await import("terser");
 
-      // Process script tags asynchronously
-      const scriptRegex = /<script[^>]*>([\s\S]*?)<\/script>/g;
-      const matches = Array.from(content.matchAll(scriptRegex));
+      // Only process inline scripts, skip external scripts
+      const inlineScriptRegex = /<script(?![^>]*src)([^>]*)>([\s\S]*?)<\/script>/g;
+      const matches = Array.from(content.matchAll(inlineScriptRegex));
 
       for (const match of matches) {
-        const [fullMatch, jsCode] = match;
-        if (jsCode.trim()) {
+        const [fullMatch, attributes, jsCode] = match;
+        if (jsCode.trim() && !jsCode.includes('analytics') && !jsCode.includes('gtag')) {
           try {
             const result = await minify(jsCode, {
-              compress: true,
-              mangle: true
+              compress: {
+                drop_console: false,  // Keep console.log for debugging
+                drop_debugger: true,
+                pure_funcs: []
+              },
+              mangle: {
+                keep_fnames: true  // Preserve function names for better debugging
+              },
+              format: {
+                comments: false
+              }
             });
             if (result.code) {
-              content = content.replace(fullMatch, fullMatch.replace(jsCode, result.code));
+              content = content.replace(fullMatch, `<script${attributes}>${result.code}</script>`);
             }
           } catch (e) {
             // If minification fails, keep original
+            console.warn(`JS minification failed for script in ${outputPath}:`, e);
           }
         }
       }
