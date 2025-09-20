@@ -127,13 +127,6 @@
   dependencies:
     mime "^3.0.0"
 
-"@cloudflare/kv-asset-handler@^0.3.0":
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/@cloudflare/kv-asset-handler/-/kv-asset-handler-0.3.4.tgz#5cc152847c8ae4d280ec5d7f4f6ba8c976b585c3"
-  integrity sha512-YLPHc8yASwjNkmcDMQMY35yiWjoKAKnhUbPRszBRS0YgH+IXtsMp61j+yTcnCE3oO2DgP0U3iejLC8FTtKDC8Q==
-  dependencies:
-    mime "^3.0.0"
-
 "@cloudflare/unenv-preset@2.7.4":
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/@cloudflare/unenv-preset/-/unenv-preset-2.7.4.tgz#e6b05a4481c0f2deeb663c110e62c58e19e3838c"

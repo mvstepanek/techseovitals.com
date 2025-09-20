@@ -1,85 +1,65 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
-
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     try {
-      // Try to get the asset with a simpler approach
-      const options = {
-        ASSET_NAMESPACE: env.__STATIC_CONTENT,
-      };
+      // Get the pathname and handle routing
+      let pathname = url.pathname;
 
-      // Only add manifest if it exists
-      if (env.__STATIC_CONTENT_MANIFEST) {
-        options.ASSET_MANIFEST = env.__STATIC_CONTENT_MANIFEST;
+      // Serve assets directly with proper routing
+      const assetResponse = await env.ASSETS.fetch(request);
+
+      // If asset found, return it with security headers if it's HTML
+      if (assetResponse.status === 200) {
+        const contentType = assetResponse.headers.get('content-type') || '';
+
+        if (contentType.includes('text/html')) {
+          const headers = new Headers(assetResponse.headers);
+          headers.set('X-Frame-Options', 'SAMEORIGIN');
+          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; font-src 'self'");
+
+          return new Response(assetResponse.body, {
+            status: assetResponse.status,
+            statusText: assetResponse.statusText,
+            headers: headers,
+          });
+        }
+
+        return assetResponse;
       }
 
-      let assetRequest = request;
+      // Handle SPA routing - try different paths
+      const routes = [
+        pathname + '/index.html',
+        pathname.endsWith('/') ? pathname + 'index.html' : pathname + '/index.html',
+        '/index.html'
+      ];
 
-      // Handle routing
-      if (url.pathname === '/') {
-        assetRequest = new Request(url.origin + '/index.html', request);
-      } else if (url.pathname.endsWith('/')) {
-        assetRequest = new Request(url.origin + url.pathname + 'index.html', request);
-      } else if (!url.pathname.includes('.') && !url.pathname.startsWith('/assets/')) {
-        // Try /path/index.html first
-        assetRequest = new Request(url.origin + url.pathname + '/index.html', request);
+      for (const route of routes) {
+        const routeRequest = new Request(new URL(route, url.origin), request);
+        const routeResponse = await env.ASSETS.fetch(routeRequest);
+
+        if (routeResponse.status === 200) {
+          const headers = new Headers(routeResponse.headers);
+          headers.set('X-Frame-Options', 'SAMEORIGIN');
+          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; font-src 'self'");
+
+          return new Response(routeResponse.body, {
+            status: routeResponse.status,
+            statusText: routeResponse.statusText,
+            headers: headers,
+          });
+        }
       }
 
-      const response = await getAssetFromKV(
-        {
-          request: assetRequest,
-          waitUntil: ctx.waitUntil.bind(ctx),
-        },
-        options
-      );
+      // Return 404 if no routes match
+      return new Response('Not Found', { status: 404 });
 
-      // Add security headers for HTML files
-      if (assetRequest.url.endsWith('.html')) {
-        const headers = new Headers(response.headers);
-        headers.set('X-Frame-Options', 'SAMEORIGIN');
-        headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; font-src 'self'");
-
-        return new Response(response.body, {
-          status: response.status,
-          statusText: response.statusText,
-          headers: headers,
-        });
-      }
-
-      return response;
-
-    } catch (e) {
-      // If the primary request fails, try fallback approaches
-      try {
-        // Try direct asset access without custom mapping
-        const response = await getAssetFromKV(
-          {
-            request,
-            waitUntil: ctx.waitUntil.bind(ctx),
-          },
-          {
-            ASSET_NAMESPACE: env.__STATIC_CONTENT,
-          }
-        );
-        return response;
-      } catch (e2) {
-        // Debug info
-        return new Response(`Debug Info v2:
-Original URL: ${url.pathname}
-Original Error: ${e.message}
-Fallback Error: ${e2.message}
-KV Namespace: ${env.__STATIC_CONTENT ? 'Available' : 'Missing'}
-Manifest: ${env.__STATIC_CONTENT_MANIFEST ? 'Available' : 'Missing'}
-
-Trying to access: ${url.pathname === '/' ? '/index.html' : url.pathname}`, {
-          status: 404,
-          headers: {
-            'Content-Type': 'text/plain',
-          },
-        });
-      }
+    } catch (error) {
+      return new Response(`Error: ${error.message}`, {
+        status: 500,
+        headers: { 'Content-Type': 'text/plain' },
+      });
     }
   },
 };
