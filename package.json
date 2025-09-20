@@ -14,7 +14,11 @@
     "lint:check": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings 0",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,md}\"",
-    "format:lint": "npm run format && npm run lint:fix"
+    "format:lint": "npm run format && npm run lint:fix",
+    "deploy": "npm run build && wrangler deploy",
+    "deploy:staging": "npm run build && wrangler deploy --env staging",
+    "deploy:production": "npm run build && wrangler deploy --env production",
+    "preview": "npm run build && wrangler dev"
   },
   "keywords": [
     "technical-seo",
@@ -26,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@cloudflare/kv-asset-handler": "^0.3.0",
     "@tailwindcss/typography": "^0.5.16",
     "jsx-async-runtime": "^1.0.4",
     "react": "^18.2.0",

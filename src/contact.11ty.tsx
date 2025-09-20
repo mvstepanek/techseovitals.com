@@ -1,7 +1,7 @@
 import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
-import ContactForm from './_components/forms/ContactForm';
+import GoogleCalendarSection from './_components/sections/GoogleCalendarSection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
 import BusinessInfoSection from './_components/sections/BusinessInfoSection';
 import TestimonialsSection from './_components/sections/TestimonialsSection';
@@ -30,7 +30,7 @@ const ContactPage: React.FC = () => (
       description="What's your user experience strategy? Let's discuss how to transform technical barriers into competitive advantages that delight users and drive revenue."
       primaryCta={{
         text: 'Start Your Transformation',
-        href: '#contact-form',
+        href: '#appointment-form',
       }}
       image={{
         src: '/assets/images/martinstepanek-techseo-2.jpg',
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => (
         text: 'Available for Projects',
       }}
     />
-    <ContactForm />
+    <GoogleCalendarSection />
     <ContactMethodsSection />
     <TestimonialsSection backgroundColor="bg-gray-50" />
     <BusinessInfoSection backgroundColor="bg-white" />
