@@ -1,4 +1,4 @@
-name = "techseovitals-website"
+name = "staging-techseovitals-com"
 main = "worker.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
@@ -13,7 +13,6 @@ command = "npm run build"
 
 # Production environment
 [env.production]
-name = "techseovitals-website-production"
 workers_dev = false
 routes = [
   { pattern = "techseovitals.com/*", zone_name = "techseovitals.com" },
@@ -22,7 +21,6 @@ routes = [
 
 # Staging environment
 [env.staging]
-name = "techseovitals-website-staging"
 workers_dev = true
 
 # Compatibility flags for better Node.js compatibility
