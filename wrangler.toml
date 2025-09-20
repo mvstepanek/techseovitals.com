@@ -25,9 +25,5 @@ routes = [
 name = "techseovitals-website-staging"
 workers_dev = true
 
-# Performance and limits
-[limits]
-cpu_ms = 50
-
 # Compatibility flags for better Node.js compatibility
 compatibility_flags = ["nodejs_compat"]
