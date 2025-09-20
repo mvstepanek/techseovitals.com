@@ -33,6 +33,7 @@
     "@cloudflare/kv-asset-handler": "^0.3.0",
     "@tailwindcss/typography": "^0.5.16",
     "jsx-async-runtime": "^1.0.4",
+    "liquidjs": "^10.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
