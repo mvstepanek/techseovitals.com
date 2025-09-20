@@ -6,6 +6,8 @@ workers_dev = true
 # Serve static files from the _site directory
 [site]
 bucket = "./_site"
+include = ["**/*"]
+exclude = []
 
 # Build configuration
 [build]
