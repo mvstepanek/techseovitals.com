@@ -15,13 +15,15 @@ command = "npm run build"
 [env.production]
 workers_dev = false
 routes = [
-  { pattern = "techseovitals.com/*", zone_name = "techseovitals.com" },
-  { pattern = "www.techseovitals.com/*", zone_name = "techseovitals.com" }
+  { pattern = "staging.techseovitals.com/*", zone_name = "techseovitals.com" }
 ]
 
 # Staging environment
 [env.staging]
-workers_dev = true
+workers_dev = false
+routes = [
+  { pattern = "staging.techseovitals.com/*", zone_name = "techseovitals.com" }
+]
 
 # Compatibility flags for better Node.js compatibility
 compatibility_flags = ["nodejs_compat"]
