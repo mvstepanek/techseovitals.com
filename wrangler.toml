@@ -30,5 +30,4 @@ workers_dev = true
 cpu_ms = 50
 
 # Compatibility flags for better Node.js compatibility
-[compatibility_flags]
-nodejs_compat = true
+compatibility_flags = ["nodejs_compat"]
