@@ -1,0 +1,66 @@
+import React from 'react';
+
+const BrutalTruthSection: React.FC = () => (
+  <section className="py-24 bg-white relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/30" />
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-display font-bold text-gray-900 mb-4">
+          The <span className="text-red-500">Brutal Truth</span> About User Experience
+        </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Your visitors won&apos;t tell you they&apos;re frustrated - they&apos;ll just leave. Here&apos;s what the data
+          reveals about user behavior.
+        </p>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
+          <div className="mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-red-100 text-red-700">
+              Amazon Study
+            </div>
+            <div className="text-4xl font-bold mb-2 text-red-500">1%</div>
+            <div className="text-sm text-gray-500 mb-4">Revenue lost per 100ms delay</div>
+          </div>
+          <h3 className="text-xl font-display font-bold text-gray-900 mb-3">Users Feel Every Delay</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Amazon discovered users perceive even 100ms delays. When frustrated by slow performance, they abandon
+            purchases - costing businesses 1% revenue per 100ms delay.
+          </p>
+        </div>
+
+        <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
+          <div className="mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-orange-100 text-orange-700">
+              Google Study
+            </div>
+            <div className="text-4xl font-bold mb-2 text-orange-500">53%</div>
+            <div className="text-sm text-gray-500 mb-4">Mobile users abandon slow sites</div>
+          </div>
+          <h3 className="text-xl font-display font-bold text-gray-900 mb-3">Patience Has Limits</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            Users give you exactly 3 seconds before deciding your site isn&apos;t worth their time. Google found 53%
+            leave immediately - taking their business elsewhere.
+          </p>
+        </div>
+
+        <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
+          <div className="mb-4">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-purple-100 text-purple-700">
+              Industry Research
+            </div>
+            <div className="text-4xl font-bold mb-2 text-purple-500">79%</div>
+            <div className="text-sm text-gray-500 mb-4">Won&apos;t buy from slow sites again</div>
+          </div>
+          <h3 className="text-xl font-display font-bold text-gray-900 mb-3">First Impressions Are Final</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">
+            79% of users who experience a poor website won&apos;t give you a second chance. Bad technical experiences
+            destroy trust and customer relationships permanently.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+export default BrutalTruthSection;
