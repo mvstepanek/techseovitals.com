@@ -5,17 +5,25 @@ export default {
     const url = new URL(request.url);
 
     try {
-      // Handle specific routes with custom mapping
+      // Try to get the asset with a simpler approach
+      const options = {
+        ASSET_NAMESPACE: env.__STATIC_CONTENT,
+      };
+
+      // Only add manifest if it exists
+      if (env.__STATIC_CONTENT_MANIFEST) {
+        options.ASSET_MANIFEST = env.__STATIC_CONTENT_MANIFEST;
+      }
+
       let assetRequest = request;
 
+      // Handle routing
       if (url.pathname === '/') {
-        // Serve index.html for root
         assetRequest = new Request(url.origin + '/index.html', request);
       } else if (url.pathname.endsWith('/')) {
-        // Handle directory paths like /contact/ -> /contact/index.html
         assetRequest = new Request(url.origin + url.pathname + 'index.html', request);
       } else if (!url.pathname.includes('.') && !url.pathname.startsWith('/assets/')) {
-        // Handle clean URLs like /contact -> /contact/index.html
+        // Try /path/index.html first
         assetRequest = new Request(url.origin + url.pathname + '/index.html', request);
       }
 
@@ -24,10 +32,7 @@ export default {
           request: assetRequest,
           waitUntil: ctx.waitUntil.bind(ctx),
         },
-        {
-          ASSET_NAMESPACE: env.__STATIC_CONTENT,
-          ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
-        }
+        options
       );
 
       // Add security headers for HTML files
@@ -46,18 +51,35 @@ export default {
       return response;
 
     } catch (e) {
-      // Debug: Return error details in development
-      return new Response(`Debug Info:
-URL: ${url.pathname}
-Error: ${e.message}
-Available assets should include index.html, contact/index.html, etc.
-Static content namespace: ${env.__STATIC_CONTENT ? 'Available' : 'Missing'}
-Manifest: ${env.__STATIC_CONTENT_MANIFEST ? 'Available' : 'Missing'}`, {
-        status: 404,
-        headers: {
-          'Content-Type': 'text/plain',
-        },
-      });
+      // If the primary request fails, try fallback approaches
+      try {
+        // Try direct asset access without custom mapping
+        const response = await getAssetFromKV(
+          {
+            request,
+            waitUntil: ctx.waitUntil.bind(ctx),
+          },
+          {
+            ASSET_NAMESPACE: env.__STATIC_CONTENT,
+          }
+        );
+        return response;
+      } catch (e2) {
+        // Debug info
+        return new Response(`Debug Info v2:
+Original URL: ${url.pathname}
+Original Error: ${e.message}
+Fallback Error: ${e2.message}
+KV Namespace: ${env.__STATIC_CONTENT ? 'Available' : 'Missing'}
+Manifest: ${env.__STATIC_CONTENT_MANIFEST ? 'Available' : 'Missing'}
+
+Trying to access: ${url.pathname === '/' ? '/index.html' : url.pathname}`, {
+          status: 404,
+          headers: {
+            'Content-Type': 'text/plain',
+          },
+        });
+      }
     }
   },
 };
