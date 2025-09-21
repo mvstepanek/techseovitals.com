@@ -1,7 +1,7 @@
 import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
-import GoogleCalendarSection from './_components/sections/GoogleCalendarSection';
+import CalendlySection from './_components/sections/CalendlySection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
 import BusinessInfoSection from './_components/sections/BusinessInfoSection';
 import TestimonialsSection from './_components/sections/TestimonialsSection';
@@ -43,7 +43,7 @@ const ContactPage: React.FC = () => (
         text: 'Available for Projects',
       }}
     />
-    <GoogleCalendarSection />
+    <CalendlySection />
     <ContactMethodsSection />
     <TestimonialsSection backgroundColor="bg-gray-50" />
     <BusinessInfoSection backgroundColor="bg-white" />
