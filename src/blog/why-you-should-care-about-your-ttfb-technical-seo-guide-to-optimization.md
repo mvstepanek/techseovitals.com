@@ -4,6 +4,7 @@ description: 'Time to First Byte (TTFB) is the most critical metric in technical
 permalink: '/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/'
 layout: 'blog-post'
 date: '2025-08-05'
+image: '/assets/images/blog-thumbnails/why-you-should-care-about-your-ttfb.jpg'
 ---
 
 Time to First Byte (TTFB) is the most critical metric in technical SEO and web performance. It measures the wait time from when you hit enter until your browser receives its first response from the website's server.

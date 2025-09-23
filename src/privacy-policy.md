@@ -1,101 +1,190 @@
 ---
-title: 'Privacy Policy | TechSEO Vitals - How We Protect Your Data'
+title: 'Privacy Policy | TechSEO Vitals'
+description: 'Privacy Policy'
 permalink: '/privacy-policy/'
 layout: 'page'
 ---
 
-**Last Updated: May 12, 2025**
+## **1. Introduction**
 
-## 1. Information We Collect
+Welcome to TechSEO Vitals (“we,” “our,” or “us”).
 
-### 1.1 Information You Provide Directly
+This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit www.techseovitals.com or www.technickeseo.sk (the “Website”) or engage with our services.
 
-- **Name and Email Address:** When you subscribe to our newsletter or contact us
-- **Company Information:** Business name and industry details when relevant
-- **Communication Content:** Messages you send through contact forms or email
+## **2. Company Information**
 
-### 1.2 Information Collected Automatically
+**mountain explorer, s. r. o.**
 
-- **Website Analytics:** Page views, time spent, and user interactions via Google Analytics
-- **Technical Information:** IP address, browser type, device information
-- **Cookies:** Small data files that help improve your experience
+Karpatske namestie 7770/10A
 
-## 2. How We Use Your Information
+83106 Bratislava
 
-We use your information to:
+Slovakia (European Union)
 
-- Send you our bi-weekly technical SEO newsletter
-- Respond to your inquiries and provide customer support
-- Improve our website and services
-- Analyze website usage patterns
-- Comply with legal obligations
+**ID:** 53226119
 
-## 3. Information Sharing
+## **3. Information We Collect**
 
-We do not sell, trade, or rent your personal information to third parties. We may share information only in these limited circumstances:
+### **3.1 Information You Provide to Us**
 
-- **Service Providers:** Trusted partners who help us operate our website and services (e.g., email service providers, analytics tools)
-- **Legal Requirements:** When required by law or to protect our rights and safety
-- **Business Transfers:** In the event of a merger, acquisition, or sale of assets
+- Name and email address when subscribing to our newsletter
+- Contact information when communicating with us
+- Website access credentials and analytics data when providing our services
+- Technical data from your website and related platforms
+- Any other information you choose to provide
 
-## 4. Data Security
+### **3.2 Information We Collect Automatically**
 
-We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no internet transmission is 100% secure.
+- Usage data (pages visited, time spent on pages, etc.)
+- Device information (browser type, IP address, device type)
+- Cookie data
+- Analytics data through Google Analytics
+- Social media data and interactions
 
-## 5. Your Rights
+### **3.3 Information From Third Parties**
 
-You have the right to:
+We may receive information about you from:
 
-- **Access:** Request a copy of your personal information
-- **Correct:** Update or correct inaccurate information
-- **Delete:** Request deletion of your personal information
-- **Unsubscribe:** Opt out of marketing communications at any time
-- **Portability:** Request your data in a portable format
+- Google Analytics
+- Ahrefs Web Analytics
+- Akismet
+- Kit
+- Google Search Console
+- Social media platforms when you interact with our content
 
-## 6. Cookies and Tracking
+## **4. How We Use Your Information**
 
-We use cookies and similar technologies to:
+### **4.1 General Usage**
 
-- Remember your preferences
-- Analyze website performance
-- Provide personalized content
+We use your information for:
 
-You can control cookies through your browser settings.
+- Providing and improving our services
+- Sending newsletters and marketing communications (through Kit)
+- Analyzing website performance and user behavior
+- Responding to your requests or inquiries
+- Complying with legal obligations
+- Preventing fraud and securing our Website
+- Combining data from various sources to better understand your needs
 
-## 7. Third-Party Services
+### **4.2 Artificial Intelligence and Data Processing**
 
-Our website uses third-party services including:
+We may process and analyze data using artificial intelligence (“AI”) and large language models (“LLM”) for:
 
-- **Google Analytics:** For website analytics ([Google's Privacy Policy](https://policies.google.com/privacy))
-- **Email Service Provider:** For newsletter delivery
-- **Social Media Platforms:** For content sharing
+- Conducting research and data analysis
+- Identifying industry trends and patterns
+- Improving service delivery and methodologies
+- Creating aggregated industry reports
+- Other professional purposes
 
-Each service has its own privacy policy governing data collection and use.
+When processing data through AI/LLM systems, we:
 
-## 8. Children's Privacy
+- Use only anonymized and aggregated data
+- Exclude personally identifiable information and sensitive business data
+- Maintain appropriate security measures
+- Regularly review AI processing methods for data protection compliance
 
-Our services are not intended for children under 13. We do not knowingly collect personal information from children under 13.
+## **5. Data Sharing and Disclosure**
 
-## 9. International Data Transfers
+We may share your information with:
 
-Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place.
+- Kit (newsletter service)
+- Google Analytics (website analytics)
+- Social media platforms (when you interact with our content)
+- Legal authorities when required by law
+- Service providers who assist in our operations
+- AI and LLM service providers (using only anonymized data)
 
-## 10. Data Retention
+## **6. Cookie Policy**
 
-We retain your information only as long as necessary to provide our services and comply with legal obligations. Newsletter subscribers can unsubscribe at any time.
+We use cookies for:
 
-## 11. Changes to This Policy
+- Essential website functionality
+- Analytics (Google Analytics)
+- Marketing purposes
 
-We may update this privacy policy periodically. Changes will be posted on this page with an updated effective date. Continued use constitutes acceptance of updated terms.
+You can manage cookie preferences through your browser settings or Website settings.
 
-## 12. Contact Information
+## **7. Data Storage and Security**
 
-For questions about this privacy policy or to exercise your rights:
+Your data is stored on secure servers within the European Union or United States. We implement appropriate technical and organizational measures to protect your data, including specific safeguards for AI/LLM processing.
 
-- **Email:** [martin@techseovitals.com](mailto:martin@techseovitals.com)
-- **Contact Form:** [staging.techseovitals.com/contact/](/contact/)
-- **Mail:** mountain explorer, s. r. o., Karpatske namestie 7770/10A, 83106 Bratislava, Slovakia
+## **8. Your Privacy Rights**
 
----
+### **8.1 GDPR Rights**
 
-**Your privacy is important to us.** We are committed to protecting your personal information and being transparent about our data practices.
+European Union residents have the right to:
+
+- Access your personal data
+- Rectify inaccurate data
+- Erase your data (“right to be forgotten”)
+- Restrict processing
+- Data portability
+- Object to processing
+- Withdraw consent
+- Object to AI/LLM processing of your personal data
+
+### **8.2 California Privacy Rights**
+
+California residents have the right to:
+
+- Know what personal information is collected
+- Know if personal information is sold or disclosed
+- Say no to the sale of personal information
+- Access personal information
+- Equal service and price (non-discrimination)
+
+## **9. Data Retention**
+
+We retain your personal data for:
+
+- Newsletter subscriptions: Until you unsubscribe
+- Service-related data: As specified in the Service Agreement
+- Other data: As long as necessary for the purposes described in this policy
+
+## **10. Children’s Privacy**
+
+Our Website and services are not intended for children under 18. We do not knowingly collect information from children under 18.
+
+## **11. Changes to This Policy**
+
+We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new policy on this page and updating the “Last Updated” date.
+
+## **12. Your Choices**
+
+You can:
+
+- Unsubscribe from our newsletter using the link in each email
+- Disable cookies through your browser settings
+- Request deletion of your data by contacting us
+- Opt-out of Google Analytics tracking
+- Manage your social media privacy settings through respective platforms
+
+## **13. Legal Basis for Processing (GDPR)**
+
+We process your data based on:
+
+- Your consent
+- Contractual necessity
+- Legal obligations
+- Legitimate interests
+- Performance of services you’ve requested
+
+## **14. Governing Law**
+
+This Privacy Policy is governed by the laws of Slovakia and the European Union, while also complying with applicable US privacy laws including CCPA.
+
+## **15. Contact Us**
+
+For privacy-related inquiries, contact us at:
+
+mountain explorer, s. r. o.
+
+Karpatske namestie 7770/10A
+
+83106 Bratislava
+
+Slovakia
+
+**Email:** martin@techseovitals.com
+
+***Last Updated: September 23, 2025***

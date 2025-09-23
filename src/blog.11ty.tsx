@@ -20,6 +20,7 @@ interface EleventyData {
         description: string;
         permalink: string;
         date: string;
+        image?: string;
       };
       content: string;
     }>;
@@ -28,21 +29,25 @@ interface EleventyData {
 
 const BlogPage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
   // Get all blog posts
-  const allPosts = collections.blog.map(post => ({
-    title: post.data.title,
-    href: post.data.permalink,
-    image: `/assets/images/blog-thumbnails/${post.data.permalink
+  const allPosts = collections.blog.map(post => {
+    const permalink = post.data.permalink || `/blog/${post.data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
+    const fallbackImage = `/assets/images/blog-thumbnails/${permalink
       .split('/')
       .filter(p => p)
-      .pop()}.jpg`,
-    date: new Date(post.data.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }),
-    dateTime: post.data.date,
-    excerpt: post.data.description,
-  }));
+      .pop()}.jpg`;
+    return {
+      title: post.data.title,
+      href: permalink,
+      image: post.data.image || fallbackImage,
+      date: new Date(post.data.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }),
+      dateTime: post.data.date,
+      excerpt: post.data.description,
+    };
+  });
 
   return (
     <main className="flex-1">

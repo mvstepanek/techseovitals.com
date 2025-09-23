@@ -26,6 +26,7 @@ interface EleventyData {
         description: string;
         permalink: string;
         date: string;
+        image?: string;
       };
       content: string;
     }>;
@@ -34,21 +35,25 @@ interface EleventyData {
 
 const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
   // Get latest 3 blog posts
-  const latestPosts = collections.blog.slice(0, 3).map(post => ({
-    title: post.data.title,
-    href: post.data.permalink,
-    image: `/assets/images/blog-thumbnails/${post.data.permalink
+  const latestPosts = collections.blog.slice(0, 3).map(post => {
+    const permalink = post.data.permalink || `/blog/${post.data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
+    const fallbackImage = `/assets/images/blog-thumbnails/${permalink
       .split('/')
       .filter(p => p)
-      .pop()}.jpg`,
-    date: new Date(post.data.date).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    }),
-    dateTime: post.data.date,
-    excerpt: post.data.description,
-  }));
+      .pop()}.jpg`;
+    return {
+      title: post.data.title,
+      href: permalink,
+      image: post.data.image || fallbackImage,
+      date: new Date(post.data.date).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      }),
+      dateTime: post.data.date,
+      excerpt: post.data.description,
+    };
+  });
 
   return (
     <>
