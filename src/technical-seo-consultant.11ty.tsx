@@ -9,9 +9,9 @@ import TestimonialsSection from './_components/sections/TestimonialsSection';
 import CTASection from './_components/sections/CTASection';
 
 export const data = {
-  title: 'Technical SEO Consultant | TechSEO Vitals',
+  title: 'Technical SEO Consultant',
   description:
-    'Expert technical SEO consultant with 10+ years optimizing websites for search engines and users. Get higher rankings, more traffic, and better conversions with proven technical SEO strategies.',
+    'Expert technical SEO consultant with 10+ years experience. Get proven strategies that boost rankings, traffic, and conversions for your business.',
   permalink: '/technical-seo-consultant/',
   layout: 'base',
 };

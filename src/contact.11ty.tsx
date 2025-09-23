@@ -7,9 +7,9 @@ import BusinessInfoSection from './_components/sections/BusinessInfoSection';
 import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
-  title: 'Contact | TechSEO Vitals',
+  title: 'Contact',
   description:
-    'Get technical SEO and performance expertise that puts users first. Schedule a free consultation to create experiences that delight visitors and naturally earn better search and AI visibility.',
+    'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
   permalink: '/contact/',
   layout: 'base',
 };

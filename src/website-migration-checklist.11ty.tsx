@@ -5,9 +5,9 @@ import MigrationBenefitsSection from './_components/sections/MigrationBenefitsSe
 import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
-  title: 'Website Migration Checklist | TechSEO Vitals',
+  title: 'Website Migration Checklist',
   description:
-    'Protect your users and search visibility during migrations. 45+ essential tasks for seamless transitions that preserve user experience, rankings, and AI discoverability.',
+    'Website migration checklist with 45+ essential tasks. Protect your search rankings and user experience during seamless website transitions.',
   permalink: '/website-migration-checklist/',
   layout: 'base',
 };

@@ -5,9 +5,9 @@ import NewsletterBenefitsSection from './_components/sections/NewsletterBenefits
 import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
-  title: 'TechSEO Vitals Newsletter | TechSEO Vitals',
+  title: 'TechSEO Vitals Newsletter',
   description:
-    'Subscribe to TechSEO Vitals newsletter for technical SEO and performance strategies that serve real users first. Get actionable insights for better user experiences and natural search visibility.',
+    'Subscribe to TechSEO Vitals newsletter for actionable technical SEO insights. Get proven strategies that improve user experience and search rankings.',
   permalink: '/newsletter/',
   layout: 'base',
 };

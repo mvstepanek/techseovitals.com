@@ -1,6 +1,6 @@
 ---
-title: 'Terms and Conditions | TechSEO Vitals'
-description: 'Terms and Conditions'
+title: 'Terms and Conditions'
+description: 'Terms and conditions for using TechSEO Vitals website and services. Legal agreements, policies, and user responsibilities explained.'
 permalink: '/terms-and-conditions/'
 layout: 'page'
 ---

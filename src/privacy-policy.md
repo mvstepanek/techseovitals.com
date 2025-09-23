@@ -1,6 +1,6 @@
 ---
-title: 'Privacy Policy | TechSEO Vitals'
-description: 'Privacy Policy'
+title: 'Privacy Policy'
+description: 'Privacy policy for TechSEO Vitals. Learn how we collect, use, and protect your personal information and data on our website.'
 permalink: '/privacy-policy/'
 layout: 'page'
 ---

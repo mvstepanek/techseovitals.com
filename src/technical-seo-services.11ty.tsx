@@ -8,9 +8,9 @@ import CTASection from './_components/sections/CTASection';
 import { BUSINESS_CONSTANTS, COMMON_STYLES } from './_data/constants';
 
 export const data = {
-  title: 'Technical SEO Services | TechSEO Vitals',
+  title: 'Technical SEO Services',
   description:
-    'Professional technical SEO services that deliver measurable results. From comprehensive audits to complex migrations, get the expertise that drives rankings, traffic, and revenue.',
+    'Professional technical SEO services that boost rankings and revenue. Get expert audits, migrations, and optimization strategies for better conversions.',
   permalink: '/technical-seo-services/',
   layout: 'base',
 };

@@ -3,9 +3,9 @@ import HeroSection from './_components/sections/HeroSection';
 import TrustedCompaniesSection from './_components/sections/TrustedCompaniesSection';
 
 export const data = {
-  title: 'Customers | TechSEO Vitals',
+  title: 'Customers',
   description:
-    'Real results from businesses that prioritize user experience. See how technical SEO and performance optimization create exceptional experiences that users love and search engines naturally reward.',
+    'Real client results from technical SEO and performance optimization. See how businesses create better user experiences and boost conversions.',
   permalink: '/customers/',
   layout: 'base',
 };

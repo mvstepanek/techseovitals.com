@@ -5,9 +5,9 @@ import TechnicalSEOBenefitsSection from './_components/sections/TechnicalSEOBene
 import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
-  title: 'Technical SEO Checklist | TechSEO Vitals',
+  title: 'Technical SEO Checklist',
   description:
-    'Complete technical SEO checklist that puts users first. 100+ actionable improvements for creating experiences people love while earning better search and AI visibility.',
+    'Complete technical SEO checklist with 100+ actionable tasks. Download the free guide that helps improve website performance and search visibility.',
   permalink: '/technical-seo-checklist/',
   layout: 'base',
 };

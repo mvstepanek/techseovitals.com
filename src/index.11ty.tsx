@@ -15,7 +15,7 @@ export const data = {
   layout: 'base',
   title: 'TechSEO Vitals With Martin Stepanek',
   description:
-    "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.",
+    "Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.",
 };
 
 interface EleventyData {

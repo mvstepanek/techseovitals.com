@@ -4,9 +4,9 @@ import PerformanceBenefitsSection from './_components/sections/PerformanceBenefi
 import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
-  title: '5 Web Performance Metrics Every Business Owner Should Track | TechSEO Vitals',
+  title: '5 Web Performance Metrics Every Business Owner Should Track',
   description:
-    'Track the performance metrics that actually matter to users. Learn which 5 indicators measure real user experience and drive both satisfaction and search visibility.',
+    'Learn the 5 web performance metrics that drive conversions. Track user experience indicators that boost customer satisfaction and search rankings.',
   permalink: '/5-web-performance-metrics-every-business-owner-should-track/',
   layout: 'base',
 };
