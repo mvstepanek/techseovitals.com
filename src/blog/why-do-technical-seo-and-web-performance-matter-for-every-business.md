@@ -36,7 +36,7 @@ Ask yourself—how many times have **you clicked the “Add to Cart” or “Bu
 
 And it doesn’t stop there. Often, after finally adding an item, you click the shopping cart icon, and again wait for 5–10 seconds for the page to load.
 
-These two incredibly frustrating issues are tied to the Interaction to Next Paint (INP) metric in [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/).
+These two incredibly frustrating issues are tied to the Interaction to Next Paint (INP) metric in Core Web Vitals.
 
 Your CMS might have a slow response time, but at the very least, the **UI should indicate that the request is being processed**—something as simple as a loading message like “Adding item to cart…” can make a huge difference. When users see that something is happening, they’re far less likely to get frustrated.
 

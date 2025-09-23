@@ -26,7 +26,7 @@ To start improving your site’s performance, I recommend a three-step approach.
 
 ## **Core Web Vitals: Google’s Conversion Metrics**
 
-Google’s [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) aren’t arbitrary technical benchmarks, they directly measure aspects of user experience that influence buying behavior.
+Google’s Core Web Vitals aren’t arbitrary technical benchmarks, they directly measure aspects of user experience that influence buying behavior.
 
 **Largest Contentful Paint (LCP)** measures how quickly your main content becomes visible. For product pages, this often means product images. When shoppers can see what they’re buying quickly, they’re more likely to stay engaged. Make sure LCP doesn’t exceed 2.5 seconds.
 
@@ -92,7 +92,7 @@ To truly understand the impact of technical improvements, look beyond basic conv
 - **Average order value** correlation with page speed often shows that faster sites lead to larger purchases
 - **Return customer rate** as influenced by site performance indicates long term business value
 
-I recommend creating a simple dashboard connecting these business metrics with your [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) and other performance indicators. This provides **clear visualization of how technical improvements drive financial outcomes**.
+I recommend creating a simple dashboard connecting these business metrics with your Core Web Vitals and other performance indicators. This provides **clear visualization of how technical improvements drive financial outcomes**.
 
 ## **Overcoming Implementation Challenges**
 

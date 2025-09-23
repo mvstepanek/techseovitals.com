@@ -22,7 +22,7 @@ Secure early access to all necessary tools. This includes **Google Search Conso
 
 ### **Analyzing the Current State**
 
-The first technical step should be analyzing the current state of your website. Analyzing the existing website requires a full [crawl](https://www.techseovitals.com/47697/improving-crawlability-help-google-and-chatgpt-find-your-business-website/) without page limitations. I use **Screaming Frog SEO Spider** for this purpose. This detailed crawl serves two critical functions:
+The first technical step should be analyzing the current state of your website. Analyzing the existing website requires a full crawl without page limitations. I use **Screaming Frog SEO Spider** for this purpose. This detailed crawl serves two critical functions:
 
 - Establishing a baseline for post-migration comparison and
 - Developing insights about the website’s structure and current issues
@@ -53,7 +53,7 @@ Also validate content structure and structured data for any bugs.
 
 **Mobile optimization** requires special attention since search engine crawlers typically visit websites as smartphones. Ensure everything displays correctly and all intended content is visible on mobile devices.
 
-At this stage, test most important pages with **Google PageSpeed Insights** or **Chrome DevTools**, and optionally **DebugBear** to identify technical SEO or performance issues, including [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/).
+At this stage, test most important pages with **Google PageSpeed Insights** or **Chrome DevTools**, and optionally **DebugBear** to identify technical SEO or performance issues, including Core Web Vitals.
 
 Once everything is verified and working properly, you should always conduct one final audit to confirm everything is implemented correctly.
 
@@ -83,7 +83,7 @@ Now it’s time to update website URLs in all tools if the URL changed with this
 
 ### **Post-Launch Monitoring and Testing**
 
-Set up **DebugBear** for real user monitoring of [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) for at least one month after release. Also configure **Ahrefs** for daily or continuous monitoring for at least one month.
+Set up **DebugBear** for real user monitoring of Core Web Vitals for at least one month after release. Also configure **Ahrefs** for daily or continuous monitoring for at least one month.
 
 On migration day, encourage as many internal team members as possible to test the website to ensure everything functions properly and report issues immediately for quick resolution.
 

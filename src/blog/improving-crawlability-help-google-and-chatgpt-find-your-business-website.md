@@ -35,7 +35,7 @@ Internal linking is the most powerful strategy for improving crawlability. When 
 
 One effective method involves **cross-linking** content through related article elements. I use semantic similarity to connect relevant content pieces. Several excellent tools can automate this process, and recently, even [Screaming Frog SEO Spider](https://www.screamingfrog.co.uk/seo-spider/) has added features to help with semantic linking.
 
-The second method involves linking content through **strategic keyword placemen**t. For example, I automatically link every mention of “[core web vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/)” on my website to my comprehensive article about that topic. Focus on long-tail keywords of 3-4 words or more first, then work your way down to 1-2 word keywords. **Long-tail keywords** always perform better for internal linking.
+The second method involves linking content through **strategic keyword placemen**t. For example, I automatically link every mention of “core web vitals” on my website to my comprehensive article about that topic. Focus on long-tail keywords of 3-4 words or more first, then work your way down to 1-2 word keywords. **Long-tail keywords** always perform better for internal linking.
 
 Before implementing any linking strategy, identify your most important pages and prioritize links to them. However, **avoid overcrowding your content with links**, as this damages user experience and discourages real visitors from engaging with your content.
 
@@ -43,7 +43,7 @@ Before implementing any linking strategy, identify your most important pages and
 
 Web performance directly impacts crawling effectiveness as **Google and other crawlers allocate limited time to each website**.
 
-However, the primary reason to focus on performance and [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) should be your visitors’ positive experience.
+However, the primary reason to focus on performance and Core Web Vitals should be your visitors’ positive experience.
 
 When your site loads slowly or lacks proper caching, Googlebot can crawl fewer pages in the same timeframe compared to a fast-loading website. This limitation directly affects how much of your content gets discovered and indexed.
 

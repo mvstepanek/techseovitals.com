@@ -83,7 +83,7 @@ You can measure TTFB using your browser’s developer console or tools like [Go
 
 ## **Investigating Root Causes of High TTFB**
 
-Investigating root causes often proves challenging and may require professional expertise. With over 10 years of experience debugging these issues as [a technical SEO and web performance consultant](https://www.techseovitals.com/technical-seo-consultant/), I can offer guidance on finding problems yourself or finding them for you.
+Investigating root causes often proves challenging and may require professional expertise. With over 10 years of experience debugging these issues as a technical SEO and web performance consultant, I can offer guidance on finding problems yourself or finding them for you.
 
 ### **Diagnostic Steps**
 

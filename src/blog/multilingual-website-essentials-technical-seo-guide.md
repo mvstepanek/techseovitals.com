@@ -50,15 +50,15 @@ In specific cases, you can target both language and country combinations like en
 
 ## **Web Performance and Core Web Vitals**
 
-As [a technical SEO and web performance consultant](https://www.techseovitals.com/technical-seo-consultant/), I frequently encounter websites that struggle once they expand internationally.
+As a technical SEO and web performance consultant, I frequently encounter websites that struggle once they expand internationally.
 
-My home country, Slovakia, for example, has a perfect connection, such as fiber internet or 5G that masks [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) issues. These problems only surface when businesses expand using the same technical setup to markets with slower internet infrastructure.
+My home country, Slovakia, for example, has a perfect connection, such as fiber internet or 5G that masks Core Web Vitals issues. These problems only surface when businesses expand using the same technical setup to markets with slower internet infrastructure.
 
 International expansion presents the perfect opportunity to resolve performance issues that might be hidden in your primary market. Even implementing a CDN (content delivery network) for your entire website, not just images and static files, can dramatically boost overall performance.
 
 **I always recommend resolving these issues before expansion** rather than during it. This approach allows you to focus on more critical tasks when you need them most.
 
-Always prioritize [Core Web Vitals](https://www.techseovitals.com/763/how-core-web-vitals-boost-your-conversions-and-revenue/) and [Time to First Byte](https://www.techseovitals.com/47707/why-you-should-care-about-your-ttfb-a-technical-seo-guide-to-optimization/) ([TTFB](https://www.techseovitals.com/47707/why-you-should-care-about-your-ttfb-a-technical-seo-guide-to-optimization/)) to deliver the best possible user experience. Visitors often give you only one chance, and if you fail due to slow loading or poor interactivity, you lose that customer forever.
+Always prioritize Core Web Vitals and Time to First Byte (TTFB) to deliver the best possible user experience. Visitors often give you only one chance, and if you fail due to slow loading or poor interactivity, you lose that customer forever.
 
 ## **Accessibility and User Experience Considerations**
 
