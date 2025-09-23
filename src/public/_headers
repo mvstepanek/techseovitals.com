@@ -8,7 +8,7 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
 
   # Content Security Policy
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;
 
   # Performance Headers
   Cache-Control: public, max-age=31536000, immutable

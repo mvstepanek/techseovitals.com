@@ -344,7 +344,6 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <link rel="icon" href="/assets/images/favicons/favicon-192x192.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon-180x180.png" />
         <meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-270x270.png" />
-        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#7c3aed" />
 
         {/* Preload critical resources */}
@@ -373,11 +372,38 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         {/* Preload hero image if exists */}
         {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
 
-        {/* Prefetch critical user journey pages */}
-        <link rel="prefetch" href="/technical-seo-services/" />
-        <link rel="prefetch" href="/contact/" />
-        <link rel="prefetch" href="/newsletter/" />
-        <link rel="prefetch" href="/blog/" />
+        {/* Speculation Rules for prefetching */}
+        <script
+          type="speculationrules"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              prefetch: [
+                {
+                  where: { href_matches: "/technical-seo-services/" },
+                  eagerness: "moderate"
+                },
+                {
+                  where: { href_matches: "/contact/" },
+                  eagerness: "moderate"
+                },
+                {
+                  where: { href_matches: "/newsletter/" },
+                  eagerness: "moderate"
+                },
+                {
+                  where: { href_matches: "/blog/" },
+                  eagerness: "moderate"
+                }
+              ],
+              prerender: [
+                {
+                  where: { href_matches: "/contact/" },
+                  eagerness: "conservative"
+                }
+              ]
+            })
+          }}
+        />
 
         {/* Critical CSS (inline for performance) */}
         <style

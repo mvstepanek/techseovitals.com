@@ -16,7 +16,7 @@ export default {
         if (contentType.includes('text/html')) {
           const headers = new Headers(assetResponse.headers);
           headers.set('X-Frame-Options', 'SAMEORIGIN');
-          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; font-src 'self'");
+          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;");
 
           return new Response(assetResponse.body, {
             status: assetResponse.status,
@@ -42,7 +42,7 @@ export default {
         if (routeResponse.status === 200) {
           const headers = new Headers(routeResponse.headers);
           headers.set('X-Frame-Options', 'SAMEORIGIN');
-          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://calendar.google.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://calendar.google.com; connect-src 'self'; font-src 'self'");
+          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;");
 
           return new Response(routeResponse.body, {
             status: routeResponse.status,
