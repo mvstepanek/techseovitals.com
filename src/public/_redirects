@@ -16,7 +16,6 @@
 
 # Force HTTPS redirect
 http://techseovitals.com/* https://staging.techseovitals.com/:splat 301
-http://staging.techseovitals.com/* https://staging.techseovitals.com/:splat 301
 
-# Redirect apex domain to staging
-/* https://staging.techseovitals.com/:splat 301
+# Redirect apex domain to staging (only from techseovitals.com)
+https://techseovitals.com/* https://staging.techseovitals.com/:splat 301
