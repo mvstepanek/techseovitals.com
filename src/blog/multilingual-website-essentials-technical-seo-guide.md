@@ -15,15 +15,15 @@ Undoubtedly, all of them are critical parts of the expansion, but technical SEO 
 
 From a technical perspective, everything starts with the correct URL structure. You have three main options to consider:
 
-- **Country-specific domains** such as [example.es](http://example.es/)
-- **Subdomains with gTLD** such as [es.example.com](http://es.example.com/)
-- **Subdirectories with gTLD** such as [example.com/es/](http://example.com/es/)
+- **Country-specific domains** such as [example.es](http://example.es/)
+- **Subdomains with gTLD** such as [es.example.com](http://es.example.com/)
+- **Subdirectories with gTLD** such as [example.com/es/](http://example.com/es/)
 
-Each approach has significant pros and cons. After many years of experience as a web developer and technical consultant, I personally prefer **country-specific domains** because they make many technical processes smoother. Although it might cost more to purchase new domains that might not always be available, the benefits definitely outweigh the cost.  The biggest advantage is the ability to run each language version on separate servers, which improves performance and management flexibility.
+Each approach has significant pros and cons. After many years of experience as a web developer and technical consultant, I personally prefer **country-specific domains** because they make many technical processes smoother. Although it might cost more to purchase new domains that might not always be available, the benefits definitely outweigh the cost.  The biggest advantage is the ability to run each language version on separate servers, which improves performance and management flexibility.
 
-You can find a comprehensive breakdown of pros and cons of the URL structures in [Google’s documentation](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites#locale-specific-urls).
+You can find a comprehensive breakdown of pros and cons of the URL structures in [Google’s documentation](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites#locale-specific-urls).
 
-Regarding structure, there’s one critical rule that should be the gold standard. **Never force visitors to a specific language version based solely on their IP address**. This creates serious problems with changes in IP address during travel or VPN usage, and more importantly, it prevents search engine crawlers from properly indexing all language versions since they get constantly redirected.
+Regarding structure, there’s one critical rule that should be the gold standard. **Never force visitors to a specific language version based solely on their IP address**. This creates serious problems with changes in IP address during travel or VPN usage, and more importantly, it prevents search engine crawlers from properly indexing all language versions since they get constantly redirected.
 
 ## **Setting Up Hreflang with X-Default Tags**
 
@@ -38,33 +38,33 @@ Here’s how proper hreflang implementation looks:
 <link rel="alternate" hreflang="es" href="https://example.es/tarifas/" />
 ```
 
-**Note:** Don’t forget to include ****the **x-default tag** that should point to your website’s main language:
+**Note:** Don’t forget to include ****the **x-default tag** that should point to your website’s main language:
 
 ```
 <link rel="alternate" hreflang="x-default" href="https://example.com/pricing/" />
 ```
 
-When you have untranslated pages on other language websites, use [canonical tags](https://developers.google.com/search/docs/crawling-indexing/canonicalization) pointing to the original page to prevent duplicate content issues.
+When you have untranslated pages on other language websites, use [canonical tags](https://developers.google.com/search/docs/crawling-indexing/canonicalization) pointing to the original page to prevent duplicate content issues.
 
 In specific cases, you can target both language and country combinations like en-US and en-GB. When you do this, remember to localize currency formats, date displays, and phone numbers even when the core language remains the same.
 
 ## **Web Performance and Core Web Vitals**
 
-As a technical SEO and web performance consultant, I frequently encounter websites that struggle once they expand internationally.
+As a technical SEO and web performance consultant, I frequently encounter websites that struggle once they expand internationally.
 
-My home country, Slovakia, for example, has a perfect connection, such as fiber internet or 5G that masks Core Web Vitals issues. These problems only surface when businesses expand using the same technical setup to markets with slower internet infrastructure.
+My home country, Slovakia, for example, has a perfect connection, such as fiber internet or 5G that masks Core Web Vitals issues. These problems only surface when businesses expand using the same technical setup to markets with slower internet infrastructure.
 
 International expansion presents the perfect opportunity to resolve performance issues that might be hidden in your primary market. Even implementing a CDN (content delivery network) for your entire website, not just images and static files, can dramatically boost overall performance.
 
-**I always recommend resolving these issues before expansion** rather than during it. This approach allows you to focus on more critical tasks when you need them most.
+**I always recommend resolving these issues before expansion** rather than during it. This approach allows you to focus on more critical tasks when you need them most.
 
-Always prioritize Core Web Vitals and Time to First Byte (TTFB) to deliver the best possible user experience. Visitors often give you only one chance, and if you fail due to slow loading or poor interactivity, you lose that customer forever.
+Always prioritize Core Web Vitals and Time to First Byte (TTFB) to deliver the best possible user experience. Visitors often give you only one chance, and if you fail due to slow loading or poor interactivity, you lose that customer forever.
 
 ## **Accessibility and User Experience Considerations**
 
 When setting up new language variations, accessibility must be part of your planning process. This is especially important in the European Union, where accessibility requirements have become mandatory for many website types. Beyond legal compliance, people with disabilities represent potential customers in your new markets.
 
-User experience can be significantly affected by **language-specific characteristics**. German, for example, often features very long compound words that can break your design layouts. Right-to-left (RTL) languages like Arabic may require major design modifications since many custom code implementations don’t account for RTL text direction at all.
+User experience can be significantly affected by **language-specific characteristics**. German, for example, often features very long compound words that can break your design layouts. Right-to-left (RTL) languages like Arabic may require major design modifications since many custom code implementations don’t account for RTL text direction at all.
 
 ## **Conclusion**
 

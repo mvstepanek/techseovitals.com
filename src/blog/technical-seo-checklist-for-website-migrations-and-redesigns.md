@@ -8,21 +8,21 @@ author: 'Martin Stepanek'
 image: '/assets/images/blog/techseo-checklist-migrations.jpg'
 ---
 
-**Website migrations** are among the most challenging aspects of technical SEO. Despite careful planning and thorough preparation, there can always be unexpected problems during the migration process. I’ve prepared a dedicated checklist that you can use to minimize these issues in your upcoming project.
+**Website migrations** are among the most challenging aspects of technical SEO. Despite careful planning and thorough preparation, there can always be unexpected problems during the migration process. I’ve prepared a dedicated checklist that you can use to minimize these issues in your upcoming project.
 
-This technical SEO checklist compiles my years of migration experience and I divided it into three main phases: **Pre-Migration**, **Migration**, and **Post-Migration**. Each of these phases is broken down into smaller, manageable sections for better understanding.
+This technical SEO checklist compiles my years of migration experience and I divided it into three main phases: **Pre-Migration**, **Migration**, and **Post-Migration**. Each of these phases is broken down into smaller, manageable sections for better understanding.
 
 ## **Pre-Migration Phase**
 
 ### **Creating a Project Plan**
 
-At the beginning of every migration, focus on creating **a detailed project plan** that includes a roadmap and financial budget for external resources or tools. The plan must address specific website requirements and project details while identifying potential risks.
+At the beginning of every migration, focus on creating **a detailed project plan** that includes a roadmap and financial budget for external resources or tools. The plan must address specific website requirements and project details while identifying potential risks.
 
-Secure early access to all necessary tools. This includes **Google Search Console**, **Google Analytics**, **Bing Webmaster Tools**, and any other monitoring or analytics platforms currently used by the website.
+Secure early access to all necessary tools. This includes **Google Search Console**, **Google Analytics**, **Bing Webmaster Tools**, and any other monitoring or analytics platforms currently used by the website.
 
 ### **Analyzing the Current State**
 
-The first technical step should be analyzing the current state of your website. Analyzing the existing website requires a full crawl without page limitations. I use **Screaming Frog SEO Spider** for this purpose. This detailed crawl serves two critical functions:
+The first technical step should be analyzing the current state of your website. Analyzing the existing website requires a full crawl without page limitations. I use **Screaming Frog SEO Spider** for this purpose. This detailed crawl serves two critical functions:
 
 - Establishing a baseline for post-migration comparison and
 - Developing insights about the website’s structure and current issues
@@ -43,7 +43,7 @@ Once staging is running with the new website, immediately block crawling via rob
 
 After deploying the final version of the website on staging with all content that will be live on migration day, thoroughly test the entire website. Verify that all forms work properly, and for eCommerce websites, test the complete purchasing process. Everything must function perfectly.
 
-Don’t forget to migrate essential elements including **meta titles**, **descriptions**, and **canonicals**. Ideally, update all internal links to point to new URLs during this phase to avoid redirects and redirect chains.
+Don’t forget to migrate essential elements including **meta titles**, **descriptions**, and **canonicals**. Ideally, update all internal links to point to new URLs during this phase to avoid redirects and redirect chains.
 
 From an SEO perspective, carefully check meta titles, descriptions, and canonicals. Verify all sitemaps, especially XML sitemaps, and prepare a validated final version of robots.txt for release with the new website.
 
@@ -51,9 +51,9 @@ Based on the URL mapping, check for 404 errors and confirm all redirects work pr
 
 Also validate content structure and structured data for any bugs.
 
-**Mobile optimization** requires special attention since search engine crawlers typically visit websites as smartphones. Ensure everything displays correctly and all intended content is visible on mobile devices.
+**Mobile optimization** requires special attention since search engine crawlers typically visit websites as smartphones. Ensure everything displays correctly and all intended content is visible on mobile devices.
 
-At this stage, test most important pages with **Google PageSpeed Insights** or **Chrome DevTools**, and optionally **DebugBear** to identify technical SEO or performance issues, including Core Web Vitals.
+At this stage, test most important pages with **Google PageSpeed Insights** or **Chrome DevTools**, and optionally **DebugBear** to identify technical SEO or performance issues, including Core Web Vitals.
 
 Once everything is verified and working properly, you should always conduct one final audit to confirm everything is implemented correctly.
 
@@ -79,11 +79,11 @@ Since everything is ready, release the new website by changing DNS records to po
 
 Immediately after release or after DNS records are updated and recognized, clear all cache, especially CDN, and start testing everything again. Focus primarily on redirects, sitemaps, and robots.txt, then move on to overall website functionality.
 
-Now it’s time to update website URLs in all tools if the URL changed with this migration, especially in **Google Search Console**, and resubmit new sitemaps. Double-check all other tools and don’t forget about annotations in tools like Google Analytics.
+Now it’s time to update website URLs in all tools if the URL changed with this migration, especially in **Google Search Console**, and resubmit new sitemaps. Double-check all other tools and don’t forget about annotations in tools like Google Analytics.
 
 ### **Post-Launch Monitoring and Testing**
 
-Set up **DebugBear** for real user monitoring of Core Web Vitals for at least one month after release. Also configure **Ahrefs** for daily or continuous monitoring for at least one month.
+Set up **DebugBear** for real user monitoring of Core Web Vitals for at least one month after release. Also configure **Ahrefs** for daily or continuous monitoring for at least one month.
 
 On migration day, encourage as many internal team members as possible to test the website to ensure everything functions properly and report issues immediately for quick resolution.
 
@@ -99,7 +99,7 @@ Fix all critical issues identified during this audit immediately. Less urgent is
 
 ### **Monitoring the New Website**
 
-**Post-migration monitoring** is a crucial part of website migration. I focus on monitoring rankings in Ahrefs and tracking crawl issues, page problems, and performance in Google Search Console. This monitoring should continue for at least one month, but ideally for 3-6 months depending on the website.
+**Post-migration monitoring** is a crucial part of website migration. I focus on monitoring rankings in Ahrefs and tracking crawl issues, page problems, and performance in Google Search Console. This monitoring should continue for at least one month, but ideally for 3-6 months depending on the website.
 
 Also monitor log files for at least 3-7 days for errors, especially 404 errors. Don’t forget to monitor other logs such as PHP errors and overall server performance.
 
