@@ -1,6 +1,6 @@
 ---
 title: 'The ROI of Faster Content: How LCP Transforms Bounce Rates and Revenue'
-description: 'Discover how optimizing Largest Contentful Paint (LCP) can dramatically reduce bounce rates and increase revenue. Learn the business impact of faster content loading.'
+description: 'Optimizing LCP reduces bounce rates by 14% and boosts conversions by 13%. Unlock the ROI of faster content loading for business growth.'
 permalink: '/blog/the-roi-of-faster-content-how-lcp-transforms-bounce-rates-and-revenue/'
 layout: 'blog-post'
 date: '2025-09-17'

@@ -1,6 +1,6 @@
 ---
 title: 'Improving Crawlability: Help Google and ChatGPT Find Your Business Website'
-description: 'Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially. Learn how to optimize for Google and AI crawlers.'
+description: 'Invisible to Google and ChatGPT? Fix crawlability issues that hide your business from search engines and AI tools with proven strategies.'
 permalink: '/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/'
 layout: 'blog-post'
 date: '2025-07-09'

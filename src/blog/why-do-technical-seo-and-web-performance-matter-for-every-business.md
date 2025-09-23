@@ -1,6 +1,6 @@
 ---
 title: 'Why Do Technical SEO and Web Performance Matter for Every Business?'
-description: 'Discover how technical SEO, web performance, and accessibility are crucial for online businesses. Learn about their impact on user experience, conversion rates, revenue, and creating an inclusive online environment.'
+description: 'Frustrated visitors leave within 3 seconds. Why technical SEO, web performance, and accessibility form the foundation of online business success.'
 permalink: '/blog/why-do-technical-seo-and-web-performance-matter-for-every-business/'
 layout: 'blog-post'
 date: '2025-03-19'

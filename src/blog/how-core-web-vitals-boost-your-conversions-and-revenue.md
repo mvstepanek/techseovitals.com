@@ -1,6 +1,6 @@
 ---
 title: 'How Core Web Vitals Boost Your Conversions and Revenue'
-description: 'Discover how Core Web Vitals (LCP, INP, and CLS) directly impact user experience and business performance. Learn to improve these technical metrics for higher conversion rates and increased revenue.'
+description: 'Every millisecond matters for conversions. How Core Web Vitals (LCP, INP, CLS) directly impact your bottom line and customer experience.'
 permalink: '/blog/how-core-web-vitals-boost-your-conversions-and-revenue/'
 layout: 'blog-post'
 date: '2025-04-16'

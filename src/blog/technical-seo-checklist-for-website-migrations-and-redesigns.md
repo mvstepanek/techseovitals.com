@@ -1,6 +1,6 @@
 ---
 title: 'Technical SEO Checklist for Website Migrations and Redesigns'
-description: 'Complete technical SEO checklist for website migrations. Ensure your redesign maintains search visibility with this comprehensive pre, during, and post-migration guide.'
+description: 'Website migrations gone wrong destroy rankings overnight. Complete technical SEO checklist to protect visibility during redesigns and migrations.'
 permalink: '/blog/technical-seo-checklist-for-website-migrations-and-redesigns/'
 layout: 'blog-post'
 date: '2025-06-26'

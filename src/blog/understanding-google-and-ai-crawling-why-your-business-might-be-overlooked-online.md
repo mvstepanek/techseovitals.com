@@ -1,6 +1,6 @@
 ---
 title: 'Understanding Google and AI Crawling: Why Your Business Might Be Overlooked Online'
-description: 'Learn how search engines and AI tools crawl and index websites. Discover technical reasons why businesses might be invisible online and actionable strategies for improving website visibility and discoverability.'
+description: '$10,000 website with zero traffic? Understand how Google and AI crawlers work, plus actionable fixes for overlooked businesses online.'
 permalink: '/blog/understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online/'
 layout: 'blog-post'
 date: '2025-04-02'
