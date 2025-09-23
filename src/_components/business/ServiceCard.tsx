@@ -17,6 +17,7 @@ interface ServiceCardProps {
   ctaHref: string;
   color: 'green' | 'orange' | 'indigo' | 'blue';
   id?: string;
+  commitment?: string;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
@@ -31,6 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   ctaHref,
   color,
   id,
+  commitment,
 }) => {
   const getColorClasses = () => {
     switch (color) {
@@ -154,6 +156,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               </ul>
             </div>
           </div>
+
+          {commitment && (
+            <div className="absolute bottom-4 right-4 text-xs text-gray-500">
+              {commitment}
+            </div>
+          )}
         </div>
       </div>
     </div>

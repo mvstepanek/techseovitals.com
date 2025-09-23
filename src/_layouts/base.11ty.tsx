@@ -59,7 +59,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
       url: 'https://staging.techseovitals.com/contact/',
     },
     sameAs: [
-      'https://linkedin.com/in/martin-stepanek-techseo/',
+      'https://www.linkedin.com/in/techseovitals/',
       'https://bsky.app/profile/techseovitals.com',
       'https://youtube.com/@techseovitals',
     ],
@@ -184,7 +184,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
       'Search Engine Optimization',
     ],
     sameAs: [
-      'https://linkedin.com/in/martin-stepanek-techseo/',
+      'https://www.linkedin.com/in/techseovitals/',
       'https://bsky.app/profile/techseovitals.com',
       'https://youtube.com/@techseovitals',
     ],

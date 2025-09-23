@@ -14,17 +14,16 @@ const NewsletterBenefitsSection: React.FC = () => (
               d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z"
             />
           </svg>
-          What You&apos;ll Learn
+          Why Subscribe
         </div>
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-          Join Website Owners Getting{' '}
+          Why Business Owners{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Real Results
+            Trust This Newsletter
           </span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          &quot;Your insights transformed how we think about user experience.&quot; - 3 benefits you can expect from
-          subscribing
+          A newsletter that transforms how you think about user experience and technical optimization.
         </p>
       </div>
       <StatsGrid
@@ -58,9 +57,9 @@ const NewsletterBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Gaining New Knowledge</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Decision Making</h3>
           <p className="text-gray-600 mb-6">
-            Learning new information is crucial for both personal and business growth. Stay ahead of the competition.
+            Stop second-guessing your technical choices. Get clear guidance on what works, what doesn't, and why it matters for your specific situation.
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
@@ -74,9 +73,9 @@ const NewsletterBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Staying Up-to-Date</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Competitive Advantage</h3>
           <p className="text-gray-600 mb-6">
-            Keeping current with recent industry changes is critical for the strategic decisions you need to make.
+            Learn optimization techniques most websites miss. Get ahead of changes before they impact your rankings and discover opportunities others overlook.
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -85,10 +84,9 @@ const NewsletterBenefitsSection: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Getting Better Website</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Growth</h3>
           <p className="text-gray-600 mb-6">
-            Implementing knowledge from the newsletter will help your website grow, attract more visitors, and increase
-            revenue over time.
+            Watch your website transform with better user engagement, improved search visibility, and increased revenue through proven optimization techniques.
           </p>
         </div>
       </div>

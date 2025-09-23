@@ -58,14 +58,14 @@ const BlogPage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
               />
             </svg>
           ),
-          text: 'User Experience Insights',
+          text: 'Expert Insights',
         }}
         title={
           <>
-            Technical SEO <span className={COMMON_STYLES.gradientText}>Blog</span>
+            Technical SEO <span className={COMMON_STYLES.gradientText}>Insights</span>
           </>
         }
-        description="Discover how to create exceptional user experiences that naturally drive business growth. Get actionable insights on transforming technical barriers into competitive advantages."
+        description="Learn optimization strategies that create websites users love while driving more conversions and revenue."
         image={{
           src: '/assets/images/martinstepanek-techseo-5.jpg',
           alt: 'Martin Stepanek - Technical SEO Expert',

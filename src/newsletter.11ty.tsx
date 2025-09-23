@@ -2,12 +2,12 @@ import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import NewsletterBenefitsSection from './_components/sections/NewsletterBenefitsSection';
-import ExperienceSection from './_components/sections/ExperienceSection';
+import AboutMartinSection from './_components/sections/AboutMartinSection';
 
 export const data = {
   title: 'TechSEO Vitals Newsletter | TechSEO Vitals',
   description:
-    'Join TechSEO Vitals newsletter for actionable strategies that create exceptional user experiences and naturally drive business growth. Subscribe now for free.',
+    'Subscribe to TechSEO Vitals newsletter for technical SEO and performance strategies that serve real users first. Get actionable insights for better user experiences and natural search visibility.',
   permalink: '/newsletter/',
   layout: 'base',
 };
@@ -17,14 +17,14 @@ const NewsletterPage: React.FC = () => (
     <HeroWithFormSection
       badge={{
         icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
-        text: 'Every Two Weeks in Your Inbox',
+        text: 'Biweekly Newsletter',
       }}
       title={
         <>
-          <span className={COMMON_STYLES.gradientText}>TechSEO Vitals</span> Newsletter
+          Get Technical SEO Insights That <span className={COMMON_STYLES.gradientText}>Drive Results</span>
         </>
       }
-      description="Create exceptional user experiences that drive revenue. Actionable strategies for transforming technical barriers into competitive advantages."
+      description="Learn how top businesses create websites that users love and search engines reward. Get practical strategies for technical SEO and performance optimization delivered to your inbox every two weeks."
       trustSignals={{
         show: true,
         images: [
@@ -47,14 +47,14 @@ const NewsletterPage: React.FC = () => (
             required: true,
           },
           {
-            placeholder: 'Business email',
+            placeholder: 'Email',
             type: 'email',
             name: 'email_address',
             required: true,
           },
         ],
         submitButton: {
-          text: 'Subscribe to Newsletter',
+          text: 'Subscribe',
           variant: 'primary',
         },
         dataAttributes: {
@@ -86,11 +86,10 @@ const NewsletterPage: React.FC = () => (
           </div>
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Maximize Your Website&apos;s <span className={COMMON_STYLES.gradientText}>Revenue Potential</span>
+              What's in Each <span className={COMMON_STYLES.gradientText}>Episode</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Through the newsletter, I share the most valuable knowledge I&apos;ve gained over my 10-year career in web
-              development and technical SEO.
+              Actionable technical SEO and performance strategies that help you create better user experiences while improving your search rankings and AI visibility.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -106,10 +105,9 @@ const NewsletterPage: React.FC = () => (
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">In-Depth Content</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Analysis</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Each newsletter focuses on a specific topic, exploring details and research in depth. Get comprehensive
-                insights you won&apos;t find elsewhere.
+                Deep dives into technical SEO trends, case studies from real websites, and performance optimization techniques that actually move the needle.
               </p>
               <div className="flex items-center gap-2 font-semibold text-blue-600">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -129,16 +127,15 @@ const NewsletterPage: React.FC = () => (
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Actionable Tips</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Actionable Guides</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Every episode includes a special actionable tip that can immediately help your business grow and improve
-                your website performance.
+                Step-by-step guides you can implement immediately. No fluff, just practical instructions with clear before-and-after examples.
               </p>
               <div className="flex items-center gap-2 font-semibold text-green-600">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
                 </svg>
-                Immediate impact
+                Ready to use
               </div>
             </div>
             <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -152,16 +149,15 @@ const NewsletterPage: React.FC = () => (
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Latest Industry News</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry Trends</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Always up-to-date news from the technical SEO and web performance industry that deserves your attention
-                and strategic consideration.
+                Latest updates on search algorithm changes, AI developments, and emerging optimization opportunities you need to know about.
               </p>
               <div className="flex items-center gap-2 font-semibold text-purple-600">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
                 </svg>
-                Stay ahead
+                Stay current
               </div>
             </div>
           </div>
@@ -171,74 +167,7 @@ const NewsletterPage: React.FC = () => (
 
     <NewsletterBenefitsSection />
 
-    <div className="border-t border-gray-200">
-      <ExperienceSection
-        badge={{
-          icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
-          text: 'About Martin',
-        }}
-        title={
-          <>
-            What Makes Me <span className={COMMON_STYLES.gradientText}>Different</span>
-          </>
-        }
-        subtitle="I combine deep technical expertise with business acumen to deliver SEO strategies that directly impact your bottom line."
-        experiencePoints={[
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            ),
-            title: '10+ Years of Experience',
-            description:
-              'Over a decade of hands-on web development and technical SEO expertise, working with businesses of all sizes.',
-            color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-          },
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5H7A2 2 0 005 7v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                />
-              </svg>
-            ),
-            title: 'Actionable Task Lists',
-            description:
-              'Detailed, prioritized action items with step-by-step guidance tailored to your internal resources and capabilities.',
-            color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
-          },
-          {
-            icon: (
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8-8 8-4-4-6 6" />
-              </svg>
-            ),
-            title: 'Revenue-Focused Approach',
-            description:
-              'Every optimization targets real business impact. I focus on improvements that directly increase conversions and revenue.',
-            color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-          },
-        ]}
-        image={{
-          src: '/assets/images/martinstepanek-techseo-4.jpg',
-          alt: 'Martin Stepanek - Technical SEO Consultant',
-        }}
-        statsBadge={{
-          icon: (
-            <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-            </svg>
-          ),
-          title: '50+ Successful Projects',
-          subtitle: 'Trusted by businesses worldwide',
-        }}
-        backgroundColor="white"
-      />
-    </div>
+    <AboutMartinSection />
   </main>
 );
 

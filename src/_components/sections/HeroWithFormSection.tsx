@@ -105,12 +105,12 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
             <div className="absolute -inset-4 bg-gradient-to-r from-brand-600/20 to-brand-600/20 rounded-3xl blur-2xl opacity-30" />
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-3xl font-bold mb-3">
                   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                     {form.title}
                   </span>
                 </h3>
-                <p className="text-gray-600">{form.subtitle}</p>
+                <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>
 
               {form.dataAttributes && form.convertKitOptions ? (

@@ -13,15 +13,14 @@ const WhyAuditSection: React.FC = () => (
               d="M9 5H7A2 2 0 005 7v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
             />
           </svg>
-          What&apos;s Your UX Strategy?
+          Why You Need an Audit
         </div>
         <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Strategy</span>{' '}
-          before Implementation
+          Stop Guessing. <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Start Knowing</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Your users experience problems you might not even know exist. A thorough audit reveals exactly where visitors
-          struggle and what&apos;s preventing them from converting.
+          You can&apos;t fix what you can&apos;t see. My audit reveals the hidden technical issues killing your
+          conversions and revenue with a clear roadmap to fix them.
         </p>
       </div>
       <div className="flex flex-col items-center gap-4 mb-16">
@@ -29,7 +28,7 @@ const WhyAuditSection: React.FC = () => (
           className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30"
           href="/contact/"
         >
-          <span className="relative z-10">Transform User Experience</span>
+          <span className="relative z-10">Get Free Website Check</span>
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
         </a>
         <div className="flex items-center justify-center gap-4 text-gray-600">
@@ -50,16 +49,16 @@ const WhyAuditSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">See Through User Eyes</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Uncover Revenue Killers</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Uncover the technical friction points that frustrate visitors and prevent them from completing their goals
-            on your site.
+            Find the technical issues that are silently costing you money. Discover exactly what&apos;s preventing
+            visitors from converting and completing purchases.
           </p>
           <div className="flex items-center gap-2 font-semibold text-blue-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            Complete diagnosis
+            Full technical analysis
           </div>
         </div>
 
@@ -70,16 +69,16 @@ const WhyAuditSection: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Fix What Matters Most</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Maximize Revenue Impact</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Focus on improvements that make the biggest difference to user experience and business outcomes - see
-            results immediately.
+            Stop wasting time on minor issues. Get fixes ranked by revenue potential so you tackle what
+            drives the most conversions and sales first.
           </p>
           <div className="flex items-center gap-2 font-semibold text-green-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            Immediate results
+            Revenue opportunities found
           </div>
         </div>
 
@@ -95,16 +94,16 @@ const WhyAuditSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Create Exceptional Experiences</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Capture Lost Revenue</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Build the smooth, intuitive website your visitors deserve - one that turns first-time users into lifelong
-            customers.
+            Identify where competitors are stealing your customers and get the technical improvements that
+            help you win back market share and revenue.
           </p>
           <div className="flex items-center gap-2 font-semibold text-purple-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            Higher satisfaction
+            Competitive advantage
           </div>
         </div>
       </div>

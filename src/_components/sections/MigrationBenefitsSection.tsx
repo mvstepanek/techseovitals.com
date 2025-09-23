@@ -14,19 +14,18 @@ const MigrationBenefitsSection: React.FC = () => (
                 d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z"
               />
             </svg>
-            What You&apos;ll Achieve
+            Protect Your Investment
           </div>
         </div>
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Keep Your Users Happy During{' '}
+            Minimize Migration{' '}
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Critical Changes
+              Risks and Losses
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-            &quot;Our users never even noticed the migration happened.&quot; - The seamless experience your visitors
-            deserve
+            Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your search rankings, user experience, and business operations.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,16 +41,15 @@ const MigrationBenefitsSection: React.FC = () => (
                 />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">User Journey Protection</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Preserve Search Rankings</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Ensure every user path remains intact. Your visitors&apos; favorite pages, bookmarks, and experiences stay
-              exactly where they expect them.
+              Protect your hard-earned search visibility. Proper redirects, URL mapping, and technical setup prevent ranking losses that destroy organic traffic.
             </p>
             <div className="flex items-center gap-2 font-semibold text-green-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
               </svg>
-              45+ critical tasks
+              45+ technical checkpoints
             </div>
           </div>
           <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
@@ -66,16 +64,15 @@ const MigrationBenefitsSection: React.FC = () => (
                 />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Seamless Experience</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Maintain User Experience</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              10+ years perfecting migrations that users don&apos;t feel. Maintain performance, accessibility, and
-              reliability throughout.
+              Keep site speed, functionality, and user flows intact. Prevent the performance drops and broken features that drive customers away.
             </p>
             <div className="flex items-center gap-2 font-semibold text-blue-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
               </svg>
-              0% user disruption
+              Zero downtime strategy
             </div>
           </div>
           <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -90,16 +87,15 @@ const MigrationBenefitsSection: React.FC = () => (
                 />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Trust Preservation</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Protection</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Protect the trust you&apos;ve built with users. Avoid the frustration and abandonment that poorly planned
-              migrations cause.
+              Safeguard your business from migration disasters. Avoid the traffic drops, broken conversions, and lost revenue that destroy ROI.
             </p>
             <div className="flex items-center gap-2 font-semibold text-purple-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
               </svg>
-              8 major areas
+              Revenue-focused approach
             </div>
           </div>
         </div>

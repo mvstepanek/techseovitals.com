@@ -281,7 +281,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
                 className={fieldClassName || defaultFieldClassName}
                 name="email_address"
                 aria-label="Email Address"
-                placeholder="Business email"
+                placeholder="Email"
                 required
                 type="email"
               />

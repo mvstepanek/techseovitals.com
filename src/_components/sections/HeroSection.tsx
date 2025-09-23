@@ -67,7 +67,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div
           className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}
         >
-          <div className={layout === 'centered' ? 'max-w-4xl mx-auto' : 'max-w-4xl'}>
+          <div className={layout === 'centered' ? 'max-w-6xl mx-auto' : 'max-w-4xl'}>
             <Badge icon={badge.icon}>{badge.text}</Badge>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900 lg:text-6xl xl:text-7xl leading-tight mt-4 sm:mt-6">
@@ -75,7 +75,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </h1>
 
             <p
-              className={`mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-lg mx-auto' : 'max-w-lg'}`}
+              className={`mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-4xl mx-auto' : 'max-w-lg'}`}
             >
               {description}
             </p>
@@ -117,7 +117,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                       &quot;{rating.text}&quot;
                       {rating.source && (
                         <span className="text-gray-600 ml-1">
-                          —{' '}
+                          –{' '}
                           {rating.sourceLink ? (
                             <a
                               href={rating.sourceLink}

@@ -6,11 +6,11 @@ const BrutalTruthSection: React.FC = () => (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-display font-bold text-gray-900 mb-4">
-          The <span className="text-red-500">Brutal Truth</span> About User Experience
+          The <span className="text-red-500">Brutal Truth</span> About Your Website
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Your visitors won&apos;t tell you they&apos;re frustrated - they&apos;ll just leave. Here&apos;s what the data
-          reveals about user behavior.
+          Technical issues destroy user trust before they even know it. Slow pages, broken navigation, and poor structure
+          frustrate real people trying to use your site. When users struggle, your business suffers.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -47,15 +47,14 @@ const BrutalTruthSection: React.FC = () => (
         <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
           <div className="mb-4">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-purple-100 text-purple-700">
-              Industry Research
+              User Experience
             </div>
             <div className="text-4xl font-bold mb-2 text-purple-500">79%</div>
-            <div className="text-sm text-gray-500 mb-4">Won&apos;t buy from slow sites again</div>
+            <div className="text-sm text-gray-500 mb-4">Won&apos;t return after bad experience</div>
           </div>
-          <h3 className="text-xl font-display font-bold text-gray-900 mb-3">First Impressions Are Final</h3>
+          <h3 className="text-xl font-display font-bold text-gray-900 mb-3">First Impressions Matter</h3>
           <p className="text-gray-600 text-sm leading-relaxed">
-            79% of users who experience a poor website won&apos;t give you a second chance. Bad technical experiences
-            destroy trust and customer relationships permanently.
+            79% of users who have a poor website experience won&apos;t give you a second chance. Plus, search engines and AI platforms rely on the same technical signals that create good user experiences.
           </p>
         </div>
       </div>

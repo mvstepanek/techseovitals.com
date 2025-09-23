@@ -8,19 +8,18 @@ const PerformanceBenefitsSection: React.FC = () => (
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          What You&apos;ll Learn
+          Track What Matters
         </div>
       </div>
       <div className="text-center mb-20">
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-          Create Experiences That{' '}
+          The 5 Metrics That{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Users Love
+            Actually Matter
           </span>
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-          When users get the fast, smooth experience they expect, they stay longer, engage more, and naturally convert
-          at higher rates. Performance is your competitive advantage.
+          Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions and revenue, plus the target numbers you need to hit.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -31,16 +30,15 @@ const PerformanceBenefitsSection: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Delighted Users</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Loading Speed Fundamentals</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Users feel the difference immediately when sites load fast. Happy users stay longer, explore more, and
-            become loyal customers who return.
+            Learn the critical speed measurements that determine if customers stay or leave. Get specific target numbers that separate fast sites from slow ones.
           </p>
           <div className="flex items-center gap-2 font-semibold text-green-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            1% revenue per 100ms
+            Exact target benchmarks
           </div>
         </div>
 
@@ -56,16 +54,15 @@ const PerformanceBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Better Conversions</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Server Response Optimization</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Passing Core Web Vitals unlocks your website&apos;s full potential and significantly improves conversion
-            rates. Better performance means more customers.
+            Discover the hidden server delays that kill conversions before customers even see your content. Learn the response time targets that keep visitors engaged.
           </p>
           <div className="flex items-center gap-2 font-semibold text-blue-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            7% conversion boost
+            Server performance targets
           </div>
         </div>
 
@@ -81,16 +78,15 @@ const PerformanceBenefitsSection: React.FC = () => (
               />
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Improved SEO</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Recovery Blueprint</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Well-optimized websites are more appealing to users and search engines. Core Web Vitals are a direct Google
-            ranking factor.
+            Discover how these 5 metrics work together to stop customer abandonment. Learn the proven system to identify which speed issues are costing you the most money.
           </p>
           <div className="flex items-center gap-2 font-semibold text-purple-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
-            Higher search rankings
+            Revenue impact analysis
           </div>
         </div>
       </div>

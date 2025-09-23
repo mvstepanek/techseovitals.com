@@ -1,7 +1,7 @@
 import React from 'react';
 
 const WhatMakesMeDifferentSection: React.FC = () => (
-  <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+  <section className="py-16 sm:py-20 lg:py-24 bg-white">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12 sm:mb-16 lg:mb-20">
         <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-4 sm:mb-6">
@@ -22,8 +22,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </span>
         </h2>
         <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-          Developer-led technical SEO that transforms performance issues into competitive advantages. No meaningless
-          reports - just actionable improvements that users feel.
+          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -40,23 +39,23 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">Developer-Level Technical Expertise</h3>
           <p className="text-gray-600 leading-relaxed">
-            10+ years coding background gives me insights most SEO consultants lack. I understand both the problems and
-            solutions.
+            10+ years of development experience provides deep technical insight into website architecture and performance.
           </p>
         </div>
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6">
-            <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
-                fillRule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414.0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414.0z"
-                clipRule="evenodd"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 10h16M4 14h16M4 18h16"
               />
             </svg>
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">No Meaningless Reports</h3>
           <p className="text-gray-600 leading-relaxed">
-            Skip 50-page PDFs. Get actionable task lists with step-by-step guidance your team can implement immediately.
+            Get actionable task lists with step-by-step guidance your team can implement immediately.
           </p>
         </div>
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
@@ -66,7 +65,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
               />
             </svg>
           </div>
@@ -82,7 +81,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M7 8h10M7 12h4m1 8-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-1l-4 4z"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
               />
             </svg>
           </div>

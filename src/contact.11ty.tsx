@@ -4,13 +4,12 @@ import HeroSection from './_components/sections/HeroSection';
 import CalendlySection from './_components/sections/CalendlySection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
 import BusinessInfoSection from './_components/sections/BusinessInfoSection';
-import TestimonialsSection from './_components/sections/TestimonialsSection';
 import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
   title: 'Contact | TechSEO Vitals',
   description:
-    'Transform technical barriers into competitive advantages. Schedule a free consultation to discuss your user experience strategy with developer-led technical SEO expertise.',
+    'Get technical SEO and performance expertise that puts users first. Schedule a free consultation to create experiences that delight visitors and naturally earn better search and AI visibility.',
   permalink: '/contact/',
   layout: 'base',
 };
@@ -27,10 +26,10 @@ const ContactPage: React.FC = () => (
           Get In Touch With <span className={COMMON_STYLES.gradientText}>Martin</span>
         </>
       }
-      description="What's your user experience strategy? Let's discuss how to transform technical barriers into competitive advantages that delight users and drive revenue."
+      description="Ready to create experiences users actually love? Let's discuss how technical SEO and performance optimization can serve your visitors first while maximizing visibility in search engines and AI systems."
       primaryCta={{
-        text: 'Start Your Transformation',
-        href: '#appointment-form',
+        text: 'Schedule Free Consultation',
+        href: '#schedule',
       }}
       image={{
         src: '/assets/images/martinstepanek-techseo-2.jpg',
@@ -45,7 +44,6 @@ const ContactPage: React.FC = () => (
     />
     <CalendlySection />
     <ContactMethodsSection />
-    <TestimonialsSection backgroundColor="bg-gray-50" />
     <BusinessInfoSection backgroundColor="bg-white" />
     <NewsletterSection />
   </main>

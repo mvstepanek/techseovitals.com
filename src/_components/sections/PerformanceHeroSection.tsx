@@ -14,22 +14,21 @@ const PerformanceHeroSection: React.FC = () => (
         <div className="max-w-2xl">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            Performance Is How Users Judge Your Brand
+            Stop Losing Customers to Slow Sites
           </div>
           <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              5 Web Performance
+              5 Performance Metrics
             </span>{' '}
-            Metrics Every Business Owner Should Track
+            That Actually Drive Business Results
           </h1>
           <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
-            Every millisecond shapes brand perception. Learn which metrics reveal how users truly experience your site
-            and build competitive advantages through performance excellence.
+            Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what drives conversions.
           </p>
           <div className="mt-10 flex flex-col gap-4">
             <div className="flex items-center gap-3 text-gray-600">
               <div className="flex text-yellow-400 text-sm">★★★★★</div>
-              <span className="text-sm font-semibold">100+ businesses creating better experiences</span>
+              <span className="text-sm font-semibold">50+ businesses improving their business results</span>
             </div>
           </div>
         </div>
@@ -37,12 +36,12 @@ const PerformanceHeroSection: React.FC = () => (
           <div className="absolute -inset-4 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-3xl blur-2xl opacity-30" />
           <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
             <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold mb-2">
+              <h3 className="text-3xl font-bold mb-3">
                 <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Get Instant Access
+                  Grab Your Free Ebook
                 </span>
               </h3>
-              <p className="text-gray-600">Enter your details to download immediately</p>
+              <p className="text-gray-600 text-lg">Get the ebook delivered to your inbox</p>
             </div>
             <ConvertKitForm formType="5-web-performance-metrics" buttonText="Get Your Free Ebook" design="checklist" />
           </div>

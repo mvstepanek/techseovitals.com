@@ -16,14 +16,13 @@ const WhyChooseMeSection: React.FC = () => (
           Why Me?
         </div>
         <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-          Track Record That{' '}
+          Technical SEO Expert Who{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Speaks for Itself
+            Delivers Real Results
           </span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          10+ years transforming frustrated user experiences into delightful interactions that naturally drive business
-          growth.
+          I specialize in delivering measurable improvements that drive real business growth. 10+ years of experience optimizing websites for both search engines and exceptional user experiences.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
@@ -41,10 +40,10 @@ const WhyChooseMeSection: React.FC = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Developer-Led Expertise</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Developer-Level Technical Skills</h3>
                 <p className="text-gray-600">
-                  10+ years building websites gives me insights most consultants lack. I understand both user
-                  frustrations and technical solutions.
+                  I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture
+                  enables me to solve complex challenges.
                 </p>
               </div>
             </div>
@@ -55,10 +54,9 @@ const WhyChooseMeSection: React.FC = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">User Experience Focus</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Comprehensive Technical Approach</h3>
                 <p className="text-gray-600">
-                  4+ years optimizing websites that users love to use - where performance improvements create
-                  competitive advantages.
+                  I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms.
                 </p>
               </div>
             </div>
@@ -74,10 +72,10 @@ const WhyChooseMeSection: React.FC = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Proven Results</h3>
+                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Measurable Business Results</h3>
                 <p className="text-gray-600">
-                  Consistently delivered significant revenue increases and meaningful conversion improvements for
-                  clients across industries.
+                  From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase revenue
+                  and organic traffic by solving complex technical SEO challenges.
                 </p>
               </div>
             </div>

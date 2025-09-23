@@ -32,7 +32,6 @@ export const BUSINESS_CONSTANTS = {
   // Common headlines and taglines
   HEADLINES: {
     TRANSFORM_BARRIERS: 'Transform Technical Barriers Into Competitive Advantages',
-    REVENUE_ENGINE: 'Turn Your Website Into a Revenue Engine',
     UX_STRATEGY: "What's Your User Experience Strategy?",
     READY_TRANSFORM: 'Ready to Transform Your Business?',
   },

@@ -5,7 +5,7 @@ import TrustedCompaniesSection from './_components/sections/TrustedCompaniesSect
 export const data = {
   title: 'Customers | TechSEO Vitals',
   description:
-    'See how businesses transform technical barriers into competitive advantages. Real results from companies creating exceptional user experiences that naturally drive revenue growth.',
+    'Real results from businesses that prioritize user experience. See how technical SEO and performance optimization create exceptional experiences that users love and search engines naturally reward.',
   permalink: '/customers/',
   layout: 'base',
 };
@@ -24,7 +24,7 @@ const CustomersPage: React.FC = () => (
             />
           </svg>
         ),
-        text: 'User Experience Transformations',
+        text: 'Proven Client Results',
       }}
       title={
         <>
@@ -34,7 +34,7 @@ const CustomersPage: React.FC = () => (
           </span>
         </>
       }
-      description="From SaaS to e-commerce, see how businesses create exceptional user experiences that delight visitors and naturally drive measurable revenue growth."
+      description="From SaaS to e-commerce, businesses use technical SEO and performance optimization to create experiences that delight real users first. Better search and AI visibility naturally follow."
       primaryCta={{
         text: 'Start Your Transformation',
         href: '/contact/',
@@ -48,7 +48,7 @@ const CustomersPage: React.FC = () => (
       rating={{
         show: true,
         stars: 5,
-        text: '50+ user experience transformations',
+        text: '50+ businesses trust my expertise',
         isTestimonial: false,
         center: true,
       }}
@@ -57,7 +57,7 @@ const CustomersPage: React.FC = () => (
     <TrustedCompaniesSection backgroundColor="white" />
 
     {/* Case Studies Section */}
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
+    <section id="case-studies" className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
@@ -72,14 +72,13 @@ const CustomersPage: React.FC = () => (
             Featured Case Studies
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            User Experiences That{' '}
+            Technical Excellence That{' '}
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Drive Growth
+              Serves Users First
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Real-world transformations focused on user delight. See how exceptional experiences naturally deliver
-            business impact.
+            See how these companies transformed their websites into high-performing platforms that drive measurable business results.
           </p>
         </div>
 
@@ -237,7 +236,7 @@ const CustomersPage: React.FC = () => (
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our technical SEO expertise has driven measurable business growth across various industries.
+            Direct feedback from clients who've experienced measurable improvements in conversions, revenue, and organic growth.
           </p>
         </div>
 
@@ -364,10 +363,9 @@ const CustomersPage: React.FC = () => (
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Get a comprehensive strategy that transforms technical barriers into competitive advantages users love. No
-            obligation, just actionable insights.
+            Join these companies and transform your website into one that users love and search engines reward.
           </p>
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-4 mb-12">
             <a
               className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30"
               href="/contact/"
@@ -378,6 +376,46 @@ const CustomersPage: React.FC = () => (
             <div className="flex items-center justify-center gap-4 text-gray-600">
               <span className="text-sm">✓ Free consultation</span>
               <span className="text-sm">✓ No commitment</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">100% Free</h3>
+              <p className="text-gray-600 text-center">Website check with no hidden costs</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">30 Minutes</h3>
+              <p className="text-gray-600 text-center">Quick call to discuss your biggest opportunities</p>
+            </div>
+
+            <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Immediate Value</h3>
+              <p className="text-gray-600 text-center">Actionable insights you can implement today</p>
             </div>
           </div>
           <div className="mb-16" />

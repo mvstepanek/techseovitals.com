@@ -2,7 +2,7 @@ import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 
 const CalendlySection: React.FC = () => (
-  <section id="appointment-form" className="py-20 bg-white relative overflow-hidden">
+  <section id="schedule" className="py-20 bg-white relative overflow-hidden">
     <div className="absolute inset-0">
       <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />
       <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl" />
@@ -14,14 +14,9 @@ const CalendlySection: React.FC = () => (
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
-          Schedule a Meeting
+          Start Your Transformation
         </div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
           Book Your <span className={COMMON_STYLES.gradientText}>Free Consultation</span>

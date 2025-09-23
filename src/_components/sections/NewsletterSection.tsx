@@ -47,8 +47,8 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className = '' })
           </h2>
 
           <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Join business owners and developers who receive actionable strategies for creating exceptional user
-            experiences, performance optimization tips, and insights that naturally drive revenue growth.
+            Get actionable strategies that help business owners and developers create exceptional user experiences,
+            optimize technical SEO and performance, and drive revenue growth.
           </p>
 
           <div className="max-w-3xl mx-auto mb-8">

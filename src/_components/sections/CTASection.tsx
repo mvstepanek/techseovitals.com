@@ -40,7 +40,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   const bgClass = backgroundColor === 'gray' ? 'bg-gradient-to-br from-slate-50 to-blue-50/30' : 'bg-white';
 
   return (
-    <section className={`${COMMON_STYLES.sectionPadding} ${bgClass} relative overflow-hidden border-t border-gray-200`}>
+    <section className={`${COMMON_STYLES.sectionPadding} ${bgClass} relative overflow-hidden`}>
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />

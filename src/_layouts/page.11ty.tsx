@@ -19,9 +19,6 @@ const PageLayout: React.FC<PageData> = (data: PageData) => (
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
             {data.title?.split('|')[0]?.trim() || data.title}
           </h1>
-          {data.description && !data.title?.includes('Terms and Conditions') && (
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{data.description}</p>
-          )}
         </div>
         <div
           className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-4 prose-p:mb-4 prose-p:text-gray-700 prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-6 prose-li:mb-2 prose-strong:font-bold prose-strong:text-gray-900 prose-a:text-primary-500 prose-a:no-underline hover:prose-a:underline prose-a:font-medium"
