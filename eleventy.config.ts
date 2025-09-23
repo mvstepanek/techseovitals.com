@@ -3,9 +3,10 @@ import { renderToStaticMarkup } from "react-dom/server";
 import type { UserConfig } from "@11ty/eleventy";
 
 export default function (eleventyConfig: any): UserConfig {
-  // Add blog collection
+  // Add blog collection sorted by date (newest first)
   eleventyConfig.addCollection("blog", function(collectionApi: any) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").reverse();
+    return collectionApi.getFilteredByGlob("src/blog/*.md")
+      .sort((a: any, b: any) => b.date - a.date);
   });
 
   // Add support for TSX/JSX templates

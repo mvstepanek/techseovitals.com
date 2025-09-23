@@ -34,8 +34,11 @@ interface EleventyData {
 }
 
 const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
-  // Get latest 3 blog posts
-  const latestPosts = collections.blog.slice(0, 3).map(post => {
+  // Get latest 3 blog posts (sorted by date, newest first)
+  const sortedPosts = [...collections.blog].sort((a, b) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  );
+  const latestPosts = sortedPosts.slice(0, 3).map(post => {
     const permalink = post.data.permalink || `/blog/${post.data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
     const fallbackImage = `/assets/images/blog-thumbnails/${permalink
       .split('/')

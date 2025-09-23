@@ -9,6 +9,7 @@ interface BlogPostData {
   description?: string;
   permalink?: string;
   date?: string;
+  image?: string;
   content: string;
 }
 
@@ -18,7 +19,7 @@ export const data = {
 
 const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
   <main className="flex-1">
-    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} />
+    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} />
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div

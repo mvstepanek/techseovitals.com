@@ -1,21 +1,21 @@
 ---
 title: 'Understanding Google and AI Crawling: Why Your Business Might Be Overlooked Online'
 description: 'Learn how search engines and AI tools crawl and index websites. Discover technical reasons why businesses might be invisible online and actionable strategies for improving website visibility and discoverability.'
+permalink: '/blog/understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online/'
+layout: 'blog-post'
 date: '2025-04-02'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/google-ai-crawling.jpg'
 ---
 
-<!--
-CONTENT PLACEHOLDER - Please copy the full blog post content from:
-https://www.techseovitals.com/757/understanding-google-and-ai-crawling-why-your-business-might-be-overlooked-online/
+## Lorem Ipsum
 
-The article should include:
-- Search engine and AI crawler mechanics
-- Common technical SEO issues
-- Website visibility problems
-- Discoverability improvement strategies
-- Actionable optimization techniques
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Featured image URL: https://www.techseovitals.com/wp-content/uploads/2025/04/understanding-google-ai-crawling.jpg
--->
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+### Technical SEO Content
+
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.

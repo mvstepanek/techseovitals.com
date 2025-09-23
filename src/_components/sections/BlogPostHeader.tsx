@@ -5,9 +5,10 @@ interface BlogPostHeaderProps {
   description?: string;
   date?: string;
   permalink?: string;
+  image?: string;
 }
 
-const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink }) => (
+const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image }) => (
   <article className="bg-gradient-to-br from-primary-500/5 via-white to-primary-600/5">
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -39,7 +40,7 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
             loading="eager"
             decoding="async"
             className="w-full rounded-3xl shadow-2xl border-4 border-white object-cover"
-            src={`/assets/images/blog-thumbnails/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
+            src={image || `/assets/images/blog-thumbnails/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
           />
         </div>
       </div>
