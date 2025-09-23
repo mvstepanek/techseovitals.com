@@ -63,76 +63,15 @@ interface EleventyData {
   pagination: PaginationData;
 }
 
-const PaginationNav: React.FC<{ pagination: PaginationData }> = ({ pagination }) => {
-  if (!pagination || !pagination.href) {
-    return null; // No pagination data available
-  }
-
-  const { page, href } = pagination;
-
-  if (page.first && page.last) {
-    return null; // No pagination needed if there's only one page
-  }
-
-  return (
-    <nav className="flex items-center justify-between border-t border-gray-200 px-4 py-8 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="flex flex-1 justify-between">
-        {href.previous ? (
-          <a
-            href={href.previous}
-            className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-200"
-          >
-            <svg
-              className="mr-2 h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-                clipRule="evenodd"
-              />
-            </svg>
-            Previous
-          </a>
-        ) : (
-          <div />
-        )}
-
-        {href.next ? (
-          <a
-            href={href.next}
-            className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors duration-200"
-          >
-            Next
-            <svg
-              className="ml-2 h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </a>
-        ) : (
-          <div />
-        )}
-      </div>
-    </nav>
-  );
-};
-
 const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
   // Process posts for display
   const processedPosts = posts.map(post => {
-    const permalink = post.data.permalink || `/blog/${post.data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
+    const permalink =
+      post.data.permalink ||
+      `/blog/${post.data.title
+        ?.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')}/`;
     const fallbackImage = `/assets/images/blog-thumbnails/${permalink
       .split('/')
       .filter(p => p)
@@ -192,9 +131,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
             <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
               Technical SEO <span className={COMMON_STYLES.gradientText}>Blog</span>
             </h1>
-            <p className="text-xl text-gray-600 text-center">
-              Page {pagination.pageNumber + 1}
-            </p>
+            <p className="text-xl text-gray-600 text-center">Page {pagination.pageNumber + 1}</p>
           </div>
         </div>
       )}

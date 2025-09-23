@@ -40,7 +40,7 @@ const AboutMartinSection: React.FC = () => (
           ),
           title: 'Comprehensive Technical Approach',
           description:
-            'I specialize in both technical SEO and performance optimization. Every aspect of your site\'s technical foundation works together to maximize visibility across search engines and AI platforms.',
+            "I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms.",
           color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
         },
         {
@@ -56,7 +56,7 @@ const AboutMartinSection: React.FC = () => (
           ),
           title: 'Measurable Business Results',
           description:
-            'From enterprise migrations to startup growth, I\'ve helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges.',
+            'From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges.',
           color: 'bg-gradient-to-br from-green-500 to-emerald-600',
         },
       ]}

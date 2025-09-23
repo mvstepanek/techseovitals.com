@@ -22,7 +22,8 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </span>
         </h2>
         <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue.
+          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable
+          improvements that drive revenue.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -39,18 +40,14 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">Developer-Level Technical Expertise</h3>
           <p className="text-gray-600 leading-relaxed">
-            10+ years of development experience provides deep technical insight into website architecture and performance.
+            10+ years of development experience provides deep technical insight into website architecture and
+            performance.
           </p>
         </div>
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-6">
             <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 10h16M4 14h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
             </svg>
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">No Meaningless Reports</h3>

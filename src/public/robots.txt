@@ -4,7 +4,3 @@ Disallow: /
 # This is a staging environment - crawling is prohibited
 # Sitemaps
 Sitemap: https://staging.techseovitals.com/sitemap.xml
-
-# RSS Feeds
-Sitemap: https://staging.techseovitals.com/blog/rss.xml
-Sitemap: https://staging.techseovitals.com/blog/atom.xml

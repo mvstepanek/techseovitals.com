@@ -36,7 +36,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
     data.description ||
     "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
   const canonicalUrl = `https://staging.techseovitals.com${data.permalink || '/'}`;
-  const ogImage = data.ogImage || 'https://staging.techseovitals.com/assets/images/og-default.jpg';
+  const ogImage = data.ogImage || 'https://staging.techseovitals.com/assets/og.png';
   const heroImage = getHeroImage(data.permalink || '/');
 
   // Schema.org Organization data
@@ -373,6 +373,12 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         {/* Preload hero image if exists */}
         {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
 
+        {/* Prefetch critical user journey pages */}
+        <link rel="prefetch" href="/technical-seo-services/" />
+        <link rel="prefetch" href="/contact/" />
+        <link rel="prefetch" href="/newsletter/" />
+        <link rel="prefetch" href="/blog/" />
+
         {/* Critical CSS (inline for performance) */}
         <style
           dangerouslySetInnerHTML={{
@@ -560,11 +566,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
 
         {/* Calendly script for contact page */}
         {data.permalink === '/contact/' && (
-          <script
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-            async
-          />
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
         )}
 
         {/* Optimized JavaScript - deferred loading */}

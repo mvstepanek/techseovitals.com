@@ -78,7 +78,8 @@ const CustomersPage: React.FC = () => (
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how these companies transformed their websites into high-performing platforms that drive measurable business results.
+            See how these companies transformed their websites into high-performing platforms that drive measurable
+            business results.
           </p>
         </div>
 
@@ -236,7 +237,8 @@ const CustomersPage: React.FC = () => (
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Direct feedback from clients who've experienced measurable improvements in conversions, revenue, and organic growth.
+            Direct feedback from clients who&apos;ve experienced measurable improvements in conversions, revenue, and
+            organic growth.
           </p>
         </div>
 

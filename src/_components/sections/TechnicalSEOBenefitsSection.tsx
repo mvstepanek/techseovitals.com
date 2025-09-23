@@ -19,13 +19,14 @@ const TechnicalSEOBenefitsSection: React.FC = () => (
         </div>
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Fix What's Costing You{' '}
+            Fix What&apos;s Costing You{' '}
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Customers Every Day
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-            Stop losing customers to technical issues. Get the optimization roadmap that improves user experience while driving measurable revenue growth.
+            Stop losing customers to technical issues. Get the optimization roadmap that improves user experience while
+            driving measurable revenue growth.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,7 +44,8 @@ const TechnicalSEOBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Complete Technical Foundation</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Ensure search engines can properly crawl, index, and understand your content. Fix the technical barriers that prevent your site from ranking.
+              Ensure search engines can properly crawl, index, and understand your content. Fix the technical barriers
+              that prevent your site from ranking.
             </p>
             <div className="flex items-center gap-2 font-semibold text-blue-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,7 +63,8 @@ const TechnicalSEOBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Search Engine Visibility</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Perfect your site architecture, Schema Markup, and technical setup to maximize search engine understanding and help your content get discovered for relevant searches.
+              Perfect your site architecture, Schema Markup, and technical setup to maximize search engine understanding
+              and help your content get discovered for relevant searches.
             </p>
             <div className="flex items-center gap-2 font-semibold text-purple-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,7 +87,8 @@ const TechnicalSEOBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Find Revenue-Killing Issues</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Identify the technical problems costing you customers. Discover what's driving visitors away and how to fix it immediately.
+              Identify the technical problems costing you customers. Discover what&apos;s driving visitors away and how
+              to fix it immediately.
             </p>
             <div className="flex items-center gap-2 font-semibold text-green-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

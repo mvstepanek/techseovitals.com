@@ -22,7 +22,8 @@ const CalendlySection: React.FC = () => (
           Book Your <span className={COMMON_STYLES.gradientText}>Free Consultation</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Choose a time that works best for you to discuss your website&apos;s technical SEO needs and opportunities for growth.
+          Choose a time that works best for you to discuss your website&apos;s technical SEO needs and opportunities for
+          growth.
         </p>
       </div>
 

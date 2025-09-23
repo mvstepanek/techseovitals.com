@@ -19,7 +19,8 @@ const PerformanceBenefitsSection: React.FC = () => (
           </span>
         </h2>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-          Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions and revenue, plus the target numbers you need to hit.
+          Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions
+          and revenue, plus the target numbers you need to hit.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -32,7 +33,8 @@ const PerformanceBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Loading Speed Fundamentals</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Learn the critical speed measurements that determine if customers stay or leave. Get specific target numbers that separate fast sites from slow ones.
+            Learn the critical speed measurements that determine if customers stay or leave. Get specific target numbers
+            that separate fast sites from slow ones.
           </p>
           <div className="flex items-center gap-2 font-semibold text-green-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,7 +58,8 @@ const PerformanceBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Server Response Optimization</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Discover the hidden server delays that kill conversions before customers even see your content. Learn the response time targets that keep visitors engaged.
+            Discover the hidden server delays that kill conversions before customers even see your content. Learn the
+            response time targets that keep visitors engaged.
           </p>
           <div className="flex items-center gap-2 font-semibold text-blue-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -80,11 +83,12 @@ const PerformanceBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Recovery Blueprint</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            Discover how these 5 metrics work together to stop customer abandonment. Learn the proven system to identify which speed issues are costing you the most money.
+            Discover how these 5 metrics work together to stop customer abandonment. Learn the proven system to identify
+            which speed issues are costing you the most money.
           </p>
           <div className="flex items-center gap-2 font-semibold text-purple-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
             </svg>
             Revenue impact analysis
           </div>

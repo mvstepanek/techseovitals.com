@@ -59,7 +59,8 @@ const NewsletterBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Decision Making</h3>
           <p className="text-gray-600 mb-6">
-            Stop second-guessing your technical choices. Get clear guidance on what works, what doesn't, and why it matters for your specific situation.
+            Stop second-guessing your technical choices. Get clear guidance on what works, what doesn&apos;t, and why it
+            matters for your specific situation.
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
@@ -75,7 +76,8 @@ const NewsletterBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">Competitive Advantage</h3>
           <p className="text-gray-600 mb-6">
-            Learn optimization techniques most websites miss. Get ahead of changes before they impact your rankings and discover opportunities others overlook.
+            Learn optimization techniques most websites miss. Get ahead of changes before they impact your rankings and
+            discover opportunities others overlook.
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
@@ -86,7 +88,8 @@ const NewsletterBenefitsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Growth</h3>
           <p className="text-gray-600 mb-6">
-            Watch your website transform with better user engagement, improved search visibility, and increased revenue through proven optimization techniques.
+            Watch your website transform with better user engagement, improved search visibility, and increased revenue
+            through proven optimization techniques.
           </p>
         </div>
       </div>

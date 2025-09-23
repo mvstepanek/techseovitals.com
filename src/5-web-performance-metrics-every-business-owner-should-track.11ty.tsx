@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import PerformanceHeroSection from './_components/sections/PerformanceHeroSection';
 import PerformanceBenefitsSection from './_components/sections/PerformanceBenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';

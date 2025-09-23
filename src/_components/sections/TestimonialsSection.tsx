@@ -13,7 +13,7 @@ interface TestimonialsProps {
 
 const TestimonialsSection: React.FC<TestimonialsProps> = ({
   title = 'Real Results from Real Clients',
-  subtitle = "Discover how technical excellence drives real business results.",
+  subtitle = 'Discover how technical excellence drives real business results.',
   showBadge = true,
   badgeText = 'Client Success Stories',
   showTrustSignals = true,

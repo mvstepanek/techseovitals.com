@@ -24,7 +24,9 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ title }) => (
           {title || (
             <>
               Technical SEO{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Services
+              </span>
             </>
           )}
         </h2>

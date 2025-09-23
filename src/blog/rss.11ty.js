@@ -3,7 +3,7 @@ export const data = {
   eleventyExcludeFromCollections: true,
 };
 
-export default function RSSFeed() {
+export default function RSSFeed(data) {
   const url = 'https://staging.techseovitals.com';
   const title = 'TechSEO Vitals Blog';
   const description =
@@ -11,33 +11,17 @@ export default function RSSFeed() {
   const author = 'Martin Stepanek';
   const email = 'martin@techseovitals.com';
 
-  // Get all blog posts
-  const posts = [
-    {
-      title: 'Improving Crawlability: Help Google and ChatGPT Find Your Business Website',
-      description:
-        "Learn how to optimize your website's crawlability to improve visibility in both Google search results and AI-powered platforms like ChatGPT.",
-      url: '/blog/improving-crawlability-help-google-and-chatgpt-find-your-business-website/',
-      date: '2024-11-15',
-      content: 'Complete guide to improving website crawlability for better search engine and AI discovery.',
-    },
-    {
-      title: 'Multilingual Website Essentials: Technical SEO Guide',
-      description:
-        'Complete technical SEO guide for multilingual websites including hreflang implementation, URL structure, and international targeting strategies.',
-      url: '/blog/multilingual-website-essentials-technical-seo-guide/',
-      date: '2024-10-28',
-      content: 'Comprehensive guide to technical SEO for multilingual websites and international expansion.',
-    },
-    {
-      title: 'Why You Should Care About Your TTFB: Technical SEO Guide to Optimization',
-      description:
-        'Learn why Time to First Byte (TTFB) matters for SEO and user experience, plus practical optimization strategies to improve server response times.',
-      url: '/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-optimization/',
-      date: '2024-10-15',
-      content: 'Technical guide to understanding and optimizing Time to First Byte for better website performance.',
-    },
-  ];
+  // Get all blog posts from collections and sort by date (newest first)
+  const blogPosts = data.collections.blog || [];
+  const posts = blogPosts
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .map(post => ({
+      title: post.data.title,
+      description: post.data.description,
+      url: post.url,
+      date: post.date,
+      content: post.data.description, // Use description as content for RSS
+    }));
 
   // Helper function to format dates for RSS
   const formatDate = dateString => {

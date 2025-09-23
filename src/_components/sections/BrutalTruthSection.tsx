@@ -9,8 +9,8 @@ const BrutalTruthSection: React.FC = () => (
           The <span className="text-red-500">Brutal Truth</span> About Your Website
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Technical issues destroy user trust before they even know it. Slow pages, broken navigation, and poor structure
-          frustrate real people trying to use your site. When users struggle, your business suffers.
+          Technical issues destroy user trust before they even know it. Slow pages, broken navigation, and poor
+          structure frustrate real people trying to use your site. When users struggle, your business suffers.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -54,7 +54,8 @@ const BrutalTruthSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-display font-bold text-gray-900 mb-3">First Impressions Matter</h3>
           <p className="text-gray-600 text-sm leading-relaxed">
-            79% of users who have a poor website experience won&apos;t give you a second chance. Plus, search engines and AI platforms rely on the same technical signals that create good user experiences.
+            79% of users who have a poor website experience won&apos;t give you a second chance. Plus, search engines
+            and AI platforms rely on the same technical signals that create good user experiences.
           </p>
         </div>
       </div>

@@ -150,7 +150,6 @@ const ConsultantServicesSection: React.FC = () => (
         id="website-migration-plan"
       />
     </div>
-    </div>
   </section>
 );
 

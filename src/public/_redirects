@@ -1,4 +1,9 @@
-# Cloudflare Pages redirects
+# Legacy service page redirects
+/services/website-migration-support/ /technical-seo-services/ 301
+/services/technical-seo-monitoring/ /technical-seo-services/ 301
+/services/technical-seo-audit/ /technical-seo-services/ 301
+/services/ /technical-seo-services/ 301
+/services/technical-seo-consulting/ /technical-seo-consultant/ 301
 
 # Redirect old book-consultation route to contact page
 /book-consultation/ /contact/ 301
@@ -9,9 +14,9 @@
 /blog /blog/ 301
 /newsletter /newsletter/ 301
 
-# Force HTTPS (handled by Cloudflare, but good to have)
+# Force HTTPS redirect
 http://techseovitals.com/* https://staging.techseovitals.com/:splat 301
 http://staging.techseovitals.com/* https://staging.techseovitals.com/:splat 301
 
-# Redirect apex domain to www
+# Redirect apex domain to staging
 https://techseovitals.com/* https://staging.techseovitals.com/:splat 301

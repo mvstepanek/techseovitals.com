@@ -157,11 +157,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </div>
           </div>
 
-          {commitment && (
-            <div className="absolute bottom-4 right-4 text-xs text-gray-500">
-              {commitment}
-            </div>
-          )}
+          {commitment && <div className="absolute bottom-4 right-4 text-xs text-gray-500">{commitment}</div>}
         </div>
       </div>
     </div>

@@ -25,7 +25,8 @@ const MigrationBenefitsSection: React.FC = () => (
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-            Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your search rankings, user experience, and business operations.
+            Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your
+            search rankings, user experience, and business operations.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -43,7 +44,8 @@ const MigrationBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Preserve Search Rankings</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Protect your hard-earned search visibility. Proper redirects, URL mapping, and technical setup prevent ranking losses that destroy organic traffic.
+              Protect your hard-earned search visibility. Proper redirects, URL mapping, and technical setup prevent
+              ranking losses that destroy organic traffic.
             </p>
             <div className="flex items-center gap-2 font-semibold text-green-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -66,7 +68,8 @@ const MigrationBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Maintain User Experience</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Keep site speed, functionality, and user flows intact. Prevent the performance drops and broken features that drive customers away.
+              Keep site speed, functionality, and user flows intact. Prevent the performance drops and broken features
+              that drive customers away.
             </p>
             <div className="flex items-center gap-2 font-semibold text-blue-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +92,8 @@ const MigrationBenefitsSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Revenue Protection</h3>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Safeguard your business from migration disasters. Avoid the traffic drops, broken conversions, and lost revenue that destroy ROI.
+              Safeguard your business from migration disasters. Avoid the traffic drops, broken conversions, and lost
+              revenue that destroy ROI.
             </p>
             <div className="flex items-center gap-2 font-semibold text-purple-600">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

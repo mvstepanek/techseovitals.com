@@ -66,10 +66,7 @@ const TechnicalSEOServicesPage: React.FC = () => (
       }}
       title={
         <>
-          Turn Your Website Into a{' '}
-          <span className={COMMON_STYLES.gradientText}>
-            Revenue Engine
-          </span>
+          Turn Your Website Into a <span className={COMMON_STYLES.gradientText}>Revenue Engine</span>
         </>
       }
       description="Your competitors are getting ahead while technical issues cost you customers every day. Get the technical audit that reveals exactly how to fix what's broken and start converting more visitors into paying customers."

@@ -23,7 +23,8 @@ const PerformanceHeroSection: React.FC = () => (
             That Actually Drive Business Results
           </h1>
           <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
-            Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what drives conversions.
+            Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what
+            drives conversions.
           </p>
           <div className="mt-10 flex flex-col gap-4">
             <div className="flex items-center gap-3 text-gray-600">

@@ -35,11 +35,16 @@ interface EleventyData {
 
 const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
   // Get latest 3 blog posts (sorted by date, newest first)
-  const sortedPosts = [...collections.blog].sort((a, b) =>
-    new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+  const sortedPosts = [...collections.blog].sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
   );
   const latestPosts = sortedPosts.slice(0, 3).map(post => {
-    const permalink = post.data.permalink || `/blog/${post.data.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
+    const permalink =
+      post.data.permalink ||
+      `/blog/${post.data.title
+        ?.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')}/`;
     const fallbackImage = `/assets/images/blog-thumbnails/${permalink
       .split('/')
       .filter(p => p)
@@ -178,7 +183,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
           ),
-          text: "Ready to Delight Your Users?",
+          text: 'Ready to Delight Your Users?',
         }}
         title={
           <>
