@@ -11,23 +11,23 @@ const PerformanceHeroSection: React.FC = () => (
     </div>
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl text-center sm:text-left">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
             Stop Losing Customers to Slow Sites
           </div>
-          <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight text-left sm:text-left">
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               5 Performance Metrics
             </span>{' '}
             That Actually Drive Business Results
           </h1>
-          <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg">
+          <p className="mt-8 text-xl text-gray-600 leading-relaxed max-w-lg text-left sm:text-left">
             Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what
             drives conversions.
           </p>
           <div className="mt-10 flex flex-col gap-4">
-            <div className="flex items-center gap-3 text-gray-600">
+            <div className="flex items-center gap-3 text-gray-600 justify-center sm:justify-start">
               <div className="flex text-yellow-400 text-sm">★★★★★</div>
               <span className="text-sm font-semibold">50+ businesses improving their business results</span>
             </div>

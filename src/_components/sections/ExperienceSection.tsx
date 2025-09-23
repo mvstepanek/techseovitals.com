@@ -102,7 +102,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 decoding="async"
               />
               {statsBadge && (
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
+                <div className="absolute -bottom-3 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white rounded-2xl p-4 shadow-xl border border-gray-100 w-fit mx-auto sm:mx-0 sm:max-w-none">
                   <div className="flex items-center gap-3">
                     {statsBadge.showIcon !== false &&
                       (statsBadge.icon || <div className="w-4 h-4 bg-green-400 rounded-full" />)}

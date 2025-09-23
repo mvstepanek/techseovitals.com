@@ -50,7 +50,7 @@ const Header: React.FC = () => (
             </a>
           </div>
           <a
-            className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-4 py-2 text-sm rounded-lg hover:scale-105 hover:shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md focus:ring-2 focus:ring-purple-500/30"
+            className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-5 py-2.5 text-sm rounded-lg hover:scale-105 hover:shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md focus:ring-2 focus:ring-purple-500/30"
             href="/contact/"
           >
             <span className="relative z-10">Contact</span>
@@ -60,7 +60,7 @@ const Header: React.FC = () => (
 
         <button
           type="button"
-          className="lg:hidden rounded-lg p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 mobile-menu-toggle"
+          className="lg:hidden rounded-lg p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 mobile-menu-toggle"
           aria-expanded="false"
           aria-controls="mobile-menu"
           aria-label="Open menu"
@@ -101,7 +101,7 @@ const Header: React.FC = () => (
           </a>
           <a
             href="/contact/"
-            className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-4 py-2 text-sm rounded-lg hover:scale-105 hover:shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md focus:ring-2 focus:ring-purple-500/30 text-center"
+            className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 py-3 text-base rounded-lg hover:scale-105 hover:shadow-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md focus:ring-2 focus:ring-purple-500/30 text-center"
           >
             <span className="relative z-10">Contact</span>
             <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />

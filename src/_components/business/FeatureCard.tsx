@@ -68,7 +68,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, tag
 
   return (
     <div
-      className={`group relative bg-white p-8 rounded-2xl border border-gray-200 hover:${colorClasses.border} hover:shadow-lg transition-all duration-300`}
+      className={`group relative bg-white p-8 rounded-2xl border border-gray-200 hover:${colorClasses.border} hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible`}
     >
       <div
         className={`absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br ${colorClasses.accent} rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity`}

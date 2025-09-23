@@ -67,15 +67,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div
           className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}
         >
-          <div className={layout === 'centered' ? 'max-w-6xl mx-auto' : 'max-w-4xl'}>
+          <div className={layout === 'centered' ? 'max-w-6xl mx-auto text-center' : 'max-w-4xl text-center sm:text-left'}>
             <Badge icon={badge.icon}>{badge.text}</Badge>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-gray-900 lg:text-6xl xl:text-7xl leading-tight mt-4 sm:mt-6">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-gray-900 leading-tight mt-4 sm:mt-6 ${layout === 'centered' ? 'text-center' : 'text-center sm:text-left'}`}>
               {title}
             </h1>
 
             <p
-              className={`mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-4xl mx-auto' : 'max-w-lg'}`}
+              className={`mt-6 sm:mt-8 text-lg sm:text-xl text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-4xl mx-auto' : 'max-w-lg'} text-left sm:text-left`}
             >
               {description}
             </p>
@@ -83,7 +83,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {primaryCta && (
               <div className={`mt-8 sm:mt-10 ${layout === 'centered' ? 'text-center' : ''}`}>
                 <div
-                  className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : ''}`}
+                  className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : 'justify-center sm:justify-start items-center'}`}
                 >
                   <Button href={primaryCta.href} target={primaryCta.target}>
                     {primaryCta.text}
@@ -135,7 +135,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                     </p>
                   </div>
                 ) : (
-                  <div className={`flex items-center gap-3 ${layout === 'centered' ? 'justify-center' : ''}`}>
+                  <div className={`flex items-center gap-3 ${layout === 'centered' ? 'justify-center' : 'justify-center sm:justify-start'}`}>
                     <div className="flex text-yellow-400 text-sm">★★★★★</div>
                     <span className="text-sm font-normal text-gray-600">{rating.text}</span>
                   </div>
@@ -158,10 +158,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   decoding="async"
                 />
                 {statusBadge?.show && (
-                  <div className="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
+                  <div className="absolute -bottom-3 left-4 right-4 sm:-bottom-8 sm:-right-8 sm:left-auto bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 sm:mx-0 sm:max-w-xs w-fit sm:w-auto mx-auto">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
-                      <span className="text-sm font-bold text-gray-800">{statusBadge.text}</span>
+                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse flex-shrink-0" />
+                      <span className="text-sm sm:text-sm font-bold text-gray-800">{statusBadge.text}</span>
                     </div>
                   </div>
                 )}

@@ -62,7 +62,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
   // Default styling based on design type
   const defaultFieldClassName =
     design === 'newsletter'
-      ? 'formkit-input w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border-0 rounded-2xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg'
+      ? 'formkit-input w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg border-0 rounded-xl bg-white/95 backdrop-blur-sm placeholder-gray-500 focus:ring-4 focus:ring-white/30 focus:bg-white transition-all shadow-lg'
       : 'w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary-500 focus:ring-opacity-20 focus:border-primary-500 transition-all duration-200';
 
   const defaultButtonClassName =

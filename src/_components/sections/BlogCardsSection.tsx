@@ -26,7 +26,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
   badgeText = 'Expert Insights',
 }) => {
   return (
-    <section className="pt-24 pb-8 bg-white border-t border-gray-200">
+    <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {(showBadge || title || subtitle) && (
           <div className="text-center mb-16">

@@ -40,7 +40,7 @@ const WhyAuditSection: React.FC = () => (
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 overflow-hidden lg:overflow-visible">
+        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
           <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
           <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,7 +65,7 @@ const WhyAuditSection: React.FC = () => (
           </div>
         </div>
 
-        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300 overflow-hidden lg:overflow-visible">
+        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
           <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
           <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ const WhyAuditSection: React.FC = () => (
           </div>
         </div>
 
-        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300 overflow-hidden lg:overflow-visible">
+        <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
           <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
           <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

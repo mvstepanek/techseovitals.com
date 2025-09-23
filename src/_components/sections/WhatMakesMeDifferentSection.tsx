@@ -15,7 +15,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </svg>
           Why Choose Me
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
           What Makes Me{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Different

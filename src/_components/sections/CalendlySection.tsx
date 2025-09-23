@@ -18,7 +18,7 @@ const CalendlySection: React.FC = () => (
           </svg>
           Start Your Transformation
         </div>
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
           Book Your <span className={COMMON_STYLES.gradientText}>Free Consultation</span>
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">

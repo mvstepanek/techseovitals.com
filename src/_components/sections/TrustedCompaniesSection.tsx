@@ -23,9 +23,10 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
         </div>
 
         <div className="space-y-8">
-          {/* First row - 3 logos */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-            <div className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
+          {/* All logos in one responsive grid */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 items-center justify-items-center">
+            {/* First row on mobile (2 logos) */}
+            <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
               <img
                 src="/assets/images/clients/logo-expertiseai.svg"
                 alt="Expertise AI"
@@ -37,7 +38,7 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
               />
             </div>
 
-            <div className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
+            <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
               <img
                 src="/assets/images/clients/liveagent-logo.png"
                 alt="LiveAgent"
@@ -49,7 +50,8 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
               />
             </div>
 
-            <div className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
+            {/* Second row on mobile (2 logos) */}
+            <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
               <img
                 src="/assets/images/clients/post-affiliate-pro-logo.png"
                 alt="Post Affiliate Pro"
@@ -60,34 +62,30 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 decoding="async"
               />
             </div>
-          </div>
 
-          {/* Second row - 2 logos centered */}
-          <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center max-w-2xl">
-              <div className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
-                <img
-                  src="/assets/images/clients/touchit-logo.png"
-                  alt="TOUCHIT"
-                  width="200"
-                  height="50"
-                  className="max-h-8 sm:max-h-10 md:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
+              <img
+                src="/assets/images/clients/touchit-logo.png"
+                alt="TOUCHIT"
+                width="200"
+                height="50"
+                className="max-h-8 sm:max-h-10 md:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
 
-              <div className="group p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center">
-                <img
-                  src="/assets/images/clients/logo-ecommerce-bridge.svg"
-                  alt="Ecommerce Bridge"
-                  width="200"
-                  height="50"
-                  className="max-h-8 sm:max-h-10 md:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
+            {/* Third row on mobile (1 logo centered) */}
+            <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center col-span-2 md:col-span-1 lg:col-span-1 max-w-xs mx-auto md:max-w-none">
+              <img
+                src="/assets/images/clients/logo-ecommerce-bridge.svg"
+                alt="Ecommerce Bridge"
+                width="200"
+                height="50"
+                className="max-h-8 sm:max-h-10 md:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>

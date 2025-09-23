@@ -4,7 +4,7 @@ const ContactMethodsSection: React.FC = () => (
   <section className="py-20 bg-gray-50">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
-        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Multiple Ways to Connect</h2>
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">Multiple Ways to Connect</h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
           Reach out directly for project inquiries or connect on social media for insights and updates
         </p>
