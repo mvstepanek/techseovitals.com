@@ -19,4 +19,4 @@ http://techseovitals.com/* https://staging.techseovitals.com/:splat 301
 http://staging.techseovitals.com/* https://staging.techseovitals.com/:splat 301
 
 # Redirect apex domain to staging
-https://techseovitals.com/* https://staging.techseovitals.com/:splat 301
+/* https://staging.techseovitals.com/:splat 301
