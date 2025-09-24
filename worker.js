@@ -1,76 +1,98 @@
+import { getAssetFromKV } from '@cloudflare/kv-asset-handler';
+
 export default {
   async fetch(request, env, ctx) {
-    const url = new URL(request.url);
-
     try {
-      // Get the pathname and handle routing
-      let pathname = url.pathname;
+      const url = new URL(request.url);
+      const pathname = url.pathname;
 
-      // Serve assets directly with proper routing
-      const assetResponse = await env.ASSETS.fetch(request);
+      // Try to serve the asset using either ASSETS or KV
+      let response;
 
-      // If asset found, apply appropriate cache headers
-      if (assetResponse.status === 200) {
-        const contentType = assetResponse.headers.get('content-type') || '';
-        const headers = new Headers(assetResponse.headers);
+      if (env.ASSETS) {
+        // New Workers with Assets
+        response = await env.ASSETS.fetch(request);
+      } else if (env.__STATIC_CONTENT) {
+        // Legacy Workers Sites
+        response = await getAssetFromKV(
+          {
+            request,
+            waitUntil: ctx.waitUntil,
+          },
+          {
+            ASSET_NAMESPACE: env.__STATIC_CONTENT,
+            ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
+          },
+        );
+      } else {
+        // No assets available, return basic 404
+        return new Response('404 - Page Not Found', {
+          status: 404,
+          headers: { 'Content-Type': 'text/plain' }
+        });
+      }
 
-        // Determine cache control based on file type
+      // If asset found, apply cache headers
+      if (response.status === 200) {
+        const headers = new Headers(response.headers);
+
+        // Apply cache headers based on file type
         if (pathname.endsWith('.html') || pathname.endsWith('/')) {
-          // HTML files - 8 hours cache with stale-while-revalidate
-          headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
-        } else if (pathname.endsWith('.xml') || pathname.endsWith('.json')) {
-          // Dynamic content files - 8 hours with stale-while-revalidate
-          headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
-        } else if (pathname === '/robots.txt') {
-          // Robots.txt - 8 hours with stale-while-revalidate
-          headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
+          headers.set('Cache-Control', 'public, max-age=3600');
+        } else if (pathname.endsWith('.xml') || pathname.endsWith('.json') || pathname === '/robots.txt') {
+          headers.set('Cache-Control', 'public, max-age=3600');
         } else {
-          // Default for other assets - 30 days
           headers.set('Cache-Control', 'public, max-age=2592000');
         }
 
-        return new Response(assetResponse.body, {
-          status: assetResponse.status,
-          statusText: assetResponse.statusText,
+        return new Response(response.body, {
+          status: response.status,
+          statusText: response.statusText,
           headers: headers,
         });
       }
 
-
-      // Try to serve custom 404 page
+    } catch (error) {
+      // For any error, try to serve 404.html
       try {
-        const notFoundRequest = new Request(new URL('/404.html', url.origin), {
-          method: 'GET',
-          headers: { 'Accept': 'text/html' }
-        });
-        const notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
+        let notFoundResponse;
+        const notFoundUrl = new URL('/404.html', request.url).toString();
+        const notFoundRequest = new Request(notFoundUrl);
 
-        if (notFoundResponse.status === 200) {
-          const headers = new Headers(notFoundResponse.headers);
-          headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
+        if (env.ASSETS) {
+          notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
+        } else if (env.__STATIC_CONTENT) {
+          notFoundResponse = await getAssetFromKV(
+            {
+              request: notFoundRequest,
+              waitUntil: ctx.waitUntil,
+            },
+            {
+              ASSET_NAMESPACE: env.__STATIC_CONTENT,
+              ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
+            },
+          );
+        }
 
+        if (notFoundResponse && notFoundResponse.status === 200) {
           return new Response(notFoundResponse.body, {
             status: 404,
             statusText: 'Not Found',
-            headers: headers,
+            headers: {
+              'Content-Type': 'text/html',
+              'Cache-Control': 'public, max-age=3600'
+            }
           });
         }
       } catch (notFoundError) {
-        // If 404 page fetch fails, continue to fallback
-        console.error('404 page fetch error:', notFoundError.message);
+        // Ignore 404 fetch errors
       }
-
-      // Fallback to basic 404 if custom page fails
-      return new Response('Not Found', {
-        status: 404,
-        headers: { 'Content-Type': 'text/plain' }
-      });
-
-    } catch (error) {
-      return new Response(`Error: ${error.message}`, {
-        status: 500,
-        headers: { 'Content-Type': 'text/plain' },
-      });
     }
+
+    // Basic fallback 404
+    return new Response('404 - Page Not Found', {
+      status: 404,
+      headers: { 'Content-Type': 'text/plain' }
+    });
   },
 };
