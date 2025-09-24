@@ -37,8 +37,26 @@ export default {
       }
 
 
-      // Return 404 if asset not found
-      return new Response('Not Found', { status: 404 });
+      // Try to serve custom 404 page
+      const notFoundRequest = new Request(new URL('/404.html', url.origin), request);
+      const notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
+
+      if (notFoundResponse.status === 200) {
+        const headers = new Headers(notFoundResponse.headers);
+        headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
+
+        return new Response(notFoundResponse.body, {
+          status: 404,
+          statusText: 'Not Found',
+          headers: headers,
+        });
+      }
+
+      // Fallback to basic 404 if custom page fails
+      return new Response('Not Found', {
+        status: 404,
+        headers: { 'Content-Type': 'text/plain' }
+      });
 
     } catch (error) {
       return new Response(`Error: ${error.message}`, {

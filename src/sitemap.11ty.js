@@ -38,10 +38,13 @@ export default function Sitemap(data) {
   // Process all pages dynamically
   const pages = allPages
     .filter(page => {
-      // Exclude paginated blog pages (blog/2/, blog/3/, etc.) and feed files
+      // Exclude paginated blog pages (blog/2/, blog/3/, etc.), feed files, assets, and 404 page
       return !page.url.match(/\/blog\/\d+\/$/) &&
              !page.url.includes('.xml') &&
              !page.url.includes('.json') &&
+             !page.url.includes('.css') &&
+             !page.url.includes('.js') &&
+             !page.url.includes('/404.html') &&
              page.url !== false; // Exclude pages with permalink: false
     })
     .map(page => {
