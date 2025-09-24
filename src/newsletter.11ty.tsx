@@ -28,9 +28,9 @@ const NewsletterPage: React.FC = () => (
       trustSignals={{
         show: true,
         images: [
-          '/assets/images/testimonials/leader3.jpg',
-          '/assets/images/testimonials/leader2.jpg',
-          '/assets/images/testimonials/leader1.jpg',
+          '/assets/images/testimonials/mersudin-forbes.jpg',
+          '/assets/images/testimonials/mark-williams-cook.jpg',
+          '/assets/images/testimonials/aleyda-solis.jpg',
         ],
         text: 'Recommended by industry leaders',
       }}

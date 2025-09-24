@@ -40,7 +40,7 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
 
             <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center lg:col-span-2">
               <img
-                src="/assets/images/clients/liveagent-logo.png"
+                src="/assets/images/clients/logo-liveagent.png"
                 alt="LiveAgent"
                 width="200"
                 height="50"
@@ -53,7 +53,7 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
             {/* Second row on mobile (2 logos) */}
             <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center lg:col-span-2">
               <img
-                src="/assets/images/clients/post-affiliate-pro-logo.png"
+                src="/assets/images/clients/logo-postaffiliatepro.png"
                 alt="Post Affiliate Pro"
                 width="200"
                 height="50"
@@ -65,7 +65,7 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
 
             <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-gray-50 hover:bg-white hover:shadow-lg transition-all duration-300 w-full flex items-center justify-center lg:col-span-3">
               <img
-                src="/assets/images/clients/touchit-logo.png"
+                src="/assets/images/clients/logo-touchit.png"
                 alt="TOUCHIT"
                 width="200"
                 height="50"

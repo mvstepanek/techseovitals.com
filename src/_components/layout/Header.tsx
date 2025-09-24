@@ -18,7 +18,7 @@ const Header: React.FC = () => (
             width="200"
             height="50"
             className="h-auto w-auto"
-            src="/assets/logo-light.svg"
+            src="/assets/techseovitals-logo.svg"
             loading="eager"
           />
         </a>

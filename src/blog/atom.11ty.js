@@ -47,7 +47,7 @@ export default function AtomFeed(data) {
   <category term="Core Web Vitals"/>
   <rights>Copyright ${new Date().getFullYear()} TechSEO Vitals. All rights reserved.</rights>
   <icon>${url}/assets/images/favicons/favicon-192x192.png</icon>
-  <logo>${url}/assets/logo-light.svg</logo>
+  <logo>${url}/assets/techseovitals-logo.svg</logo>
   ${posts
     .map(
       post => `

@@ -15,7 +15,7 @@ const Footer: React.FC = () => (
               width="200"
               height="50"
               className="h-auto w-auto"
-              src="/assets/logo-dark.svg"
+              src="/assets/techseovitals-logo-white.svg"
               aria-hidden="true"
             />
           </a>

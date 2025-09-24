@@ -72,7 +72,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
         ?.toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '')}/`;
-    const fallbackImage = `/assets/images/blog-thumbnails/${permalink
+    const fallbackImage = `/assets/images/blog/${permalink
       .split('/')
       .filter(p => p)
       .pop()}.jpg`;
@@ -116,7 +116,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
           }
           description="Learn optimization strategies that create websites users love while driving more conversions and revenue."
           image={{
-            src: '/assets/images/martinstepanek-techseo-5.jpg',
+            src: '/assets/images/martin-stepanek-6.jpg',
             alt: 'Martin Stepanek - Technical SEO Expert',
           }}
           layout="centered"

@@ -24,7 +24,7 @@ const RealResultsSection: React.FC = () => (
                   height="64"
                   decoding="async"
                   className="rounded-2xl"
-                  src="/assets/images/testimonials/viktor-zeman-real.webp"
+                  src="/assets/images/testimonials/viktor-zeman-real.jpg"
                 />
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-400 rounded-full border-2 border-white" />
               </div>
@@ -58,7 +58,7 @@ const RealResultsSection: React.FC = () => (
                   height="64"
                   decoding="async"
                   className="rounded-2xl"
-                  src="/assets/images/testimonials/daniel-pison.jpeg"
+                  src="/assets/images/testimonials/daniel-pison.jpg"
                 />
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-400 rounded-full border-2 border-white" />
               </div>

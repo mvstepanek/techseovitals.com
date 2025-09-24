@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => (
         href: '#schedule',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-2.jpg',
+        src: '/assets/images/martin-stepanek-3.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}

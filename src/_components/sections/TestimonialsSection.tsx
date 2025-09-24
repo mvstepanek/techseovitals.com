@@ -70,7 +70,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
                     height="64"
                     decoding="async"
                     className="rounded-2xl"
-                    src="/assets/images/testimonials/viktor-zeman-real.webp"
+                    src="/assets/images/testimonials/viktor-zeman-real.jpg"
                   />
                   <svg
                     className="absolute -bottom-2 -right-2 w-7 h-7 text-green-600 bg-white rounded-full"
@@ -115,7 +115,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
                     height="64"
                     decoding="async"
                     className="rounded-2xl"
-                    src="/assets/images/testimonials/daniel-pison.jpeg"
+                    src="/assets/images/testimonials/daniel-pison.jpg"
                   />
                   <svg
                     className="absolute -bottom-2 -right-2 w-7 h-7 text-green-600 bg-white rounded-full"

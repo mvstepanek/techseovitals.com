@@ -46,12 +46,12 @@ export const BUSINESS_CONSTANTS = {
 
   // Image paths
   IMAGES: {
-    MARTIN_TECHSEO_1: '/assets/images/martinstepanek-techseo-1.jpg',
-    MARTIN_TECHSEO_2: '/assets/images/martinstepanek-techseo-2.jpg',
-    MARTIN_TECHSEO_3: '/assets/images/martinstepanek-techseo-3.jpg',
-    MARTIN_TECHSEO_4: '/assets/images/martinstepanek-techseo-4.jpg',
-    MARTIN_TECHSEO_5: '/assets/images/martinstepanek-techseo-5.jpg',
-    MARTIN_MOUNTAINS: '/assets/images/martin-stepanek-mountains.jpg',
+    MARTIN_TECHSEO_1: '/assets/images/martin-stepanek-2.jpg',
+    MARTIN_TECHSEO_2: '/assets/images/martin-stepanek-3.jpg',
+    MARTIN_TECHSEO_3: '/assets/images/martin-stepanek-4.jpg',
+    MARTIN_TECHSEO_4: '/assets/images/martin-stepanek-5.jpg',
+    MARTIN_TECHSEO_5: '/assets/images/martin-stepanek-6.jpg',
+    MARTIN_MOUNTAINS: '/assets/images/martin-stepanek-1.jpg',
   },
 
   // Service pricing
@@ -121,13 +121,13 @@ export const TESTIMONIALS = {
     title: 'CEO, LiveAgent & Post Affiliate Pro',
     quote:
       "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-    image: '/assets/images/testimonials/viktor-zeman-real.webp',
+    image: '/assets/images/testimonials/viktor-zeman.jpg',
   },
   DANIEL_PISON: {
     name: 'Daniel Pison',
     title: 'CMO, Quality Unit',
     quote:
       "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market.",
-    image: '/assets/images/testimonials/daniel-pison.jpeg',
+    image: '/assets/images/testimonials/daniel-pison.jpg',
   },
 };

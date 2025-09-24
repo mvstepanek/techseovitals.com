@@ -38,7 +38,7 @@ const TechnicalSEOServicesPage: React.FC = () => (
         target: '_self',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-1.jpg',
+        src: '/assets/images/martin-stepanek-2.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}

@@ -38,7 +38,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
         target: '_self',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-3.jpg',
+        src: '/assets/images/martin-stepanek-4.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}
@@ -108,7 +108,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
           },
         ]}
         image={{
-          src: '/assets/images/martin-stepanek-mountains.jpg',
+          src: '/assets/images/martin-stepanek-1.jpg',
           alt: 'Martin Stepanek - Technical SEO Consultant',
         }}
         statsBadge={{

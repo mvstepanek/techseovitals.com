@@ -45,7 +45,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         ?.toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-|-$/g, '')}/`;
-    const fallbackImage = `/assets/images/blog-thumbnails/${permalink
+    const fallbackImage = `/assets/images/blog/${permalink
       .split('/')
       .filter(p => p)
       .pop()}.jpg`;
@@ -89,7 +89,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
           href: '/contact/',
         }}
         image={{
-          src: '/assets/images/martinstepanek-techseo-5.jpg',
+          src: '/assets/images/martin-stepanek-6.jpg',
           alt: 'Martin Stepanek - Technical SEO Expert',
           loading: 'eager',
         }}

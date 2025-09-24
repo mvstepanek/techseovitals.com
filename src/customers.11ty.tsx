@@ -40,7 +40,7 @@ const CustomersPage: React.FC = () => (
         href: '/contact/',
       }}
       image={{
-        src: '/assets/images/martinstepanek-techseo-5.jpg',
+        src: '/assets/images/martin-stepanek-6.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
         loading: 'eager',
       }}
@@ -94,7 +94,7 @@ const CustomersPage: React.FC = () => (
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
                 <img
-                  src="/assets/images/clients/touchit-logo.png"
+                  src="/assets/images/clients/logo-touchit.png"
                   alt="TOUCHIT"
                   className="h-12 w-auto object-contain"
                 />
@@ -256,7 +256,7 @@ const CustomersPage: React.FC = () => (
                     height="64"
                     decoding="async"
                     className="rounded-2xl"
-                    src="/assets/images/testimonials/viktor-zeman-real.webp"
+                    src="/assets/images/testimonials/viktor-zeman.jpg"
                   />
                   <svg
                     className="absolute -bottom-2 -right-2 w-7 h-7 text-green-600 bg-white rounded-full"
@@ -302,7 +302,7 @@ const CustomersPage: React.FC = () => (
                     height="64"
                     decoding="async"
                     className="rounded-2xl"
-                    src="/assets/images/testimonials/daniel-pison.jpeg"
+                    src="/assets/images/testimonials/daniel-pison.jpg"
                   />
                   <svg
                     className="absolute -bottom-2 -right-2 w-7 h-7 text-green-600 bg-white rounded-full"

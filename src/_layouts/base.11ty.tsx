@@ -20,12 +20,12 @@ interface EleventyData {
 // Helper function to get hero image for preloading
 const getHeroImage = (permalink: string): string | null => {
   const heroImages: { [key: string]: string } = {
-    '/': '/assets/images/martinstepanek-techseo-5.jpg',
-    '/technical-seo-consultant/': '/assets/images/martinstepanek-techseo-3.jpg',
-    '/technical-seo-services/': '/assets/images/martinstepanek-techseo-1.jpg',
-    '/contact/': '/assets/images/martinstepanek-techseo-2.jpg',
-    '/customers/': '/assets/images/martinstepanek-techseo-5.jpg',
-    '/blog/': '/assets/images/martinstepanek-techseo-5.jpg',
+    '/': '/assets/images/martin-stepanek-6.jpg',
+    '/technical-seo-consultant/': '/assets/images/martin-stepanek-4.jpg',
+    '/technical-seo-services/': '/assets/images/martin-stepanek-2.jpg',
+    '/contact/': '/assets/images/martin-stepanek-3.jpg',
+    '/customers/': '/assets/images/martin-stepanek-6.jpg',
+    '/blog/': '/assets/images/martin-stepanek-6.jpg',
   };
   return heroImages[permalink || '/'] || null;
 };
@@ -45,7 +45,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
     '@type': 'Organization',
     name: 'TechSEO Vitals',
     url: 'https://staging.techseovitals.com',
-    logo: 'https://staging.techseovitals.com/assets/logo-light.svg',
+    logo: 'https://staging.techseovitals.com/assets/techseovitals-logo.svg',
     description: 'Expert technical SEO and web performance consulting services',
     founder: {
       '@type': 'Person',
@@ -85,7 +85,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
           name: 'TechSEO Vitals',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://staging.techseovitals.com/assets/logo-light.svg',
+            url: 'https://staging.techseovitals.com/assets/techseovitals-logo.svg',
           },
         },
       }

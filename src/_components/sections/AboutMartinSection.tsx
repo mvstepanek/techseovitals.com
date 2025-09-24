@@ -61,7 +61,7 @@ const AboutMartinSection: React.FC = () => (
         },
       ]}
       image={{
-        src: '/assets/images/martinstepanek-techseo-4.jpg',
+        src: '/assets/images/martin-stepanek-5.jpg',
         alt: 'Martin Stepanek - Technical SEO Consultant',
       }}
       statsBadge={{

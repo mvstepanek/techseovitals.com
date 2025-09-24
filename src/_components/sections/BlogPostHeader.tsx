@@ -40,7 +40,7 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
             loading="eager"
             decoding="async"
             className="w-full rounded-3xl shadow-2xl border-4 border-white object-cover"
-            src={image || `/assets/images/blog-thumbnails/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
+            src={image || `/assets/images/blog/${permalink?.split('/').filter(Boolean).pop()}.jpg`}
           />
         </div>
       </div>
