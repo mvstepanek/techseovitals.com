@@ -1,7 +1,7 @@
 {
   "name": "techseovitals-website",
   "version": "1.0.0",
-  "description": "TechSEO Vitals - Technical SEO and Web Performance Consulting",
+  "description": "TechSEO Vitals",
   "type": "module",
   "scripts": {
     "build": "NODE_ENV=production tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
@@ -20,12 +20,6 @@
     "deploy:production": "npm run build && npx wrangler deploy --env production",
     "preview": "npm run build && npx wrangler dev"
   },
-  "keywords": [
-    "technical-seo",
-    "web-performance",
-    "consulting",
-    "eleventy"
-  ],
   "author": "TechSEO Vitals",
   "license": "MIT",
   "dependencies": {

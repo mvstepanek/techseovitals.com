@@ -1,1 +1,1 @@
-# techseovitals-eleventy
+# TechSEO Vitals - www.techseovitals.com

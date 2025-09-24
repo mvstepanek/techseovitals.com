@@ -18,12 +18,5 @@ routes = [
   { pattern = "staging.techseovitals.com/*", zone_name = "techseovitals.com" }
 ]
 
-# Staging environment
-[env.staging]
-workers_dev = false
-routes = [
-  { pattern = "staging.techseovitals.com/*", zone_name = "techseovitals.com" }
-]
-
 # Compatibility flags for better Node.js compatibility
 compatibility_flags = ["nodejs_compat"]
