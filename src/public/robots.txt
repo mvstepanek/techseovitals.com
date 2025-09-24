@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /
 
-# This is a staging environment - crawling is prohibited
 # Sitemaps
 Sitemap: https://staging.techseovitals.com/sitemap.xml

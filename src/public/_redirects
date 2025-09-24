@@ -1,17 +1,7 @@
-# Legacy service page redirects
+# Legacy pages redirects
 /services/website-migration-support/ /technical-seo-services/ 301
 /services/technical-seo-monitoring/ /technical-seo-services/ 301
 /services/technical-seo-audit/ /technical-seo-services/ 301
 /services/ /technical-seo-services/ 301
 /services/technical-seo-consulting/ /technical-seo-consultant/ 301
-
-# Redirect old book-consultation route to contact page
 /book-consultation/ /contact/ 301
-/book-consultation /contact/ 301
-
-# Handle trailing slash variations
-/contact /contact/ 301
-/blog /blog/ 301
-/newsletter /newsletter/ 301
-
-# Domain redirects should be handled at DNS level, not in _redirects file

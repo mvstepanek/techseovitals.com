@@ -9,22 +9,8 @@ export default {
       // Serve assets directly with proper routing
       const assetResponse = await env.ASSETS.fetch(request);
 
-      // If asset found, return it with security headers if it's HTML
+      // If asset found, return it
       if (assetResponse.status === 200) {
-        const contentType = assetResponse.headers.get('content-type') || '';
-
-        if (contentType.includes('text/html')) {
-          const headers = new Headers(assetResponse.headers);
-          headers.set('X-Frame-Options', 'SAMEORIGIN');
-          headers.set('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;");
-
-          return new Response(assetResponse.body, {
-            status: assetResponse.status,
-            statusText: assetResponse.statusText,
-            headers: headers,
-          });
-        }
-
         return assetResponse;
       }
 
