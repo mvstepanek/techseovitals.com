@@ -53,40 +53,42 @@ export default {
       }
 
     } catch (error) {
-      // For any error, try to serve 404.html
-      try {
-        let notFoundResponse;
-        const notFoundUrl = new URL('/404.html', request.url).toString();
-        const notFoundRequest = new Request(notFoundUrl);
+      // Asset not found, continue to 404 handling
+    }
 
-        if (env.ASSETS) {
-          notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
-        } else if (env.__STATIC_CONTENT) {
-          notFoundResponse = await getAssetFromKV(
-            {
-              request: notFoundRequest,
-              waitUntil: ctx.waitUntil,
-            },
-            {
-              ASSET_NAMESPACE: env.__STATIC_CONTENT,
-              ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
-            },
-          );
-        }
+    // Try to serve 404.html for not found pages
+    try {
+      let notFoundResponse;
+      const notFoundUrl = new URL('/404.html', request.url);
+      const notFoundRequest = new Request(notFoundUrl);
 
-        if (notFoundResponse && notFoundResponse.status === 200) {
-          return new Response(notFoundResponse.body, {
-            status: 404,
-            statusText: 'Not Found',
-            headers: {
-              'Content-Type': 'text/html',
-              'Cache-Control': 'public, max-age=3600'
-            }
-          });
-        }
-      } catch (notFoundError) {
-        // Ignore 404 fetch errors
+      if (env.ASSETS) {
+        notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
+      } else if (env.__STATIC_CONTENT) {
+        notFoundResponse = await getAssetFromKV(
+          {
+            request: notFoundRequest,
+            waitUntil: ctx.waitUntil,
+          },
+          {
+            ASSET_NAMESPACE: env.__STATIC_CONTENT,
+            ASSET_MANIFEST: env.__STATIC_CONTENT_MANIFEST,
+          },
+        );
       }
+
+      if (notFoundResponse && notFoundResponse.status === 200) {
+        return new Response(notFoundResponse.body, {
+          status: 404,
+          statusText: 'Not Found',
+          headers: {
+            'Content-Type': 'text/html',
+            'Cache-Control': 'public, max-age=3600'
+          }
+        });
+      }
+    } catch (notFoundError) {
+      // 404.html not found, use fallback
     }
 
     // Basic fallback 404
