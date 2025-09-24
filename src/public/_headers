@@ -1,4 +1,5 @@
 # Security and Performance Headers
+
 /*
   # Security Headers
   X-Frame-Options: DENY
@@ -10,50 +11,35 @@
   # Content Security Policy
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://f.convertkit.com https://app.kit.com https://analytics.ahrefs.com https://www.googletagmanager.com https://assets.calendly.com https://static.cloudflareinsights.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://f.convertkit.com https://app.kit.com https://app.convertkit.com https://analytics.ahrefs.com https://www.google-analytics.com; frame-src https://calendly.com https://assets.calendly.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://app.kit.com;
 
-  # Performance Headers
-  Cache-Control: public, max-age=31536000, immutable
+  # Performance Headers - Default
+  Cache-Control: public, max-age=2592000
 
-# Service Worker
-/sw.js
-  Cache-Control: public, max-age=0, must-revalidate
+# HTML Files - Fresh content with background revalidation
+/*.html
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
 
-# HTML Files
-**/*.html
-  Cache-Control: public, max-age=3600
+/*/index.html
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
 
-# CSS Files
-/*.css
-  Cache-Control: public, max-age=31536000, immutable
+/*/*/index.html
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
 
-# JavaScript Files
-/*.js
-  Cache-Control: public, max-age=31536000, immutable
+/*/*/*/index.html
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
 
-# Font Files
+# Font Files - Need CORS header
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
   Cross-Origin-Embedder-Policy: require-corp
 
-# Images
-/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.svg
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.avif
-  Cache-Control: public, max-age=31536000, immutable
-
-# XML Files (sitemaps, feeds)
 /*.xml
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
 
-# JSON Files
+/sitemap.xml
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
+
 /*.json
-  Cache-Control: public, max-age=3600
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
+
+/robots.txt
+  Cache-Control: public, s-maxage=28800, stale-while-revalidate=86400
