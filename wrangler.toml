@@ -13,6 +13,7 @@ command = "npm run build"
 
 # Production environment
 [env.production]
+name = "staging-techseovitals-com"
 workers_dev = false
 routes = [
   { pattern = "staging.techseovitals.com/*", zone_name = "techseovitals.com" }
