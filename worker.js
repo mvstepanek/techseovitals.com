@@ -38,18 +38,26 @@ export default {
 
 
       // Try to serve custom 404 page
-      const notFoundRequest = new Request(new URL('/404.html', url.origin), request);
-      const notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
-
-      if (notFoundResponse.status === 200) {
-        const headers = new Headers(notFoundResponse.headers);
-        headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
-
-        return new Response(notFoundResponse.body, {
-          status: 404,
-          statusText: 'Not Found',
-          headers: headers,
+      try {
+        const notFoundRequest = new Request(new URL('/404.html', url.origin), {
+          method: 'GET',
+          headers: { 'Accept': 'text/html' }
         });
+        const notFoundResponse = await env.ASSETS.fetch(notFoundRequest);
+
+        if (notFoundResponse.status === 200) {
+          const headers = new Headers(notFoundResponse.headers);
+          headers.set('Cache-Control', 'public, s-maxage=86400, stale-while-revalidate=259200');
+
+          return new Response(notFoundResponse.body, {
+            status: 404,
+            statusText: 'Not Found',
+            headers: headers,
+          });
+        }
+      } catch (notFoundError) {
+        // If 404 page fetch fails, continue to fallback
+        console.error('404 page fetch error:', notFoundError.message);
       }
 
       // Fallback to basic 404 if custom page fails
