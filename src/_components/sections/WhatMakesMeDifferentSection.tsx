@@ -14,9 +14,8 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           </>
         }
         subtitle="Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue."
-        className="mb-0 sm:mb-4"
       />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-8 sm:mt-12">
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mb-6">
             <Icons.badge className="w-8 h-8 text-blue-600" />

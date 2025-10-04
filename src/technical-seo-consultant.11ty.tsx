@@ -111,7 +111,6 @@ const TechnicalSEOConsultantPage: React.FC = () => (
           How I Can <span>Help Your Business</span>
         </>
       }
-      colorScheme="variant2"
     />
     <CTASection
       badge={{

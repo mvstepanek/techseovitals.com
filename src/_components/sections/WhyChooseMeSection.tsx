@@ -5,6 +5,7 @@ import Icons from '../ui/Icons';
 import { COMMON_STYLES } from '../../_data/constants';
 import FeaturePoint from '../ui/FeaturePoint';
 import TestimonialQuoteBox from '../ui/TestimonialQuoteBox';
+import { ABOUT_CONTENT } from '../../_data/about-content';
 
 const WhyChooseMeSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -21,8 +22,8 @@ const WhyChooseMeSection: React.FC = () => (
         }
         subtitle={
           <>
-            I specialize in delivering measurable improvements that drive real business growth.
-            <br /> 10+ years of experience optimizing websites for both search engines and exceptional user experiences.
+            {ABOUT_CONTENT.subtitle.split('. ')[0]}.
+            <br /> {ABOUT_CONTENT.subtitle.split('. ')[1]}
           </>
         }
         maxWidth="4xl"
@@ -30,24 +31,15 @@ const WhyChooseMeSection: React.FC = () => (
       <div className={`${COMMON_STYLES.twoColumnGrid} items-center mb-16`}>
         <div>
           <div className="space-y-8">
-            <FeaturePoint
-              icon={<Icons.badge className="w-6 h-6 text-white" />}
-              title="Professional Web Development Skills"
-              description="I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges."
-              color="bg-gradient-to-br from-blue-500 to-blue-600"
-            />
-            <FeaturePoint
-              icon={<Icons.lightning className="w-6 h-6 text-white" />}
-              title="Comprehensive Technical Approach"
-              description="I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms."
-              color="bg-gradient-to-br from-green-500 to-green-600"
-            />
-            <FeaturePoint
-              icon={<Icons.monitor className="w-6 h-6 text-white" />}
-              title="Measurable Business Results"
-              description="From enterprise migrations to startup growth, I've helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges."
-              color="bg-gradient-to-br from-purple-500 to-purple-600"
-            />
+            {ABOUT_CONTENT.experiencePoints.map((point) => (
+              <FeaturePoint
+                key={point.title}
+                icon={point.icon}
+                title={point.title}
+                description={point.descriptionAlt || point.description}
+                color={point.colorAlt}
+              />
+            ))}
           </div>
         </div>
         <div className="relative">
@@ -65,7 +57,7 @@ const WhyChooseMeSection: React.FC = () => (
             <div className="absolute -bottom-4 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white rounded-2xl p-3 sm:p-4 shadow-xl border border-gray-100 w-fit mx-auto sm:mx-0 sm:max-w-none">
               <div className="flex items-center gap-2 sm:gap-3">
                 <Icons.badge className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 flex-shrink-0" />
-                <div className="text-sm sm:text-sm font-bold text-gray-900">50+ Websites Successfully Optimized</div>
+                <div className="text-sm sm:text-sm font-bold text-gray-900">{ABOUT_CONTENT.statsBadge.titleAlt}</div>
               </div>
             </div>
           </div>

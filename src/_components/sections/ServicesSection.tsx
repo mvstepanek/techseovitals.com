@@ -11,10 +11,9 @@ interface ServicesSectionProps {
     text?: string;
   };
   subtitle?: string;
-  colorScheme?: 'variant1' | 'variant2';
 }
 
-const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle, colorScheme = 'variant1' }) => (
+const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle }) => (
   <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
@@ -32,7 +31,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitl
         subtitle={subtitle || 'Stop guessing. Start growing. Get the technical SEO expertise that turns your website into a revenue-generating machine.'}
         className="mb-4"
       />
-      <ServicesCardsSection colorScheme={colorScheme} />
+      <ServicesCardsSection />
     </div>
   </section>
 );

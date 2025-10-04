@@ -2,22 +2,9 @@ import React from 'react';
 import ServiceCard from '../ui/ServiceCard';
 import Icons from '../ui/Icons';
 
-type ColorScheme = 'variant1' | 'variant2';
-
-interface ServicesCardsProps {
-  colorScheme?: ColorScheme;
-}
-
-const ServicesCardsSection: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' }) => {
-  const colors = {
-    variant1: { audit: 'indigo', monitoring: 'green', migration: 'purple' },
-    variant2: { audit: 'green', monitoring: 'orange', migration: 'indigo' },
-  } as const;
-
-  const scheme = colors[colorScheme];
-
+const ServicesCardsSection: React.FC = () => {
   return (
-    <>
+    <div className="space-y-12 sm:space-y-16">
       <ServiceCard
         icon={<Icons.document className="w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-white" />}
         title="Technical SEO Audit"
@@ -39,7 +26,7 @@ const ServicesCardsSection: React.FC<ServicesCardsProps> = ({ colorScheme = 'var
         ]}
         ctaText="Get Your Audit"
         ctaHref="/contact/"
-        color={scheme.audit}
+        color="indigo"
         id="technical-seo-audit"
       />
       <ServiceCard
@@ -65,7 +52,7 @@ const ServicesCardsSection: React.FC<ServicesCardsProps> = ({ colorScheme = 'var
         ]}
         ctaText="Start Monitoring"
         ctaHref="/contact/"
-        color={scheme.monitoring}
+        color="green"
         id="technical-seo-monitoring"
         commitment="Minimum 3 months commitment"
       />
@@ -91,10 +78,10 @@ const ServicesCardsSection: React.FC<ServicesCardsProps> = ({ colorScheme = 'var
         ]}
         ctaText="Plan Your Migration"
         ctaHref="/contact/"
-        color={scheme.migration}
+        color="purple"
         id="website-migration-plan"
       />
-    </>
+    </div>
   );
 };
 
