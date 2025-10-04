@@ -35,7 +35,7 @@ export function render(_data: unknown) {
           </div>
 
           {/* Error Message */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">Oops! Page Not Found</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4">Oops! Page Not Found</h1>
 
           <p className="text-lg sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Looks like this page took a wrong turn in the technical SEO maze. The content you&apos;re searching for might have been moved, deleted, or perhaps it never existed.

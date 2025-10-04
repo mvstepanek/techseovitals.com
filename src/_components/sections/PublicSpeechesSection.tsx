@@ -2,6 +2,7 @@ import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import { COMMON_STYLES } from '../../_data/constants';
+import Icons from '../ui/Icons';
 
 const PublicSpeechesSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
@@ -9,16 +10,7 @@ const PublicSpeechesSection: React.FC = () => (
     <div className={`relative ${COMMON_STYLES.containerWidth}`}>
       <SectionHeader
         badge={{
-          icon: (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
-              />
-            </svg>
-          ),
+          icon: <Icons.video className="w-4 h-4" />,
           text: 'Speaking',
         }}
         title={

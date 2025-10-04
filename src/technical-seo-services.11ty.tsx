@@ -66,7 +66,6 @@ const TechnicalSEOServicesPage: React.FC = () => (
         text: 'Get Free Website Check',
         href: BUSINESS_CONSTANTS.CONTACT_URL,
       }}
-      trustSignals={['Free consultation', 'No commitment']}
       features={DEFAULT_CTA_FEATURES}
     />
   </main>

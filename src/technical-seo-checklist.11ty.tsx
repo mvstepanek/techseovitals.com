@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
-import AboutMartinSection from './_components/sections/AboutMartinSection';
+import AboutSection from './_components/sections/AboutSection';
 import { TECHNICAL_SEO_BENEFITS } from './_data/benefits';
 
 export const data = {
@@ -15,7 +15,6 @@ const TechnicalSEOChecklistPage: React.FC = () => (
   <main className="flex-1">
     <HeroWithFormSection
       badge={{
-        icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
         text: 'Complete Technical SEO Optimization',
       }}
       title={
@@ -65,7 +64,7 @@ const TechnicalSEOChecklistPage: React.FC = () => (
 
     <BenefitsSection {...TECHNICAL_SEO_BENEFITS} />
 
-    <AboutMartinSection />
+    <AboutSection />
   </main>
 );
 

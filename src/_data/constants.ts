@@ -190,6 +190,15 @@ export const COLOR_SCHEMES = {
     checkmark: 'text-green-500',
     button: 'from-indigo-600 to-indigo-700',
   },
+  red: {
+    bg: 'from-red-500 to-red-600',
+    border: 'border-red-200',
+    accent: 'from-red-500 to-red-600',
+    text: 'text-red-600',
+    focus: 'focus:ring-red-300',
+    checkmark: 'text-green-500',
+    button: 'from-red-600 to-red-700',
+  },
 };
 
 // Utility functions for color schemes

@@ -1,6 +1,7 @@
 import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 import { COMMON_STYLES } from '../../_data/constants';
+import Icons from '../ui/Icons';
 
 interface HeaderProps {
   currentPath?: string;
@@ -106,9 +107,7 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
             aria-controls="mobile-menu"
             aria-label="Open menu"
           >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+            <Icons.menu className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
 

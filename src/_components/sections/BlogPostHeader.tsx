@@ -24,7 +24,7 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
             </time>
           </div>
         )}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 mb-6 sm:mb-8 leading-tight">{title}</h1>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 sm:mb-8 leading-tight">{title}</h1>
         {description && <p className="text-lg sm:text-lg text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>}
       </div>
       <div className="relative">

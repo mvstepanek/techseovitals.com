@@ -1,9 +1,10 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
-import SchemaScript from '../utils/SchemaScript';
+import SchemaMarkup from '../utils/SchemaMarkup';
 import FAQCard from '../ui/FAQCard';
 import GridLayout from '../ui/GridLayout';
+import Icons from '../ui/Icons';
 
 const FAQSection: React.FC = () => {
   // FAQ schema for SEO
@@ -49,22 +50,13 @@ const FAQSection: React.FC = () => {
   return (
     <>
       {/* FAQ Schema */}
-      <SchemaScript schema={faqSchema} />
+      <SchemaMarkup schema={faqSchema} />
 
       <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
         <div className={COMMON_STYLES.containerWidth}>
           <SectionHeader
             badge={{
-              icon: (
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              ),
+              icon: <Icons.questionMark className="w-4 h-4" />,
               text: 'FAQ',
             }}
             title={

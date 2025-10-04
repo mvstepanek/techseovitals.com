@@ -4,6 +4,7 @@ import ConvertKitForm from '../forms/ConvertKitForm';
 import OptimizedImage from '../common/OptimizedImage';
 import { COMMON_STYLES } from '../../_data/constants';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
+import Icons from '../ui/Icons';
 
 interface NewsletterSectionProps {
   className?: string;
@@ -16,19 +17,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <Badge
-            variant="newsletter"
-            icon={
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 8l7.89 4.26a2 2 0 002.22.0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5A2 2 0 003 7v10a2 2 0 002 2z"
-                />
-              </svg>
-            }
-          >
+          <Badge variant="newsletter" icon={<Icons.email className="w-4 h-4" />}>
             Newsletter
           </Badge>
 

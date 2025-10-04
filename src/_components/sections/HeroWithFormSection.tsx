@@ -22,7 +22,6 @@ interface FormField {
 
 interface HeroWithFormProps {
   badge: {
-    icon?: React.ReactNode;
     text: string;
   };
   title: React.ReactNode;
@@ -54,7 +53,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
       <div className={COMMON_STYLES.containerWidth}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="max-w-2xl">
-            <Badge icon={badge.icon}>{badge.text}</Badge>
+            <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>{badge.text}</Badge>
 
             <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">{title}</h1>
 

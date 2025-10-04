@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface SchemaScriptProps {
+interface SchemaMarkupProps {
   schema: object;
 }
 
-const SchemaScript: React.FC<SchemaScriptProps> = ({ schema }) => (
+const SchemaMarkup: React.FC<SchemaMarkupProps> = ({ schema }) => (
   <script
     type="application/ld+json"
     dangerouslySetInnerHTML={{
@@ -13,4 +13,4 @@ const SchemaScript: React.FC<SchemaScriptProps> = ({ schema }) => (
   />
 );
 
-export default SchemaScript;
+export default SchemaMarkup;

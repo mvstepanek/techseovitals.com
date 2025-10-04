@@ -48,7 +48,7 @@ const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, prim
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
 
           {/* Description */}
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">{description}</p>

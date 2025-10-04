@@ -3,7 +3,7 @@ import ExperienceSection from './ExperienceSection';
 import BadgeIcons from '../ui/BadgeIcons';
 import Icons from '../ui/Icons';
 
-const AboutMartinSection: React.FC = () => (
+const AboutSection: React.FC = () => (
   <div className="border-t border-gray-200">
     <ExperienceSection
       badge={{
@@ -51,4 +51,4 @@ const AboutMartinSection: React.FC = () => (
   </div>
 );
 
-export default AboutMartinSection;
+export default AboutSection;

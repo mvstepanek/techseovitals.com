@@ -2,7 +2,7 @@ import React from 'react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { COMMON_STYLES, MAX_WIDTH_CLASSES } from '../../_data/constants';
-import SchemaScript from '../utils/SchemaScript';
+import SchemaMarkup from '../utils/SchemaMarkup';
 import TrustSignalsList from '../ui/TrustSignalsList';
 
 interface SectionLayoutProps {
@@ -85,7 +85,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
   return (
     <>
       {/* Schema markup */}
-      {schema && <SchemaScript schema={schema} />}
+      {schema && <SchemaMarkup schema={schema} />}
 
       <Component className={`${COMMON_STYLES.sectionPadding} ${backgroundClasses[background]} ${borderClasses[borders]} relative overflow-hidden ${className}`}>
         {/* Background decorations */}
@@ -122,7 +122,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
               )}
 
               {/* Title */}
-              {title && <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>}
+              {title && <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>}
 
               {/* Subtitle */}
               {subtitle && <p className={`text-lg text-gray-600 ${MAX_WIDTH_CLASSES[maxWidth]} ${headerAlign === 'center' ? 'mx-auto' : ''} leading-relaxed`}>{subtitle}</p>}

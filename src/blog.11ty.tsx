@@ -125,7 +125,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
       {!isFirstPage && (
         <div className="bg-gradient-to-b from-gray-50 to-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-4">
               Technical SEO <span>Blog</span>
             </h1>
             <p className="text-lg text-gray-600 text-center">Page {pagination.pageNumber + 1}</p>
@@ -133,7 +133,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
         </div>
       )}
 
-      <BlogCardsSection showBadge={false} posts={processedPosts} />
+      <BlogCardsSection showBadge={false} title="" subtitle="" posts={processedPosts} />
 
       {/* Simple pagination navigation */}
       {pagination && pagination.pages && pagination.pages.length > 1 && (

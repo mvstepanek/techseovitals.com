@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
-import AboutMartinSection from './_components/sections/AboutMartinSection';
+import AboutSection from './_components/sections/AboutSection';
 import { MIGRATION_BENEFITS } from './_data/benefits';
 
 export const data = {
@@ -15,7 +15,6 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
   <main className="flex-1">
     <HeroWithFormSection
       badge={{
-        icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
         text: 'Protect Your Digital Assets',
       }}
       title={
@@ -65,7 +64,7 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
 
     <BenefitsSection {...MIGRATION_BENEFITS} />
 
-    <AboutMartinSection />
+    <AboutSection />
   </main>
 );
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PerformanceHeroSection from './_components/sections/PerformanceHeroSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
-import AboutMartinSection from './_components/sections/AboutMartinSection';
+import AboutSection from './_components/sections/AboutSection';
 import { PERFORMANCE_BENEFITS } from './_data/benefits';
 
 export const data = {
@@ -18,7 +18,7 @@ const WebPerformanceMetricsPage: React.FC = () => (
       <BenefitsSection {...PERFORMANCE_BENEFITS} />
     </div>
 
-    <AboutMartinSection />
+    <AboutSection />
   </main>
 );
 

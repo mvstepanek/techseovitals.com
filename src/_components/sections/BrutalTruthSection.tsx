@@ -6,7 +6,7 @@ const BrutalTruthSection: React.FC = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/30" />
     <div className={`${COMMON_STYLES.containerWidth} relative`}>
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-display font-bold text-gray-900 mb-4">
+        <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-4">
           The <span className="text-red-500">Brutal Truth</span> About Your Website
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
