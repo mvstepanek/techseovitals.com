@@ -3,6 +3,7 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import OptimizedImage from '../common/OptimizedImage';
 import { COMMON_STYLES } from '../../_data/constants';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 interface HeroSectionProps {
   badge: {
@@ -59,11 +60,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12 sm:py-16 lg:py-28">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-8 sm:top-16 left-4 sm:left-16 w-16 sm:w-32 h-16 sm:h-32 bg-purple-300 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-12 sm:top-24 right-8 sm:right-32 w-12 sm:w-24 h-12 sm:h-24 bg-indigo-300 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-16 sm:bottom-32 left-1/4 w-20 sm:w-40 h-20 sm:h-40 bg-blue-200 rounded-full blur-3xl opacity-25" />
-      </div>
+      <BackgroundDecorations variant="centered" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div

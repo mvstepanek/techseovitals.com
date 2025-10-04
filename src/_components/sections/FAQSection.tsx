@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../ui/SectionHeader';
 
 const FAQSection: React.FC = () => {
   // FAQ schema for SEO
@@ -53,28 +54,24 @@ const FAQSection: React.FC = () => {
 
       <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <SectionHeader
+            badge={{
+              icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
-              </svg>
-              FAQ
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-              Frequently Asked{' '}
+              </svg>,
+              text: 'FAQ'
+            }}
+            title={<>Frequently Asked{' '}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
                 Questions
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Everything you need to know about creating exceptional website experiences that drive real results
-            </p>
-          </div>
+              </span></>}
+            subtitle="Everything you need to know about creating exceptional website experiences that drive real results"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How is pricing determined?</h3>

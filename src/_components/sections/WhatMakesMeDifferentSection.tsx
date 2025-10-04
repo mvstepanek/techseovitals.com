@@ -1,15 +1,15 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
+import Badge from '../ui/Badge';
 
 const WhatMakesMeDifferentSection: React.FC = () => (
   <section className="py-16 sm:py-20 lg:py-24 bg-white">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-        <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-4 sm:mb-6`}>
-          <Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />
+        <Badge icon={<Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />} className="mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4">
           Why Choose Me
-        </div>
+        </Badge>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
           What Makes Me{' '}
           <span>
@@ -40,14 +40,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
         </div>
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className={`w-16 h-16 ${COMMON_STYLES.gradientBgVeryLight} rounded-2xl flex items-center justify-center mb-6`}>
-            <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
+            <Icons.heart className="w-8 h-8 text-purple-600" />
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">Making Teams Self-Sufficient</h3>
           <p className="text-gray-600 leading-relaxed">Get detailed guidance that empowers your team to maintain excellence long after our work together.</p>

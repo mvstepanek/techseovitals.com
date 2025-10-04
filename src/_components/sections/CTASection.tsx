@@ -1,5 +1,6 @@
 import React from 'react';
 import { BUSINESS_CONSTANTS, COMMON_STYLES } from '../../_data/constants';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 interface BadgeProps {
   icon: React.ReactNode;
@@ -41,12 +42,7 @@ const CTASection: React.FC<CTASectionProps> = ({
 
   return (
     <section className={`${COMMON_STYLES.sectionPadding} ${bgClass} relative overflow-hidden`}>
-      {/* Background decorations */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />
-        <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl" />
-        <div className={`${COMMON_STYLES.blurredBlob} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96`} />
-      </div>
+      <BackgroundDecorations variant="default" />
 
       <div className={`relative ${COMMON_STYLES.containerWidth}`}>
         <div className="max-w-4xl mx-auto text-center">

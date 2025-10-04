@@ -1,21 +1,18 @@
 import React from 'react';
 import ConvertKitForm from '../forms/ConvertKitForm';
+import Badge from '../ui/Badge';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 const PerformanceHeroSection: React.FC = () => (
   <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
     <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40" />
-      <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25" />
-    </div>
+    <BackgroundDecorations variant="centered" />
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="max-w-2xl text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
-            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+          <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>
             Stop Losing Customers to Slow Sites
-          </div>
+          </Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight text-left sm:text-left">
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
               5 Performance Metrics

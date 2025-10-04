@@ -131,6 +131,55 @@ export const COMMON_STYLES = {
   featureCardWithBg: 'bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
 };
 
+// Color schemes for components
+export const COLOR_SCHEMES = {
+  blue: {
+    bg: 'from-blue-500 to-blue-600',
+    border: 'border-blue-200',
+    accent: 'from-blue-500 to-blue-600',
+    text: 'text-blue-600',
+    focus: 'focus:ring-blue-300',
+    checkmark: 'text-green-500',
+    button: 'from-blue-600 to-blue-700',
+  },
+  green: {
+    bg: 'from-green-500 to-green-600',
+    border: 'border-green-200',
+    accent: 'from-green-500 to-green-600',
+    text: 'text-green-600',
+    focus: 'focus:ring-green-300',
+    checkmark: 'text-green-500',
+    button: 'from-green-600 to-green-700',
+  },
+  purple: {
+    bg: 'from-purple-500 to-purple-600',
+    border: 'border-purple-200',
+    accent: 'from-purple-500 to-purple-600',
+    text: 'text-purple-600',
+    focus: 'focus:ring-purple-300',
+    checkmark: 'text-green-500',
+    button: 'from-purple-600 to-purple-700',
+  },
+  orange: {
+    bg: 'from-orange-500 to-orange-600',
+    border: 'border-orange-200',
+    accent: 'from-orange-500 to-orange-600',
+    text: 'text-orange-600',
+    focus: 'focus:ring-orange-300',
+    checkmark: 'text-green-500',
+    button: 'from-orange-600 to-orange-700',
+  },
+  indigo: {
+    bg: 'from-indigo-500 to-indigo-600',
+    border: 'border-indigo-200',
+    accent: 'from-indigo-500 to-indigo-600',
+    text: 'text-indigo-600',
+    focus: 'focus:ring-indigo-300',
+    checkmark: 'text-green-500',
+    button: 'from-indigo-600 to-indigo-700',
+  },
+};
+
 // Design system tokens
 export const DESIGN_TOKENS = {
   ANIMATION: {

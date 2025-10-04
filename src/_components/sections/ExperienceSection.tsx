@@ -1,6 +1,7 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import OptimizedImage from '../common/OptimizedImage';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 interface ExperiencePoint {
   icon: React.ReactNode;
@@ -54,13 +55,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
 
   return (
     <section className={`relative overflow-hidden py-24 ${bgClasses}`}>
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-32 right-24 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-40 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25" />
-        <div className="absolute bottom-20 right-16 w-28 h-28 bg-slate-300 rounded-full blur-3xl opacity-35" />
-      </div>
+      <BackgroundDecorations variant="simple" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

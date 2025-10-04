@@ -1,30 +1,21 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
+import SectionHeader from '../ui/SectionHeader';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 const CalendlySection: React.FC = () => (
   <section id="schedule" className="py-20 bg-white relative overflow-hidden">
-    <div className="absolute inset-0">
-      <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />
-      <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-purple-150 to-indigo-150 rounded-full blur-3xl opacity-50" />
-    </div>
+    <BackgroundDecorations variant="default" />
     <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <div
-          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}
-        >
-          <Icons.lightning className="w-4 h-4" />
-          Start Your Transformation
-        </div>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-          Book Your <span>Free Consultation</span>
-        </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Choose a time that works best for you to discuss your website&apos;s technical SEO needs and opportunities for
-          growth.
-        </p>
-      </div>
+      <SectionHeader
+        badge={{
+          icon: <Icons.lightning className="w-4 h-4" />,
+          text: 'Start Your Transformation'
+        }}
+        title={<>Book Your <span>Free Consultation</span></>}
+        subtitle="Choose a time that works best for you to discuss your website's technical SEO needs and opportunities for growth."
+      />
 
       {/* Calendly Appointment Form */}
       <div>

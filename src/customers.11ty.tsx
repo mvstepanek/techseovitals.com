@@ -4,6 +4,9 @@ import TrustedCompaniesSection from './_components/sections/TrustedCompaniesSect
 import TestimonialCard from './_components/ui/TestimonialCard';
 import OptimizedImage from './_components/common/OptimizedImage';
 import { COMMON_STYLES } from './_data/constants';
+import SectionHeader from './_components/ui/SectionHeader';
+import BackgroundDecorations from './_components/ui/BackgroundDecorations';
+import Icons from './_components/ui/Icons';
 
 export const data = {
   title: 'Customers',
@@ -17,16 +20,7 @@ const CustomersPage: React.FC = () => (
   <main className="flex-1">
     <HeroSection
       badge={{
-        icon: (
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z"
-            />
-          </svg>
-        ),
+        icon: <Icons.checkCircle className="w-4 h-4" />,
         text: 'Proven Client Results',
       }}
       title={
@@ -61,29 +55,17 @@ const CustomersPage: React.FC = () => (
     {/* Case Studies Section */}
     <section id="case-studies" className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              />
-            </svg>
-            Featured Case Studies
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Technical Excellence That{' '}
+        <SectionHeader
+          badge={{
+            icon: <Icons.document className="w-4 h-4" />,
+            text: 'Featured Case Studies'
+          }}
+          title={<>Technical Excellence That{' '}
             <span>
               Serves Users First
-            </span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            See how these companies transformed their websites into high-performing platforms that drive measurable
-            business results.
-          </p>
-        </div>
+            </span></>}
+          subtitle="See how these companies transformed their websites into high-performing platforms that drive measurable business results."
+        />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* TOUCHIT Case Study */}
@@ -116,14 +98,7 @@ const CustomersPage: React.FC = () => (
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
+                    <Icons.lightning className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-base font-semibold text-gray-900">Faster Website & Better Core Web Vitals</span>
                 </div>
@@ -187,14 +162,7 @@ const CustomersPage: React.FC = () => (
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M13 10V3L4 14h7v7l9-11h-7z"
-                      />
-                    </svg>
+                    <Icons.lightning className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-base font-semibold text-gray-900">Performance Optimization & Crawl Efficiency</span>
                 </div>
@@ -208,29 +176,17 @@ const CustomersPage: React.FC = () => (
     {/* Full Testimonials Section */}
     <section className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              />
-            </svg>
-            What Customers Say
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Real Results from{' '}
+        <SectionHeader
+          badge={{
+            icon: <Icons.chat className="w-4 h-4" />,
+            text: 'What Customers Say'
+          }}
+          title={<>Real Results from{' '}
             <span>
               Real Customers
-            </span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Direct feedback from clients who&apos;ve experienced measurable improvements in conversions, revenue, and
-            organic growth.
-          </p>
-        </div>
+            </span></>}
+          subtitle="Direct feedback from clients who've experienced measurable improvements in conversions, revenue, and organic growth."
+        />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
 
@@ -264,33 +220,21 @@ I would definitely be happy to work with Martin in the future, I consider him to
 
     {/* Trust Building CTA Section */}
     <section className="py-24 bg-white relative overflow-hidden border-t border-gray-200">
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-purple-200 rounded-full blur-3xl" />
-        <div className="absolute bottom-32 right-32 w-48 h-48 bg-indigo-200 rounded-full blur-3xl" />
-        <div className={`${COMMON_STYLES.blurredBlob} top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96`} />
-      </div>
+      <BackgroundDecorations variant="default" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-8">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z"
-              />
-            </svg>
-            100% Risk-Free Consultation
-          </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Ready to Join These{' '}
-            <span>
-              Success Stories?
-            </span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Join these companies and transform your website into one that users love and search engines reward.
-          </p>
+          <SectionHeader
+            badge={{
+              icon: <Icons.checkCircle className="w-4 h-4" />,
+              text: '100% Risk-Free Consultation'
+            }}
+            title={<>Ready to Join These{' '}
+              <span>
+                Success Stories?
+              </span></>}
+            subtitle="Join these companies and transform your website into one that users love and search engines reward."
+            className="mb-12"
+          />
           <div className="flex flex-col items-center gap-4 mb-12">
             <a
               className={COMMON_STYLES.buttonPrimary}
@@ -308,13 +252,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <Icons.checkCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">100% Free</h3>
               <p className="text-gray-600 text-center">Free website check with no hidden costs</p>
@@ -322,13 +260,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
 
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <Icons.clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">30 Minutes</h3>
               <p className="text-gray-600 text-center">Quick call to discuss your biggest opportunities</p>
@@ -336,9 +268,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
 
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
+                <Icons.star className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Immediate Value</h3>
               <p className="text-gray-600 text-center">Actionable insights you can implement today</p>

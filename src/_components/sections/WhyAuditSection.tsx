@@ -1,44 +1,33 @@
 import React from 'react';
 import Icons from '../ui/Icons';
+import SectionHeader from '../ui/SectionHeader';
+import CardDecoration from '../ui/CardDecoration';
+import IconContainer from '../ui/IconContainer';
+import CTAWithTrustSignals from '../cta/CTAWithTrustSignals';
 
 const WhyAuditSection: React.FC = () => (
   <section className="py-24 bg-white">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-6">
-          <Icons.badge className="w-4 h-4" />
-          Why You Need an Audit
-        </div>
-        <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-          Stop Guessing.{' '}
+      <SectionHeader
+        badge={{
+          icon: <Icons.badge className="w-4 h-4" />,
+          text: 'Why You Need an Audit'
+        }}
+        title={<>Stop Guessing.{' '}
           <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Start Knowing
-          </span>
-        </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          You can&apos;t fix what you can&apos;t see. My audit reveals the hidden technical issues killing your
-          conversions and revenue with a clear roadmap to fix them.
-        </p>
-      </div>
-      <div className="flex flex-col items-center gap-4 mb-16">
-        <a
-          className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30"
-          href="/contact/"
-        >
-          <span className="relative z-10">Get Free Website Check</span>
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-        </a>
-        <div className="flex items-center justify-center gap-4 text-gray-600">
-          <span className="text-sm">✓ Free consultation</span>
-          <span className="text-sm">✓ No commitment</span>
-        </div>
-      </div>
+          </span></>}
+        subtitle="You can't fix what you can't see. My audit reveals the hidden technical issues killing your conversions and revenue with a clear roadmap to fix them."
+      />
+      <CTAWithTrustSignals
+        text="Get Free Website Check"
+        href="/contact/"
+        trustSignals={['Free consultation', 'No commitment']}
+      />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
-          <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
-          <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <Icons.checkCircle className="w-8 h-8 text-white" />
-          </div>
+          <CardDecoration color="blue" />
+          <IconContainer icon={<Icons.checkCircle className="w-8 h-8 text-white" />} color="blue" />
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Uncover Revenue Killers</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
             Find the technical issues that are silently costing you money. Discover exactly what&apos;s preventing
@@ -53,10 +42,8 @@ const WhyAuditSection: React.FC = () => (
         </div>
 
         <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
-          <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
-          <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <Icons.lightning className="w-8 h-8 text-white" />
-          </div>
+          <CardDecoration color="green" />
+          <IconContainer icon={<Icons.lightning className="w-8 h-8 text-white" />} color="green" />
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Maximize Revenue Impact</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
               Focus on what matters most. I prioritize fixes by revenue impact, addressing high-conversion opportunities first to see faster ROI.
@@ -70,17 +57,8 @@ const WhyAuditSection: React.FC = () => (
         </div>
 
         <div className="group relative bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
-          <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl rotate-12 opacity-10 group-hover:opacity-20 transition-opacity" />
-          <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4.318 6.318a4.5 4.5.0 000 6.364L12 20.364l7.682-7.682a4.5 4.5.0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5.0 00-6.364.0z"
-              />
-            </svg>
-          </div>
+          <CardDecoration color="purple" />
+          <IconContainer icon={<Icons.heart className="w-8 h-8 text-white" />} color="purple" />
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Capture Lost Revenue</h3>
           <p className="text-gray-600 leading-relaxed mb-6">
             Identify where competitors are stealing your customers and get the technical improvements that help you win

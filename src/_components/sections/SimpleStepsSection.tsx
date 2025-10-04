@@ -1,32 +1,27 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
+import SectionHeader from '../ui/SectionHeader';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
+import Icons from '../ui/Icons';
 
 const SimpleStepsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
-    {/* Background decorative elements */}
-    <div className="absolute inset-0 pointer-events-none">
-      <div className="absolute top-20 left-20 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30" />
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-200 rounded-full blur-3xl opacity-20" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-indigo-200 rounded-full blur-3xl opacity-25" />
-    </div>
+    <BackgroundDecorations variant="centered" />
 
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-      <div className="text-center mb-20">
-        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}>
-          <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-          How Does It Work?
-        </div>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
-          <span>
+      <SectionHeader
+        badge={{
+          icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
+          text: 'How Does It Work?'
+        }}
+        title={<><span>
             3 Simple Steps
           </span>
           <br />
-          to Success
-        </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Transform your website into the exceptional experience your users deserve.
-        </p>
-      </div>
+          to Success</>}
+        subtitle="Transform your website into the exceptional experience your users deserve."
+        className="mb-20"
+      />
 
       <div className="relative">
         {/* Connection lines for desktop */}
@@ -66,23 +61,11 @@ const SimpleStepsSection: React.FC = () => (
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   100% free
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   No commitment
                 </span>
               </div>
@@ -106,23 +89,11 @@ const SimpleStepsSection: React.FC = () => (
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   50+ data points
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   Prioritized roadmap
                 </span>
               </div>
@@ -146,23 +117,11 @@ const SimpleStepsSection: React.FC = () => (
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   Expert guidance
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
+                  <Icons.checkCircle className="w-4 h-4" />
                   Proven results
                 </span>
               </div>
