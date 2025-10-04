@@ -1,16 +1,19 @@
 import React from 'react';
 import TestimonialCard from '../ui/TestimonialCard';
 import { COMMON_STYLES } from '../../_data/constants';
+import SectionHeader from '../ui/SectionHeader';
 
 const RealResultsSection: React.FC = () => (
   <section className="py-24 bg-white">
     <div className={COMMON_STYLES.containerWidth}>
-      <div className="text-center mb-16">
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-          Real Results from <span>Real Clients</span>
-        </h2>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <SectionHeader
+        title={
+          <>
+            Real Results from <span>Real Clients</span>
+          </>
+        }
+      />
+      <div className={COMMON_STYLES.twoColumnGrid}>
         <TestimonialCard
           name="Viktor Zeman"
           position="CEO"

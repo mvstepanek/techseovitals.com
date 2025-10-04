@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '../ui/Badge';
+import SectionHeader from '../ui/SectionHeader';
 import TestimonialCard from '../ui/TestimonialCard';
 import { TESTIMONIALS, COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
@@ -26,23 +26,21 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
   return (
     <section className={`${backgroundColor} py-24`}>
       <div className={COMMON_STYLES.containerWidth}>
-        <div className="text-center mb-16">
-          {showBadge && <Badge icon={<Icons.heart className="w-4 h-4" />}>{badgeText}</Badge>}
-
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-            {title.includes('Real Clients') ? (
+        <SectionHeader
+          badge={showBadge ? { icon: <Icons.heart className="w-4 h-4" />, text: badgeText } : undefined}
+          title={
+            title.includes('Real Clients') ? (
               <>
                 Real Results from <span>Real Clients</span>
               </>
             ) : (
               title
-            )}
-          </h2>
+            )
+          }
+          subtitle={subtitle}
+        />
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className={COMMON_STYLES.twoColumnGrid}>
           <TestimonialCard
             name={TESTIMONIALS.VIKTOR_ZEMAN.name}
             position="CEO"

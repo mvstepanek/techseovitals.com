@@ -93,7 +93,7 @@ const NewsletterPage: React.FC = () => (
               Actionable technical SEO and performance strategies that help you create better user experiences while improving your search rankings and AI visibility.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className={COMMON_STYLES.threeColumnGrid}>
             <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
               <CardDecoration color="blue" size="lg" />
               <IconContainer

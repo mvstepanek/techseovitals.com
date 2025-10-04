@@ -1,22 +1,21 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
-import Badge from '../ui/Badge';
+import SectionHeader from '../ui/SectionHeader';
 
 const WhatMakesMeDifferentSection: React.FC = () => (
   <section className="py-16 sm:py-20 lg:py-24 bg-white">
     <div className={COMMON_STYLES.containerWidth}>
-      <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-        <Badge icon={<Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />} className="mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4">
-          Why Choose Me
-        </Badge>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
-          What Makes Me <span>Different</span>
-        </h2>
-        <p className="text-lg sm:text-lg text-gray-600 max-w-3xl mx-auto">
-          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue.
-        </p>
-      </div>
+      <SectionHeader
+        badge={{ icon: <Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />, text: 'Why Choose Me' }}
+        title={
+          <>
+            What Makes Me <span>Different</span>
+          </>
+        }
+        subtitle="Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue."
+        className="mb-0 sm:mb-4"
+      />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mb-6">

@@ -23,13 +23,13 @@ const PublicSpeechesSection: React.FC = () => (
         }}
         title={
           <>
-            Public <span className={COMMON_STYLES.gradientText}>Speaking</span>
+            Public <span>Speaking</span>
           </>
         }
         subtitle="Sharing knowledge and insights at industry conferences and events"
       />
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className={COMMON_STYLES.twoColumnGrid}>
           <div className="bg-gradient-to-br from-gray-50 to-blue-50 rounded-3xl p-6 shadow-xl border border-gray-200">
             <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-lg">
               <iframe

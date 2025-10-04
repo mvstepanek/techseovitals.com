@@ -2,8 +2,8 @@ import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
-import IconContainer from '../ui/IconContainer';
 import { COMMON_STYLES } from '../../_data/constants';
+import FeaturePoint from '../ui/FeaturePoint';
 
 const WhyChooseMeSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -15,7 +15,7 @@ const WhyChooseMeSection: React.FC = () => (
         }}
         title={
           <>
-            Technical SEO Expert Who <span className={COMMON_STYLES.gradientText}>Delivers Real Results</span>
+            Technical SEO Expert Who <span>Delivers Real Results</span>
           </>
         }
         subtitle={
@@ -26,38 +26,27 @@ const WhyChooseMeSection: React.FC = () => (
         }
         maxWidth="4xl"
       />
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+      <div className={COMMON_STYLES.twoColumnGrid} style={{ alignItems: 'center', marginBottom: '4rem' }}>
         <div>
           <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <IconContainer icon={<Icons.badge className="w-6 h-6 text-white" />} color="blue" className="flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Professional Web Development Skills</h3>
-                <p className="text-gray-600">
-                  I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <IconContainer icon={<Icons.lightning className="w-6 h-6 text-white" />} color="green" className="flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Comprehensive Technical Approach</h3>
-                <p className="text-gray-600">
-                  I specialize in both technical SEO and performance optimization. Every aspect of your site&apos;s technical foundation works together to maximize visibility
-                  across search engines and AI platforms.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <IconContainer icon={<Icons.monitor className="w-6 h-6 text-white" />} color="purple" className="flex-shrink-0" />
-              <div>
-                <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Measurable Business Results</h3>
-                <p className="text-gray-600">
-                  From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase revenue and organic traffic by solving complex technical SEO
-                  challenges.
-                </p>
-              </div>
-            </div>
+            <FeaturePoint
+              icon={<Icons.badge className="w-6 h-6 text-white" />}
+              title="Professional Web Development Skills"
+              description="I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges."
+              color="bg-gradient-to-br from-blue-500 to-blue-600"
+            />
+            <FeaturePoint
+              icon={<Icons.lightning className="w-6 h-6 text-white" />}
+              title="Comprehensive Technical Approach"
+              description="I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms."
+              color="bg-gradient-to-br from-green-500 to-green-600"
+            />
+            <FeaturePoint
+              icon={<Icons.monitor className="w-6 h-6 text-white" />}
+              title="Measurable Business Results"
+              description="From enterprise migrations to startup growth, I've helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges."
+              color="bg-gradient-to-br from-purple-500 to-purple-600"
+            />
           </div>
         </div>
         <div className="relative">

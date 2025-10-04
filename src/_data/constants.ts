@@ -139,6 +139,8 @@ export const COMMON_STYLES = {
   containerWidth: 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8',
   featureCard: 'rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
   featureCardWithBg: 'bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
+  threeColumnGrid: 'grid grid-cols-1 md:grid-cols-3 gap-8',
+  twoColumnGrid: 'grid grid-cols-1 lg:grid-cols-2 gap-8',
 };
 
 // Color schemes for components

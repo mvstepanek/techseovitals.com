@@ -14,7 +14,7 @@ const BrutalTruthSection: React.FC = () => (
           business suffers.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className={COMMON_STYLES.threeColumnGrid}>
         <div className="group relative bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200">
           <div className="mb-4">
             <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold mb-3 bg-red-100 text-red-700">Amazon Study</div>

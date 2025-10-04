@@ -92,7 +92,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold mb-3">
-                  <span className={COMMON_STYLES.gradientText}>{form.title}</span>
+                  <span>{form.title}</span>
                 </h3>
                 <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>

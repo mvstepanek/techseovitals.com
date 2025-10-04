@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from '../ui/Badge';
+import SectionHeader from '../ui/SectionHeader';
 import OptimizedImage from '../common/OptimizedImage';
 import { COMMON_STYLES } from '../../_data/constants';
 
@@ -31,41 +31,39 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
     <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className={COMMON_STYLES.containerWidth}>
         {(showBadge || title || subtitle) && (
-          <div className="text-center mb-16">
-            {showBadge && (
-              <Badge
-                icon={
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                    />
-                  </svg>
-                }
-              >
-                {badgeText}
-              </Badge>
-            )}
-
-            {title && (
-              <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-                {title.includes('Technical SEO') ? (
-                  <>
-                    Latest <span className={COMMON_STYLES.gradientText}>Technical SEO</span> Insights
-                  </>
-                ) : (
-                  title
-                )}
-              </h2>
-            )}
-
-            {subtitle && <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>}
-          </div>
+          <SectionHeader
+            badge={
+              showBadge
+                ? {
+                    icon: (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                        />
+                      </svg>
+                    ),
+                    text: badgeText,
+                  }
+                : undefined
+            }
+            title={
+              title &&
+              (title.includes('Technical SEO') ? (
+                <>
+                  Latest <span>Technical SEO</span> Insights
+                </>
+              ) : (
+                title
+              ))
+            }
+            subtitle={subtitle}
+          />
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className={COMMON_STYLES.threeColumnGrid}>
           {posts.map((post, index) => (
             <article key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
               <a href={post.href}>

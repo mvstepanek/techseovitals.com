@@ -2,6 +2,7 @@ import React from 'react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { COMMON_STYLES } from '../../_data/constants';
+import IconContainer from '../ui/IconContainer';
 
 interface Feature {
   icon: React.ReactNode;
@@ -45,23 +46,21 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
     }
   };
 
-  const getColorClasses = (color?: string) => {
+  const getIconColor = (color?: string): 'blue' | 'green' | 'purple' | 'orange' | 'indigo' => {
     switch (color) {
       case 'green':
-        return 'bg-gradient-to-br from-green-500 to-emerald-600';
+        return 'green';
       case 'blue':
-        return 'bg-gradient-to-br from-blue-500 to-cyan-600';
-      case 'red':
-        return 'bg-gradient-to-br from-red-500 to-rose-600';
-      case 'yellow':
-        return 'bg-gradient-to-br from-yellow-500 to-amber-600';
+        return 'blue';
       case 'orange':
-        return 'bg-gradient-to-br from-orange-500 to-red-600';
+      case 'red':
+      case 'yellow':
+        return 'orange';
       case 'indigo':
-        return 'bg-gradient-to-br from-indigo-500 to-purple-600';
+        return 'indigo';
       case 'purple':
       default:
-        return COMMON_STYLES.gradientBgDiagonal;
+        return 'purple';
     }
   };
 
@@ -95,7 +94,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
           <div className={`grid ${getGridCols()} gap-8`}>
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
-                <div className={`w-16 h-16 ${getColorClasses(feature.color)} rounded-2xl flex items-center justify-center mb-6`}>{feature.icon}</div>
+                <IconContainer icon={feature.icon} color={getIconColor(feature.color)} size="md" className="mb-6" />
                 <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>

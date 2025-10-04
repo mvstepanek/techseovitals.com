@@ -1,8 +1,9 @@
 import React from 'react';
-import Badge from '../ui/Badge';
+import SectionHeader from '../ui/SectionHeader';
 import OptimizedImage from '../common/OptimizedImage';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import { COMMON_STYLES } from '../../_data/constants';
+import FeaturePoint from '../ui/FeaturePoint';
 
 interface ExperiencePoint {
   icon: React.ReactNode;
@@ -50,25 +51,13 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ badge, title, sub
       <BackgroundDecorations variant="simple" />
 
       <div className={`${COMMON_STYLES.containerWidth} relative z-10`}>
-        <div className="text-center mb-16">
-          <Badge icon={badge.icon}>{badge.text}</Badge>
+        <SectionHeader badge={{ icon: badge.icon, text: badge.text }} title={title} subtitle={subtitle} />
 
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">{title}</h2>
-
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+        <div className={COMMON_STYLES.twoColumnGrid} style={{ alignItems: 'center', marginBottom: '4rem' }}>
           <div>
             <div className="space-y-8">
               {experiencePoints.map((point, index) => (
-                <div key={index} className="flex items-start gap-4">
-                  <div className={`w-16 h-16 ${point.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>{point.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-display font-bold text-gray-900 mb-2">{point.title}</h3>
-                    <p className="text-gray-600">{point.description}</p>
-                  </div>
-                </div>
+                <FeaturePoint key={index} icon={point.icon} title={point.title} description={point.description} color={point.color} />
               ))}
             </div>
           </div>

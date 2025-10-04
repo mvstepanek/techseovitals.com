@@ -1,6 +1,5 @@
 import React from 'react';
 import Icons from '../_components/ui/Icons';
-import { COMMON_STYLES } from './constants';
 
 export const TECHNICAL_SEO_BENEFITS = {
   badge: {
@@ -47,7 +46,7 @@ export const PERFORMANCE_BENEFITS = {
   },
   title: (
     <>
-      The 5 Metrics That <span className={COMMON_STYLES.gradientText}>Actually Matter</span>
+      The 5 Metrics That <span>Actually Matter</span>
     </>
   ),
   subtitle: 'Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions and revenue, plus the target numbers you need to hit.',
@@ -89,7 +88,7 @@ export const MIGRATION_BENEFITS = {
   },
   title: (
     <>
-      Minimize Migration <span className={COMMON_STYLES.gradientText}>Risks and Losses</span>
+      Minimize Migration <span>Risks and Losses</span>
     </>
   ),
   subtitle: 'Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your search rankings, user experience, and business operations.',

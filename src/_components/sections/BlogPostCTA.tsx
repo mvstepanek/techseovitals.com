@@ -17,7 +17,7 @@ const BlogPostCTA: React.FC = () => (
           }}
           title={
             <>
-              Let&apos;s Transform Your Website Into a <span className={COMMON_STYLES.gradientText}>Revenue Engine</span>
+              Let&apos;s Transform Your Website Into a <span>Revenue Engine</span>
             </>
           }
           subtitle="Don't let technical issues hold your business back. Get expert technical SEO guidance and turn your website into your most powerful sales tool."

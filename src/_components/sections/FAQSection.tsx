@@ -67,7 +67,7 @@ const FAQSection: React.FC = () => {
             }}
             title={
               <>
-                Frequently Asked <span className={COMMON_STYLES.gradientText}>Questions</span>
+                Frequently Asked <span>Questions</span>
               </>
             }
             subtitle="Everything you need to know about creating exceptional website experiences that drive real results"

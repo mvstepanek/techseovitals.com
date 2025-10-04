@@ -16,7 +16,7 @@ const WhyAuditSection: React.FC = () => (
         }}
         title={
           <>
-            Stop Guessing. <span className={COMMON_STYLES.gradientText}>Start Knowing</span>
+            Stop Guessing. <span>Start Knowing</span>
           </>
         }
         subtitle="You can't fix what you can't see. My audit reveals the hidden technical issues killing your conversions and revenue with a clear roadmap to fix them."

@@ -3,7 +3,7 @@ import { COMMON_STYLES } from '../../_data/constants';
 import Button from '../ui/Button';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
-import Icons from '../ui/Icons';
+import ProcessStepCard from '../ui/ProcessStepCard';
 
 const SimpleStepsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
@@ -40,87 +40,34 @@ const SimpleStepsSection: React.FC = () => (
           </svg>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 relative">
-          {/* Step 1 */}
-          <div className="text-center group">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">01</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Free Discovery Call</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                30-minute conversation about your users&apos; needs, pain points, and how we can create better experiences that drive business growth.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  100% free
-                </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-blue-50 text-blue-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  No commitment
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="text-center group">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">02</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">User Experience Analysis</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Deep dive into how users experience your site, identifying friction points and opportunities for delightful improvements.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  50+ data points
-                </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-emerald-50 text-emerald-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  Prioritized roadmap
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="text-center group">
-            <div className="relative mb-8">
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mx-auto flex items-center justify-center shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-white">03</div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group-hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-              <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Transform & Optimize</h3>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                Clear roadmap to create exceptional experiences, with support to ensure your users feel the improvements immediately.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  Expert guidance
-                </span>
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium bg-purple-50 text-purple-700">
-                  <Icons.checkCircle className="w-4 h-4" />
-                  Proven results
-                </span>
-              </div>
-            </div>
-          </div>
+        <div className={COMMON_STYLES.threeColumnGrid}>
+          <ProcessStepCard
+            stepNumber={1}
+            icon={<div className="text-2xl font-bold text-white">01</div>}
+            title="Free Discovery Call"
+            description="30-minute conversation about your users' needs, pain points, and how we can create better experiences that drive business growth."
+            color="bg-gradient-to-br from-blue-500 to-blue-600"
+            trustSignals={['100% free', 'No commitment']}
+            trustSignalColor="blue"
+          />
+          <ProcessStepCard
+            stepNumber={2}
+            icon={<div className="text-2xl font-bold text-white">02</div>}
+            title="User Experience Analysis"
+            description="Deep dive into how users experience your site, identifying friction points and opportunities for delightful improvements."
+            color="bg-gradient-to-br from-emerald-500 to-green-600"
+            trustSignals={['50+ data points', 'Prioritized roadmap']}
+            trustSignalColor="green"
+          />
+          <ProcessStepCard
+            stepNumber={3}
+            icon={<div className="text-2xl font-bold text-white">03</div>}
+            title="Transform & Optimize"
+            description="Clear roadmap to create exceptional experiences, with support to ensure your users feel the improvements immediately."
+            color="bg-gradient-to-br from-purple-500 to-purple-600"
+            trustSignals={['Expert guidance', 'Proven results']}
+            trustSignalColor="purple"
+          />
         </div>
       </div>
 
