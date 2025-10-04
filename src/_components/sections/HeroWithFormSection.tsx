@@ -3,6 +3,8 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import ConvertKitForm from '../forms/ConvertKitForm';
 import OptimizedImage from '../common/OptimizedImage';
+import BackgroundDecorations from '../ui/BackgroundDecorations';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface TrustSignalsProps {
   show: boolean;
@@ -20,7 +22,6 @@ interface FormField {
 
 interface HeroWithFormProps {
   badge: {
-    icon?: React.ReactNode;
     text: string;
   };
   title: React.ReactNode;
@@ -43,30 +44,18 @@ interface HeroWithFormProps {
   };
 }
 
-const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
-  badge,
-  title,
-  description,
-  trustSignals = { show: true, text: 'Trusted by website owners worldwide' },
-  form,
-}) => {
+const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, description, trustSignals = { show: true, text: 'Trusted by website owners worldwide' }, form }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
       <div className="absolute inset-0 bg-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-16 left-16 w-32 h-32 bg-purple-300 rounded-full blur-3xl opacity-40" />
-        <div className="absolute top-24 right-32 w-24 h-24 bg-indigo-300 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-32 left-1/4 w-40 h-40 bg-blue-200 rounded-full blur-3xl opacity-25" />
-      </div>
+      <BackgroundDecorations variant="centered" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="max-w-2xl">
-            <Badge icon={badge.icon}>{badge.text}</Badge>
+            <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>{badge.text}</Badge>
 
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
-              {title}
-            </h1>
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">{title}</h1>
 
             <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg">{description}</p>
 
@@ -78,13 +67,8 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                   ) : (
                     <div className="flex -space-x-2">
                       {trustSignals.images ? (
-                        trustSignals.images.map((image, index) => (
-                          <OptimizedImage
-                            key={index}
-                            src={image}
-                            alt={`Industry leader ${index + 1}`}
-                            className="w-12 h-12 rounded-full border-2 border-white object-cover"
-                          />
+                        trustSignals.images.map((image) => (
+                          <OptimizedImage key={image} src={image} alt="Industry leader" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
                         ))
                       ) : (
                         <>
@@ -107,9 +91,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold mb-3">
-                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                    {form.title}
-                  </span>
+                  <span>{form.title}</span>
                 </h3>
                 <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>
@@ -132,13 +114,12 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                     }
                   })()}
                   buttonText={form.submitButton.text}
-                  design="checklist"
                 />
               ) : (
                 <form action={form.action} method={form.method || 'POST'} className="space-y-4">
                   <div className="space-y-4">
-                    {form.fields.map((field, index) => (
-                      <div key={index} className="flex-1">
+                    {form.fields.map((field) => (
+                      <div key={field.name} className="flex-1">
                         <input
                           className="w-full px-6 py-4 text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary-500 focus:ring-opacity-20 focus:border-primary-500 transition-all duration-200"
                           placeholder={field.placeholder}

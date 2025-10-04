@@ -106,6 +106,17 @@ export const CONVERTKIT_FORMS = {
   },
 };
 
+// Max width classes for content sections
+export const MAX_WIDTH_CLASSES = {
+  sm: 'max-w-sm',
+  md: 'max-w-md',
+  lg: 'max-w-lg',
+  xl: 'max-w-xl',
+  '2xl': 'max-w-2xl',
+  '3xl': 'max-w-3xl',
+  '4xl': 'max-w-4xl',
+} as const;
+
 // Common CSS classes for reuse
 export const COMMON_STYLES = {
   gradientText: 'bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent',
@@ -120,8 +131,7 @@ export const COMMON_STYLES = {
   cardShadow: 'shadow-xl hover:shadow-2xl transition-all duration-300',
   cardHover: 'hover:shadow-lg transition-all duration-300',
   blurredBlob: 'absolute bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full blur-3xl opacity-50',
-  badge:
-    'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg',
+  badge: 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg',
   buttonPrimary:
     'group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30',
   heroImage: 'w-full rounded-3xl shadow-2xl border-4 border-white',
@@ -129,6 +139,108 @@ export const COMMON_STYLES = {
   containerWidth: 'mx-auto max-w-7xl px-4 sm:px-6 lg:px-8',
   featureCard: 'rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
   featureCardWithBg: 'bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
+  threeColumnGrid: 'grid grid-cols-1 md:grid-cols-3 gap-8',
+  twoColumnGrid: 'grid grid-cols-1 lg:grid-cols-2 gap-8',
+  // New patterns from refactoring
+  heroBackground: 'bg-gradient-to-br from-slate-50 via-white to-blue-50',
+  sectionHeading: 'text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight',
+  cardGlow: 'absolute -inset-4 bg-gradient-to-r from-brand-600/20 to-brand-600/20 rounded-3xl blur-2xl opacity-30',
+  heroImageWithShadow: 'w-full rounded-3xl shadow-2xl border-4 border-white',
+  cardGrid: 'grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8',
+  sectionPaddingLarge: 'py-20 lg:py-28',
+  sectionPaddingSmall: 'py-16',
+};
+
+// Color schemes for components
+export const COLOR_SCHEMES = {
+  blue: {
+    bg: 'from-blue-500 to-blue-600',
+    border: 'border-blue-200',
+    accent: 'from-blue-500 to-blue-600',
+    text: 'text-blue-600',
+    focus: 'focus:ring-blue-300',
+    checkmark: 'text-green-500',
+    button: 'from-blue-600 to-blue-700',
+  },
+  green: {
+    bg: 'from-green-500 to-green-600',
+    border: 'border-green-200',
+    accent: 'from-green-500 to-green-600',
+    text: 'text-green-600',
+    focus: 'focus:ring-green-300',
+    checkmark: 'text-green-500',
+    button: 'from-green-600 to-green-700',
+  },
+  purple: {
+    bg: 'from-purple-500 to-purple-600',
+    border: 'border-purple-200',
+    accent: 'from-purple-500 to-purple-600',
+    text: 'text-purple-600',
+    focus: 'focus:ring-purple-300',
+    checkmark: 'text-green-500',
+    button: 'from-purple-600 to-purple-700',
+  },
+  orange: {
+    bg: 'from-orange-500 to-orange-600',
+    border: 'border-orange-200',
+    accent: 'from-orange-500 to-orange-600',
+    text: 'text-orange-600',
+    focus: 'focus:ring-orange-300',
+    checkmark: 'text-green-500',
+    button: 'from-orange-600 to-orange-700',
+  },
+  indigo: {
+    bg: 'from-indigo-500 to-indigo-600',
+    border: 'border-indigo-200',
+    accent: 'from-indigo-500 to-indigo-600',
+    text: 'text-indigo-600',
+    focus: 'focus:ring-indigo-300',
+    checkmark: 'text-green-500',
+    button: 'from-indigo-600 to-indigo-700',
+  },
+  red: {
+    bg: 'from-red-500 to-red-600',
+    border: 'border-red-200',
+    accent: 'from-red-500 to-red-600',
+    text: 'text-red-600',
+    focus: 'focus:ring-red-300',
+    checkmark: 'text-green-500',
+    button: 'from-red-600 to-red-700',
+  },
+};
+
+// Utility functions for color schemes
+export type ColorType = keyof typeof COLOR_SCHEMES;
+
+export const getGradientClass = (color: ColorType): string => {
+  return COLOR_SCHEMES[color]?.bg || COLOR_SCHEMES.blue.bg;
+};
+
+export const getColorScheme = (color: ColorType) => {
+  return COLOR_SCHEMES[color] || COLOR_SCHEMES.blue;
+};
+
+// Color mapping utility for variant normalization
+export const mapColorVariant = (color: string): ColorType => {
+  const colorMap: Record<string, ColorType> = {
+    red: 'purple',
+    yellow: 'orange',
+  };
+  return (colorMap[color] as ColorType) || (color as ColorType);
+};
+
+// Background color utilities
+export const BACKGROUND_CLASSES = {
+  white: 'bg-white',
+  gray: 'bg-gray-50',
+  gradientSlate: 'bg-gradient-to-br from-gray-50 to-slate-100',
+  gradientBlue: 'bg-gradient-to-br from-slate-50 to-blue-50/30',
+} as const;
+
+export type BackgroundType = keyof typeof BACKGROUND_CLASSES;
+
+export const getBackgroundClass = (bg: BackgroundType): string => {
+  return BACKGROUND_CLASSES[bg] || BACKGROUND_CLASSES.white;
 };
 
 // Design system tokens
@@ -146,6 +258,7 @@ export const DESIGN_TOKENS = {
   },
   COLORS: {
     THEME_COLOR: '#7c3aed',
+    TOPBAR_BG: '#7607FF',
     SUCCESS_RGB: 'rgb(34, 197, 94)',
     SVG_GRADIENT_START: '#8b5cf6',
     SVG_GRADIENT_END: '#6366f1',
@@ -162,9 +275,7 @@ export const SOCIAL_MEDIA = {
 
 // Site configuration
 export const SITE_CONFIG = {
-  DOMAIN: process.env.NODE_ENV === 'development'
-    ? 'https://staging.techseovitals.com'
-    : 'https://www.techseovitals.com',
+  DOMAIN: process.env.NODE_ENV === 'development' ? 'https://staging.techseovitals.com' : 'https://www.techseovitals.com',
   EMAIL: 'martin@techseovitals.com',
   CALENDLY_URL: 'https://calendly.com/techseovitals/free-initial-consultation?primary_color=9333ea',
 };

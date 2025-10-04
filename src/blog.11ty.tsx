@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
 import BlogCardsSection from './_components/sections/BlogCardsSection';
 import NewsletterSection from './_components/sections/NewsletterSection';
@@ -11,19 +10,17 @@ export const data = {
     alias: 'posts',
   },
   eleventyComputed: {
-    title: (data: any) => {
+    title: (data: { pagination: { pageNumber: number } }) => {
       const pageNum = data.pagination.pageNumber + 1;
-      return pageNum > 1
-        ? `Technical SEO Blog - Page ${pageNum}`
-        : 'Technical SEO Blog';
+      return pageNum > 1 ? `Technical SEO Blog - Page ${pageNum}` : 'Technical SEO Blog';
     },
-    description: (data: any) => {
+    description: (data: { pagination: { pageNumber: number } }) => {
       const pageNum = data.pagination.pageNumber + 1;
       return pageNum > 1
         ? `Expert insights on technical optimization - Page ${pageNum}. Learn actionable strategies that transform technical barriers into competitive advantages.`
         : 'Expert insights on creating exceptional user experiences through technical optimization. Learn actionable strategies that transform technical barriers into competitive advantages.';
     },
-    permalink: (data: any) => {
+    permalink: (data: { pagination: { pageNumber: number } }) => {
       const pageNum = data.pagination.pageNumber;
       return pageNum === 0 ? '/blog/' : `/blog/${pageNum + 1}/`;
     },
@@ -43,7 +40,7 @@ interface BlogPost {
 }
 
 interface PaginationData {
-  pages: any[];
+  pages: BlogPost[];
   page: {
     first: boolean;
     last: boolean;
@@ -65,7 +62,7 @@ interface EleventyData {
 
 const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
   // Process posts for display
-  const processedPosts = posts.map(post => {
+  const processedPosts = posts.map((post) => {
     const permalink =
       post.data.permalink ||
       `/blog/${post.data.title
@@ -74,7 +71,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
         .replace(/^-|-$/g, '')}/`;
     const fallbackImage = `/assets/images/blog/${permalink
       .split('/')
-      .filter(p => p)
+      .filter((p) => p)
       .pop()}.jpg`;
     return {
       title: post.data.title,
@@ -111,7 +108,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
           }}
           title={
             <>
-              Technical SEO <span className={COMMON_STYLES.gradientText}>Insights</span>
+              Technical SEO <span>Insights</span>
             </>
           }
           description="Learn optimization strategies that create websites users love while driving more conversions and revenue."
@@ -128,15 +125,15 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
       {!isFirstPage && (
         <div className="bg-gradient-to-b from-gray-50 to-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
-              Technical SEO <span className={COMMON_STYLES.gradientText}>Blog</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-4">
+              Technical SEO <span>Blog</span>
             </h1>
             <p className="text-lg text-gray-600 text-center">Page {pagination.pageNumber + 1}</p>
           </div>
         </div>
       )}
 
-      <BlogCardsSection title="" subtitle="" showBadge={false} posts={processedPosts} />
+      <BlogCardsSection showBadge={false} title="" subtitle="" posts={processedPosts} />
 
       {/* Simple pagination navigation */}
       {pagination && pagination.pages && pagination.pages.length > 1 && (
@@ -168,7 +165,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
   );
 };
 
-export default function (data: any) {
+export default function BlogTemplate(data: { posts: BlogPost[]; pagination: PaginationData }) {
   // The pagination data creates 'posts' from the alias
   // and 'pagination' is at the root level
   return <BlogPage posts={data.posts || []} pagination={data.pagination} />;

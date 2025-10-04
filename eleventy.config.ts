@@ -112,13 +112,18 @@ export default function (eleventyConfig: any): UserConfig {
     if (outputPath && outputPath.endsWith(".html") && content.includes("<script>") && process.env.NODE_ENV === 'production') {
       const { minify } = await import("terser");
 
-      // Only process inline scripts, skip external scripts
+      // Only process inline scripts, skip external scripts and JSON-LD scripts
       const inlineScriptRegex = /<script(?![^>]*src)([^>]*)>([\s\S]*?)<\/script>/g;
       const matches = Array.from(content.matchAll(inlineScriptRegex));
 
       for (const match of matches) {
         const [fullMatch, attributes, jsCode] = match;
-        if (jsCode.trim() && !jsCode.includes('analytics') && !jsCode.includes('gtag')) {
+        // Skip JSON-LD scripts, analytics scripts, and speculation rules
+        if (jsCode.trim() &&
+            !attributes.includes('application/ld+json') &&
+            !attributes.includes('speculationrules') &&
+            !jsCode.includes('analytics') &&
+            !jsCode.includes('gtag')) {
           try {
             const result = await minify(jsCode, {
               compress: {
@@ -137,8 +142,7 @@ export default function (eleventyConfig: any): UserConfig {
               content = content.replace(fullMatch, `<script${attributes}>${result.code}</script>`);
             }
           } catch (e) {
-            // If minification fails, keep original
-            console.warn(`JS minification failed for script in ${outputPath}:`, e);
+            // If minification fails, keep original (silently)
           }
         }
       }

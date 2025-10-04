@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsletterSection from '../_components/sections/NewsletterSection';
 import BlogPostHeader from '../_components/sections/BlogPostHeader';
-import AuthorBio from '../_components/sections/AuthorBio';
+import BlogAuthorBio from '../_components/sections/BlogAuthorBio';
 import { SITE_CONFIG } from '../_data/constants';
 
 interface BlogPostData {
@@ -16,24 +16,18 @@ interface BlogPostData {
 export const data = {
   layout: 'base',
   eleventyComputed: {
-    ogImage: (data: any) => {
+    ogImage: (data: { image?: string }) => {
       if (data.image) {
         return `${SITE_CONFIG.DOMAIN}${data.image}`;
       }
       return undefined; // Will use default og.png from base layout
-    }
-  }
+    },
+  },
 };
 
 const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
   <main className="flex-1">
-    <BlogPostHeader
-      title={data.title}
-      description={data.description}
-      date={data.date}
-      permalink={data.permalink}
-      image={data.image}
-    />
+    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} />
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div
@@ -53,7 +47,7 @@ const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
             `,
           }}
         />
-        <AuthorBio />
+        <BlogAuthorBio />
       </div>
     </section>
     <NewsletterSection />

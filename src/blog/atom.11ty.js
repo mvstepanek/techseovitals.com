@@ -4,12 +4,9 @@ export const data = {
 };
 
 export default function AtomFeed(data) {
-  const url = process.env.NODE_ENV === 'development'
-    ? 'https://staging.techseovitals.com'
-    : 'https://www.techseovitals.com';
+  const url = process.env.NODE_ENV === 'development' ? 'https://staging.techseovitals.com' : 'https://www.techseovitals.com';
   const title = 'TechSEO Vitals Blog';
-  const description =
-    'Expert insights on technical SEO, web performance, and Core Web Vitals optimization for business growth.';
+  const description = 'Expert insights on technical SEO, web performance, and Core Web Vitals optimization for business growth.';
   const author = 'Martin Stepanek';
   const email = 'martin@techseovitals.com';
 
@@ -17,7 +14,7 @@ export default function AtomFeed(data) {
   const blogPosts = data.collections.blog || [];
   const posts = blogPosts
     .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .map(post => ({
+    .map((post) => ({
       title: post.data.title,
       description: post.data.description,
       url: post.url,
@@ -26,7 +23,7 @@ export default function AtomFeed(data) {
     }));
 
   // Helper function to format dates for Atom
-  const formatDate = dateString => {
+  const formatDate = (dateString) => {
     return new Date(dateString).toISOString();
   };
 
@@ -52,7 +49,7 @@ export default function AtomFeed(data) {
   <logo>${url}/assets/techseovitals-logo.svg</logo>
   ${posts
     .map(
-      post => `
+      (post) => `
   <entry>
     <title type="html"><![CDATA[${post.title}]]></title>
     <link href="${url}${post.url}" rel="alternate" type="text/html"/>

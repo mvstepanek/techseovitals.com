@@ -1,5 +1,6 @@
 import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface TrustedCompaniesProps {
   title?: string;
@@ -17,7 +18,7 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
 
   return (
     <section className={`py-16 ${bgClasses} ${borderClasses}`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">{title}</p>
           <h2 className="text-2xl font-display font-bold text-gray-900">{subtitle}</h2>
@@ -35,7 +36,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 height="50"
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
                 loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -46,8 +46,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -59,8 +57,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -71,8 +67,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -85,7 +79,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 height="50"
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
                 loading="lazy"
-                decoding="async"
               />
             </div>
           </div>

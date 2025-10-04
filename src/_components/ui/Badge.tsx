@@ -1,14 +1,8 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
+import { BadgeProps } from '../../_types/common';
 
-interface BadgeProps {
-  children: React.ReactNode;
-  variant?: 'default' | 'outline' | 'newsletter';
-  icon?: React.ReactNode;
-  className?: string;
-}
-
-const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', icon, className = '' }) => {
+const Badge: React.FC<BadgeProps> = React.memo(({ children, variant = 'default', icon, className }) => {
   const baseClasses = 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold shadow-lg mb-6';
 
   const variantClasses = {
@@ -25,6 +19,8 @@ const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', icon, clas
       {children}
     </div>
   );
-};
+});
+
+Badge.displayName = 'Badge';
 
 export default Badge;

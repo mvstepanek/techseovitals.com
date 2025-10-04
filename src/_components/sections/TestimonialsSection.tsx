@@ -1,8 +1,8 @@
 import React from 'react';
-import Badge from '../ui/Badge';
-import TestimonialCard from '../ui/TestimonialCard';
 import SectionHeader from '../ui/SectionHeader';
-import { COMMON_STYLES, TESTIMONIALS } from '../../_data/constants';
+import TestimonialCard from '../ui/TestimonialCard';
+import { TESTIMONIALS, COMMON_STYLES } from '../../_data/constants';
+import Icons from '../ui/Icons';
 
 interface TestimonialsProps {
   title?: string;
@@ -25,48 +25,27 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
 }) => {
   return (
     <section className={`${backgroundColor} py-24`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          {showBadge && (
-            <Badge
-              icon={
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M4.318 6.318a4.5 4.5.0 000 6.364L12 20.364l7.682-7.682a4.5 4.5.0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5.0 00-6.364.0z"
-                  />
-                </svg>
-              }
-            >
-              {badgeText}
-            </Badge>
-          )}
-
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
-            {title.includes('Real Clients') ? (
+      <div className={COMMON_STYLES.containerWidth}>
+        <SectionHeader
+          badge={showBadge ? { icon: <Icons.heart className="w-4 h-4" />, text: badgeText } : undefined}
+          title={
+            title.includes('Real Clients') ? (
               <>
-                Real Results from{' '}
-                <span className={COMMON_STYLES.gradientText}>
-                  Real Clients
-                </span>
+                Real Results from <span>Real Clients</span>
               </>
             ) : (
               title
-            )}
-          </h2>
+            )
+          }
+          subtitle={subtitle}
+        />
 
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className={COMMON_STYLES.twoColumnGrid}>
           <TestimonialCard
             name={TESTIMONIALS.VIKTOR_ZEMAN.name}
             position="CEO"
             company="LiveAgent & Post Affiliate Pro"
             text={TESTIMONIALS.VIKTOR_ZEMAN.quote}
-            linkedinUrl=""
             image="/assets/images/testimonials/viktor-zeman.jpg"
           />
 
@@ -75,7 +54,6 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
             position="CMO"
             company="Quality Unit"
             text={TESTIMONIALS.DANIEL_PISON.quote}
-            linkedinUrl=""
             image="/assets/images/testimonials/daniel-pison.jpg"
           />
         </div>
@@ -87,9 +65,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
               More success stories
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <Icons.arrowRight className="w-4 h-4" />
             </a>
           </div>
         )}

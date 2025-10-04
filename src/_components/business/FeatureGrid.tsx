@@ -1,6 +1,9 @@
 import React from 'react';
 import Badge from '../ui/Badge';
-import { COMMON_STYLES } from '../../_data/constants';
+import Button from '../ui/Button';
+import { COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
+import IconContainer from '../ui/IconContainer';
+import TrustSignalsList from '../ui/TrustSignalsList';
 
 interface Feature {
   icon: React.ReactNode;
@@ -27,17 +30,8 @@ interface FeatureGridProps {
   bottomText?: string;
 }
 
-const FeatureGrid: React.FC<FeatureGridProps> = ({
-  badge,
-  title,
-  subtitle,
-  cta,
-  features,
-  backgroundColor = 'gray',
-  columns = 4,
-  bottomText,
-}) => {
-  const bgClasses = backgroundColor === 'gray' ? 'bg-gradient-to-br from-gray-50 to-slate-100' : 'bg-white';
+const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, features, backgroundColor = 'gray', columns = 4, bottomText }) => {
+  const bgClass = backgroundColor === 'gray' ? getBackgroundClass('gradientSlate') : getBackgroundClass('white');
   const borderClasses = backgroundColor === 'white' ? 'border-t border-gray-200' : '';
 
   const getGridCols = () => {
@@ -53,30 +47,28 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
     }
   };
 
-  const getColorClasses = (color?: string) => {
+  const getIconColor = (color?: string): 'blue' | 'green' | 'purple' | 'orange' | 'indigo' => {
     switch (color) {
       case 'green':
-        return 'bg-gradient-to-br from-green-500 to-emerald-600';
+        return 'green';
       case 'blue':
-        return 'bg-gradient-to-br from-blue-500 to-cyan-600';
-      case 'red':
-        return 'bg-gradient-to-br from-red-500 to-rose-600';
-      case 'yellow':
-        return 'bg-gradient-to-br from-yellow-500 to-amber-600';
+        return 'blue';
       case 'orange':
-        return 'bg-gradient-to-br from-orange-500 to-red-600';
+      case 'red':
+      case 'yellow':
+        return 'orange';
       case 'indigo':
-        return 'bg-gradient-to-br from-indigo-500 to-purple-600';
+        return 'indigo';
       case 'purple':
       default:
-        return COMMON_STYLES.gradientBgDiagonal;
+        return 'purple';
     }
   };
 
   return (
     <div className={borderClasses}>
-      <section className={`py-24 ${bgClasses}`}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className={`py-24 ${bgClass}`}>
+        <div className={COMMON_STYLES.containerWidth}>
           <div className="text-center mb-16">
             {badge && <Badge icon={badge.icon}>{badge.text}</Badge>}
 
@@ -86,37 +78,16 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
 
             {cta && (
               <div className="flex flex-col items-center gap-4">
-                <a
-                  className={COMMON_STYLES.buttonPrimary}
-                  href={cta.href}
-                >
-                  <span className="relative z-10">{cta.text}</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                </a>
-                {cta.trustSignals && (
-                  <div className="flex items-center justify-center gap-4 text-gray-600">
-                    {cta.trustSignals.map((signal, index) => (
-                      <span key={index} className="text-sm">
-                        ✓ {signal}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <Button href={cta.href}>{cta.text}</Button>
+                {cta.trustSignals && <TrustSignalsList signals={cta.trustSignals} />}
               </div>
             )}
           </div>
 
           <div className={`grid ${getGridCols()} gap-8`}>
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
-              >
-                <div
-                  className={`w-16 h-16 ${getColorClasses(feature.color)} rounded-2xl flex items-center justify-center mb-6`}
-                >
-                  {feature.icon}
-                </div>
+            {features.map((feature) => (
+              <div key={feature.title} className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <IconContainer icon={feature.icon} color={getIconColor(feature.color)} size="md" className="mb-6" />
                 <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
 import CalendlySection from './_components/sections/CalendlySection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
@@ -8,8 +7,7 @@ import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
   title: 'Contact',
-  description:
-    'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
+  description: 'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
   permalink: '/contact/',
   layout: 'base',
 };
@@ -23,7 +21,7 @@ const ContactPage: React.FC = () => (
       }}
       title={
         <>
-          Get In Touch With <span className={COMMON_STYLES.gradientText}>Martin</span>
+          Get In Touch With <span>Martin</span>
         </>
       }
       description="Ready to create experiences users actually love? Let's discuss how technical SEO and performance optimization can serve your visitors first while maximizing visibility in search engines and AI systems."
@@ -34,7 +32,6 @@ const ContactPage: React.FC = () => (
       image={{
         src: '/assets/images/martin-stepanek-3.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
-        loading: 'eager',
       }}
       rating={{ show: false }}
       statusBadge={{

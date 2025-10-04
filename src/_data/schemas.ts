@@ -1,4 +1,4 @@
-import { SITE_CONFIG, SOCIAL_MEDIA, TESTIMONIALS } from './constants';
+import { SITE_CONFIG, SOCIAL_MEDIA } from './constants';
 
 export interface EleventyData {
   title?: string;
@@ -37,11 +37,7 @@ export class SchemaFactory {
         contactType: 'customer service',
         url: `${SITE_CONFIG.DOMAIN}/contact/`,
       },
-      sameAs: [
-        SOCIAL_MEDIA.LINKEDIN_PROFILE,
-        SOCIAL_MEDIA.BLUESKY,
-        SOCIAL_MEDIA.YOUTUBE,
-      ],
+      sameAs: [SOCIAL_MEDIA.LINKEDIN_PROFILE, SOCIAL_MEDIA.BLUESKY, SOCIAL_MEDIA.YOUTUBE],
     };
   }
 
@@ -163,18 +159,8 @@ export class SchemaFactory {
         '@type': 'Organization',
         name: 'TechSEO Vitals',
       },
-      knowsAbout: [
-        'Technical SEO',
-        'Web Performance',
-        'Core Web Vitals',
-        'Website Migration',
-        'Search Engine Optimization',
-      ],
-      sameAs: [
-        SOCIAL_MEDIA.LINKEDIN_PROFILE,
-        SOCIAL_MEDIA.BLUESKY,
-        SOCIAL_MEDIA.YOUTUBE,
-      ],
+      knowsAbout: ['Technical SEO', 'Web Performance', 'Core Web Vitals', 'Website Migration', 'Search Engine Optimization'],
+      sameAs: [SOCIAL_MEDIA.LINKEDIN_PROFILE, SOCIAL_MEDIA.BLUESKY, SOCIAL_MEDIA.YOUTUBE],
     };
   }
 
@@ -249,23 +235,12 @@ export class SchemaFactory {
 
   // Generate all schemas for a page
   static generateSchemas(data: EleventyData) {
-    const schemas = [
-      this.organization(),
-      this.webPage(data),
-      this.person(),
-    ];
+    const schemas = [this.organization(), this.webPage(data), this.person()];
 
     // Add conditional schemas
-    const conditionalSchemas = [
-      this.article(data),
-      this.breadcrumb(data),
-      this.website(data),
-      this.blog(data),
-      this.newsletter(data),
-      this.contactPage(data),
-    ];
+    const conditionalSchemas = [this.article(data), this.breadcrumb(data), this.website(data), this.blog(data), this.newsletter(data), this.contactPage(data)];
 
-    conditionalSchemas.forEach(schema => {
+    conditionalSchemas.forEach((schema) => {
       if (schema) schemas.push(schema);
     });
 
@@ -275,8 +250,6 @@ export class SchemaFactory {
   // Generate schema script tags for HTML
   static generateSchemaScripts(data: EleventyData) {
     const schemas = this.generateSchemas(data);
-    return schemas.map(schema =>
-      `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
-    ).join('\n');
+    return schemas.map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n');
   }
 }

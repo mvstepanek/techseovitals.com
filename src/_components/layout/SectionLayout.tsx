@@ -1,6 +1,9 @@
 import React from 'react';
 import Badge from '../ui/Badge';
-import { COMMON_STYLES } from '../../_data/constants';
+import Button from '../ui/Button';
+import { COMMON_STYLES, MAX_WIDTH_CLASSES } from '../../_data/constants';
+import SchemaMarkup from '../utils/SchemaMarkup';
+import TrustSignalsList from '../ui/TrustSignalsList';
 
 interface SectionLayoutProps {
   // Section configuration
@@ -46,7 +49,7 @@ interface SectionLayoutProps {
 
 const SectionLayout: React.FC<SectionLayoutProps> = ({
   as: Component = 'section',
-  className = '',
+  className,
   background = 'white',
   borders = 'none',
   decorations = false,
@@ -57,7 +60,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
   maxWidth = '3xl',
   cta,
   children,
-  contentClassName = '',
+  contentClassName,
   footer,
   schema,
 }) => {
@@ -76,35 +79,15 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
     vertical: 'border-y border-gray-100',
   };
 
-  // Max width classes for subtitle
-  const maxWidthClasses = {
-    sm: 'max-w-sm',
-    md: 'max-w-md',
-    lg: 'max-w-lg',
-    xl: 'max-w-xl',
-    '2xl': 'max-w-2xl',
-    '3xl': 'max-w-3xl',
-    '4xl': 'max-w-4xl',
-  };
-
   // Header alignment classes
   const alignmentClasses = headerAlign === 'center' ? 'text-center' : 'text-left';
 
   return (
     <>
       {/* Schema markup */}
-      {schema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schema),
-          }}
-        />
-      )}
+      {schema && <SchemaMarkup schema={schema} />}
 
-      <Component
-        className={`${COMMON_STYLES.sectionPadding} ${backgroundClasses[background]} ${borderClasses[borders]} relative overflow-hidden ${className}`}
-      >
+      <Component className={`${COMMON_STYLES.sectionPadding} ${backgroundClasses[background]} ${borderClasses[borders]} relative overflow-hidden ${className}`}>
         {/* Background decorations */}
         {decorations && (
           <div className="absolute inset-0">
@@ -133,66 +116,36 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
             <div className={`${alignmentClasses} mb-16`}>
               {/* Badge */}
               {badge && (
-                <Badge
-                  icon={badge.icon}
-                  variant={badge.variant}
-                >
+                <Badge icon={badge.icon} variant={badge.variant}>
                   {badge.text}
                 </Badge>
               )}
 
               {/* Title */}
-              {title && (
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  {title}
-                </h2>
-              )}
+              {title && <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>}
 
               {/* Subtitle */}
-              {subtitle && (
-                <p className={`text-lg text-gray-600 ${maxWidthClasses[maxWidth]} ${headerAlign === 'center' ? 'mx-auto' : ''} leading-relaxed`}>
-                  {subtitle}
-                </p>
-              )}
+              {subtitle && <p className={`text-lg text-gray-600 ${MAX_WIDTH_CLASSES[maxWidth]} ${headerAlign === 'center' ? 'mx-auto' : ''} leading-relaxed`}>{subtitle}</p>}
             </div>
           )}
 
           {/* CTA Section */}
           {cta && (
             <div className="flex flex-col items-center gap-4 mb-16">
-              <a
-                className={COMMON_STYLES.buttonPrimary}
-                href={cta.button.href}
-                target={cta.button.target}
-              >
-                <span className="relative z-10">{cta.button.text}</span>
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-              </a>
+              <Button href={cta.button.href} target={cta.button.target}>
+                {cta.button.text}
+              </Button>
 
               {/* Trust Signals */}
-              {cta.trustSignals && (
-                <div className="flex items-center justify-center gap-4 text-gray-600">
-                  {cta.trustSignals.map((signal, index) => (
-                    <span key={index} className="text-sm">
-                      ✓ {signal}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {cta.trustSignals && <TrustSignalsList signals={cta.trustSignals} />}
             </div>
           )}
 
           {/* Main Content */}
-          <div className={contentClassName}>
-            {children}
-          </div>
+          <div className={contentClassName}>{children}</div>
 
           {/* Footer Content */}
-          {footer && (
-            <div className="mt-16">
-              {footer}
-            </div>
-          )}
+          {footer && <div className="mt-16">{footer}</div>}
         </div>
       </Component>
     </>

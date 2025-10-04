@@ -18,7 +18,7 @@
 }
 
 .formkit-alert:not(:empty):before {
-  content: "" !important;
+  content: '' !important;
   display: inline-block !important;
   width: 16px !important;
   height: 16px !important;

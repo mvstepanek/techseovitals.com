@@ -39,7 +39,6 @@ export interface TestimonialCardProps {
   position: string;
   company: string;
   text: string;
-  linkedinUrl?: string;
   image?: string;
   className?: string;
 }
@@ -54,9 +53,21 @@ export const COLOR_VARIANTS = {
   default: { border: 'border-gray-200', accent: 'text-gray-600', hover: 'hover:border-gray-300' },
   green: { border: 'border-green-200', accent: 'text-green-600', hover: 'hover:border-green-300' },
   blue: { border: 'border-blue-200', accent: 'text-blue-600', hover: 'hover:border-blue-300' },
-  purple: { border: 'border-purple-200', accent: 'text-purple-600', hover: 'hover:border-purple-300' },
-  indigo: { border: 'border-indigo-200', accent: 'text-indigo-600', hover: 'hover:border-indigo-300' },
-  orange: { border: 'border-orange-200', accent: 'text-orange-600', hover: 'hover:border-orange-300' },
+  purple: {
+    border: 'border-purple-200',
+    accent: 'text-purple-600',
+    hover: 'hover:border-purple-300',
+  },
+  indigo: {
+    border: 'border-indigo-200',
+    accent: 'text-indigo-600',
+    hover: 'hover:border-indigo-300',
+  },
+  orange: {
+    border: 'border-orange-200',
+    accent: 'text-orange-600',
+    hover: 'hover:border-orange-300',
+  },
 } as const;
 
 export type ColorVariant = keyof typeof COLOR_VARIANTS;

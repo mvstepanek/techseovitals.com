@@ -1,45 +1,7 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES, CONVERTKIT_FORMS } from '../../_data/constants';
 
-// Form configurations mapping
-const FORM_CONFIG = {
-  // Newsletter forms (same ID, different designs)
-  'newsletter-section': {
-    formId: '7514069',
-    uid: '06e277ea9a',
-    action: 'https://app.kit.com/forms/7514069/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription.',
-  },
-  'newsletter-page': {
-    formId: '7514069',
-    uid: '06e277ea9a',
-    action: 'https://app.kit.com/forms/7514069/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription.',
-  },
-  // Checklist forms (unique IDs)
-  'technical-seo-checklist': {
-    formId: '7969566',
-    uid: '1b414d8dc5',
-    action: 'https://app.kit.com/forms/7969566/subscriptions',
-    successMessage:
-      'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
-  },
-  'website-migration-checklist': {
-    formId: '7945460',
-    uid: '4ef42b0b85',
-    action: 'https://app.kit.com/forms/7945460/subscriptions',
-    successMessage:
-      'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
-  },
-  '5-web-performance-metrics': {
-    formId: '8513383',
-    uid: 'e7077aaed9',
-    action: 'https://app.kit.com/forms/8513383/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the ebook.',
-  },
-};
-
-type FormType = keyof typeof FORM_CONFIG;
+type FormType = keyof typeof CONVERTKIT_FORMS;
 
 interface ConvertKitFormProps {
   formType: FormType;
@@ -50,15 +12,8 @@ interface ConvertKitFormProps {
   fieldClassName?: string;
 }
 
-const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
-  formType,
-  buttonText,
-  design = 'checklist',
-  className = '',
-  buttonClassName = '',
-  fieldClassName = '',
-}) => {
-  const config = FORM_CONFIG[formType];
+const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName }) => {
+  const config = CONVERTKIT_FORMS[formType];
 
   // Default styling based on design type
   const defaultFieldClassName =
@@ -72,9 +27,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
       : `formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl ${COMMON_STYLES.gradientBg} text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full`;
 
   const defaultFormClassName =
-    design === 'newsletter'
-      ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center'
-      : 'space-y-3 sm:space-y-4';
+    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
 
   return (
     <>
@@ -258,44 +211,31 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
         data-format="inline"
         data-version="5"
         data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${config.successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
-        min-width="400 500 600 700 800"
+        style={{ minWidth: '400px' }}
       >
         <div data-style="clean">
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
 
-          <div
-            data-element="fields"
-            data-stacked="false"
-            className={`seva-fields formkit-fields ${design === 'newsletter' ? 'flex flex-col sm:flex-row gap-4' : 'space-y-4'}`}
-          >
+          <div data-element="fields" data-stacked="false" className={`seva-fields formkit-fields ${design === 'newsletter' ? 'flex flex-col sm:flex-row gap-4' : 'space-y-4'}`}>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input
-                className={fieldClassName || defaultFieldClassName}
-                aria-label="First Name"
-                name="fields[first_name]"
-                placeholder="First name"
-                type="text"
-              />
+              <input className={fieldClassName || defaultFieldClassName} aria-label="First Name" name="fields[first_name]" placeholder="First name" />
             </div>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input
-                className={fieldClassName || defaultFieldClassName}
-                name="email_address"
-                aria-label="Email Address"
-                placeholder="Email"
-                required
-                type="email"
-              />
+              <input className={fieldClassName || defaultFieldClassName} name="email_address" aria-label="Email Address" placeholder="Email" required type="email" />
             </div>
-            <button type="submit" data-element="submit" className={`${buttonClassName || defaultButtonClassName} ${
-              formType === 'technical-seo-checklist'
-                ? 'AhrefsAnalytics-event-techseo_checklist'
-                : formType === 'website-migration-checklist'
-                ? 'AhrefsAnalytics-event-migration_checklist'
-                : formType === '5-web-performance-metrics'
-                ? 'AhrefsAnalytics-event-business_metrics'
-                : 'AhrefsAnalytics-event-newsletter_signup'
-            }`}>
+            <button
+              type="submit"
+              data-element="submit"
+              className={`${buttonClassName || defaultButtonClassName} ${
+                formType === 'technical-seo-checklist'
+                  ? 'AhrefsAnalytics-event-techseo_checklist'
+                  : formType === 'website-migration-checklist'
+                    ? 'AhrefsAnalytics-event-migration_checklist'
+                    : formType === '5-web-performance-metrics'
+                      ? 'AhrefsAnalytics-event-business_metrics'
+                      : 'AhrefsAnalytics-event-newsletter_signup'
+              }`}
+            >
               <div className="formkit-spinner">
                 <div />
                 <div />
