@@ -192,6 +192,31 @@ export const COLOR_SCHEMES = {
   },
 };
 
+// Utility functions for color schemes
+export type ColorType = keyof typeof COLOR_SCHEMES;
+
+export const getGradientClass = (color: ColorType): string => {
+  return COLOR_SCHEMES[color]?.bg || COLOR_SCHEMES.blue.bg;
+};
+
+export const getColorScheme = (color: ColorType) => {
+  return COLOR_SCHEMES[color] || COLOR_SCHEMES.blue;
+};
+
+// Background color utilities
+export const BACKGROUND_CLASSES = {
+  white: 'bg-white',
+  gray: 'bg-gray-50',
+  gradientSlate: 'bg-gradient-to-br from-gray-50 to-slate-100',
+  gradientBlue: 'bg-gradient-to-br from-slate-50 to-blue-50/30',
+} as const;
+
+export type BackgroundType = keyof typeof BACKGROUND_CLASSES;
+
+export const getBackgroundClass = (bg: BackgroundType): string => {
+  return BACKGROUND_CLASSES[bg] || BACKGROUND_CLASSES.white;
+};
+
 // Design system tokens
 export const DESIGN_TOKENS = {
   ANIMATION: {

@@ -2,6 +2,7 @@ import React from 'react';
 import StatsGrid from '../ui/StatsGrid';
 import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
+import GridLayout from '../ui/GridLayout';
 import { COMMON_STYLES } from '../../_data/constants';
 
 const NewsletterBenefitsSection: React.FC = () => (
@@ -38,7 +39,7 @@ const NewsletterBenefitsSection: React.FC = () => (
           },
         ]}
       />
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <GridLayout columns={3}>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300">
           <div className="mb-6">
             <Icons.lightbulb className="w-12 h-12 text-blue-500 mb-4" />
@@ -66,7 +67,7 @@ const NewsletterBenefitsSection: React.FC = () => (
             Watch your website transform with better user engagement, improved search visibility, and increased revenue through proven optimization techniques.
           </p>
         </div>
-      </div>
+      </GridLayout>
     </div>
   </section>
 );

@@ -5,6 +5,7 @@ import AboutMartinSection from './_components/sections/AboutMartinSection';
 import Badge from './_components/ui/Badge';
 import CardDecoration from './_components/ui/CardDecoration';
 import IconContainer from './_components/ui/IconContainer';
+import Icons from './_components/ui/Icons';
 import { COMMON_STYLES } from './_data/constants';
 
 export const data = {
@@ -114,9 +115,7 @@ const NewsletterPage: React.FC = () => (
                 Deep dives into technical SEO trends, case studies from real websites, and performance optimization techniques that actually move the needle.
               </p>
               <div className="flex items-center gap-2 font-semibold text-blue-600">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
-                </svg>
+                <Icons.arrowTrendUp className="w-5 h-5" />
                 Deep insights
               </div>
             </div>
@@ -139,9 +138,7 @@ const NewsletterPage: React.FC = () => (
                 Step-by-step guides you can implement immediately. No fluff, just practical instructions with clear before-and-after examples.
               </p>
               <div className="flex items-center gap-2 font-semibold text-green-600">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
-                </svg>
+                <Icons.arrowTrendUp className="w-5 h-5" />
                 Ready to use
               </div>
             </div>
@@ -164,9 +161,7 @@ const NewsletterPage: React.FC = () => (
                 Latest updates on search algorithm changes, AI developments, and emerging optimization opportunities you need to know about.
               </p>
               <div className="flex items-center gap-2 font-semibold text-purple-600">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
-                </svg>
+                <Icons.arrowTrendUp className="w-5 h-5" />
                 Stay current
               </div>
             </div>

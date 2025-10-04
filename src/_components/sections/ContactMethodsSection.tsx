@@ -2,12 +2,13 @@ import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 import IconContainer from '../ui/IconContainer';
 import SectionHeader from '../ui/SectionHeader';
+import GridLayout from '../ui/GridLayout';
 
 const ContactMethodsSection: React.FC = () => (
   <section className="py-20 bg-gray-50">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader title="Multiple Ways to Connect" subtitle="Reach out directly for project inquiries or connect on social media for insights and updates" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <GridLayout columns={4}>
         <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 text-center">
           <IconContainer
             icon={
@@ -81,7 +82,7 @@ const ContactMethodsSection: React.FC = () => (
             @techseovitals
           </a>
         </div>
-      </div>
+      </GridLayout>
     </div>
   </section>
 );

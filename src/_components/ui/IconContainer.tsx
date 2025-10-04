@@ -1,20 +1,15 @@
 import React from 'react';
+import { getGradientClass, ColorType } from '../../_data/constants';
 
 interface IconContainerProps {
   icon: React.ReactNode;
-  color: 'blue' | 'green' | 'purple' | 'orange' | 'indigo';
+  color: ColorType;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
 const IconContainer: React.FC<IconContainerProps> = ({ icon, color, size = 'md', className }) => {
-  const colorClasses = {
-    blue: 'from-blue-500 to-blue-600',
-    green: 'from-green-500 to-green-600',
-    purple: 'from-purple-600 to-indigo-600',
-    orange: 'from-orange-500 to-orange-600',
-    indigo: 'from-indigo-500 to-indigo-600',
-  };
+  const gradientClass = color === 'purple' ? 'from-purple-600 to-indigo-600' : getGradientClass(color);
 
   const sizeClasses = {
     sm: 'w-12 h-12',
@@ -23,9 +18,7 @@ const IconContainer: React.FC<IconContainerProps> = ({ icon, color, size = 'md',
   };
 
   return (
-    <div
-      className={`${sizeClasses[size]} bg-gradient-to-br ${colorClasses[color]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl ${className || ''}`}
-    >
+    <div className={`${sizeClasses[size]} bg-gradient-to-br ${gradientClass} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-xl ${className || ''}`}>
       {icon}
     </div>
   );

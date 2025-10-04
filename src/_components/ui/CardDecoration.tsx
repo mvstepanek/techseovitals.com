@@ -1,19 +1,14 @@
 import React from 'react';
+import { getGradientClass, ColorType } from '../../_data/constants';
 
 interface CardDecorationProps {
-  color: 'blue' | 'green' | 'purple' | 'orange' | 'indigo';
+  color: ColorType;
   size?: 'sm' | 'md' | 'lg';
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 }
 
 const CardDecoration: React.FC<CardDecorationProps> = ({ color, size = 'md', position = 'top-right' }) => {
-  const colorClasses = {
-    blue: 'from-blue-500 to-blue-600',
-    green: 'from-green-500 to-green-600',
-    purple: 'from-purple-500 to-purple-600',
-    orange: 'from-orange-500 to-orange-600',
-    indigo: 'from-indigo-500 to-indigo-600',
-  };
+  const gradientClass = getGradientClass(color);
 
   const sizeClasses = {
     sm: 'w-16 h-16 sm:w-20 sm:h-20',
@@ -28,11 +23,7 @@ const CardDecoration: React.FC<CardDecorationProps> = ({ color, size = 'md', pos
     'bottom-left': '-bottom-2 -left-2 sm:-bottom-4 sm:-left-4 rotate-12',
   };
 
-  return (
-    <div
-      className={`absolute ${positionClasses[position]} ${sizeClasses[size]} bg-gradient-to-br ${colorClasses[color]} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity`}
-    />
-  );
+  return <div className={`absolute ${positionClasses[position]} ${sizeClasses[size]} bg-gradient-to-br ${gradientClass} rounded-2xl opacity-10 group-hover:opacity-20 transition-opacity`} />;
 };
 
 export default CardDecoration;

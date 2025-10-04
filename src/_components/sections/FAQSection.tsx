@@ -2,6 +2,8 @@ import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
 import SchemaScript from '../utils/SchemaScript';
+import FAQCard from '../ui/FAQCard';
+import GridLayout from '../ui/GridLayout';
 
 const FAQSection: React.FC = () => {
   // FAQ schema for SEO
@@ -72,32 +74,21 @@ const FAQSection: React.FC = () => {
             }
             subtitle="Everything you need to know about creating exceptional website experiences that drive real results"
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">How is pricing determined?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Pricing varies by site complexity and specific requirements. I provide transparent pricing after understanding your unique situation and goals.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly will users notice improvements?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Users feel performance improvements immediately. Business metrics improve within weeks as better experiences lead to higher engagement and conversions.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Are there long-term commitments?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                No long-term commitments required, except for monitoring services which have a 3-month minimum to ensure meaningful results.
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">What makes the biggest impact?</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Focusing on user experience first creates lasting value. I prioritize improvements that visitors actually feel, naturally driving better business outcomes.
-              </p>
-            </div>
-          </div>
+          <GridLayout columns={2} gap="sm">
+            <FAQCard question="How is pricing determined?" answer="Pricing varies by site complexity and specific requirements. I provide transparent pricing after understanding your unique situation and goals." />
+            <FAQCard
+              question="How quickly will users notice improvements?"
+              answer="Users feel performance improvements immediately. Business metrics improve within weeks as better experiences lead to higher engagement and conversions."
+            />
+            <FAQCard
+              question="Are there long-term commitments?"
+              answer="No long-term commitments required, except for monitoring services which have a 3-month minimum to ensure meaningful results."
+            />
+            <FAQCard
+              question="What makes the biggest impact?"
+              answer="Focusing on user experience first creates lasting value. I prioritize improvements that visitors actually feel, naturally driving better business outcomes."
+            />
+          </GridLayout>
         </div>
       </section>
     </>

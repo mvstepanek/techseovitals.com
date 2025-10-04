@@ -3,6 +3,7 @@ import Badge from '../ui/Badge';
 import Button from '../ui/Button';
 import { COMMON_STYLES, MAX_WIDTH_CLASSES } from '../../_data/constants';
 import SchemaScript from '../utils/SchemaScript';
+import TrustSignalsList from '../ui/TrustSignalsList';
 
 interface SectionLayoutProps {
   // Section configuration
@@ -136,15 +137,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
               </Button>
 
               {/* Trust Signals */}
-              {cta.trustSignals && (
-                <div className="flex items-center justify-center gap-4 text-gray-600">
-                  {cta.trustSignals.map((signal, index) => (
-                    <span key={index} className="text-sm">
-                      ✓ {signal}
-                    </span>
-                  ))}
-                </div>
-              )}
+              {cta.trustSignals && <TrustSignalsList signals={cta.trustSignals} />}
             </div>
           )}
 

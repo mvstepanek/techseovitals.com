@@ -1,10 +1,10 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES, getGradientClass, ColorType } from '../../_data/constants';
 
 interface StatItem {
   value: string;
   label: string;
-  color: 'green' | 'blue' | 'purple' | 'red' | 'yellow' | 'orange';
+  color: ColorType | 'red' | 'yellow';
 }
 
 interface StatsGridProps {
@@ -13,22 +13,11 @@ interface StatsGridProps {
 
 const StatsGrid: React.FC<StatsGridProps> = ({ stats }) => {
   const getColorClass = (color: string) => {
-    switch (color) {
-      case 'green':
-        return 'from-green-600 to-emerald-600';
-      case 'blue':
-        return 'from-blue-600 to-indigo-600';
-      case 'purple':
-        return 'from-purple-600 to-pink-600';
-      case 'red':
-        return 'from-red-600 to-rose-600';
-      case 'yellow':
-        return 'from-yellow-600 to-amber-600';
-      case 'orange':
-        return 'from-orange-600 to-red-600';
-      default:
-        return 'from-blue-600 to-indigo-600';
+    // Map red/yellow to existing colors, otherwise use getGradientClass
+    if (color === 'red' || color === 'yellow') {
+      return color === 'red' ? 'from-red-600 to-rose-600' : 'from-yellow-600 to-amber-600';
     }
+    return getGradientClass(color as ColorType).replace('500', '600');
   };
 
   return (

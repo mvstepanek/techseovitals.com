@@ -4,6 +4,7 @@ import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
 import { COMMON_STYLES } from '../../_data/constants';
 import FeaturePoint from '../ui/FeaturePoint';
+import TestimonialQuoteBox from '../ui/TestimonialQuoteBox';
 
 const WhyChooseMeSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -70,31 +71,11 @@ const WhyChooseMeSection: React.FC = () => (
           </div>
         </div>
       </div>
-      <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-200">
-        <div className="flex items-start gap-6">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-            <Icons.chat className="w-8 h-8 text-blue-600" />
-          </div>
-          <div className="flex-1">
-            <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
-              &quot;Under Martin&apos;s leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and
-              aptitude for conveying complex technical concepts have consistently yielded remarkable results.&quot;
-            </p>
-            <div className="flex items-center gap-4">
-              <div>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-                  href="https://www.linkedin.com/in/techseovitals/#recommendations"
-                >
-                  LinkedIn Recommendation
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <TestimonialQuoteBox
+        quote="Under Martin's leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts have consistently yielded remarkable results."
+        source="LinkedIn Recommendation"
+        sourceLink="https://www.linkedin.com/in/techseovitals/#recommendations"
+      />
     </div>
   </section>
 );

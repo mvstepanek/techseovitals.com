@@ -1,6 +1,6 @@
 import React from 'react';
 import TestimonialCard from '../ui/TestimonialCard';
-import { COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES, TESTIMONIALS } from '../../_data/constants';
 import SectionHeader from '../ui/SectionHeader';
 
 const RealResultsSection: React.FC = () => (
@@ -14,21 +14,9 @@ const RealResultsSection: React.FC = () => (
         }
       />
       <div className={COMMON_STYLES.twoColumnGrid}>
-        <TestimonialCard
-          name="Viktor Zeman"
-          position="CEO"
-          company="LiveAgent & Post Affiliate Pro"
-          text="Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites."
-          image="/assets/images/testimonials/viktor-zeman.jpg"
-        />
+        <TestimonialCard name={TESTIMONIALS.VIKTOR_ZEMAN.name} position="CEO" company="LiveAgent & Post Affiliate Pro" text={TESTIMONIALS.VIKTOR_ZEMAN.quote} image={TESTIMONIALS.VIKTOR_ZEMAN.image} />
 
-        <TestimonialCard
-          name="Daniel Pison"
-          position="CMO"
-          company="Quality Unit"
-          text="Thanks in particular to Martin’s skills and expertise, we have long been able to compete with much stronger competitors in terms of website quality. I consider him one of the greatest technical SEO experts on the market."
-          image="/assets/images/testimonials/daniel-pison.jpg"
-        />
+        <TestimonialCard name={TESTIMONIALS.DANIEL_PISON.name} position="CMO" company="Quality Unit" text={TESTIMONIALS.DANIEL_PISON.quote} image={TESTIMONIALS.DANIEL_PISON.image} />
       </div>
       <div className="text-center mt-12">
         <div className="flex items-center justify-center gap-2 text-gray-600">

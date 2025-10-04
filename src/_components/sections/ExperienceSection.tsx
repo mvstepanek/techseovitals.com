@@ -4,6 +4,7 @@ import OptimizedImage from '../common/OptimizedImage';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import { COMMON_STYLES } from '../../_data/constants';
 import FeaturePoint from '../ui/FeaturePoint';
+import TestimonialQuoteBox from '../ui/TestimonialQuoteBox';
 
 interface ExperiencePoint {
   icon: React.ReactNode;
@@ -89,37 +90,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ badge, title, sub
           </div>
         </div>
 
-        {testimonial && (
-          <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-200">
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-              </div>
-              <div className="flex-1">
-                <p className="text-lg text-gray-700 leading-relaxed italic mb-4">&quot;{testimonial.quote}&quot;</p>
-                <div className="flex items-center gap-4">
-                  <div>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-blue-600 hover:text-blue-700 hover:underline transition-colors"
-                      href="https://www.linkedin.com/in/techseovitals/#recommendations"
-                    >
-                      {testimonial.source}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+        {testimonial && <TestimonialQuoteBox quote={testimonial.quote} source={testimonial.source} sourceLink="https://www.linkedin.com/in/techseovitals/#recommendations" />}
       </div>
     </section>
   );

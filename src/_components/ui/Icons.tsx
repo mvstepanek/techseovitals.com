@@ -222,6 +222,13 @@ export const Icons = {
       />
     </svg>
   ),
+
+  // Arrow Trend Up icon
+  arrowTrendUp: (props: IconProps) => (
+    <svg className={props.className || 'w-5 h-5'} fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
+    </svg>
+  ),
 };
 
 export default Icons;

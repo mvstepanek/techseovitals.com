@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
+import TrustSignalsList from './TrustSignalsList';
 
 interface CTAWithTrustSignalsProps {
   text: string;
@@ -14,15 +15,7 @@ const CTAWithTrustSignals: React.FC<CTAWithTrustSignalsProps> = ({ text, href, t
     <Button href={href} variant={variant} size="lg">
       {text}
     </Button>
-    {trustSignals && trustSignals.length > 0 && (
-      <div className="flex items-center justify-center gap-4 text-gray-600">
-        {trustSignals.map((signal, index) => (
-          <span key={index} className="text-sm">
-            ✓ {signal}
-          </span>
-        ))}
-      </div>
-    )}
+    {trustSignals && trustSignals.length > 0 && <TrustSignalsList signals={trustSignals} />}
   </div>
 );
 

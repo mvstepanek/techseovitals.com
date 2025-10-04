@@ -1,5 +1,6 @@
 import React from 'react';
 import CardDecoration from './CardDecoration';
+import Icons from './Icons';
 import { COLOR_SCHEMES } from '../../_data/constants';
 
 interface FeatureCardProps {
@@ -26,9 +27,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description, tag
       <p className="text-gray-600 leading-relaxed mb-6">{description}</p>
       {showTagline && tagline && (
         <div className={`flex items-center gap-2 font-semibold ${colorClasses.text}`}>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17l9.2-9.2M17 17V7H7" />
-          </svg>
+          <Icons.arrowTrendUp className="w-5 h-5" />
           {tagline}
         </div>
       )}

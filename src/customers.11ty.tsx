@@ -9,6 +9,7 @@ import SectionHeader from './_components/ui/SectionHeader';
 import BackgroundDecorations from './_components/ui/BackgroundDecorations';
 import Icons from './_components/ui/Icons';
 import IconContainer from './_components/ui/IconContainer';
+import TrustSignalsList from './_components/ui/TrustSignalsList';
 
 export const data = {
   title: 'Customers',
@@ -220,10 +221,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
           />
           <div className="flex flex-col items-center gap-4 mb-12">
             <Button href="/contact/">Start Your Transformation</Button>
-            <div className="flex items-center justify-center gap-4 text-gray-600">
-              <span className="text-sm">✓ Free consultation</span>
-              <span className="text-sm">✓ No commitment</span>
-            </div>
+            <TrustSignalsList signals={['Free consultation', 'No commitment']} />
           </div>
 
           <div className={`${COMMON_STYLES.threeColumnGrid} max-w-4xl mx-auto`}>

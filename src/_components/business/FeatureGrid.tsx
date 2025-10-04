@@ -1,8 +1,9 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import Button from '../ui/Button';
-import { COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
 import IconContainer from '../ui/IconContainer';
+import TrustSignalsList from '../ui/TrustSignalsList';
 
 interface Feature {
   icon: React.ReactNode;
@@ -30,7 +31,7 @@ interface FeatureGridProps {
 }
 
 const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, features, backgroundColor = 'gray', columns = 4, bottomText }) => {
-  const bgClasses = backgroundColor === 'gray' ? 'bg-gradient-to-br from-gray-50 to-slate-100' : 'bg-white';
+  const bgClass = backgroundColor === 'gray' ? getBackgroundClass('gradientSlate') : getBackgroundClass('white');
   const borderClasses = backgroundColor === 'white' ? 'border-t border-gray-200' : '';
 
   const getGridCols = () => {
@@ -66,7 +67,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
 
   return (
     <div className={borderClasses}>
-      <section className={`py-24 ${bgClasses}`}>
+      <section className={`py-24 ${bgClass}`}>
         <div className={COMMON_STYLES.containerWidth}>
           <div className="text-center mb-16">
             {badge && <Badge icon={badge.icon}>{badge.text}</Badge>}
@@ -78,15 +79,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
             {cta && (
               <div className="flex flex-col items-center gap-4">
                 <Button href={cta.href}>{cta.text}</Button>
-                {cta.trustSignals && (
-                  <div className="flex items-center justify-center gap-4 text-gray-600">
-                    {cta.trustSignals.map((signal, index) => (
-                      <span key={index} className="text-sm">
-                        ✓ {signal}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {cta.trustSignals && <TrustSignalsList signals={cta.trustSignals} />}
               </div>
             )}
           </div>
