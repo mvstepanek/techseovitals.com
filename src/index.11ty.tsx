@@ -10,6 +10,9 @@ import BrutalTruthSection from './_components/sections/BrutalTruthSection';
 import WhyChooseMeSection from './_components/sections/WhyChooseMeSection';
 import WhyAuditSection from './_components/sections/WhyAuditSection';
 import { COMMON_STYLES } from './_data/constants';
+import CTAFeatures from './_components/cta/CTAFeatures';
+import BadgeIcons from './_components/ui/BadgeIcons';
+import Icons from './_components/ui/Icons';
 
 export const data = {
   layout: 'base',
@@ -67,20 +70,12 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
     <>
       <HeroSection
         badge={{
-          icon: (
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                clipRule="evenodd"
-              />
-            </svg>
-          ),
+          icon: BadgeIcons.checkCircle,
           text: '10+ Years of Industry Expertise',
         }}
         title={
           <>
-            Transform Your Website Into a <span className={COMMON_STYLES.gradientText}>Revenue Engine</span>
+            Transform Your Website Into a <span>Revenue Engine</span>
           </>
         }
         description="When your site is fast, accessible, and easy to navigate, visitors stay longer and convert more. I combine technical SEO and performance optimization to create exceptional user experiences."
@@ -91,7 +86,6 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         image={{
           src: '/assets/images/martin-stepanek-6.jpg',
           alt: 'Martin Stepanek - Technical SEO Expert',
-          loading: 'eager',
         }}
         rating={{
           show: true,
@@ -106,16 +100,16 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         }}
       />
 
-      <TrustedCompaniesSection backgroundColor="white" />
+      <TrustedCompaniesSection />
 
       <FeatureGrid
         badge={{
-          icon: <div className="w-2 h-2 bg-white rounded-full" />,
+          icon: BadgeIcons.pulsingDot,
           text: 'Why Technical Excellence Matters',
         }}
         title={
           <>
-            Users First. <span className={COMMON_STYLES.gradientText}>Search Engines Follow</span>
+            Users First. <span>Search Engines Follow</span>
           </>
         }
         subtitle="Great user experience drives everything. Technical SEO and performance optimization work together to boost engagement, and increase conversions. Websites that are technically excellent create better user experiences, leading to better visibility on search engines and AI platforms"
@@ -128,22 +122,14 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         columns={3}
         features={[
           {
-            icon: (
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            ),
+            icon: <Icons.growth className="w-8 h-8 text-white" />,
             title: 'Turn Visitors Into Customers',
             description:
               'When visitors can easily find products and pages load instantly, they convert better. Optimizing technical SEO and web performance create a positive experience that drives revenue.',
             color: 'blue',
           },
           {
-            icon: (
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
-              </svg>
-            ),
+            icon: <Icons.monitor className="w-8 h-8 text-white" />,
             title: 'Remove User Friction',
             description:
               'Broken links, slow pages, and poor structure frustrate visitors. Technical optimization eliminates these barriers, ensuring every user journey is smooth from search to purchase.',
@@ -178,16 +164,12 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
 
       <CTASection
         badge={{
-          icon: (
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          ),
+          icon: BadgeIcons.lightning,
           text: 'Ready to Delight Your Users?',
         }}
         title={
           <>
-            Give Visitors The Experience <span className={COMMON_STYLES.gradientText}>They Deserve</span>
+            Give Visitors The Experience <span>They Deserve</span>
           </>
         }
         description="Your users are struggling with issues you might not even see. Get a comprehensive technical audit that reveals exactly what's frustrating visitors and how to create a seamless experience while naturally improving your visibility in search engines and AI systems."
@@ -196,43 +178,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
           href: '/contact/',
         }}
         trustSignals={['Free consultation', 'No commitment']}
-        features={[
-          {
-            icon: (
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            ),
-            title: '100% Free',
-            description: 'Free website check with no hidden costs',
-          },
-          {
-            icon: (
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  fillRule="evenodd"
-                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            ),
-            title: '30 Minutes',
-            description: 'Quick call to discuss your biggest opportunities',
-          },
-          {
-            icon: (
-              <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ),
-            title: 'Immediate Value',
-            description: 'Actionable insights you can implement today',
-          },
-        ]}
+        features={CTAFeatures({})}
       />
 
       <BlogCardsSection posts={latestPosts} />

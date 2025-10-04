@@ -32,7 +32,7 @@ const CustomersPage: React.FC = () => (
       title={
         <>
           Trusted by{' '}
-          <span className={COMMON_STYLES.gradientText}>
+          <span>
             Growing Businesses
           </span>
         </>
@@ -45,7 +45,6 @@ const CustomersPage: React.FC = () => (
       image={{
         src: '/assets/images/martin-stepanek-6.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
-        loading: 'eager',
       }}
       layout="centered"
       rating={{
@@ -57,7 +56,7 @@ const CustomersPage: React.FC = () => (
       }}
     />
 
-    <TrustedCompaniesSection backgroundColor="white" />
+    <TrustedCompaniesSection />
 
     {/* Case Studies Section */}
     <section id="case-studies" className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -76,7 +75,7 @@ const CustomersPage: React.FC = () => (
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Technical Excellence That{' '}
-            <span className={COMMON_STYLES.gradientText}>
+            <span>
               Serves Users First
             </span>
           </h2>
@@ -223,7 +222,7 @@ const CustomersPage: React.FC = () => (
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
             Real Results from{' '}
-            <span className={COMMON_STYLES.gradientText}>
+            <span>
               Real Customers
             </span>
           </h2>
@@ -285,7 +284,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Ready to Join These{' '}
-            <span className={COMMON_STYLES.gradientText}>
+            <span>
               Success Stories?
             </span>
           </h2>

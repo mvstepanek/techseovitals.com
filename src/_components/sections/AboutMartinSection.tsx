@@ -1,59 +1,39 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
 import ExperienceSection from './ExperienceSection';
+import BadgeIcons from '../ui/BadgeIcons';
+import Icons from '../ui/Icons';
 
 const AboutMartinSection: React.FC = () => (
   <div className="border-t border-gray-200">
     <ExperienceSection
       badge={{
-        icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
+        icon: BadgeIcons.pulsingDot,
         text: 'About Martin',
       }}
       title={
         <>
-          What Makes Me <span className={COMMON_STYLES.gradientText}>Different</span>
+          What Makes Me <span>Different</span>
         </>
       }
       subtitle="I specialize in delivering measurable improvements that drive real business growth. 10+ years of experience optimizing websites for both search engines and exceptional user experiences."
       experiencePoints={[
         {
-          icon: (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42.0 001.946-.806 3.42 3.42.0 014.438.0 3.42 3.42.0 001.946.806 3.42 3.42.0 013.138 3.138 3.42 3.42.0 00.806 1.946 3.42 3.42.0 010 4.438 3.42 3.42.0 00-.806 1.946 3.42 3.42.0 01-3.138 3.138 3.42 3.42.0 00-1.946.806 3.42 3.42.0 01-4.438.0 3.42 3.42.0 00-1.946-.806 3.42 3.42.0 01-3.138-3.138 3.42 3.42.0 00-.806-1.946 3.42 3.42.0 010-4.438 3.42 3.42.0 00.806-1.946 3.42 3.42.0 013.138-3.138z"
-              />
-            </svg>
-          ),
+          icon: <Icons.badge className="w-6 h-6 text-white" />,
           title: 'Professional Web Development Skills',
           description:
             'I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.',
           color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
         },
         {
-          icon: (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-          ),
+          icon: <Icons.lightning className="w-6 h-6 text-white" />,
           title: 'Comprehensive Technical Approach',
           description:
             "I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms.",
           color: 'bg-gradient-to-br from-green-500 to-emerald-600',
         },
         {
-          icon: (
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-              />
-            </svg>
-          ),
+          icon: <Icons.monitor className="w-6 h-6 text-white" />,
           title: 'Measurable Business Results',
           description:
             'From enterprise migrations to startup growth, I have helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges.',
@@ -73,7 +53,6 @@ const AboutMartinSection: React.FC = () => (
         title: '50+ Successful Projects',
         subtitle: 'Trusted by businesses worldwide',
       }}
-      backgroundColor="white"
     />
   </div>
 );

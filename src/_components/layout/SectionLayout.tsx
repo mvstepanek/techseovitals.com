@@ -46,7 +46,7 @@ interface SectionLayoutProps {
 
 const SectionLayout: React.FC<SectionLayoutProps> = ({
   as: Component = 'section',
-  className = '',
+  className,
   background = 'white',
   borders = 'none',
   decorations = false,
@@ -57,7 +57,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
   maxWidth = '3xl',
   cta,
   children,
-  contentClassName = '',
+  contentClassName,
   footer,
   schema,
 }) => {

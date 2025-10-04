@@ -99,8 +99,6 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
                 width={800}
                 height={800}
                 className="w-full rounded-3xl shadow-2xl border-4 border-white"
-                loading="lazy"
-                decoding="async"
                 responsive={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

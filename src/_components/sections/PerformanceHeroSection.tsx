@@ -44,7 +44,7 @@ const PerformanceHeroSection: React.FC = () => (
               </h3>
               <p className="text-gray-600 text-lg">Get the ebook delivered to your inbox</p>
             </div>
-            <ConvertKitForm formType="5-web-performance-metrics" buttonText="Get Your Free Ebook" design="checklist" />
+            <ConvertKitForm formType="5-web-performance-metrics" buttonText="Get Your Free Ebook" />
           </div>
         </div>
       </div>

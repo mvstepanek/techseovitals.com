@@ -134,7 +134,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
               <a
                 className={`inline-block w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-r ${colorClasses.button} px-5 sm:px-6 py-2.5 sm:py-3 text-center text-base sm:text-base font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 ${colorClasses.focus}`}
                 href={ctaHref}
-                target="_self"
               >
                 {ctaText}
               </a>

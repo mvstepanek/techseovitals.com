@@ -8,7 +8,7 @@ interface BadgeProps {
   className?: string;
 }
 
-const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', icon, className = '' }) => {
+const Badge: React.FC<BadgeProps> = ({ children, variant = 'default', icon, className }) => {
   const baseClasses = 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold shadow-lg mb-6';
 
   const variantClasses = {

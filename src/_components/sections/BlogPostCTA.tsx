@@ -1,4 +1,5 @@
 import React from 'react';
+import Icons from '../ui/Icons';
 
 const BlogPostCTA: React.FC = () => (
   <section className="py-24 bg-white relative overflow-hidden border-t border-gray-200">
@@ -10,9 +11,7 @@ const BlogPostCTA: React.FC = () => (
     <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg mb-8">
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+          <Icons.lightning className="w-4 h-4" />
           Ready to Get Started?
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">

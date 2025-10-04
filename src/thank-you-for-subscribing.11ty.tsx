@@ -30,7 +30,7 @@ const ThankYouForSubscribingPage: React.FC = () => (
       title={
         <>
           Thank You for{' '}
-          <span className={COMMON_STYLES.gradientText}>
+          <span>
             Subscribing!
           </span>
         </>

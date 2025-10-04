@@ -16,9 +16,9 @@ const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({
   formType,
   buttonText,
   design = 'checklist',
-  className = '',
-  buttonClassName = '',
-  fieldClassName = '',
+  className,
+  buttonClassName,
+  fieldClassName,
 }) => {
   const config = CONVERTKIT_FORMS[formType];
 
@@ -72,7 +72,6 @@ const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({
             name="fields[first_name]"
             aria-label="First Name"
             placeholder="First Name"
-            type="text"
             className={fieldClassName || defaultFieldClassName}
           />
         )}

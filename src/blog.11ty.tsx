@@ -111,7 +111,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
           }}
           title={
             <>
-              Technical SEO <span className={COMMON_STYLES.gradientText}>Insights</span>
+              Technical SEO <span>Insights</span>
             </>
           }
           description="Learn optimization strategies that create websites users love while driving more conversions and revenue."
@@ -129,14 +129,14 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
         <div className="bg-gradient-to-b from-gray-50 to-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-bold text-gray-900 text-center mb-4">
-              Technical SEO <span className={COMMON_STYLES.gradientText}>Blog</span>
+              Technical SEO <span>Blog</span>
             </h1>
             <p className="text-lg text-gray-600 text-center">Page {pagination.pageNumber + 1}</p>
           </div>
         </div>
       )}
 
-      <BlogCardsSection title="" subtitle="" showBadge={false} posts={processedPosts} />
+      <BlogCardsSection showBadge={false} posts={processedPosts} />
 
       {/* Simple pagination navigation */}
       {pagination && pagination.pages && pagination.pages.length > 1 && (

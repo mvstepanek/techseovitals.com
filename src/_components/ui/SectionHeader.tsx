@@ -8,7 +8,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   subtitle,
   maxWidth = '3xl',
   align = 'center',
-  className = '',
+  className,
 }) => {
   const alignmentClasses = align === 'center' ? 'text-center' : 'text-left';
 

@@ -35,7 +35,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 height="50"
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
                 loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -46,8 +45,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -59,8 +56,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -71,8 +66,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 width={200}
                 height={50}
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
-                loading="lazy"
-                decoding="async"
               />
             </div>
 
@@ -85,7 +78,6 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
                 height="50"
                 className="max-h-8 sm:max-h-12 w-auto grayscale group-hover:grayscale-0 transition-all duration-300 opacity-90 group-hover:opacity-100"
                 loading="lazy"
-                decoding="async"
               />
             </div>
           </div>

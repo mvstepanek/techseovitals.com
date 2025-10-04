@@ -6,8 +6,8 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
-  loading?: 'lazy' | 'eager';
-  decoding?: 'auto' | 'sync' | 'async';
+  loading?: 'lazy';
+  decoding?: 'async';
   fetchpriority?: 'high' | 'low' | 'auto';
   sizes?: string;
   responsive?: boolean;
@@ -21,8 +21,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className,
-  loading = 'lazy',
-  decoding = 'async',
+  loading,
+  decoding,
   fetchpriority,
   sizes,
   responsive = false,

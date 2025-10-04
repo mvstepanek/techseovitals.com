@@ -9,7 +9,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   text,
   linkedinUrl,
   image,
-  className = '',
+  className,
 }) => {
   return (
     <div className={`group relative ${className}`}>
@@ -22,10 +22,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
             {image && (
               <OptimizedImage
                 alt={name}
-                loading="lazy"
                 width={64}
                 height={64}
-                decoding="async"
                 className="rounded-2xl"
                 src={image}
               />

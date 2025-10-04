@@ -21,7 +21,7 @@ const NewsletterPage: React.FC = () => (
       }}
       title={
         <>
-          Get Technical SEO Insights That <span className={COMMON_STYLES.gradientText}>Drive Results</span>
+          Get Technical SEO Insights That <span>Drive Results</span>
         </>
       }
       description="Learn how top businesses create websites that users love and search engines reward. Get practical strategies for technical SEO and performance optimization delivered to your inbox every two weeks."
@@ -86,7 +86,7 @@ const NewsletterPage: React.FC = () => (
           </div>
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              What&apos;s in Each <span className={COMMON_STYLES.gradientText}>Episode</span>
+              What&apos;s in Each <span>Episode</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
               Actionable technical SEO and performance strategies that help you create better user experiences while

@@ -132,7 +132,6 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                     }
                   })()}
                   buttonText={form.submitButton.text}
-                  design="checklist"
                 />
               ) : (
                 <form action={form.action} method={form.method || 'POST'} className="space-y-4">

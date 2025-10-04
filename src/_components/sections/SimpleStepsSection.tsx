@@ -17,7 +17,7 @@ const SimpleStepsSection: React.FC = () => (
           How Does It Work?
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-6 leading-tight">
-          <span className={COMMON_STYLES.gradientText}>
+          <span>
             3 Simple Steps
           </span>
           <br />

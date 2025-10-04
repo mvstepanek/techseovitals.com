@@ -12,7 +12,6 @@ const Footer: React.FC = () => (
           <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label="TechSEO Vitals Home">
             <OptimizedImage
               alt="TechSEO Vitals"
-              loading="lazy"
               width={200}
               height={50}
               className="h-auto w-auto"

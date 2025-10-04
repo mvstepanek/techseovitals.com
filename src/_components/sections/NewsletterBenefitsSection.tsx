@@ -19,7 +19,7 @@ const NewsletterBenefitsSection: React.FC = () => (
         </div>
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
           Why Business Owners{' '}
-          <span className={COMMON_STYLES.gradientText}>
+          <span>
             Trust This Newsletter
           </span>
         </h2>

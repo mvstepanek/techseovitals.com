@@ -78,10 +78,8 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
                 <div className="relative h-48 w-full overflow-hidden">
                   <OptimizedImage
                     alt={post.title}
-                    loading="lazy"
                     width={800}
                     height={400}
-                    decoding="async"
                     className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-full"
                     responsive={true}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -23,7 +23,7 @@ const ContactPage: React.FC = () => (
       }}
       title={
         <>
-          Get In Touch With <span className={COMMON_STYLES.gradientText}>Martin</span>
+          Get In Touch With <span>Martin</span>
         </>
       }
       description="Ready to create experiences users actually love? Let's discuss how technical SEO and performance optimization can serve your visitors first while maximizing visibility in search engines and AI systems."
@@ -34,7 +34,6 @@ const ContactPage: React.FC = () => (
       image={{
         src: '/assets/images/martin-stepanek-3.jpg',
         alt: 'Martin Stepanek - Technical SEO Expert',
-        loading: 'eager',
       }}
       rating={{ show: false }}
       statusBadge={{

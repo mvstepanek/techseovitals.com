@@ -1,7 +1,8 @@
 import React from 'react';
 import PerformanceHeroSection from './_components/sections/PerformanceHeroSection';
-import PerformanceBenefitsSection from './_components/sections/PerformanceBenefitsSection';
+import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';
+import { PERFORMANCE_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: '5 Web Performance Metrics Every Business Owner Should Track',
@@ -15,7 +16,7 @@ const WebPerformanceMetricsPage: React.FC = () => (
   <main className="flex-1">
     <PerformanceHeroSection />
     <div className="border-t border-gray-200">
-      <PerformanceBenefitsSection />
+      <BenefitsSection {...PERFORMANCE_BENEFITS} />
     </div>
 
     <AboutMartinSection />

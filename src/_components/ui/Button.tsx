@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
   size = 'md',
   href,
   children,
-  className = '',
+  className,
   type = 'button',
   target,
   rel,

@@ -1,8 +1,9 @@
 import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
-import MigrationBenefitsSection from './_components/sections/MigrationBenefitsSection';
+import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';
+import { MIGRATION_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: 'Website Migration Checklist',
@@ -21,7 +22,7 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
       }}
       title={
         <>
-          Get Your <span className={COMMON_STYLES.gradientText}>Website Migration</span> Checklist
+          Get Your <span>Website Migration</span> Checklist
         </>
       }
       description="Most website migrations fail due to poor planning, causing traffic drops and lost revenue. This comprehensive checklist reduces migration risks while safeguarding your search visibility and business operations."
@@ -64,7 +65,7 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
       }}
     />
 
-    <MigrationBenefitsSection />
+    <BenefitsSection {...MIGRATION_BENEFITS} />
 
     <AboutMartinSection />
   </main>

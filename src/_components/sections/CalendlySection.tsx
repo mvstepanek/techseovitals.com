@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
+import Icons from '../ui/Icons';
 
 const CalendlySection: React.FC = () => (
   <section id="schedule" className="py-20 bg-white relative overflow-hidden">
@@ -13,13 +14,11 @@ const CalendlySection: React.FC = () => (
         <div
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold ${COMMON_STYLES.gradientBg} text-white shadow-lg mb-6`}
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+          <Icons.lightning className="w-4 h-4" />
           Start Your Transformation
         </div>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-          Book Your <span className={COMMON_STYLES.gradientText}>Free Consultation</span>
+          Book Your <span>Free Consultation</span>
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Choose a time that works best for you to discuss your website&apos;s technical SEO needs and opportunities for

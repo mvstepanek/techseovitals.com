@@ -6,7 +6,7 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   title,
   description,
   colorVariant = 'default',
-  className = '',
+  className,
 }) => {
   const colors = COLOR_VARIANTS[colorVariant];
 

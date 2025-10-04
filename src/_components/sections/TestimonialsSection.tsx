@@ -48,7 +48,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
             {title.includes('Real Clients') ? (
               <>
                 Real Results from{' '}
-                <span className={COMMON_STYLES.gradientText}>
+                <span>
                   Real Clients
                 </span>
               </>
@@ -66,7 +66,6 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
             position="CEO"
             company="LiveAgent & Post Affiliate Pro"
             text={TESTIMONIALS.VIKTOR_ZEMAN.quote}
-            linkedinUrl=""
             image="/assets/images/testimonials/viktor-zeman.jpg"
           />
 
@@ -75,7 +74,6 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
             position="CMO"
             company="Quality Unit"
             text={TESTIMONIALS.DANIEL_PISON.quote}
-            linkedinUrl=""
             image="/assets/images/testimonials/daniel-pison.jpg"
           />
         </div>

@@ -6,10 +6,8 @@ const AuthorBio: React.FC = () => (
     <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
       <OptimizedImage
         alt="Martin Stepanek - Technical SEO Expert"
-        loading="lazy"
         width={800}
         height={800}
-        decoding="async"
         className="w-16 h-16 sm:w-20 sm:h-20 rounded-full flex-shrink-0 border-2 border-white shadow-lg mx-auto sm:mx-0"
         src="/assets/images/martin-stepanek-5.jpg"
       />

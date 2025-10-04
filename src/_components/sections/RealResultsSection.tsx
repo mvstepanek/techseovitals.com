@@ -8,7 +8,7 @@ const RealResultsSection: React.FC = () => (
       <div className="text-center mb-16">
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
           Real Results from{' '}
-          <span className={COMMON_STYLES.gradientText}>
+          <span>
             Real Clients
           </span>
         </h2>

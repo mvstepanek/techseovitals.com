@@ -1,8 +1,9 @@
 import React from 'react';
 import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
-import TechnicalSEOBenefitsSection from './_components/sections/TechnicalSEOBenefitsSection';
+import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';
+import { TECHNICAL_SEO_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: 'Technical SEO Checklist',
@@ -21,7 +22,7 @@ const TechnicalSEOChecklistPage: React.FC = () => (
       }}
       title={
         <>
-          Get Your <span className={COMMON_STYLES.gradientText}>Technical SEO</span> Checklist
+          Get Your <span>Technical SEO</span> Checklist
         </>
       }
       description="Comprehensive technical SEO checklist covering crawlability, indexability, and site optimization. 100+ actionable items to fix technical issues, improve search visibility, and create experiences that keep visitors engaged and converting."
@@ -64,7 +65,7 @@ const TechnicalSEOChecklistPage: React.FC = () => (
       }}
     />
 
-    <TechnicalSEOBenefitsSection />
+    <BenefitsSection {...TECHNICAL_SEO_BENEFITS} />
 
     <AboutMartinSection />
   </main>

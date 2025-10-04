@@ -26,7 +26,6 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
             height={50}
             className="h-auto w-auto"
             src="/assets/techseovitals-logo.svg"
-            loading="eager"
           />
         </a>
 

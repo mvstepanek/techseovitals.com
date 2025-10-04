@@ -8,7 +8,7 @@ interface NewsletterSectionProps {
   className?: string;
 }
 
-const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className = '' }) => {
+const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
   return (
     <section
       className={`relative py-24 ${COMMON_STYLES.gradientBgTriple} overflow-hidden ${className}`}

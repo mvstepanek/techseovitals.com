@@ -28,7 +28,7 @@ interface HeroSectionProps {
   image: {
     src: string;
     alt: string;
-    loading?: 'eager' | 'lazy';
+    loading?: 'lazy';
   };
   rating?: {
     show: boolean;
@@ -156,8 +156,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
                   width={800}
                   height={800}
                   className="w-full rounded-3xl shadow-2xl border-4 border-white"
-                  loading={image.loading || 'eager'}
-                  decoding="async"
+                  loading={image.loading}
                   responsive={true}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />

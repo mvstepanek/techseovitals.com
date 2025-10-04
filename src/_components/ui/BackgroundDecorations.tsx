@@ -6,7 +6,7 @@ interface BackgroundDecorationsProps {
   className?: string;
 }
 
-const BackgroundDecorations: React.FC<BackgroundDecorationsProps> = ({ variant = 'default', className = '' }) => {
+const BackgroundDecorations: React.FC<BackgroundDecorationsProps> = ({ variant = 'default', className }) => {
   const decorations = {
     // Original variants (preserved)
     default: (

@@ -54,9 +54,9 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
   formType,
   buttonText,
   design = 'checklist',
-  className = '',
-  buttonClassName = '',
-  fieldClassName = '',
+  className,
+  buttonClassName,
+  fieldClassName,
 }) => {
   const config = FORM_CONFIG[formType];
 
@@ -274,7 +274,6 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({
                 aria-label="First Name"
                 name="fields[first_name]"
                 placeholder="First name"
-                type="text"
               />
             </div>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
