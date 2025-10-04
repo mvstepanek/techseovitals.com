@@ -6,7 +6,7 @@ import GridLayout from '../ui/GridLayout';
 import Icons from '../ui/Icons';
 
 const ContactMethodsSection: React.FC = () => (
-  <section className="py-20 bg-gray-50">
+  <section className={`${COMMON_STYLES.sectionPadding} bg-gray-50`}>
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader title="Multiple Ways to Connect" subtitle="Reach out directly for project inquiries or connect on social media for insights and updates" />
       <GridLayout columns={4}>

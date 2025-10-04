@@ -11,6 +11,8 @@ interface GradientTextProps {
  * Usage: <h2>Users First. <GradientText>Search Engines Follow</GradientText></h2>
  * Or simply use <span> which will automatically get gradient styling when used in titles/headings
  */
-const GradientText: React.FC<GradientTextProps> = ({ children, className }) => <span className={`${COMMON_STYLES.gradientText} ${className}`}>{children}</span>;
+const GradientText = React.memo<GradientTextProps>(({ children, className }) => <span className={`${COMMON_STYLES.gradientText} ${className}`}>{children}</span>);
+
+GradientText.displayName = 'GradientText';
 
 export default GradientText;

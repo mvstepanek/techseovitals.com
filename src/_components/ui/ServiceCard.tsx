@@ -24,7 +24,7 @@ interface ServiceCardProps {
   commitment?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, price, priceUnit, priceLabel = 'Starting at', description, features, ctaText, ctaHref, color, id, commitment }) => {
+const ServiceCard: React.FC<ServiceCardProps> = React.memo(({ icon, title, price, priceUnit, priceLabel = 'Starting at', description, features, ctaText, ctaHref, color, id, commitment }) => {
   const colorClasses = COLOR_SCHEMES[color] || COLOR_SCHEMES.green;
 
   return (
@@ -61,6 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, price, priceUnit
               <a
                 className={`inline-block w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-r ${colorClasses.button} px-5 sm:px-6 py-2.5 sm:py-3 text-center text-base sm:text-base font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 ${colorClasses.focus}`}
                 href={ctaHref}
+                aria-label={ctaText}
               >
                 {ctaText}
               </a>
@@ -68,8 +69,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, price, priceUnit
 
             <div>
               <ul className="space-y-3 sm:space-y-4 text-gray-700">
-                {features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 sm:gap-4">
+                {features.map((feature) => (
+                  <li key={feature.title} className="flex items-start gap-3 sm:gap-4">
                     <Icons.checkCircle className={`w-5 sm:w-6 h-5 sm:h-6 ${colorClasses.checkmark} mt-0.5 sm:mt-1 flex-shrink-0`} />
                     <div>
                       <h5 className="font-semibold text-base sm:text-base mb-1">{feature.title}</h5>
@@ -86,6 +87,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, price, priceUnit
       </div>
     </div>
   );
-};
+});
+
+ServiceCard.displayName = 'ServiceCard';
 
 export default ServiceCard;

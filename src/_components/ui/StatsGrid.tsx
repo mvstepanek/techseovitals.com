@@ -22,8 +22,8 @@ const StatsGrid: React.FC<StatsGridProps> = ({ stats }) => {
 
   return (
     <div className={`${COMMON_STYLES.threeColumnGrid} mb-16`}>
-      {stats.map((stat, index) => (
-        <div key={index} className="text-center">
+      {stats.map((stat) => (
+        <div key={stat.label} className="text-center">
           <div className={`text-5xl font-bold bg-gradient-to-r ${getColorClass(stat.color)} bg-clip-text text-transparent mb-2`}>{stat.value}</div>
           <div className="text-gray-600 font-semibold">{stat.label}</div>
         </div>

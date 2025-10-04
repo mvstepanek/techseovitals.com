@@ -133,9 +133,9 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <link rel="stylesheet" href="/styles/main.css" />
 
       {/* Schema.org structured data */}
-      {schemas.map((schema, index) => (
+      {schemas.map((schema) => (
         <script
-          key={index}
+          key={schema['@type']}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schema),

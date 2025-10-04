@@ -47,8 +47,8 @@ const ProcessStepCard: React.FC<ProcessStepCardProps> = ({
       {/* Trust Signals */}
       {trustSignals && trustSignals.length > 0 && (
         <div className="flex flex-wrap gap-2 mt-4">
-          {trustSignals.map((signal, index) => (
-            <TrustSignalBadge key={index} text={signal} color={trustSignalColor} />
+          {trustSignals.map((signal) => (
+            <TrustSignalBadge key={signal} text={signal} color={trustSignalColor} />
           ))}
         </div>
       )}

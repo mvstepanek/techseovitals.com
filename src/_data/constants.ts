@@ -141,6 +141,14 @@ export const COMMON_STYLES = {
   featureCardWithBg: 'bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200',
   threeColumnGrid: 'grid grid-cols-1 md:grid-cols-3 gap-8',
   twoColumnGrid: 'grid grid-cols-1 lg:grid-cols-2 gap-8',
+  // New patterns from refactoring
+  heroBackground: 'bg-gradient-to-br from-slate-50 via-white to-blue-50',
+  sectionHeading: 'text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight',
+  cardGlow: 'absolute -inset-4 bg-gradient-to-r from-brand-600/20 to-brand-600/20 rounded-3xl blur-2xl opacity-30',
+  heroImageWithShadow: 'w-full rounded-3xl shadow-2xl border-4 border-white',
+  cardGrid: 'grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8',
+  sectionPaddingLarge: 'py-20 lg:py-28',
+  sectionPaddingSmall: 'py-16',
 };
 
 // Color schemes for components
@@ -212,6 +220,15 @@ export const getColorScheme = (color: ColorType) => {
   return COLOR_SCHEMES[color] || COLOR_SCHEMES.blue;
 };
 
+// Color mapping utility for variant normalization
+export const mapColorVariant = (color: string): ColorType => {
+  const colorMap: Record<string, ColorType> = {
+    red: 'purple',
+    yellow: 'orange',
+  };
+  return (colorMap[color] as ColorType) || (color as ColorType);
+};
+
 // Background color utilities
 export const BACKGROUND_CLASSES = {
   white: 'bg-white',
@@ -241,6 +258,7 @@ export const DESIGN_TOKENS = {
   },
   COLORS: {
     THEME_COLOR: '#7c3aed',
+    TOPBAR_BG: '#7607FF',
     SUCCESS_RGB: 'rgb(34, 197, 94)',
     SVG_GRADIENT_START: '#8b5cf6',
     SVG_GRADIENT_END: '#6366f1',

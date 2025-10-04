@@ -39,7 +39,6 @@ export interface TestimonialCardProps {
   position: string;
   company: string;
   text: string;
-  linkedinUrl?: string;
   image?: string;
   className?: string;
 }

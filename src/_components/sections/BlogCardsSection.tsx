@@ -56,8 +56,8 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
         )}
 
         <div className={COMMON_STYLES.threeColumnGrid}>
-          {posts.map((post, index) => (
-            <article key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
+          {posts.map((post) => (
+            <article key={post.href} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
               <a href={post.href}>
                 <div className="relative h-48 w-full overflow-hidden">
                   <OptimizedImage

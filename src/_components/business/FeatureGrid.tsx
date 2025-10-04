@@ -85,8 +85,8 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
           </div>
 
           <div className={`grid ${getGridCols()} gap-8`}>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+            {features.map((feature) => (
+              <div key={feature.title} className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                 <IconContainer icon={feature.icon} color={getIconColor(feature.color)} size="md" className="mb-6" />
                 <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>

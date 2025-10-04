@@ -27,7 +27,7 @@ const WhyChooseMeSection: React.FC = () => (
         }
         maxWidth="4xl"
       />
-      <div className={COMMON_STYLES.twoColumnGrid} style={{ alignItems: 'center', marginBottom: '4rem' }}>
+      <div className={`${COMMON_STYLES.twoColumnGrid} items-center mb-16`}>
         <div>
           <div className="space-y-8">
             <FeaturePoint

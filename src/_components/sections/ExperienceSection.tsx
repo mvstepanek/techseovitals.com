@@ -54,11 +54,11 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ badge, title, sub
       <div className={`${COMMON_STYLES.containerWidth} relative z-10`}>
         <SectionHeader badge={{ icon: badge.icon, text: badge.text }} title={title} subtitle={subtitle} />
 
-        <div className={COMMON_STYLES.twoColumnGrid} style={{ alignItems: 'center', marginBottom: '4rem' }}>
+        <div className={`${COMMON_STYLES.twoColumnGrid} items-center mb-16`}>
           <div>
             <div className="space-y-8">
-              {experiencePoints.map((point, index) => (
-                <FeaturePoint key={index} icon={point.icon} title={point.title} description={point.description} color={point.color} />
+              {experiencePoints.map((point) => (
+                <FeaturePoint key={point.title} icon={point.icon} title={point.title} description={point.description} color={point.color} />
               ))}
             </div>
           </div>

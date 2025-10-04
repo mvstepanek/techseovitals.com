@@ -7,7 +7,7 @@ interface GridLayoutProps {
   className?: string;
 }
 
-const GridLayout: React.FC<GridLayoutProps> = ({ children, columns, gap = 'md', className = '' }) => {
+const GridLayout = React.memo<GridLayoutProps>(({ children, columns, gap = 'md', className = '' }) => {
   const columnClasses = {
     2: 'grid-cols-1 lg:grid-cols-2',
     3: 'grid-cols-1 md:grid-cols-3',
@@ -21,6 +21,8 @@ const GridLayout: React.FC<GridLayoutProps> = ({ children, columns, gap = 'md', 
   };
 
   return <div className={`grid ${columnClasses[columns]} ${gapClasses[gap]} ${className}`}>{children}</div>;
-};
+});
+
+GridLayout.displayName = 'GridLayout';
 
 export default GridLayout;

@@ -14,6 +14,7 @@ export const TECHNICAL_SEO_BENEFITS = {
   subtitle: 'Stop losing customers to technical issues. Get the optimization roadmap that improves user experience while driving measurable revenue growth.',
   benefits: [
     {
+      id: 'technical-foundation',
       icon: <Icons.clock className="w-8 h-8 text-white" />,
       title: 'Complete Technical Foundation',
       description: 'Ensure search engines can properly crawl, index, and understand your content. Fix the technical barriers that prevent your site from ranking.',
@@ -21,6 +22,7 @@ export const TECHNICAL_SEO_BENEFITS = {
       color: 'blue' as const,
     },
     {
+      id: 'revenue-issues',
       icon: <Icons.lightbulb className="w-8 h-8 text-white" />,
       title: 'Find Revenue-Killing Issues',
       description: "Identify the technical problems costing you customers. Discover what's driving visitors away and how to fix it immediately.",
@@ -28,6 +30,7 @@ export const TECHNICAL_SEO_BENEFITS = {
       color: 'green' as const,
     },
     {
+      id: 'search-visibility',
       icon: <Icons.growth className="w-8 h-8 text-white" />,
       title: 'Search Engine Visibility',
       description:
@@ -52,6 +55,7 @@ export const PERFORMANCE_BENEFITS = {
   subtitle: 'Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions and revenue, plus the target numbers you need to hit.',
   benefits: [
     {
+      id: 'server-optimization',
       icon: <Icons.monitor className="w-8 h-8 text-white" />,
       title: 'Server Response Optimization',
       description: 'Discover the hidden server delays that kill conversions before customers even see your content. Learn the response time targets that keep visitors engaged.',
@@ -59,6 +63,7 @@ export const PERFORMANCE_BENEFITS = {
       color: 'blue' as const,
     },
     {
+      id: 'loading-speed',
       icon: <Icons.growth className="w-8 h-8 text-white" />,
       title: 'Loading Speed Fundamentals',
       description: 'Learn the critical speed measurements that determine if customers stay or leave. Get specific target numbers that separate fast sites from slow ones.',
@@ -66,6 +71,7 @@ export const PERFORMANCE_BENEFITS = {
       color: 'green' as const,
     },
     {
+      id: 'revenue-recovery',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z" />
@@ -94,6 +100,7 @@ export const MIGRATION_BENEFITS = {
   subtitle: 'Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your search rankings, user experience, and business operations.',
   benefits: [
     {
+      id: 'user-experience',
       icon: <Icons.checkCircle className="w-8 h-8 text-white" />,
       title: 'Maintain User Experience',
       description: 'Keep site speed, functionality, and user flows intact. Prevent the performance drops and broken features that drive customers away.',
@@ -101,6 +108,7 @@ export const MIGRATION_BENEFITS = {
       color: 'blue' as const,
     },
     {
+      id: 'search-rankings',
       icon: <Icons.lightbulb className="w-8 h-8 text-white" />,
       title: 'Preserve Search Rankings',
       description: 'Protect your hard-earned search visibility. Proper redirects, URL mapping, and technical setup prevent ranking losses that destroy organic traffic.',
@@ -108,6 +116,7 @@ export const MIGRATION_BENEFITS = {
       color: 'green' as const,
     },
     {
+      id: 'revenue-protection',
       icon: (
         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path

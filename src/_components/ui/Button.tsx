@@ -10,9 +10,10 @@ interface ButtonProps {
   type?: 'button' | 'submit';
   target?: string;
   rel?: string;
+  'aria-label'?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'md', href, children, className, type = 'button', target, rel }) => {
+const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'md', href, children, className, type = 'button', target, rel, 'aria-label': ariaLabel }) => {
   const baseClasses = 'group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold rounded-xl inline-flex items-center justify-center';
 
   const variantClasses = {
@@ -39,14 +40,14 @@ const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'md', href,
 
   if (href) {
     return (
-      <a href={href} className={combinedClasses} target={target} rel={rel}>
+      <a href={href} className={combinedClasses} target={target} rel={rel} aria-label={ariaLabel}>
         {content}
       </a>
     );
   }
 
   return (
-    <button type={type} className={combinedClasses}>
+    <button type={type} className={combinedClasses} aria-label={ariaLabel}>
       {content}
     </button>
   );

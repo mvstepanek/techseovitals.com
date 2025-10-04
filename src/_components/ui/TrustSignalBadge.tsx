@@ -6,7 +6,7 @@ interface TrustSignalBadgeProps {
   color?: 'blue' | 'green' | 'purple' | 'orange';
 }
 
-const TrustSignalBadge: React.FC<TrustSignalBadgeProps> = ({ text, color = 'blue' }) => {
+const TrustSignalBadge = React.memo<TrustSignalBadgeProps>(({ text, color = 'blue' }) => {
   const colorClasses = {
     blue: 'bg-blue-50 text-blue-700',
     green: 'bg-green-50 text-green-700',
@@ -20,6 +20,8 @@ const TrustSignalBadge: React.FC<TrustSignalBadgeProps> = ({ text, color = 'blue
       {text}
     </span>
   );
-};
+});
+
+TrustSignalBadge.displayName = 'TrustSignalBadge';
 
 export default TrustSignalBadge;

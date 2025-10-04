@@ -1,43 +1,7 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES, CONVERTKIT_FORMS } from '../../_data/constants';
 
-// Form configurations mapping
-const FORM_CONFIG = {
-  // Newsletter forms (same ID, different designs)
-  'newsletter-section': {
-    formId: '7514069',
-    uid: '06e277ea9a',
-    action: 'https://app.kit.com/forms/7514069/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription.',
-  },
-  'newsletter-page': {
-    formId: '7514069',
-    uid: '06e277ea9a',
-    action: 'https://app.kit.com/forms/7514069/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription.',
-  },
-  // Checklist forms (unique IDs)
-  'technical-seo-checklist': {
-    formId: '7969566',
-    uid: '1b414d8dc5',
-    action: 'https://app.kit.com/forms/7969566/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
-  },
-  'website-migration-checklist': {
-    formId: '7945460',
-    uid: '4ef42b0b85',
-    action: 'https://app.kit.com/forms/7945460/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.',
-  },
-  '5-web-performance-metrics': {
-    formId: '8513383',
-    uid: 'e7077aaed9',
-    action: 'https://app.kit.com/forms/8513383/subscriptions',
-    successMessage: 'Great! Now check your email to confirm your subscription and I will send you a copy of the ebook.',
-  },
-};
-
-type FormType = keyof typeof FORM_CONFIG;
+type FormType = keyof typeof CONVERTKIT_FORMS;
 
 interface ConvertKitFormProps {
   formType: FormType;
@@ -49,7 +13,7 @@ interface ConvertKitFormProps {
 }
 
 const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName }) => {
-  const config = FORM_CONFIG[formType];
+  const config = CONVERTKIT_FORMS[formType];
 
   // Default styling based on design type
   const defaultFieldClassName =

@@ -8,7 +8,7 @@ interface IconContainerProps {
   className?: string;
 }
 
-const IconContainer: React.FC<IconContainerProps> = ({ icon, color, size = 'md', className }) => {
+const IconContainer = React.memo<IconContainerProps>(({ icon, color, size = 'md', className }) => {
   const gradientClass = color === 'purple' ? 'from-purple-600 to-indigo-600' : getGradientClass(color);
 
   const sizeClasses = {
@@ -22,6 +22,8 @@ const IconContainer: React.FC<IconContainerProps> = ({ icon, color, size = 'md',
       {icon}
     </div>
   );
-};
+});
+
+IconContainer.displayName = 'IconContainer';
 
 export default IconContainer;

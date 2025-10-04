@@ -3,7 +3,7 @@ import OptimizedImage from '../common/OptimizedImage';
 import { TestimonialCardProps } from '../../_types/common';
 import Icons from '../ui/Icons';
 
-const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, position, company, text, linkedinUrl: _linkedinUrl, image, className }) => {
+const TestimonialCard = React.memo<TestimonialCardProps>(({ name, position, company, text, image, className }) => {
   return (
     <div className={`group relative ${className}`}>
       <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -34,6 +34,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ name, position, compa
       </div>
     </div>
   );
-};
+});
+
+TestimonialCard.displayName = 'TestimonialCard';
 
 export default TestimonialCard;

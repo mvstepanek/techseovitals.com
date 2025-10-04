@@ -1,20 +1,10 @@
 import React from 'react';
 import { BUSINESS_CONSTANTS, COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
+import { BadgeProps, CTAProps } from '../../_types/common';
 import Button from '../ui/Button';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import TrustSignalsList from '../ui/TrustSignalsList';
 import CTAFeaturesGrid from '../ui/CTAFeaturesGrid';
-
-interface BadgeProps {
-  icon: React.ReactNode;
-  text: string;
-}
-
-interface CTAProps {
-  text: string;
-  href: string;
-  target?: string;
-}
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -22,8 +12,13 @@ interface FeatureProps {
   description: string;
 }
 
+interface CTASectionBadgeProps {
+  icon: React.ReactNode;
+  text: string;
+}
+
 interface CTASectionProps {
-  badge: BadgeProps;
+  badge: CTASectionBadgeProps;
   title: React.ReactNode;
   description: string;
   primaryCta: CTAProps;

@@ -5,7 +5,7 @@ import BackgroundDecorations from '../ui/BackgroundDecorations';
 import { COMMON_STYLES } from '../../_data/constants';
 
 const CalendlySection: React.FC = () => (
-  <section id="schedule" className="py-20 bg-white relative overflow-hidden">
+  <section id="schedule" className={`${COMMON_STYLES.sectionPadding} bg-white relative overflow-hidden`}>
     <BackgroundDecorations variant="default" />
     <div className={`relative ${COMMON_STYLES.containerWidth}`}>
       <SectionHeader

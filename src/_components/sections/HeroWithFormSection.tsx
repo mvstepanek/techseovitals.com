@@ -67,8 +67,8 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
                   ) : (
                     <div className="flex -space-x-2">
                       {trustSignals.images ? (
-                        trustSignals.images.map((image, index) => (
-                          <OptimizedImage key={index} src={image} alt={`Industry leader ${index + 1}`} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+                        trustSignals.images.map((image) => (
+                          <OptimizedImage key={image} src={image} alt="Industry leader" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
                         ))
                       ) : (
                         <>
@@ -118,8 +118,8 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
               ) : (
                 <form action={form.action} method={form.method || 'POST'} className="space-y-4">
                   <div className="space-y-4">
-                    {form.fields.map((field, index) => (
-                      <div key={index} className="flex-1">
+                    {form.fields.map((field) => (
+                      <div key={field.name} className="flex-1">
                         <input
                           className="w-full px-6 py-4 text-lg rounded-xl border border-gray-300 bg-white placeholder-gray-500 focus:ring-4 focus:ring-primary-500 focus:ring-opacity-20 focus:border-primary-500 transition-all duration-200"
                           placeholder={field.placeholder}

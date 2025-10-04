@@ -13,10 +13,10 @@ const Footer: React.FC = () => (
           <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label="TechSEO Vitals Home">
             <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo-white.svg" aria-hidden="true" />
           </a>
-          <p className="text-sm leading-6 text-gray-300 max-w-md" style={{ fontSize: '0.9375rem' }}>
+          <p className="text-[0.9375rem] leading-6 text-gray-300 max-w-md">
             Experienced technical SEO and web performance consultant with over a decade of web development experience.
           </p>
-          <div className="flex space-x-3 sm:space-x-4" style={{ marginLeft: '-5px' }}>
+          <div className="flex space-x-3 sm:space-x-4 -ml-[5px]">
             <a
               href="https://www.linkedin.com/in/techseovitals/"
               className="text-gray-400 hover:text-gray-300 transition-colors"

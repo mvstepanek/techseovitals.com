@@ -4,6 +4,7 @@ import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
 
 interface Benefit {
+  id: string;
   icon: React.ReactNode;
   title: string;
   description: string;
@@ -28,8 +29,8 @@ const BenefitsSection: React.FC<BenefitsSectionProps> = ({ badge, title, subtitl
       <div className={COMMON_STYLES.containerWidth}>
         <SectionHeader badge={{ icon: badge.icon, text: badge.text }} title={title} subtitle={subtitle} maxWidth="4xl" className="mb-4" />
         <div className={COMMON_STYLES.threeColumnGrid}>
-          {benefits.map((benefit, index) => (
-            <FeatureCard key={index} icon={benefit.icon} title={benefit.title} description={benefit.description} tagline={benefit.tagline} color={benefit.color} />
+          {benefits.map((benefit) => (
+            <FeatureCard key={benefit.id} icon={benefit.icon} title={benefit.title} description={benefit.description} tagline={benefit.tagline} color={benefit.color} />
           ))}
         </div>
       </div>
