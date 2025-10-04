@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
 import ExperienceSection from './ExperienceSection';
 import BadgeIcons from '../ui/BadgeIcons';
 import Icons from '../ui/Icons';
@@ -21,8 +20,7 @@ const AboutMartinSection: React.FC = () => (
         {
           icon: <Icons.badge className="w-6 h-6 text-white" />,
           title: 'Professional Web Development Skills',
-          description:
-            'I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.',
+          description: 'I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.',
           color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
         },
         {

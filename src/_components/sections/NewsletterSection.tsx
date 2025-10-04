@@ -11,9 +11,7 @@ interface NewsletterSectionProps {
 
 const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
   return (
-    <section
-      className={`relative py-24 ${COMMON_STYLES.gradientBgTriple} overflow-hidden ${className}`}
-    >
+    <section className={`relative py-24 ${COMMON_STYLES.gradientBgTriple} overflow-hidden ${className}`}>
       <BackgroundDecorations variant="newsletter" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -35,16 +33,12 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
           </Badge>
 
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Get{' '}
-            <span className="text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text">
-              Biweekly
-            </span>{' '}
-            Technical SEO Insights
+            Get <span className="text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text">Biweekly</span> Technical SEO Insights
           </h2>
 
           <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Get actionable strategies that help business owners and developers create exceptional user experiences,
-            optimize technical SEO and performance, and drive revenue growth.
+            Get actionable strategies that help business owners and developers create exceptional user experiences, optimize technical SEO and performance, and drive revenue
+            growth.
           </p>
 
           <div className="max-w-3xl mx-auto mb-8">
@@ -63,11 +57,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
                 alt="Mark Williams-Cook"
                 className="w-10 h-10 rounded-full border-2 border-white/80 object-cover"
               />
-              <OptimizedImage
-                src="/assets/images/testimonials/aleyda-solis.jpg"
-                alt="Aleyda Solis"
-                className="w-10 h-10 rounded-full border-2 border-white/80 object-cover"
-              />
+              <OptimizedImage src="/assets/images/testimonials/aleyda-solis.jpg" alt="Aleyda Solis" className="w-10 h-10 rounded-full border-2 border-white/80 object-cover" />
             </div>
             <span className="text-sm font-medium text-white/90">Recommended by industry leaders</span>
           </div>

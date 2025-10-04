@@ -2,14 +2,7 @@ import React from 'react';
 import Badge from './Badge';
 import { SectionHeaderProps } from '../../_types/common';
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({
-  badge,
-  title,
-  subtitle,
-  maxWidth = '3xl',
-  align = 'center',
-  className,
-}) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({ badge, title, subtitle, maxWidth = '3xl', align = 'center', className }) => {
   const alignmentClasses = align === 'center' ? 'text-center' : 'text-left';
 
   const maxWidthClasses = {
@@ -32,16 +25,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
       )}
 
       {/* Title */}
-      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-        {title}
-      </h2>
+      <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
 
       {/* Subtitle */}
-      {subtitle && (
-        <p className={`text-lg text-gray-600 ${maxWidthClasses[maxWidth]} ${align === 'center' ? 'mx-auto' : ''} leading-relaxed`}>
-          {subtitle}
-        </p>
-      )}
+      {subtitle && <p className={`text-lg text-gray-600 ${maxWidthClasses[maxWidth]} ${align === 'center' ? 'mx-auto' : ''} leading-relaxed`}>{subtitle}</p>}
     </div>
   );
 };

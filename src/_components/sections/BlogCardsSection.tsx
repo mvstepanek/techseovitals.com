@@ -52,11 +52,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
               <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
                 {title.includes('Technical SEO') ? (
                   <>
-                    Latest{' '}
-                    <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                      Technical SEO
-                    </span>{' '}
-                    Insights
+                    Latest <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Technical SEO</span> Insights
                   </>
                 ) : (
                   title
@@ -70,10 +66,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {posts.map((post, index) => (
-            <article
-              key={index}
-              className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden"
-            >
+            <article key={index} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
               <a href={post.href}>
                 <div className="relative h-48 w-full overflow-hidden">
                   <OptimizedImage
@@ -90,9 +83,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
                   <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
                     <time dateTime={post.dateTime}>{post.date}</time>
                   </div>
-                  <h3 className="text-xl font-display font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-brand-600 transition-colors">
-                    {post.title}
-                  </h3>
+                  <h3 className="text-xl font-display font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-brand-600 transition-colors">{post.title}</h3>
                   <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">{post.excerpt}</p>
                 </div>
               </a>

@@ -12,20 +12,17 @@ const BlogPostCTA: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.lightning className="w-4 h-4" />,
-            text: 'Ready to Get Started?'
+            text: 'Ready to Get Started?',
           }}
-          title={<>Let&apos;s Transform Your Website Into a{' '}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              Revenue Engine
-            </span></>}
+          title={
+            <>
+              Let&apos;s Transform Your Website Into a <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Revenue Engine</span>
+            </>
+          }
           subtitle="Don't let technical issues hold your business back. Get expert technical SEO guidance and turn your website into your most powerful sales tool."
           className="mb-12"
         />
-        <CTAWithTrustSignals
-          text="Get Free Website Check"
-          href="/contact/"
-          trustSignals={['Free consultation', 'No commitment']}
-        />
+        <CTAWithTrustSignals text="Get Free Website Check" href="/contact/" trustSignals={['Free consultation', 'No commitment']} />
       </div>
     </div>
   </section>

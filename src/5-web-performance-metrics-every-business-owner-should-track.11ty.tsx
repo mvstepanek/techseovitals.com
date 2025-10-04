@@ -6,8 +6,7 @@ import { PERFORMANCE_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: '5 Web Performance Metrics Every Business Owner Should Track',
-  description:
-    'Learn the 5 web performance metrics that drive conversions. Track user experience indicators that boost customer satisfaction and search rankings.',
+  description: 'Learn the 5 web performance metrics that drive conversions. Track user experience indicators that boost customer satisfaction and search rankings.',
   permalink: '/5-web-performance-metrics-every-business-owner-should-track/',
   layout: 'base',
 };

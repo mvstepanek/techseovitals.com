@@ -83,10 +83,10 @@ You agree to:
 
 - The TechSEO Vitals Newsletter is provided at no charge.
 - We reserve the right to:
-    - Modify Newsletter frequency
-    - Alter Newsletter content and format
-    - Discontinue the Newsletter service
-    - Convert the Newsletter to a paid service with advance notice
+  - Modify Newsletter frequency
+  - Alter Newsletter content and format
+  - Discontinue the Newsletter service
+  - Convert the Newsletter to a paid service with advance notice
 
 ### **3.2 Late Payments**
 
@@ -137,10 +137,10 @@ We may anonymously use and share data from Google Search Console and other platf
 - Educational content and training materials
 - Marketing materials and promotional content
 - Analysis and processing using artificial intelligence (“AI”) and large language models (“LLM”) for:
-    - Conducting research and data analysis
-    - Identifying industry trends and patterns
-    - Improving service delivery and methodologies
-    - Creating aggregated industry reports
+  - Conducting research and data analysis
+  - Identifying industry trends and patterns
+  - Improving service delivery and methodologies
+  - Creating aggregated industry reports
 - Any other professional purposes
 
 **Brand Usage:**
@@ -168,14 +168,14 @@ We commit to:
 - We provide recommendations based on best practices and professional judgment but cannot guarantee specific results
 - You acknowledge that search engine success requires ongoing effort, proper implementation, and adaptation to changing circumstances beyond our control
 - We are not liable for:
-    - Changes in search engine rankings
-    - Loss of current search engine positions
-    - Changes in organic traffic levels
-    - Impact of search engine algorithm updates
-    - Business losses including lost profits or revenue
-    - Implementation outcomes
-    - Results of website migrations
-    - Impact of technical changes on search performance
+  - Changes in search engine rankings
+  - Loss of current search engine positions
+  - Changes in organic traffic levels
+  - Impact of search engine algorithm updates
+  - Business losses including lost profits or revenue
+  - Implementation outcomes
+  - Results of website migrations
+  - Impact of technical changes on search performance
 
 ## **7. Data Protection and Privacy**
 
@@ -264,6 +264,6 @@ Slovakia
 
 Email: martin@techseovitals.com
 
-***Last updated: September 23, 2025***
+**_Last updated: September 23, 2025_**
 
 **By engaging our services or using our Website, You acknowledge that You have read these terms, understand them, and agree to be bound by them. You further acknowledge that these terms represent the complete and exclusive statement of the agreement between us regarding our services.**

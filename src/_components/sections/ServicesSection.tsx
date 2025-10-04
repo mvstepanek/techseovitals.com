@@ -13,12 +13,7 @@ interface ServicesSectionProps {
   colorScheme?: 'variant1' | 'variant2';
 }
 
-const ServicesSection: React.FC<ServicesSectionProps> = ({
-  title,
-  badge,
-  subtitle,
-  colorScheme = 'variant1'
-}) => (
+const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle, colorScheme = 'variant1' }) => (
   <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12 sm:mb-16 lg:mb-20">
@@ -28,10 +23,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
           {title || (
             <>
-              Technical SEO{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Services
-              </span>
+              Technical SEO <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Services</span>
             </>
           )}
         </h2>

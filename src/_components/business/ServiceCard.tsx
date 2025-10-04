@@ -24,20 +24,7 @@ interface ServiceCardProps {
   commitment?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({
-  icon,
-  title,
-  price,
-  priceUnit,
-  priceLabel = 'Starting at',
-  description,
-  features,
-  ctaText,
-  ctaHref,
-  color,
-  id,
-  commitment,
-}) => {
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, price, priceUnit, priceLabel = 'Starting at', description, features, ctaText, ctaHref, color, id, commitment }) => {
   const colorClasses = COLOR_SCHEMES[color] || COLOR_SCHEMES.green;
 
   return (
@@ -69,9 +56,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 </div>
               </div>
 
-              <p className="text-base sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-5 sm:mb-6">
-                {description}
-              </p>
+              <p className="text-base sm:text-base lg:text-lg text-gray-600 leading-relaxed mb-5 sm:mb-6">{description}</p>
 
               <a
                 className={`inline-block w-full sm:w-auto group relative overflow-hidden rounded-xl bg-gradient-to-r ${colorClasses.button} px-5 sm:px-6 py-2.5 sm:py-3 text-center text-base sm:text-base font-bold text-white shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 ${colorClasses.focus}`}

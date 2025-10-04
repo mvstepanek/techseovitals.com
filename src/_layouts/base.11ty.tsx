@@ -35,8 +35,7 @@ const getHeroImage = (permalink: string): string | null => {
 export default function BaseLayout(data: EleventyData): JSX.Element {
   const title = data.title ? `${data.title}` : 'TechSEO Vitals - Technical SEO & Web Performance Consulting';
   const description =
-    data.description ||
-    "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
+    data.description || "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
   const canonicalUrl = `${SITE_CONFIG.DOMAIN}${data.permalink || '/'}`;
   const ogImage = data.ogImage || `${SITE_CONFIG.DOMAIN}/assets/og.png`;
   const heroImage = getHeroImage(data.permalink || '/');
@@ -70,7 +69,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <link rel="preload" href="/assets/fonts/opensans-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/fonts/opensans-600.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/assets/fonts/opensans-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
+        {heroImage && <link rel="preload" as="image" href={heroImage} fetchPriority="high" />}
 
         {/* Open Graph */}
         <meta property="og:title" content={title} />
@@ -101,7 +100,6 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-270x270.png" />
         <meta name="theme-color" content="#7c3aed" />
 
-
         {/* Speculation Rules for prefetching */}
         <script
           type="speculationrules"
@@ -109,32 +107,31 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
             __html: JSON.stringify({
               prefetch: [
                 {
-                  where: { href_matches: "/technical-seo-services/" },
-                  eagerness: "moderate"
+                  where: { href_matches: '/technical-seo-services/' },
+                  eagerness: 'moderate',
                 },
                 {
-                  where: { href_matches: "/contact/" },
-                  eagerness: "moderate"
+                  where: { href_matches: '/contact/' },
+                  eagerness: 'moderate',
                 },
                 {
-                  where: { href_matches: "/newsletter/" },
-                  eagerness: "moderate"
+                  where: { href_matches: '/newsletter/' },
+                  eagerness: 'moderate',
                 },
                 {
-                  where: { href_matches: "/blog/" },
-                  eagerness: "moderate"
-                }
+                  where: { href_matches: '/blog/' },
+                  eagerness: 'moderate',
+                },
               ],
               prerender: [
                 {
-                  where: { href_matches: "/contact/" },
-                  eagerness: "conservative"
-                }
-              ]
-            })
+                  where: { href_matches: '/contact/' },
+                  eagerness: 'conservative',
+                },
+              ],
+            }),
           }}
         />
-
 
         {/* Inline font declarations for optimal loading */}
         <style
@@ -221,9 +218,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <CookieConsentBar />
 
         {/* Calendly script for contact page */}
-        {data.permalink === '/contact/' && (
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />
-        )}
+        {data.permalink === '/contact/' && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
 
         {/* Optimized JavaScript - deferred loading */}
         <script

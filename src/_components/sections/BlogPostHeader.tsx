@@ -24,12 +24,8 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
             </time>
           </div>
         )}
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 mb-6 sm:mb-8 leading-tight">
-          {title}
-        </h1>
-        {description && (
-          <p className="text-lg sm:text-lg text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>
-        )}
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 mb-6 sm:mb-8 leading-tight">{title}</h1>
+        {description && <p className="text-lg sm:text-lg text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>}
       </div>
       <div className="relative">
         <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-3xl blur-2xl opacity-30" />

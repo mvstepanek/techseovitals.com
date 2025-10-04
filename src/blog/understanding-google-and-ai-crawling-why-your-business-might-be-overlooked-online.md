@@ -70,7 +70,7 @@ So if your website doesn’t appear in the top positions of Google or Bing resul
 
 I frequently encounter websites that block indexing in their robots.txt file. This issue is especially common for sites that have been recently migrated. However, many businesses take 2-3 months to identify the problem and understand why their revenue is decreasing.
 
-Another common mistake is adding noindex tags to an entire website. This frequently happens with WordPress sites where there’s a specific checkbox labeled *“Discourage search engines from indexing this site”* in the Reading settings.
+Another common mistake is adding noindex tags to an entire website. This frequently happens with WordPress sites where there’s a specific checkbox labeled _“Discourage search engines from indexing this site”_ in the Reading settings.
 
 Moving to more advanced issues, being overlooked can also result from incorrectly configured canonical tags, which can function like noindex when set up improperly. [**Canonical tags**](https://ahrefs.com/blog/canonical-tags/) help prevent duplicate content by designating one authoritative URL when you have multiple nearly identical pages. We use this technique to avoid duplication, which is a frequent reason sites get overlooked.
 

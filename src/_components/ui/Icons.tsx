@@ -68,35 +68,21 @@ export const Icons = {
   // Migration/Transfer icon
   transfer: (props: IconProps) => (
     <svg className={props.className || 'w-6 h-6'} fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
     </svg>
   ),
 
   // Email/Newsletter icon
   email: (props: IconProps) => (
     <svg className={props.className || 'w-6 h-6'} fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M3 8l7.89 4.26a2 2 0 002.22.0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5A2 2 0 003 7v10a2 2 0 002 2z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22.0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5A2 2 0 003 7v10a2 2 0 002 2z" />
     </svg>
   ),
 
   // Clock/Time icon
   clock: (props: IconProps) => (
     <svg className={props.className || 'w-6 h-6'} fill="currentColor" viewBox="0 0 20 20" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-        clipRule="evenodd"
-      />
+      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
     </svg>
   ),
 
@@ -146,12 +132,7 @@ export const Icons = {
   // User/Person icon
   user: (props: IconProps) => (
     <svg className={props.className || 'w-6 h-6'} fill="none" stroke="currentColor" viewBox="0 0 24 24" {...props}>
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M16 7A4 4 0 118 7a4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7A4 4 0 118 7a4 4 0 018 0zm-4 7a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
     </svg>
   ),
 
@@ -168,9 +149,7 @@ export const Icons = {
   ),
 
   // Pulse/Loading animation dot
-  pulsingDot: (props: IconProps) => (
-    <div className={props.className || 'w-2 h-2 bg-white rounded-full animate-pulse'} />
-  ),
+  pulsingDot: (props: IconProps) => <div className={props.className || 'w-2 h-2 bg-white rounded-full animate-pulse'} />,
 
   // Heart icon
   heart: (props: IconProps) => (

@@ -17,10 +17,7 @@ const TopBar: React.FC = () => (
             Website Migration Checklist
           </a>
           <span className="text-purple-200">•</span>
-          <a
-            className="hover:underline text-xs sm:text-sm px-1 whitespace-nowrap"
-            href="/5-web-performance-metrics-every-business-owner-should-track/"
-          >
+          <a className="hover:underline text-xs sm:text-sm px-1 whitespace-nowrap" href="/5-web-performance-metrics-every-business-owner-should-track/">
             5 Web Performance Metrics For Business Owners
           </a>
         </div>

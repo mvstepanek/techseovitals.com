@@ -19,7 +19,7 @@ From a technical perspective, everything starts with the correct URL structure. 
 - **Subdomains with gTLD** such as es.example.com
 - **Subdirectories with gTLD** such as example.com/es/
 
-Each approach has significant pros and cons. After many years of experience as a web developer and technical consultant, I personally prefer **country-specific domains** because they make many technical processes smoother. Although it might cost more to purchase new domains that might not always be available, the benefits definitely outweigh the cost.  The biggest advantage is the ability to run each language version on separate servers, which improves performance and management flexibility.
+Each approach has significant pros and cons. After many years of experience as a web developer and technical consultant, I personally prefer **country-specific domains** because they make many technical processes smoother. Although it might cost more to purchase new domains that might not always be available, the benefits definitely outweigh the cost. The biggest advantage is the ability to run each language version on separate servers, which improves performance and management flexibility.
 
 You can find a comprehensive breakdown of pros and cons of the URL structures in [Google’s documentation](https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites#locale-specific-urls).
 

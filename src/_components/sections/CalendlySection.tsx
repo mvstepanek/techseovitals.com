@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
@@ -11,9 +10,13 @@ const CalendlySection: React.FC = () => (
       <SectionHeader
         badge={{
           icon: <Icons.lightning className="w-4 h-4" />,
-          text: 'Start Your Transformation'
+          text: 'Start Your Transformation',
         }}
-        title={<>Book Your <span>Free Consultation</span></>}
+        title={
+          <>
+            Book Your <span>Free Consultation</span>
+          </>
+        }
         subtitle="Choose a time that works best for you to discuss your website's technical SEO needs and opportunities for growth."
       />
 

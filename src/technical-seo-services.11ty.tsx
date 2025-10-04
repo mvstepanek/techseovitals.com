@@ -5,14 +5,13 @@ import TestimonialsSection from './_components/sections/TestimonialsSection';
 import ServicesSection from './_components/sections/ServicesSection';
 import WhatMakesMeDifferentSection from './_components/sections/WhatMakesMeDifferentSection';
 import CTASection from './_components/sections/CTASection';
-import { BUSINESS_CONSTANTS, COMMON_STYLES } from './_data/constants';
+import { BUSINESS_CONSTANTS } from './_data/constants';
 import CTAFeatures from './_components/cta/CTAFeatures';
 import BadgeIcons from './_components/ui/BadgeIcons';
 
 export const data = {
   title: 'Technical SEO Services',
-  description:
-    'Professional technical SEO services that boost rankings and revenue. Get expert audits, migrations, and optimization strategies for better conversions.',
+  description: 'Professional technical SEO services that boost rankings and revenue. Get expert audits, migrations, and optimization strategies for better conversions.',
   permalink: '/technical-seo-services/',
   layout: 'base',
 };

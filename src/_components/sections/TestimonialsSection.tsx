@@ -1,8 +1,7 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import TestimonialCard from '../ui/TestimonialCard';
-import SectionHeader from '../ui/SectionHeader';
-import { COMMON_STYLES, TESTIMONIALS } from '../../_data/constants';
+import { TESTIMONIALS } from '../../_data/constants';
 import Icons from '../ui/Icons';
 
 interface TestimonialsProps {
@@ -28,19 +27,12 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
     <section className={`${backgroundColor} py-24`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          {showBadge && (
-            <Badge icon={<Icons.heart className="w-4 h-4" />}>
-              {badgeText}
-            </Badge>
-          )}
+          {showBadge && <Badge icon={<Icons.heart className="w-4 h-4" />}>{badgeText}</Badge>}
 
           <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
             {title.includes('Real Clients') ? (
               <>
-                Real Results from{' '}
-                <span>
-                  Real Clients
-                </span>
+                Real Results from <span>Real Clients</span>
               </>
             ) : (
               title

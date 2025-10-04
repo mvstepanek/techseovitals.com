@@ -9,7 +9,6 @@ import FeatureGrid from './_components/business/FeatureGrid';
 import BrutalTruthSection from './_components/sections/BrutalTruthSection';
 import WhyChooseMeSection from './_components/sections/WhyChooseMeSection';
 import WhyAuditSection from './_components/sections/WhyAuditSection';
-import { COMMON_STYLES } from './_data/constants';
 import CTAFeatures from './_components/cta/CTAFeatures';
 import BadgeIcons from './_components/ui/BadgeIcons';
 import Icons from './_components/ui/Icons';
@@ -17,8 +16,7 @@ import Icons from './_components/ui/Icons';
 export const data = {
   layout: 'base',
   title: 'TechSEO Vitals With Martin Stepanek',
-  description:
-    "Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.",
+  description: 'Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.',
 };
 
 interface EleventyData {
@@ -38,10 +36,8 @@ interface EleventyData {
 
 const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
   // Get latest 3 blog posts (sorted by date, newest first)
-  const sortedPosts = [...collections.blog].sort(
-    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-  );
-  const latestPosts = sortedPosts.slice(0, 3).map(post => {
+  const sortedPosts = [...collections.blog].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+  const latestPosts = sortedPosts.slice(0, 3).map((post) => {
     const permalink =
       post.data.permalink ||
       `/blog/${post.data.title
@@ -50,7 +46,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         .replace(/^-|-$/g, '')}/`;
     const fallbackImage = `/assets/images/blog/${permalink
       .split('/')
-      .filter(p => p)
+      .filter((p) => p)
       .pop()}.jpg`;
     return {
       title: post.data.title,
@@ -188,6 +184,6 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
   );
 };
 
-export default function (data: EleventyData) {
+export default function IndexTemplate(data: EleventyData) {
   return <HomePage collections={data.collections} />;
 }

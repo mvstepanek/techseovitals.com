@@ -63,13 +63,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <BackgroundDecorations variant="centered" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}
-        >
+        <div className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}>
           <div className={layout === 'centered' ? 'max-w-6xl mx-auto text-center' : 'max-w-4xl text-center sm:text-left'}>
             <Badge icon={badge.icon}>{badge.text}</Badge>
 
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-gray-900 leading-tight mt-4 sm:mt-6 ${layout === 'centered' ? 'text-center' : 'text-center sm:text-left'}`}>
+            <h1
+              className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-gray-900 leading-tight mt-4 sm:mt-6 ${layout === 'centered' ? 'text-center' : 'text-center sm:text-left'}`}
+            >
               {title}
             </h1>
 
@@ -81,9 +81,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             {primaryCta && (
               <div className={`mt-8 sm:mt-10 ${layout === 'centered' ? 'text-center' : ''}`}>
-                <div
-                  className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : 'justify-center sm:justify-start items-center'}`}
-                >
+                <div className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : 'justify-center sm:justify-start items-center'}`}>
                   <Button href={primaryCta.href} target={primaryCta.target}>
                     {primaryCta.text}
                   </Button>

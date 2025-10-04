@@ -4,9 +4,7 @@ export const data = {
 };
 
 export default function Sitemap(data) {
-  const url = process.env.NODE_ENV === 'development'
-    ? 'https://staging.techseovitals.com'
-    : 'https://www.techseovitals.com';
+  const url = process.env.NODE_ENV === 'development' ? 'https://staging.techseovitals.com' : 'https://www.techseovitals.com';
   const now = new Date().toISOString();
 
   // Get all pages from collections (automatically includes all pages)
@@ -39,16 +37,18 @@ export default function Sitemap(data) {
 
   // Process all pages dynamically
   const pages = allPages
-    .filter(page => {
+    .filter((page) => {
       // Exclude feed files, assets, and 404 page
-      return !page.url.includes('.xml') &&
-             !page.url.includes('.json') &&
-             !page.url.includes('.css') &&
-             !page.url.includes('.js') &&
-             !page.url.includes('/404.html') &&
-             page.url !== false; // Exclude pages with permalink: false
+      return (
+        !page.url.includes('.xml') &&
+        !page.url.includes('.json') &&
+        !page.url.includes('.css') &&
+        !page.url.includes('.js') &&
+        !page.url.includes('/404.html') &&
+        page.url !== false
+      ); // Exclude pages with permalink: false
     })
-    .map(page => {
+    .map((page) => {
       const { priority, changefreq } = getPriorityAndFreq(page.url);
       return {
         url: page.url,
@@ -68,7 +68,7 @@ export default function Sitemap(data) {
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 ${pages
   .map(
-    page => `  <url>
+    (page) => `  <url>
     <loc>${url}${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>

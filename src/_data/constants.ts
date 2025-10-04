@@ -120,8 +120,7 @@ export const COMMON_STYLES = {
   cardShadow: 'shadow-xl hover:shadow-2xl transition-all duration-300',
   cardHover: 'hover:shadow-lg transition-all duration-300',
   blurredBlob: 'absolute bg-gradient-to-r from-purple-200 to-indigo-200 rounded-full blur-3xl opacity-50',
-  badge:
-    'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg',
+  badge: 'inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg',
   buttonPrimary:
     'group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-8 py-4 text-lg rounded-xl hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl focus:ring-4 focus:ring-purple-500/30',
   heroImage: 'w-full rounded-3xl shadow-2xl border-4 border-white',
@@ -211,9 +210,7 @@ export const SOCIAL_MEDIA = {
 
 // Site configuration
 export const SITE_CONFIG = {
-  DOMAIN: process.env.NODE_ENV === 'development'
-    ? 'https://staging.techseovitals.com'
-    : 'https://www.techseovitals.com',
+  DOMAIN: process.env.NODE_ENV === 'development' ? 'https://staging.techseovitals.com' : 'https://www.techseovitals.com',
   EMAIL: 'martin@techseovitals.com',
   CALENDLY_URL: 'https://calendly.com/techseovitals/free-initial-consultation?primary_color=9333ea',
 };

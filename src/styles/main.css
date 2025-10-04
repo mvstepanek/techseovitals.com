@@ -50,11 +50,11 @@ html {
 }
 
 /* Auto-apply gradient to spans within headings/titles */
-h1 > span:not([class*="text-"]):not([class*="bg-"]),
-h2 > span:not([class*="text-"]):not([class*="bg-"]),
-h3 > span:not([class*="text-"]):not([class*="bg-"]),
-.title > span:not([class*="text-"]):not([class*="bg-"]),
-.heading > span:not([class*="text-"]):not([class*="bg-"]) {
+h1 > span:not([class*='text-']):not([class*='bg-']),
+h2 > span:not([class*='text-']):not([class*='bg-']),
+h3 > span:not([class*='text-']):not([class*='bg-']),
+.title > span:not([class*='text-']):not([class*='bg-']),
+.heading > span:not([class*='text-']):not([class*='bg-']) {
   background-image: linear-gradient(to right, #9333ea, #4f46e5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -111,4 +111,3 @@ h3 > span:not([class*="text-"]):not([class*="bg-"]),
 .bg-grid-slate-100 {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(241 245 249)'%3e%3cpath d='m0 .5h32m-32 32v-32'/%3e%3c/svg%3e");
 }
-

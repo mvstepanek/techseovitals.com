@@ -41,16 +41,7 @@ interface ExperienceSectionProps {
   backgroundColor?: 'gray' | 'white';
 }
 
-const ExperienceSection: React.FC<ExperienceSectionProps> = ({
-  badge,
-  title,
-  subtitle,
-  experiencePoints,
-  image,
-  statsBadge,
-  testimonial,
-  backgroundColor = 'gray',
-}) => {
+const ExperienceSection: React.FC<ExperienceSectionProps> = ({ badge, title, subtitle, experiencePoints, image, statsBadge, testimonial, backgroundColor = 'gray' }) => {
   const bgClasses = backgroundColor === 'gray' ? 'bg-gradient-to-br from-gray-50 to-slate-100' : 'bg-white';
 
   return (
@@ -71,11 +62,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
             <div className="space-y-8">
               {experiencePoints.map((point, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div
-                    className={`w-16 h-16 ${point.color} rounded-2xl flex items-center justify-center flex-shrink-0`}
-                  >
-                    {point.icon}
-                  </div>
+                  <div className={`w-16 h-16 ${point.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>{point.icon}</div>
                   <div>
                     <h3 className="text-xl font-display font-bold text-gray-900 mb-2">{point.title}</h3>
                     <p className="text-gray-600">{point.description}</p>
@@ -100,8 +87,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
               {statsBadge && (
                 <div className="absolute -bottom-3 left-4 right-4 sm:-bottom-6 sm:-left-6 sm:right-auto bg-white rounded-2xl p-4 shadow-xl border border-gray-100 w-fit mx-auto sm:mx-0 sm:max-w-none">
                   <div className="flex items-center gap-3">
-                    {statsBadge.showIcon !== false &&
-                      (statsBadge.icon || <div className="w-4 h-4 bg-green-400 rounded-full" />)}
+                    {statsBadge.showIcon !== false && (statsBadge.icon || <div className="w-4 h-4 bg-green-400 rounded-full" />)}
                     <div>
                       <div className="text-sm font-bold text-gray-900">{statsBadge.title}</div>
                       <div className="text-xs text-gray-500">{statsBadge.subtitle}</div>

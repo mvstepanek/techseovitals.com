@@ -1,10 +1,7 @@
 import React from 'react';
 
 const CookieConsentBar: React.FC = () => (
-  <div
-    id="cookie-consent"
-    className="fixed bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 md:left-6 md:right-6 lg:bottom-6 lg:left-8 lg:right-8 z-50 hidden"
-  >
+  <div id="cookie-consent" className="fixed bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 md:left-6 md:right-6 lg:bottom-6 lg:left-8 lg:right-8 z-50 hidden">
     <div className="max-w-4xl mx-auto">
       <div className="bg-gradient-to-r from-primary-50 to-purple-50 backdrop-blur-lg rounded-xl sm:rounded-2xl shadow-2xl border border-primary-200/60 overflow-hidden ring-1 ring-purple-300/20">
         <div className="px-4 py-4 sm:px-6 sm:py-5 lg:px-8 lg:py-6">

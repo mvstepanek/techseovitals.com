@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';
@@ -7,8 +6,7 @@ import { TECHNICAL_SEO_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: 'Technical SEO Checklist',
-  description:
-    'Complete technical SEO checklist with 100+ actionable tasks. Download the free guide that helps improve website performance and search visibility.',
+  description: 'Complete technical SEO checklist with 100+ actionable tasks. Download the free guide that helps improve website performance and search visibility.',
   permalink: '/technical-seo-checklist/',
   layout: 'base',
 };

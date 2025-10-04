@@ -9,13 +9,7 @@ interface CTAWithTrustSignalsProps {
   className?: string;
 }
 
-const CTAWithTrustSignals: React.FC<CTAWithTrustSignalsProps> = ({
-  text,
-  href,
-  trustSignals = ['Free consultation', 'No commitment'],
-  variant = 'primary',
-  className,
-}) => (
+const CTAWithTrustSignals: React.FC<CTAWithTrustSignalsProps> = ({ text, href, trustSignals = ['Free consultation', 'No commitment'], variant = 'primary', className }) => (
   <div className={`flex flex-col items-center gap-4 mb-16 ${className || ''}`}>
     <Button href={href} variant={variant} size="lg">
       {text}

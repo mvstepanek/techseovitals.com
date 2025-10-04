@@ -1,18 +1,15 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
 
 const ContactMethodsSection: React.FC = () => (
   <section className="py-20 bg-gray-50">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">Multiple Ways to Connect</h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Reach out directly for project inquiries or connect on social media for insights and updates
-        </p>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">Reach out directly for project inquiries or connect on social media for insights and updates</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div className="group bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 text-center">
-          <div className={`w-16 h-16 ${COMMON_STYLES.gradientBgDiagonalBold} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
+          <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
             <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
@@ -36,12 +33,7 @@ const ContactMethodsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-3">LinkedIn</h3>
           <p className="text-gray-600 mb-4">Connect professionally and see client success stories</p>
-          <a
-            href="https://www.linkedin.com/in/techseovitals/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-500 hover:text-primary-700 font-semibold"
-          >
+          <a href="https://www.linkedin.com/in/techseovitals/" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-700 font-semibold">
             /in/techseovitals
           </a>
         </div>
@@ -53,12 +45,7 @@ const ContactMethodsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-3">Bluesky</h3>
           <p className="text-gray-600 mb-4">Quick updates and technical SEO tips</p>
-          <a
-            href="https://bsky.app/profile/techseovitals.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-500 hover:text-primary-700 font-semibold"
-          >
+          <a href="https://bsky.app/profile/techseovitals.com" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-700 font-semibold">
             @techseovitals.com
           </a>
         </div>
@@ -70,12 +57,7 @@ const ContactMethodsSection: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-gray-900 mb-3">YouTube</h3>
           <p className="text-gray-600 mb-4">In-depth tutorials and case studies</p>
-          <a
-            href="https://youtube.com/@techseovitals"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-500 hover:text-primary-700 font-semibold"
-          >
+          <a href="https://youtube.com/@techseovitals" target="_blank" rel="noopener noreferrer" className="text-primary-500 hover:text-primary-700 font-semibold">
             @techseovitals
           </a>
         </div>

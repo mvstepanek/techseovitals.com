@@ -102,9 +102,7 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
         />
       )}
 
-      <Component
-        className={`${COMMON_STYLES.sectionPadding} ${backgroundClasses[background]} ${borderClasses[borders]} relative overflow-hidden ${className}`}
-      >
+      <Component className={`${COMMON_STYLES.sectionPadding} ${backgroundClasses[background]} ${borderClasses[borders]} relative overflow-hidden ${className}`}>
         {/* Background decorations */}
         {decorations && (
           <div className="absolute inset-0">
@@ -133,38 +131,23 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
             <div className={`${alignmentClasses} mb-16`}>
               {/* Badge */}
               {badge && (
-                <Badge
-                  icon={badge.icon}
-                  variant={badge.variant}
-                >
+                <Badge icon={badge.icon} variant={badge.variant}>
                   {badge.text}
                 </Badge>
               )}
 
               {/* Title */}
-              {title && (
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  {title}
-                </h2>
-              )}
+              {title && <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>}
 
               {/* Subtitle */}
-              {subtitle && (
-                <p className={`text-lg text-gray-600 ${maxWidthClasses[maxWidth]} ${headerAlign === 'center' ? 'mx-auto' : ''} leading-relaxed`}>
-                  {subtitle}
-                </p>
-              )}
+              {subtitle && <p className={`text-lg text-gray-600 ${maxWidthClasses[maxWidth]} ${headerAlign === 'center' ? 'mx-auto' : ''} leading-relaxed`}>{subtitle}</p>}
             </div>
           )}
 
           {/* CTA Section */}
           {cta && (
             <div className="flex flex-col items-center gap-4 mb-16">
-              <a
-                className={COMMON_STYLES.buttonPrimary}
-                href={cta.button.href}
-                target={cta.button.target}
-              >
+              <a className={COMMON_STYLES.buttonPrimary} href={cta.button.href} target={cta.button.target}>
                 <span className="relative z-10">{cta.button.text}</span>
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
               </a>
@@ -183,16 +166,10 @@ const SectionLayout: React.FC<SectionLayoutProps> = ({
           )}
 
           {/* Main Content */}
-          <div className={contentClassName}>
-            {children}
-          </div>
+          <div className={contentClassName}>{children}</div>
 
           {/* Footer Content */}
-          {footer && (
-            <div className="mt-16">
-              {footer}
-            </div>
-          )}
+          {footer && <div className="mt-16">{footer}</div>}
         </div>
       </Component>
     </>

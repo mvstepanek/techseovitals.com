@@ -10,8 +10,7 @@ import Icons from './_components/ui/Icons';
 
 export const data = {
   title: 'Customers',
-  description:
-    'Real client results from technical SEO and performance optimization. See how businesses create better user experiences and boost conversions.',
+  description: 'Real client results from technical SEO and performance optimization. See how businesses create better user experiences and boost conversions.',
   permalink: '/customers/',
   layout: 'base',
 };
@@ -25,10 +24,7 @@ const CustomersPage: React.FC = () => (
       }}
       title={
         <>
-          Trusted by{' '}
-          <span>
-            Growing Businesses
-          </span>
+          Trusted by <span>Growing Businesses</span>
         </>
       }
       description="From SaaS to e-commerce, businesses use technical SEO and performance optimization to create experiences that prioritize real users first. Better search and AI visibility naturally follow."
@@ -58,12 +54,13 @@ const CustomersPage: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.document className="w-4 h-4" />,
-            text: 'Featured Case Studies'
+            text: 'Featured Case Studies',
           }}
-          title={<>Technical Excellence That{' '}
-            <span>
-              Serves Users First
-            </span></>}
+          title={
+            <>
+              Technical Excellence That <span>Serves Users First</span>
+            </>
+          }
           subtitle="See how these companies transformed their websites into high-performing platforms that drive measurable business results."
         />
 
@@ -72,16 +69,10 @@ const CustomersPage: React.FC = () => (
           <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
-                <OptimizedImage
-                  src="/assets/images/clients/logo-touchit.png"
-                  alt="TOUCHIT"
-                  className="h-12 w-auto object-contain"
-                />
+                <OptimizedImage src="/assets/images/clients/logo-touchit.png" alt="TOUCHIT" className="h-12 w-auto object-contain" />
               </div>
               <p className="text-purple-600 font-semibold mb-2">Technology News Portal</p>
-              <p className="text-gray-600 mb-6">
-                Complete infrastructure modernization and performance optimization for Slovakia's leading technology news portal.
-              </p>
+              <p className="text-gray-600 mb-6">Complete infrastructure modernization and performance optimization for Slovakia&apos;s leading technology news portal.</p>
               <div className={`space-y-4 ${COMMON_STYLES.gradientBgVeryLight} p-6 rounded-xl border border-purple-100`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
@@ -123,26 +114,15 @@ const CustomersPage: React.FC = () => (
           <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
-                <OptimizedImage
-                  src="/assets/images/clients/logo-expertiseai.svg"
-                  alt="expertise.ai"
-                  className="h-12 w-auto object-contain"
-                />
+                <OptimizedImage src="/assets/images/clients/logo-expertiseai.svg" alt="expertise.ai" className="h-12 w-auto object-contain" />
               </div>
               <p className="text-purple-600 font-semibold mb-2">Demand Conversion AI Platform</p>
-              <p className="text-gray-600 mb-6">
-                Strategic merger migration and comprehensive optimization combining two brands into a unified, high-performance platform.
-              </p>
+              <p className="text-gray-600 mb-6">Strategic merger migration and comprehensive optimization combining two brands into a unified, high-performance platform.</p>
               <div className={`space-y-4 ${COMMON_STYLES.gradientBgVeryLight} p-6 rounded-xl border border-purple-100`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                     </svg>
                   </div>
                   <span className="text-base font-semibold text-gray-900">Complete Two-Brand Merger Migration</span>
@@ -179,17 +159,17 @@ const CustomersPage: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.chat className="w-4 h-4" />,
-            text: 'What Customers Say'
+            text: 'What Customers Say',
           }}
-          title={<>Real Results from{' '}
-            <span>
-              Real Customers
-            </span></>}
+          title={
+            <>
+              Real Results from <span>Real Customers</span>
+            </>
+          }
           subtitle="Direct feedback from clients who've experienced measurable improvements in conversions, revenue, and organic growth."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
-
           <TestimonialCard
             name="Daniel Pison"
             position="CMO"
@@ -207,13 +187,13 @@ I would definitely be happy to work with Martin in the future, I consider him to
             image="/assets/images/testimonials/tomas-buransky.jpg"
           />
 
-        <TestimonialCard
+          <TestimonialCard
             name="Viktor Zeman"
             position="CEO"
             company="LiveAgent & Post Affiliate Pro"
             text="Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites."
             image="/assets/images/testimonials/viktor-zeman.jpg"
-        />
+          />
         </div>
       </div>
     </section>
@@ -226,20 +206,18 @@ I would definitely be happy to work with Martin in the future, I consider him to
           <SectionHeader
             badge={{
               icon: <Icons.checkCircle className="w-4 h-4" />,
-              text: '100% Risk-Free Consultation'
+              text: '100% Risk-Free Consultation',
             }}
-            title={<>Ready to Join These{' '}
-              <span>
-                Success Stories?
-              </span></>}
+            title={
+              <>
+                Ready to Join These <span>Success Stories?</span>
+              </>
+            }
             subtitle="Join these companies and transform your website into one that users love and search engines reward."
             className="mb-12"
           />
           <div className="flex flex-col items-center gap-4 mb-12">
-            <a
-              className={COMMON_STYLES.buttonPrimary}
-              href="/contact/"
-            >
+            <a className={COMMON_STYLES.buttonPrimary} href="/contact/">
               <span className="relative z-10">Start Your Transformation</span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>

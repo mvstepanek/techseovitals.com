@@ -10,14 +10,7 @@ const Footer: React.FC = () => (
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-6 sm:space-y-8 xl:col-span-1">
           <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label="TechSEO Vitals Home">
-            <OptimizedImage
-              alt="TechSEO Vitals"
-              width={200}
-              height={50}
-              className="h-auto w-auto"
-              src="/assets/techseovitals-logo-white.svg"
-              aria-hidden="true"
-            />
+            <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo-white.svg" aria-hidden="true" />
           </a>
           <p className="text-sm leading-6 text-gray-300 max-w-md" style={{ fontSize: '0.9375rem' }}>
             Experienced technical SEO and web performance consultant with over a decade of web development experience.
@@ -67,10 +60,7 @@ const Footer: React.FC = () => (
             <h3 className="text-sm font-bold leading-6 text-white">TechSEO Vitals</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/technical-seo-consultant/"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-consultant/">
                   About
                 </a>
               </li>
@@ -101,26 +91,17 @@ const Footer: React.FC = () => (
             <h3 className="text-sm font-bold leading-6 text-white">Services</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/technical-seo-services/#technical-seo-audit"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#technical-seo-audit">
                   Technical SEO Audit
                 </a>
               </li>
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/technical-seo-services/#technical-seo-monitoring"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#technical-seo-monitoring">
                   Technical SEO Monitoring
                 </a>
               </li>
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/technical-seo-services/#website-migration-plan"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#website-migration-plan">
                   Website Migration Plan
                 </a>
               </li>
@@ -131,26 +112,17 @@ const Footer: React.FC = () => (
             <h3 className="text-sm font-bold leading-6 text-white">Free Resources</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/technical-seo-checklist/"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-checklist/">
                   Technical SEO Checklist
                 </a>
               </li>
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/website-migration-checklist/"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/website-migration-checklist/">
                   Website Migration Checklist
                 </a>
               </li>
               <li>
-                <a
-                  className="text-sm leading-6 text-gray-300 hover:text-white transition-colors"
-                  href="/5-web-performance-metrics-every-business-owner-should-track/"
-                >
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/5-web-performance-metrics-every-business-owner-should-track/">
                   5 Web Performance Metrics Every Business Owner Should Track
                 </a>
               </li>
@@ -161,20 +133,12 @@ const Footer: React.FC = () => (
 
       <div className="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-          <p className="text-xs leading-5 text-gray-400">
-            © 2024 - {new Date().getFullYear()} TechSEO Vitals. All rights reserved.
-          </p>
+          <p className="text-xs leading-5 text-gray-400">© 2024 - {new Date().getFullYear()} TechSEO Vitals. All rights reserved.</p>
           <div className="mt-4 sm:mt-0 flex space-x-6">
-            <a
-              className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors"
-              href="/privacy-policy/"
-            >
+            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href="/privacy-policy/">
               Privacy Policy
             </a>
-            <a
-              className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors"
-              href="/terms-and-conditions/"
-            >
+            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href="/terms-and-conditions/">
               Terms and Conditions
             </a>
           </div>

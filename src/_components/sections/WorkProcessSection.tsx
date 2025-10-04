@@ -8,12 +8,13 @@ const WorkProcessSection: React.FC = () => (
       <SectionHeader
         badge={{
           icon: <Icons.lightning className="w-4 h-4" />,
-          text: 'Simple Process'
+          text: 'Simple Process',
         }}
-        title={<>How I{' '}
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Work With You
-          </span></>}
+        title={
+          <>
+            How I <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Work With You</span>
+          </>
+        }
         subtitle="My proven 3-step process transforms technical barriers into competitive advantages that users love"
       />
       <div className="relative">
@@ -26,8 +27,7 @@ const WorkProcessSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Initial Consultation</h3>
             <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
-              Free consultation to understand your users&apos; needs and identify technical barriers preventing optimal
-              experiences.
+              Free consultation to understand your users&apos; needs and identify technical barriers preventing optimal experiences.
             </p>
           </div>
           <div className="text-center group">
@@ -37,9 +37,7 @@ const WorkProcessSection: React.FC = () => (
               </div>
             </div>
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Preparation and Execution</h3>
-            <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
-              Deep analysis reveals user friction points and creates actionable roadmap for immediate improvements.
-            </p>
+            <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">Deep analysis reveals user friction points and creates actionable roadmap for immediate improvements.</p>
           </div>
           <div className="text-center group">
             <div className="relative mb-8">
@@ -49,8 +47,7 @@ const WorkProcessSection: React.FC = () => (
             </div>
             <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">Ongoing Support and Optimization</h3>
             <p className="text-gray-600 leading-relaxed max-w-xs mx-auto">
-              Present results with prioritized task lists. Provide strategic guidance to maximize ROI while avoiding
-              resource drain. Ongoing consultations available.
+              Present results with prioritized task lists. Provide strategic guidance to maximize ROI while avoiding resource drain. Ongoing consultations available.
             </p>
           </div>
         </div>

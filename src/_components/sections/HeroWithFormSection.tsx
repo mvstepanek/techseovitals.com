@@ -44,13 +44,7 @@ interface HeroWithFormProps {
   };
 }
 
-const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
-  badge,
-  title,
-  description,
-  trustSignals = { show: true, text: 'Trusted by website owners worldwide' },
-  form,
-}) => {
+const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, description, trustSignals = { show: true, text: 'Trusted by website owners worldwide' }, form }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
       <div className="absolute inset-0 bg-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
@@ -61,9 +55,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
           <div className="max-w-2xl">
             <Badge icon={badge.icon}>{badge.text}</Badge>
 
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">
-              {title}
-            </h1>
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">{title}</h1>
 
             <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg">{description}</p>
 
@@ -76,12 +68,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
                     <div className="flex -space-x-2">
                       {trustSignals.images ? (
                         trustSignals.images.map((image, index) => (
-                          <OptimizedImage
-                            key={index}
-                            src={image}
-                            alt={`Industry leader ${index + 1}`}
-                            className="w-12 h-12 rounded-full border-2 border-white object-cover"
-                          />
+                          <OptimizedImage key={index} src={image} alt={`Industry leader ${index + 1}`} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
                         ))
                       ) : (
                         <>
@@ -104,9 +91,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold mb-3">
-                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                    {form.title}
-                  </span>
+                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">{form.title}</span>
                 </h3>
                 <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>

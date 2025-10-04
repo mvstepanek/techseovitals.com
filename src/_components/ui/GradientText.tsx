@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
 
 interface GradientTextProps {
   children: React.ReactNode;
@@ -12,9 +11,7 @@ interface GradientTextProps {
  * Or simply use <span> which will automatically get gradient styling when used in titles/headings
  */
 const GradientText: React.FC<GradientTextProps> = ({ children, className }) => (
-  <span className={`${COMMON_STYLES.gradientText} ${className}`}>
-    {children}
-  </span>
+  <span className={`bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent ${className}`}>{children}</span>
 );
 
 export default GradientText;

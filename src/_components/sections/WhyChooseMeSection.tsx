@@ -10,13 +10,19 @@ const WhyChooseMeSection: React.FC = () => (
       <SectionHeader
         badge={{
           icon: <Icons.user className="w-4 h-4" />,
-          text: 'Why Me?'
+          text: 'Why Me?',
         }}
-        title={<>Technical SEO Expert Who{' '}
-          <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Delivers Real Results
-          </span></>}
-        subtitle={<>I specialize in delivering measurable improvements that drive real business growth.<br/> 10+ years of experience optimizing websites for both search engines and exceptional user experiences.</>}
+        title={
+          <>
+            Technical SEO Expert Who <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Delivers Real Results</span>
+          </>
+        }
+        subtitle={
+          <>
+            I specialize in delivering measurable improvements that drive real business growth.
+            <br /> 10+ years of experience optimizing websites for both search engines and exceptional user experiences.
+          </>
+        }
         maxWidth="4xl"
       />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
@@ -27,8 +33,7 @@ const WhyChooseMeSection: React.FC = () => (
               <div>
                 <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Professional Web Development Skills</h3>
                 <p className="text-gray-600">
-                  I combine development expertise with SEO knowledge. Deep understanding of technical aspects and
-                  architecture enables me to solve complex challenges.
+                  I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.
                 </p>
               </div>
             </div>
@@ -37,8 +42,8 @@ const WhyChooseMeSection: React.FC = () => (
               <div>
                 <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Comprehensive Technical Approach</h3>
                 <p className="text-gray-600">
-                  I specialize in both technical SEO and performance optimization. Every aspect of your site&apos;s
-                  technical foundation works together to maximize visibility across search engines and AI platforms.
+                  I specialize in both technical SEO and performance optimization. Every aspect of your site&apos;s technical foundation works together to maximize visibility
+                  across search engines and AI platforms.
                 </p>
               </div>
             </div>
@@ -47,8 +52,8 @@ const WhyChooseMeSection: React.FC = () => (
               <div>
                 <h3 className="text-xl font-display font-bold text-gray-900 mb-2">Measurable Business Results</h3>
                 <p className="text-gray-600">
-                  From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase
-                  revenue and organic traffic by solving complex technical SEO challenges.
+                  From enterprise migrations to startup growth, I&apos;ve helped businesses significantly increase revenue and organic traffic by solving complex technical SEO
+                  challenges.
                 </p>
               </div>
             </div>
@@ -82,9 +87,8 @@ const WhyChooseMeSection: React.FC = () => (
           </div>
           <div className="flex-1">
             <p className="text-lg text-gray-700 leading-relaxed italic mb-4">
-              &quot;Under Martin&apos;s leadership, our team significantly enhanced the performance of two high-traffic
-              websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts
-              have consistently yielded remarkable results.&quot;
+              &quot;Under Martin&apos;s leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and
+              aptitude for conveying complex technical concepts have consistently yielded remarkable results.&quot;
             </p>
             <div className="flex items-center gap-4">
               <div>

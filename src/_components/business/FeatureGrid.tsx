@@ -27,16 +27,7 @@ interface FeatureGridProps {
   bottomText?: string;
 }
 
-const FeatureGrid: React.FC<FeatureGridProps> = ({
-  badge,
-  title,
-  subtitle,
-  cta,
-  features,
-  backgroundColor = 'gray',
-  columns = 4,
-  bottomText,
-}) => {
+const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, features, backgroundColor = 'gray', columns = 4, bottomText }) => {
   const bgClasses = backgroundColor === 'gray' ? 'bg-gradient-to-br from-gray-50 to-slate-100' : 'bg-white';
   const borderClasses = backgroundColor === 'white' ? 'border-t border-gray-200' : '';
 
@@ -86,10 +77,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
 
             {cta && (
               <div className="flex flex-col items-center gap-4">
-                <a
-                  className={COMMON_STYLES.buttonPrimary}
-                  href={cta.href}
-                >
+                <a className={COMMON_STYLES.buttonPrimary} href={cta.href}>
                   <span className="relative z-10">{cta.text}</span>
                   <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                 </a>
@@ -108,15 +96,8 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({
 
           <div className={`grid ${getGridCols()} gap-8`}>
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
-              >
-                <div
-                  className={`w-16 h-16 ${getColorClasses(feature.color)} rounded-2xl flex items-center justify-center mb-6`}
-                >
-                  {feature.icon}
-                </div>
+              <div key={index} className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <div className={`w-16 h-16 ${getColorClasses(feature.color)} rounded-2xl flex items-center justify-center mb-6`}>{feature.icon}</div>
                 <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>

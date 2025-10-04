@@ -26,13 +26,11 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' 
         features={[
           {
             title: 'Comprehensive Technical Analysis',
-            description:
-              'Complete audit covering technical SEO, performance, and user experience with 50+ checkpoints to identify all issues affecting your site.',
+            description: 'Complete audit covering technical SEO, performance, and user experience with 50+ checkpoints to identify all issues affecting your site.',
           },
           {
             title: 'Prioritized Action Plan',
-            description:
-              'Clear roadmap with fixes ranked by business impact. Specific recommendations your team can implement immediately to drive results.',
+            description: 'Clear roadmap with fixes ranked by business impact. Specific recommendations your team can implement immediately to drive results.',
           },
           {
             title: '90-Minute Strategy Consultation',
@@ -58,8 +56,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' 
           },
           {
             title: 'Monthly Optimization Reports',
-            description:
-              'Monthly performance reports with new optimization opportunities. Stay ahead of algorithm updates and competitor improvements.',
+            description: 'Monthly performance reports with new optimization opportunities. Stay ahead of algorithm updates and competitor improvements.',
           },
           {
             title: 'Priority Support & Consultation',
@@ -85,8 +82,7 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' 
           },
           {
             title: 'Post-Migration Audit & Support',
-            description:
-              'Comprehensive post-migration audit to verify everything transferred correctly. Ongoing optimization to improve performance beyond pre-migration levels.',
+            description: 'Comprehensive post-migration audit to verify everything transferred correctly. Ongoing optimization to improve performance beyond pre-migration levels.',
           },
           {
             title: 'Continuous Support & Monitoring',

@@ -40,7 +40,7 @@ Just from a straightforward ROI calculation, this scenario could deliver a **760
 
 [**Renault’s transformation**](https://web.dev/case-studies/renault) is proof that LCP improvements translate into business gains. The automotive brand analyzed **10 million visits across 33 countries** and discovered strong correlations between LCP performance and conversion rates.
 
-Their technical approach included **server-side rendering**, **aggressive CDN caching**, and **code-splitting** to reduce JavaScript loads. They optimized images using next-generation formats (WebP, AVIF)  and streamlined third-party tracking tags.
+Their technical approach included **server-side rendering**, **aggressive CDN caching**, and **code-splitting** to reduce JavaScript loads. They optimized images using next-generation formats (WebP, AVIF) and streamlined third-party tracking tags.
 
 The results showed significant improvements. Renault quantified that **1 second LCP improvement generated 14 percentage points lower bounce rates and 13% higher conversion rates** without additional advertising investment.
 
@@ -56,7 +56,7 @@ Start by optimizing minimal development resources:
 
 **Optimize Images and Media:** Compress and resize images without visible quality loss. Use modern formats like **WebP or AVIF**, which are 25-40% smaller than traditional formats. Implement responsive images with srcset for mobile users.
 
-**Preload the hero image** using <link rel=”preload” as=”image” href=”hero.webp”> and *never lazy-load* above-the-fold images.
+**Preload the hero image** using <link rel=”preload” as=”image” href=”hero.webp”> and _never lazy-load_ above-the-fold images.
 
 **Optimize Fonts:** Preload key fonts in the <head> section using <link rel=”preload” href=”font.woff2″ as=”font” type=”font/woff2″>. Use font-display: swap to avoid text rendering delays.
 
@@ -82,7 +82,7 @@ Address structural issues that require developer resources:
 
 **Establish real-user monitoring systems:** rather than relying solely on lab data from tools like Google PageSpeed Insights, what really matters is real-user monitoring data through tools like DebugBear or [Google’s CrUX Dashboard](https://developers.google.com/web/tools/chrome-user-experience-report), though the latter only collects Chrome user data.
 
-**Define clear KPIs:** such as “Maintain LCP under 2.5  seconds (ideally under 1.5s) for 75% of users” and configure automated audits in CI/CD pipelines to catch regressions before deployment.
+**Define clear KPIs:** such as “Maintain LCP under 2.5 seconds (ideally under 1.5s) for 75% of users” and configure automated audits in CI/CD pipelines to catch regressions before deployment.
 
 ## **Action Plan: From Analysis to Implementation**
 

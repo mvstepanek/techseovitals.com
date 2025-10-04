@@ -10,18 +10,12 @@ const PerformanceHeroSection: React.FC = () => (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div className="max-w-2xl text-center sm:text-left">
-          <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>
-            Stop Losing Customers to Slow Sites
-          </Badge>
+          <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>Stop Losing Customers to Slow Sites</Badge>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 leading-tight text-left sm:text-left">
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-              5 Performance Metrics
-            </span>{' '}
-            That Actually Drive Business Results
+            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">5 Performance Metrics</span> That Actually Drive Business Results
           </h1>
           <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg text-left sm:text-left">
-            Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what
-            drives conversions.
+            Discover which performance metrics directly impact customer satisfaction and revenue. Learn to track what drives conversions.
           </p>
           <div className="mt-10 flex flex-col gap-4">
             <div className="flex items-center gap-3 text-gray-600 justify-start">
@@ -35,9 +29,7 @@ const PerformanceHeroSection: React.FC = () => (
           <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold mb-3">
-                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Grab Your Free Ebook
-                </span>
+                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Grab Your Free Ebook</span>
               </h3>
               <p className="text-gray-600 text-lg">Get the ebook delivered to your inbox</p>
             </div>

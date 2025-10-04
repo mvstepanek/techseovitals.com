@@ -12,27 +12,14 @@ interface ButtonProps {
   rel?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  variant = 'primary',
-  size = 'md',
-  href,
-  children,
-  className,
-  type = 'button',
-  target,
-  rel,
-}) => {
-  const baseClasses =
-    'group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold rounded-xl inline-flex items-center justify-center';
+const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'md', href, children, className, type = 'button', target, rel }) => {
+  const baseClasses = 'group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold rounded-xl inline-flex items-center justify-center';
 
   const variantClasses = {
-    primary:
-      `${COMMON_STYLES.gradientBg} text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-purple-500/30`,
-    secondary:
-      'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-green-300',
+    primary: `${COMMON_STYLES.gradientBg} text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-purple-500/30`,
+    secondary: 'bg-gradient-to-r from-green-600 to-green-700 text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-green-300',
     outline: 'border-2 border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-500',
-    newsletter:
-      'bg-gradient-to-r from-yellow-200 to-orange-200 text-purple-800 shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-yellow-300/30',
+    newsletter: 'bg-gradient-to-r from-yellow-200 to-orange-200 text-purple-800 shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-yellow-300/30',
   };
 
   const sizeClasses = {

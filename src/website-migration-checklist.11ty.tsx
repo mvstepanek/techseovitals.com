@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutMartinSection from './_components/sections/AboutMartinSection';
@@ -7,8 +6,7 @@ import { MIGRATION_BENEFITS } from './_data/benefits';
 
 export const data = {
   title: 'Website Migration Checklist',
-  description:
-    'Website migration checklist with 45+ essential tasks. Protect your search rankings and user experience during seamless website transitions.',
+  description: 'Website migration checklist with 45+ essential tasks. Protect your search rankings and user experience during seamless website transitions.',
   permalink: '/website-migration-checklist/',
   layout: 'base',
 };

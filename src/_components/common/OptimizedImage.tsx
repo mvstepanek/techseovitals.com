@@ -15,35 +15,13 @@ interface OptimizedImageProps {
 
 const RESPONSIVE_SIZES = [480, 640, 768, 1024];
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  loading,
-  decoding,
-  fetchpriority,
-  sizes,
-  responsive = false,
-}) => {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className, loading, decoding, fetchpriority, sizes, responsive = false }) => {
   const isExternal = src.startsWith('http');
   const isSvg = src.endsWith('.svg');
 
   // For SVG images, return simple img tag without WebP optimization
   if (isSvg) {
-    return (
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        className={className}
-        loading={loading}
-        decoding={decoding}
-        fetchpriority={fetchpriority}
-      />
-    );
+    return <img src={src} alt={alt} width={width} height={height} className={className} loading={loading} decoding={decoding} fetchPriority={fetchpriority} />;
   }
 
   // Generate srcset for responsive images
@@ -55,7 +33,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     const basePath = src.replace(/\.[^/.]+$/, '');
     const extension = format || src.split('.').pop();
 
-    return RESPONSIVE_SIZES.map(size => {
+    return RESPONSIVE_SIZES.map((size) => {
       const suffix = size === 1024 ? '' : `-${size}w`;
       return `${basePath}${suffix}.${extension} ${size}w`;
     }).join(', ');
@@ -74,11 +52,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   return (
     <picture>
       {/* WebP format - good compression, wide support */}
-      <source
-        srcSet={generateSrcSet('webp')}
-        type="image/webp"
-        sizes={sizes}
-      />
+      <source srcSet={generateSrcSet('webp')} type="image/webp" sizes={sizes} />
 
       {/* Fallback - original format */}
       <img
@@ -90,7 +64,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={className}
         loading={loading}
         decoding={decoding}
-        fetchpriority={fetchpriority}
+        fetchPriority={fetchpriority}
         sizes={sizes}
       />
     </picture>

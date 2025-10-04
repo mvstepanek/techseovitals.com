@@ -56,49 +56,48 @@ const FAQSection: React.FC = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge={{
-              icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>,
-              text: 'FAQ'
+              icon: (
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              ),
+              text: 'FAQ',
             }}
-            title={<>Frequently Asked{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                Questions
-              </span></>}
+            title={
+              <>
+                Frequently Asked <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Questions</span>
+              </>
+            }
             subtitle="Everything you need to know about creating exceptional website experiences that drive real results"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How is pricing determined?</h3>
               <p className="text-gray-600 leading-relaxed">
-                Pricing varies by site complexity and specific requirements. I provide transparent pricing after
-                understanding your unique situation and goals.
+                Pricing varies by site complexity and specific requirements. I provide transparent pricing after understanding your unique situation and goals.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-3">How quickly will users notice improvements?</h3>
               <p className="text-gray-600 leading-relaxed">
-                Users feel performance improvements immediately. Business metrics improve within weeks as better
-                experiences lead to higher engagement and conversions.
+                Users feel performance improvements immediately. Business metrics improve within weeks as better experiences lead to higher engagement and conversions.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Are there long-term commitments?</h3>
               <p className="text-gray-600 leading-relaxed">
-                No long-term commitments required, except for monitoring services which have a 3-month minimum to ensure
-                meaningful results.
+                No long-term commitments required, except for monitoring services which have a 3-month minimum to ensure meaningful results.
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-3">What makes the biggest impact?</h3>
               <p className="text-gray-600 leading-relaxed">
-                Focusing on user experience first creates lasting value. I prioritize improvements that visitors
-                actually feel, naturally driving better business outcomes.
+                Focusing on user experience first creates lasting value. I prioritize improvements that visitors actually feel, naturally driving better business outcomes.
               </p>
             </div>
           </div>

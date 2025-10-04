@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from '../../_data/constants';
 import TestimonialCard from '../ui/TestimonialCard';
 
 const RealResultsSection: React.FC = () => (
@@ -7,10 +6,7 @@ const RealResultsSection: React.FC = () => (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-          Real Results from{' '}
-          <span>
-            Real Clients
-          </span>
+          Real Results from <span>Real Clients</span>
         </h2>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

@@ -15,9 +15,8 @@ const AuthorBio: React.FC = () => (
         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Martin Stepanek</h3>
         <p className="text-sm text-gray-500 font-semibold mb-3">Technical SEO and Web Performance Consultant</p>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
-          With 10+ years building and optimizing websites, I&apos;ve learned that technical excellence drives business
-          success. I help companies maximize their website&apos;s potential through strategic technical SEO and
-          performance improvements that create better experiences for users and stronger results for businesses.
+          With 10+ years building and optimizing websites, I&apos;ve learned that technical excellence drives business success. I help companies maximize their website&apos;s
+          potential through strategic technical SEO and performance improvements that create better experiences for users and stronger results for businesses.
         </p>
         <div className="flex justify-center sm:justify-start gap-3 sm:ml-[-4px]">
           <a

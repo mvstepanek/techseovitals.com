@@ -1,5 +1,4 @@
 import React from 'react';
-import { COMMON_STYLES } from './_data/constants';
 import HeroSection from './_components/sections/HeroSection';
 import CalendlySection from './_components/sections/CalendlySection';
 import ContactMethodsSection from './_components/sections/ContactMethodsSection';
@@ -8,8 +7,7 @@ import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
   title: 'Contact',
-  description:
-    'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
+  description: 'Schedule a free consultation with technical SEO expert Martin Stepanek. Get actionable insights to improve your website performance and conversions.',
   permalink: '/contact/',
   layout: 'base',
 };

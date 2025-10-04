@@ -12,14 +12,7 @@ interface ConvertKitFormProps {
   fieldClassName?: string;
 }
 
-const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({
-  formType,
-  buttonText,
-  design = 'checklist',
-  className,
-  buttonClassName,
-  fieldClassName,
-}) => {
+const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName }) => {
   const config = CONVERTKIT_FORMS[formType];
 
   // Default styling based on design type
@@ -34,9 +27,7 @@ const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({
       : `formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl ${COMMON_STYLES.gradientBg} text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full`;
 
   const defaultFormClassName =
-    design === 'newsletter'
-      ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center'
-      : 'space-y-3 sm:space-y-4';
+    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
 
   React.useEffect(() => {
     // Load ConvertKit utility script
@@ -67,14 +58,7 @@ const ConvertKitFormSimple: React.FC<ConvertKitFormProps> = ({
 
         <input name="email_address" aria-label="Email Address" placeholder="Enter your email address" required type="email" className={fieldClassName || defaultFieldClassName} />
 
-        {design === 'checklist' && (
-          <input
-            name="fields[first_name]"
-            aria-label="First Name"
-            placeholder="First Name"
-            className={fieldClassName || defaultFieldClassName}
-          />
-        )}
+        {design === 'checklist' && <input name="fields[first_name]" aria-label="First Name" placeholder="First Name" className={fieldClassName || defaultFieldClassName} />}
 
         <button data-element="submit" className={`${buttonClassName || defaultButtonClassName} AhrefsAnalytics-event-newsletter_signup`} type="submit">
           <span className="relative z-10">{buttonText}</span>

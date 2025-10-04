@@ -11,14 +11,10 @@ const WhatMakesMeDifferentSection: React.FC = () => (
           Why Choose Me
         </Badge>
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-4 sm:mb-6">
-          What Makes Me{' '}
-          <span>
-            Different
-          </span>
+          What Makes Me <span>Different</span>
         </h2>
         <p className="text-lg sm:text-lg text-gray-600 max-w-3xl mx-auto">
-          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable
-          improvements that drive revenue.
+          Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue.
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -34,9 +30,7 @@ const WhatMakesMeDifferentSection: React.FC = () => (
             <Icons.document className="w-8 h-8 text-green-600" />
           </div>
           <h3 className="text-xl font-sans font-bold text-gray-900 mb-3">Clear Action Plans</h3>
-          <p className="text-gray-600 leading-relaxed">
-            Get actionable task lists with step-by-step guidance your team can implement immediately.
-          </p>
+          <p className="text-gray-600 leading-relaxed">Get actionable task lists with step-by-step guidance your team can implement immediately.</p>
         </div>
         <div className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
           <div className={`w-16 h-16 ${COMMON_STYLES.gradientBgVeryLight} rounded-2xl flex items-center justify-center mb-6`}>
