@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface TrustBadgeProps {
+interface TrustSignalBadgeProps {
   text: string;
   color?: 'blue' | 'green' | 'purple' | 'orange';
 }
 
-const TrustBadge: React.FC<TrustBadgeProps> = ({ text, color = 'blue' }) => {
+const TrustSignalBadge: React.FC<TrustSignalBadgeProps> = ({ text, color = 'blue' }) => {
   const colorClasses = {
     blue: 'bg-blue-50 text-blue-700',
     green: 'bg-green-50 text-green-700',
@@ -23,4 +23,4 @@ const TrustBadge: React.FC<TrustBadgeProps> = ({ text, color = 'blue' }) => {
   );
 };
 
-export default TrustBadge;
+export default TrustSignalBadge;

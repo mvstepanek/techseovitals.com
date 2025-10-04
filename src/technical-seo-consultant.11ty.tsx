@@ -6,7 +6,7 @@ import NewsletterSection from './_components/sections/NewsletterSection';
 import ServicesSection from './_components/sections/ServicesSection';
 import TestimonialsSection from './_components/sections/TestimonialsSection';
 import CTASection from './_components/sections/CTASection';
-import CTAFeatures from './_components/cta/CTAFeatures';
+import { DEFAULT_CTA_FEATURES } from './_data/cta-features';
 import BadgeIcons from './_components/ui/BadgeIcons';
 import Icons from './_components/ui/Icons';
 
@@ -137,7 +137,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
         href: '/contact/',
       }}
       trustSignals={['Free consultation', 'No commitment']}
-      features={CTAFeatures({})}
+      features={DEFAULT_CTA_FEATURES}
     />
     <NewsletterSection />
   </main>

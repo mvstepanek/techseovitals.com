@@ -6,7 +6,7 @@ import ServicesSection from './_components/sections/ServicesSection';
 import WhatMakesMeDifferentSection from './_components/sections/WhatMakesMeDifferentSection';
 import CTASection from './_components/sections/CTASection';
 import { BUSINESS_CONSTANTS } from './_data/constants';
-import CTAFeatures from './_components/cta/CTAFeatures';
+import { DEFAULT_CTA_FEATURES } from './_data/cta-features';
 import BadgeIcons from './_components/ui/BadgeIcons';
 
 export const data = {
@@ -67,7 +67,7 @@ const TechnicalSEOServicesPage: React.FC = () => (
         href: BUSINESS_CONSTANTS.CONTACT_URL,
       }}
       trustSignals={['Free consultation', 'No commitment']}
-      features={CTAFeatures({})}
+      features={DEFAULT_CTA_FEATURES}
     />
   </main>
 );

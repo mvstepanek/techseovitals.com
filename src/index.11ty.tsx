@@ -9,7 +9,7 @@ import FeatureGrid from './_components/business/FeatureGrid';
 import BrutalTruthSection from './_components/sections/BrutalTruthSection';
 import WhyChooseMeSection from './_components/sections/WhyChooseMeSection';
 import WhyAuditSection from './_components/sections/WhyAuditSection';
-import CTAFeatures from './_components/cta/CTAFeatures';
+import { DEFAULT_CTA_FEATURES } from './_data/cta-features';
 import BadgeIcons from './_components/ui/BadgeIcons';
 import Icons from './_components/ui/Icons';
 
@@ -174,7 +174,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
           href: '/contact/',
         }}
         trustSignals={['Free consultation', 'No commitment']}
-        features={CTAFeatures({})}
+        features={DEFAULT_CTA_FEATURES}
       />
 
       <BlogCardsSection posts={latestPosts} />

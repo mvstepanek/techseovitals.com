@@ -1,5 +1,5 @@
 import React from 'react';
-import StatsGrid from '../business/StatsGrid';
+import StatsGrid from '../ui/StatsGrid';
 import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
 import { COMMON_STYLES } from '../../_data/constants';

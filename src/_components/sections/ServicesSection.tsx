@@ -1,5 +1,5 @@
 import React from 'react';
-import ServicesCards from '../cards/ServicesCards';
+import ServicesCardsSection from './ServicesCardsSection';
 import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
@@ -32,7 +32,7 @@ const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitl
         subtitle={subtitle || 'Stop guessing. Start growing. Get the technical SEO expertise that turns your website into a revenue-generating machine.'}
         className="mb-4"
       />
-      <ServicesCards colorScheme={colorScheme} />
+      <ServicesCardsSection colorScheme={colorScheme} />
     </div>
   </section>
 );

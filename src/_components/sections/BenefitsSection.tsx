@@ -1,5 +1,5 @@
 import React from 'react';
-import FeatureCard from '../business/FeatureCard';
+import FeatureCard from '../ui/FeatureCard';
 import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
 

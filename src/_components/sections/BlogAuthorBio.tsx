@@ -1,7 +1,7 @@
 import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 
-const AuthorBio: React.FC = () => (
+const BlogAuthorBio: React.FC = () => (
   <div className="mt-12 sm:mt-16 p-6 sm:p-8 bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl sm:rounded-3xl border border-gray-200">
     <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
       <OptimizedImage
@@ -58,4 +58,4 @@ const AuthorBio: React.FC = () => (
   </div>
 );
 
-export default AuthorBio;
+export default BlogAuthorBio;

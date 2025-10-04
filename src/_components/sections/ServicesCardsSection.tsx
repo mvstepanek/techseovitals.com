@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceCard from '../business/ServiceCard';
+import ServiceCard from '../ui/ServiceCard';
 import Icons from '../ui/Icons';
 
 type ColorScheme = 'variant1' | 'variant2';
@@ -8,7 +8,7 @@ interface ServicesCardsProps {
   colorScheme?: ColorScheme;
 }
 
-const ServicesCards: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' }) => {
+const ServicesCardsSection: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' }) => {
   const colors = {
     variant1: { audit: 'indigo', monitoring: 'green', migration: 'purple' },
     variant2: { audit: 'green', monitoring: 'orange', migration: 'indigo' },
@@ -98,4 +98,4 @@ const ServicesCards: React.FC<ServicesCardsProps> = ({ colorScheme = 'variant1' 
   );
 };
 
-export default ServicesCards;
+export default ServicesCardsSection;

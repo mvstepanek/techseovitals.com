@@ -1,5 +1,5 @@
 import React from 'react';
-import CardDecoration from '../ui/CardDecoration';
+import CardDecoration from './CardDecoration';
 import { COLOR_SCHEMES } from '../../_data/constants';
 
 interface FeatureCardProps {

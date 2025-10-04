@@ -1,7 +1,7 @@
 import React from 'react';
 import NewsletterSection from '../_components/sections/NewsletterSection';
 import BlogPostHeader from '../_components/sections/BlogPostHeader';
-import AuthorBio from '../_components/sections/AuthorBio';
+import BlogAuthorBio from '../_components/sections/BlogAuthorBio';
 import { SITE_CONFIG } from '../_data/constants';
 
 interface BlogPostData {
@@ -47,7 +47,7 @@ const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
             `,
           }}
         />
-        <AuthorBio />
+        <BlogAuthorBio />
       </div>
     </section>
     <NewsletterSection />

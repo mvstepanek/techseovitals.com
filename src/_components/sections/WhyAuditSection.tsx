@@ -3,7 +3,7 @@ import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
 import CardDecoration from '../ui/CardDecoration';
 import IconContainer from '../ui/IconContainer';
-import CTAWithTrustSignals from '../cta/CTAWithTrustSignals';
+import CTAWithTrustSignals from '../ui/CTAWithTrustSignals';
 import { COMMON_STYLES } from '../../_data/constants';
 
 const WhyAuditSection: React.FC = () => (

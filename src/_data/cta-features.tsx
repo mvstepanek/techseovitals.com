@@ -1,17 +1,13 @@
 import React from 'react';
-import Icons from '../ui/Icons';
+import Icons from '../_components/ui/Icons';
 
-interface CTAFeature {
+export interface CTAFeature {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
 
-interface CTAFeaturesProps {
-  features?: CTAFeature[];
-}
-
-const DEFAULT_FEATURES: CTAFeature[] = [
+export const DEFAULT_CTA_FEATURES: CTAFeature[] = [
   {
     icon: <Icons.checkCircle className="w-8 h-8 text-white" />,
     title: '100% Free',
@@ -28,10 +24,3 @@ const DEFAULT_FEATURES: CTAFeature[] = [
     description: 'Actionable insights you can implement today',
   },
 ];
-
-const CTAFeatures: React.FC<CTAFeaturesProps> = ({ features = DEFAULT_FEATURES }) => {
-  return features;
-};
-
-export default CTAFeatures;
-export { DEFAULT_FEATURES };

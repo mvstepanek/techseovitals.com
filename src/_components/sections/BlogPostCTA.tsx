@@ -2,7 +2,7 @@ import React from 'react';
 import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
-import CTAWithTrustSignals from '../cta/CTAWithTrustSignals';
+import CTAWithTrustSignals from '../ui/CTAWithTrustSignals';
 import { COMMON_STYLES } from '../../_data/constants';
 
 const BlogPostCTA: React.FC = () => (
