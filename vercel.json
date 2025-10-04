@@ -93,6 +93,11 @@
       "source": "/47690/technical-seo-checklist-for-website-migrations-and-redesigns/",
       "destination": "/blog/technical-seo-checklist-for-website-migrations-and-redesigns/",
       "permanent": true
+    },
+    {
+      "source": "/sitemap_index.xml",
+      "destination": "/sitemap.xml",
+      "permanent": true
     }
   ],
   "headers": [
