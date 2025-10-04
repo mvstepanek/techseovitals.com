@@ -1,10 +1,11 @@
 import React from 'react';
 import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const WorkProcessSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: <Icons.lightning className="w-4 h-4" />,
@@ -12,7 +13,7 @@ const WorkProcessSection: React.FC = () => (
         }}
         title={
           <>
-            How I <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Work With You</span>
+            How I <span className={COMMON_STYLES.gradientText}>Work With You</span>
           </>
         }
         subtitle="My proven 3-step process transforms technical barriers into competitive advantages that users love"

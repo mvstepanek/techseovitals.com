@@ -1,11 +1,12 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const PublicSpeechesSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden">
     <BackgroundDecorations variant="centered" />
-    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={`relative ${COMMON_STYLES.containerWidth}`}>
       <SectionHeader
         badge={{
           icon: (
@@ -22,7 +23,7 @@ const PublicSpeechesSection: React.FC = () => (
         }}
         title={
           <>
-            Public <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Speaking</span>
+            Public <span className={COMMON_STYLES.gradientText}>Speaking</span>
           </>
         }
         subtitle="Sharing knowledge and insights at industry conferences and events"

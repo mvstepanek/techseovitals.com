@@ -1,5 +1,7 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
+import { COMMON_STYLES } from '../../_data/constants';
+import SchemaScript from '../utils/SchemaScript';
 
 const FAQSection: React.FC = () => {
   // FAQ schema for SEO
@@ -45,15 +47,10 @@ const FAQSection: React.FC = () => {
   return (
     <>
       {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
+      <SchemaScript schema={faqSchema} />
 
       <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className={COMMON_STYLES.containerWidth}>
           <SectionHeader
             badge={{
               icon: (
@@ -70,7 +67,7 @@ const FAQSection: React.FC = () => {
             }}
             title={
               <>
-                Frequently Asked <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Questions</span>
+                Frequently Asked <span className={COMMON_STYLES.gradientText}>Questions</span>
               </>
             }
             subtitle="Everything you need to know about creating exceptional website experiences that drive real results"

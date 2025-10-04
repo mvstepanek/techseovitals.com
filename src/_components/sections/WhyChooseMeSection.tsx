@@ -3,10 +3,11 @@ import OptimizedImage from '../common/OptimizedImage';
 import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
 import IconContainer from '../ui/IconContainer';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const WhyChooseMeSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: <Icons.user className="w-4 h-4" />,
@@ -14,7 +15,7 @@ const WhyChooseMeSection: React.FC = () => (
         }}
         title={
           <>
-            Technical SEO Expert Who <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Delivers Real Results</span>
+            Technical SEO Expert Who <span className={COMMON_STYLES.gradientText}>Delivers Real Results</span>
           </>
         }
         subtitle={

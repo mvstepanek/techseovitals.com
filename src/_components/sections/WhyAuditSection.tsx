@@ -4,10 +4,11 @@ import SectionHeader from '../ui/SectionHeader';
 import CardDecoration from '../ui/CardDecoration';
 import IconContainer from '../ui/IconContainer';
 import CTAWithTrustSignals from '../cta/CTAWithTrustSignals';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const WhyAuditSection: React.FC = () => (
   <section className="py-24 bg-white">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: <Icons.badge className="w-4 h-4" />,
@@ -15,7 +16,7 @@ const WhyAuditSection: React.FC = () => (
         }}
         title={
           <>
-            Stop Guessing. <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Start Knowing</span>
+            Stop Guessing. <span className={COMMON_STYLES.gradientText}>Start Knowing</span>
           </>
         }
         subtitle="You can't fix what you can't see. My audit reveals the hidden technical issues killing your conversions and revenue with a clear roadmap to fix them."

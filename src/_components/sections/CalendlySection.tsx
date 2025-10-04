@@ -2,11 +2,12 @@ import React from 'react';
 import Icons from '../ui/Icons';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const CalendlySection: React.FC = () => (
   <section id="schedule" className="py-20 bg-white relative overflow-hidden">
     <BackgroundDecorations variant="default" />
-    <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={`relative ${COMMON_STYLES.containerWidth}`}>
       <SectionHeader
         badge={{
           icon: <Icons.lightning className="w-4 h-4" />,

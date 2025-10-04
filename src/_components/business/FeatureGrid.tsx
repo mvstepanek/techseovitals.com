@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from '../ui/Badge';
+import Button from '../ui/Button';
 import { COMMON_STYLES } from '../../_data/constants';
 
 interface Feature {
@@ -67,7 +68,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
   return (
     <div className={borderClasses}>
       <section className={`py-24 ${bgClasses}`}>
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className={COMMON_STYLES.containerWidth}>
           <div className="text-center mb-16">
             {badge && <Badge icon={badge.icon}>{badge.text}</Badge>}
 
@@ -77,10 +78,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
 
             {cta && (
               <div className="flex flex-col items-center gap-4">
-                <a className={COMMON_STYLES.buttonPrimary} href={cta.href}>
-                  <span className="relative z-10">{cta.text}</span>
-                  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-                </a>
+                <Button href={cta.href}>{cta.text}</Button>
                 {cta.trustSignals && (
                   <div className="flex items-center justify-center gap-4 text-gray-600">
                     {cta.trustSignals.map((signal, index) => (

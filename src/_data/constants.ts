@@ -106,6 +106,17 @@ export const CONVERTKIT_FORMS = {
   },
 };
 
+// Max width classes for content sections
+export const MAX_WIDTH_CLASSES = {
+  sm: 'max-w-sm',
+  md: 'max-w-md',
+  lg: 'max-w-lg',
+  xl: 'max-w-xl',
+  '2xl': 'max-w-2xl',
+  '3xl': 'max-w-3xl',
+  '4xl': 'max-w-4xl',
+} as const;
+
 // Common CSS classes for reuse
 export const COMMON_STYLES = {
   gradientText: 'bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent',

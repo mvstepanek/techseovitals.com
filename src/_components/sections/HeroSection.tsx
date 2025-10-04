@@ -62,7 +62,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <BackgroundDecorations variant="centered" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${layout === 'centered' ? 'grid-cols-1 justify-center text-center' : 'grid-cols-1 lg:grid-cols-2'}`}>
           <div className={layout === 'centered' ? 'max-w-6xl mx-auto text-center' : 'max-w-4xl text-center sm:text-left'}>
             <Badge icon={badge.icon}>{badge.text}</Badge>

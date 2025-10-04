@@ -5,7 +5,7 @@ import Badge from '../ui/Badge';
 
 const WhatMakesMeDifferentSection: React.FC = () => (
   <section className="py-16 sm:py-20 lg:py-24 bg-white">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={COMMON_STYLES.containerWidth}>
       <div className="text-center mb-12 sm:mb-16 lg:mb-20">
         <Badge icon={<Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />} className="mb-4 sm:mb-6 text-xs sm:text-sm px-3 sm:px-4">
           Why Choose Me

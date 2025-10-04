@@ -1,7 +1,7 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import TestimonialCard from '../ui/TestimonialCard';
-import { TESTIMONIALS } from '../../_data/constants';
+import { TESTIMONIALS, COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
 
 interface TestimonialsProps {
@@ -25,7 +25,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
 }) => {
   return (
     <section className={`${backgroundColor} py-24`}>
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="text-center mb-16">
           {showBadge && <Badge icon={<Icons.heart className="w-4 h-4" />}>{badgeText}</Badge>}
 

@@ -9,6 +9,7 @@ import CTASection from './_components/sections/CTASection';
 import CTAFeatures from './_components/cta/CTAFeatures';
 import BadgeIcons from './_components/ui/BadgeIcons';
 import Icons from './_components/ui/Icons';
+import { COMMON_STYLES } from './_data/constants';
 
 export const data = {
   title: 'Technical SEO Consultant',
@@ -26,7 +27,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
       }}
       title={
         <>
-          Martin Stepanek, <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Technical SEO Expert</span>
+          Martin Stepanek, <span className={COMMON_STYLES.gradientText}>Technical SEO Expert</span>
         </>
       }
       description="I help businesses create websites that prioritizes both user satisfaction and revenue performance."
@@ -116,7 +117,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
     <ServicesSection
       title={
         <>
-          How I Can <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Help Your Business</span>
+          How I Can <span className={COMMON_STYLES.gradientText}>Help Your Business</span>
         </>
       }
       colorScheme="variant2"
@@ -128,7 +129,7 @@ const TechnicalSEOConsultantPage: React.FC = () => (
       }}
       title={
         <>
-          Turn Your Website Into a <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Revenue Engine</span>
+          Turn Your Website Into a <span className={COMMON_STYLES.gradientText}>Revenue Engine</span>
         </>
       }
       description="Your competitors are stealing your traffic while you struggle with technical issues. Get the expert help that turns your website into an unstoppable growth machine."

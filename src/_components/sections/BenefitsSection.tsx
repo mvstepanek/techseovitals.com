@@ -1,6 +1,7 @@
 import React from 'react';
 import FeatureCard from '../business/FeatureCard';
 import Badge from '../ui/Badge';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface Benefit {
   icon: React.ReactNode;
@@ -24,7 +25,7 @@ interface BenefitsSectionProps {
 const BenefitsSection: React.FC<BenefitsSectionProps> = ({ badge, title, subtitle, benefits, borderTop = false }) => (
   <div className={borderTop ? 'border-t border-gray-200' : ''}>
     <section className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="text-center mb-6">
           <Badge icon={badge.icon}>{badge.text}</Badge>
         </div>

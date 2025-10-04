@@ -2,10 +2,11 @@ import React from 'react';
 import StatsGrid from '../business/StatsGrid';
 import SectionHeader from '../ui/SectionHeader';
 import Icons from '../ui/Icons';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const NewsletterBenefitsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: <Icons.checkCircle className="w-4 h-4" />,

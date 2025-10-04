@@ -1,9 +1,10 @@
 import React from 'react';
+import { COMMON_STYLES } from '../../_data/constants';
 
 const BrutalTruthSection: React.FC = () => (
   <section className="py-24 bg-white relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/30" />
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+    <div className={`${COMMON_STYLES.containerWidth} relative`}>
       <div className="text-center mb-16">
         <h2 className="text-4xl font-display font-bold text-gray-900 mb-4">
           The <span className="text-red-500">Brutal Truth</span> About Your Website

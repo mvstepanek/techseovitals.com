@@ -3,6 +3,7 @@ import HeroSection from './_components/sections/HeroSection';
 import TrustedCompaniesSection from './_components/sections/TrustedCompaniesSection';
 import TestimonialCard from './_components/ui/TestimonialCard';
 import OptimizedImage from './_components/common/OptimizedImage';
+import Button from './_components/ui/Button';
 import { COMMON_STYLES } from './_data/constants';
 import SectionHeader from './_components/ui/SectionHeader';
 import BackgroundDecorations from './_components/ui/BackgroundDecorations';
@@ -50,7 +51,7 @@ const CustomersPage: React.FC = () => (
 
     {/* Case Studies Section */}
     <section id="case-studies" className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <SectionHeader
           badge={{
             icon: <Icons.document className="w-4 h-4" />,
@@ -155,7 +156,7 @@ const CustomersPage: React.FC = () => (
 
     {/* Full Testimonials Section */}
     <section className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <SectionHeader
           badge={{
             icon: <Icons.chat className="w-4 h-4" />,
@@ -201,7 +202,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
     {/* Trust Building CTA Section */}
     <section className="py-24 bg-white relative overflow-hidden border-t border-gray-200">
       <BackgroundDecorations variant="default" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={`relative ${COMMON_STYLES.containerWidth}`}>
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeader
             badge={{
@@ -217,10 +218,7 @@ I would definitely be happy to work with Martin in the future, I consider him to
             className="mb-12"
           />
           <div className="flex flex-col items-center gap-4 mb-12">
-            <a className={COMMON_STYLES.buttonPrimary} href="/contact/">
-              <span className="relative z-10">Start Your Transformation</span>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </a>
+            <Button href="/contact/">Start Your Transformation</Button>
             <div className="flex items-center justify-center gap-4 text-gray-600">
               <span className="text-sm">✓ Free consultation</span>
               <span className="text-sm">✓ No commitment</span>

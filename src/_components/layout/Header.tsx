@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
         Skip to main content
       </a>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="flex items-center justify-between py-4">
           <a className="block max-w-[180px]" href="/" aria-label="TechSEO Vitals Home">
             <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo.svg" />

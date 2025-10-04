@@ -1,5 +1,6 @@
 import React from 'react';
 import { COMMON_STYLES } from '../../_data/constants';
+import Button from '../ui/Button';
 import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import Icons from '../ui/Icons';
@@ -8,7 +9,7 @@ const SimpleStepsSection: React.FC = () => (
   <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
     <BackgroundDecorations variant="centered" />
 
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
+    <div className={`${COMMON_STYLES.containerWidth} relative`}>
       <SectionHeader
         badge={{
           icon: <div className="w-2 h-2 bg-white rounded-full animate-pulse" />,
@@ -124,10 +125,7 @@ const SimpleStepsSection: React.FC = () => (
       </div>
 
       <div className="text-center mt-16">
-        <a className={COMMON_STYLES.buttonPrimary} href="/contact/">
-          <span className="relative z-10">Get Free Website Check</span>
-          <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-        </a>
+        <Button href="/contact/">Get Free Website Check</Button>
       </div>
     </div>
   </section>

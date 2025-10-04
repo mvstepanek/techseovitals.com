@@ -2,6 +2,7 @@ import React from 'react';
 import Badge from '../ui/Badge';
 import OptimizedImage from '../common/OptimizedImage';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface ExperiencePoint {
   icon: React.ReactNode;
@@ -48,7 +49,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({ badge, title, sub
     <section className={`relative overflow-hidden py-24 ${bgClasses}`}>
       <BackgroundDecorations variant="simple" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className={`${COMMON_STYLES.containerWidth} relative z-10`}>
         <div className="text-center mb-16">
           <Badge icon={badge.icon}>{badge.text}</Badge>
 

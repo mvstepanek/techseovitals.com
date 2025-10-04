@@ -5,6 +5,7 @@ import AboutMartinSection from './_components/sections/AboutMartinSection';
 import Badge from './_components/ui/Badge';
 import CardDecoration from './_components/ui/CardDecoration';
 import IconContainer from './_components/ui/IconContainer';
+import { COMMON_STYLES } from './_data/constants';
 
 export const data = {
   title: 'TechSEO Vitals Newsletter',
@@ -67,7 +68,7 @@ const NewsletterPage: React.FC = () => (
 
     <div className="border-t border-gray-200">
       <section className="py-24 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className={COMMON_STYLES.containerWidth}>
           <div className="text-center mb-6">
             <Badge
               icon={

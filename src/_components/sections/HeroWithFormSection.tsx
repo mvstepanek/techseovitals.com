@@ -4,6 +4,7 @@ import Button from '../ui/Button';
 import ConvertKitForm from '../forms/ConvertKitForm';
 import OptimizedImage from '../common/OptimizedImage';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface TrustSignalsProps {
   show: boolean;
@@ -50,7 +51,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
       <div className="absolute inset-0 bg-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <BackgroundDecorations variant="centered" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="max-w-2xl">
             <Badge icon={badge.icon}>{badge.text}</Badge>
@@ -91,7 +92,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
             <div className="relative bg-white rounded-3xl shadow-2xl border-4 border-white p-8">
               <div className="text-center mb-6">
                 <h3 className="text-3xl font-bold mb-3">
-                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">{form.title}</span>
+                  <span className={COMMON_STYLES.gradientText}>{form.title}</span>
                 </h3>
                 <p className="text-gray-600 text-lg">{form.subtitle}</p>
               </div>

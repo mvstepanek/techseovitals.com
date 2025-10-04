@@ -1,5 +1,6 @@
 import React from 'react';
 import { BUSINESS_CONSTANTS, COMMON_STYLES } from '../../_data/constants';
+import Button from '../ui/Button';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 
 interface BadgeProps {
@@ -52,10 +53,9 @@ const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, prim
 
           {/* CTA Button */}
           <div className="flex flex-col items-center gap-4 mb-16">
-            <a className={COMMON_STYLES.buttonPrimary} href={primaryCta.href} target={primaryCta.target}>
-              <span className="relative z-10">{primaryCta.text}</span>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            </a>
+            <Button href={primaryCta.href} target={primaryCta.target}>
+              {primaryCta.text}
+            </Button>
 
             {/* Trust Signals */}
             {trustSignals && (

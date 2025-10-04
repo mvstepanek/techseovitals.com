@@ -1,6 +1,7 @@
 import React from 'react';
 import Badge from '../ui/Badge';
 import OptimizedImage from '../common/OptimizedImage';
+import { COMMON_STYLES } from '../../_data/constants';
 
 interface BlogPost {
   title: string;
@@ -28,7 +29,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
 }) => {
   return (
     <section className="pt-24 pb-24 bg-white border-t border-gray-200">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className={COMMON_STYLES.containerWidth}>
         {(showBadge || title || subtitle) && (
           <div className="text-center mb-16">
             {showBadge && (
@@ -52,7 +53,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
               <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-6">
                 {title.includes('Technical SEO') ? (
                   <>
-                    Latest <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Technical SEO</span> Insights
+                    Latest <span className={COMMON_STYLES.gradientText}>Technical SEO</span> Insights
                   </>
                 ) : (
                   title
