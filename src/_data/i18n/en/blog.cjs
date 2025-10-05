@@ -17,7 +17,7 @@ module.exports = {
   "blog.hero.badge": "Expert Technical SEO Insights",
   "blog.hero.title": "Technical SEO <span>Insights & Strategies</span>",
   "blog.hero.description": "In-depth guides on technical SEO, web performance, and user experience optimization. Learn strategies to improve your website's visibility and conversions.",
-  "blog-cards.title": "Latest Technical SEO Insights",
+  "blog-cards.title": "Latest <span>Technical SEO</span> Insights",
   "blog-cards.subtitle": "Stay ahead with actionable technical SEO strategies, performance optimization tips, and industry best practices.",
   "blog-cards.badge": "Expert Insights"
 };

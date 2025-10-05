@@ -140,7 +140,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination, t = (key) => key,
         </div>
       )}
 
-      <BlogCardsSection showBadge={false} title="" subtitle="" posts={processedPosts} t={t} />
+      <BlogCardsSection showBadge={false} title={null} subtitle={null} posts={processedPosts} t={t} />
 
       {/* Simple pagination navigation */}
       {pagination && pagination.pages && pagination.pages.length > 1 && (

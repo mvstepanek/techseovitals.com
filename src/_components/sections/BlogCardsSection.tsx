@@ -32,13 +32,15 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
   badgeText,
   t = defaultT,
 }) => {
-  const actualTitle = title || t('blog-cards.title');
-  const actualSubtitle = subtitle || t('blog-cards.subtitle');
+  const actualTitle = title === null ? null : (title || t('blog-cards.title'));
+  const actualSubtitle = subtitle === null ? null : (subtitle || t('blog-cards.subtitle'));
   const actualBadgeText = badgeText || t('blog-cards.badge');
+  const shouldShowHeader = showBadge || (actualTitle !== null || actualSubtitle !== null);
+
   return (
     <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className={COMMON_STYLES.containerWidth}>
-        {(showBadge || actualTitle || actualSubtitle) && (
+        {shouldShowHeader && (
           <SectionHeader
             badge={
               showBadge
