@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-07-23'
 image: '/assets/images/blog/thumbnail-multilingual-website-essentials.jpg'
 lang: sk
+translationKey: 'multilingual-website-essentials'
 ---
 
 Keď zákazníci nakupujú vo svojom rodnom jazyku, dôvera automaticky rastie a predaje sa zvyšujú. Je to logické: ľudia preferujú prostredie, kde sa cítia komfortne.

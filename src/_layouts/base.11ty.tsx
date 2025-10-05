@@ -48,8 +48,8 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
   const ogImage = data.ogImage || `${domain}/assets/og.png`;
   const heroImage = getHeroImage(data.permalink || '/');
 
-  // Get hreflang alternates
-  const alternates = data.hreflang?.getAlternates(data.permalink || '/') || [];
+  // Get hreflang alternates (pass translationKey if available for translated content)
+  const alternates = data.hreflang?.getAlternates(data.permalink || '/', data.translationKey) || [];
 
   // Get translated aria labels
   const ariaCloseMenu = t('common.aria.close-menu');
@@ -79,6 +79,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         htmlLang={htmlLang}
         hreflang={data.hreflang}
         t={data.t}
+        translationKey={data.translationKey}
       />
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
         <TopBar t={data.t} />

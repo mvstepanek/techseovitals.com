@@ -7,6 +7,7 @@ date: '2025-09-17'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/how-lcp-transforms-bounce-rates-revenue.jpg'
 lang: sk
+translationKey: 'lcp-transforms-bounce-rates-revenue'
 ---
 
 Predstavte si, že potenciálny zákazník klikne na vašu reklamu a čaká... a čaká... kým sa vaša stránka načíta. Po pár sekundách jednoducho odíde. Táto situácia sa deje častejšie, ako si myslíte.

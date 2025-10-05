@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-08-05'
 image: '/assets/images/blog/why-you-should-care-about-your-ttfb.jpg'
 lang: sk
+translationKey: 'why-care-about-ttfb'
 ---
 
 **Time to First Byte (TTFB)** predstavuje jednu z najkritickejších metrík v technickom SEO a výkone webových stránok. Meria čas od odoslania požiadavky až po prijatie prvého bajtu dát zo servera. Jednoducho povedané, je to čas, počas ktorého sa na vašej obrazovke nezobrazí nič okrem prázdnej plochy.

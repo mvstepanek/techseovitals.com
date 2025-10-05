@@ -18,9 +18,10 @@ interface HeadSectionProps {
   htmlLang?: string;
   hreflang?: any;
   t?: (key: string) => string;
+  translationKey?: string;
 }
 
-const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonicalUrl, ogImage, heroImage, permalink, schemas, articleData, alternates = [], htmlLang = 'en', hreflang, t = (key) => key }) => {
+const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonicalUrl, ogImage, heroImage, permalink, schemas, articleData, alternates = [], htmlLang = 'en', hreflang, t = (key) => key, translationKey }) => {
   // Deduplicate alternates by locale (safety measure)
   const uniqueAlternates = alternates.reduce((acc:any[], alt) => {
     if (!acc.find(a => a.locale === alt.locale)) {
@@ -29,8 +30,8 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
     return acc;
   }, []);
 
-  // Get x-default URL (English version)
-  const xDefaultUrl = hreflang?.getAlternateUrl(permalink || '/', 'en') || uniqueAlternates.find(alt => alt.lang === 'en')?.url || uniqueAlternates[0]?.url;
+  // Get x-default URL (English version) - pass translationKey if available
+  const xDefaultUrl = hreflang?.getAlternateUrl(permalink || '/', 'en', translationKey) || uniqueAlternates.find(alt => alt.lang === 'en')?.url || uniqueAlternates[0]?.url;
 
   // Get alternate locale for og:locale:alternate
   const alternateLocale = htmlLang === 'sk' ? 'en_US' : 'sk_SK';
