@@ -11,7 +11,7 @@ module.exports = {
   "about.point2.description": "I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms.",
   "about.point3.title": "Measurable Business Results",
   "about.point3.description": "From enterprise migrations to startup growth, I have helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges.",
-  "about.stats.title": "50+ Successful Projects",
+  "about.stats.title": "50+ Websites Successfully Optimized",
   "about.stats.subtitle": "Trusted by businesses worldwide",
   "why-choose-me.badge": "Why Me?",
   "why-choose-me.title": "Technical SEO Expert Who <span>Delivers Real Results</span>",

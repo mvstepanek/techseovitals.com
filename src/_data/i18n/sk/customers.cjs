@@ -27,7 +27,7 @@ module.exports = {
   "customers.testimonials.badge": "Úspešní klienti",
   "customers.testimonials.title": "Čo hovoria <span>klienti</span>",
   "customers.testimonials.subtitle": "Skutočné hodnotenia od firiem, ktoré dosiahli lepšie konverzie, obrat a organický rast.",
-  "customers.testimonial.pison.name": "Daniel Pison",
+  "customers.testimonial.pison.name": "Daniel Pisoň",
   "customers.testimonial.pison.position": "CMO",
   "customers.testimonial.pison.company": "Quality Unit",
   "customers.testimonial.pison.text": "Martin bol vedúcim členom tímu zodpovedného za technický stav webových stránok liveagent.com a postaffiliatepro.com. Vďaka jeho schopnostiam a odbornosti sme sa dlho dokázali konkurovať silnejším firmám na trhu.\nUrčite by som bol rád, keby som s Martinom spolupracoval aj v budúcnosti, považujem ho za jedného z najlepších odborníkov na technické SEO na trhu. Určite odporúčam spoluprácu s ním.",

@@ -49,5 +49,5 @@ module.exports = {
   "services.section.badge": "Vyberte si službu, ktorá vyhovuje vaším potrebám",
   "services.section.title": "<span>Technické SEO</span> služby",
   "services.section.subtitle": "Vaša webová stránka môže byť vaším najlepším predajcom. Získajte technickú SEO analýzu, ktorá z vašej webovej stránky spraví nástroj na zvyšovanie tržieb.",
-  "services.starting-at": "Začína na"
+  "services.starting-at": "Už od"
 };

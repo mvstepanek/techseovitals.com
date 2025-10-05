@@ -13,11 +13,12 @@ module.exports = {
   "blog.cta.title": "Premeňte svoju webovú stránku na",
   "blog.cta.description": "Aplikujte tieto poznatky na svoju webovú stránku. Získajte komplexný technický audit, ktorý odhalí presne to, čo brzdí váš výkon a ako to napraviť.",
   "blog.author.name": "Martin Štěpánek",
-  "blog.author.bio": "S viac ako 10 rokmi skúseností s vývojom a optimalizáciou webových stránok som sa naučil, že technická dokonalosť vedie k obchodnému úspechu. Pomáham firmám maximalizovať potenciál ich webových stránok prostredníctvom strategického technického SEO a vylepšení výkonu, ktoré vytvárajú lepšiu skúsenosť pre používateľov a lepšie výsledky pre firmy.",
+  "blog.author.title": "Konzultant technického SEO a optimalizácie rýchlosti stránok",
+  "blog.author.bio": "Viac ako 10 rokov skúseností s webovými stránkami mi ukázalo, že technická stránka webu rozhoduje o jeho úspechu. Pomáham firmám vyťažiť maximum z ich webových stránok prostredníctvom technického SEO a optimalizácie rýchlosti.",
   "blog.hero.badge": "Bezplatné praktické rady",
   "blog.hero.title": "Blog o <span>technickom SEO</span>",
   "blog.hero.description": "Dominujte v technickom SEO s pokročilými stratégiami, expertnými metódami optimalizácie výkonu a inovatívnymi riešeniami.",
-  "blog-cards.title": "Najnovšie poznatky o <span>technickom SEO</span>",
-  "blog-cards.subtitle": "Zostaňte o krok vpred s praktickými stratégiami technického SEO, tipmi na optimalizáciu výkonu a osvedčenými postupmi v odvetví.",
-  "blog-cards.badge": "Expertné poznatky"
+  "blog-cards.title": "Najnovšie články <span>o technickom SEO</span>",
+  "blog-cards.subtitle": "Zostaňte napred s praktickými stratégiami z oblasti technického SEO, tipmi na optimalizáciu výkonu a dôležitými novinkami.",
+  "blog-cards.badge": "Bezplatné praktické rady"
 };

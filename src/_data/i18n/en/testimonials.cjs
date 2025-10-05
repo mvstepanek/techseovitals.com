@@ -12,5 +12,13 @@ module.exports = {
   "testimonials.position.ceo": "CEO",
   "testimonials.position.cmo": "CMO",
   "testimonials.company.liveagent": "LiveAgent & Post Affiliate Pro",
-  "testimonials.company.quality-unit": "Quality Unit"
+  "testimonials.company.quality-unit": "Quality Unit",
+  "testimonial.viktor.name": "Viktor Zeman",
+  "testimonial.viktor.position": "CEO",
+  "testimonial.viktor.company": "LiveAgent & Post Affiliate Pro",
+  "testimonial.viktor.quote": "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
+  "testimonial.daniel.name": "Daniel Pison",
+  "testimonial.daniel.position": "CMO",
+  "testimonial.daniel.company": "Quality Unit",
+  "testimonial.daniel.quote": "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market."
 };

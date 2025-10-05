@@ -57,7 +57,7 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <link rel="dns-prefetch" href="https://app.kit.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://analytics.ahrefs.com" />
-      {permalink === '/contact/' && <link rel="preconnect" href="https://assets.calendly.com" />}
+      {(permalink === '/contact/' || permalink === '/kontakt/') && <link rel="preconnect" href="https://assets.calendly.com" />}
 
       {/* Preload critical resources */}
       {htmlLang === 'sk' ? (

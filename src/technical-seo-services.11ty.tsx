@@ -32,9 +32,10 @@ export const data = {
 
 interface Props {
   t?: (key: string) => string;
+  locale?: string;
 }
 
-const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key }) => {
+const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key, locale = 'en' }) => {
 
   return (
   <main className="flex-1">
@@ -65,7 +66,7 @@ const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key }) => {
     />
     <TrustedCompaniesSection t={t} />
     <ServicesSection t={t} />
-    <WhatMakesMeDifferentSection t={t} />
+    <WhatMakesMeDifferentSection t={t} locale={locale} />
     <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
     <CTASection
       badge={{
@@ -87,5 +88,6 @@ const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key }) => {
 };
 
 export default function TechnicalSEOServicesTemplate(data: any & { t: (key: string) => string }) {
-  return <TechnicalSEOServicesPage t={data.t} />;
+  const locale = data.i18n?.locale || 'en';
+  return <TechnicalSEOServicesPage t={data.t} locale={locale} />;
 }

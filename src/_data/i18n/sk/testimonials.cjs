@@ -21,9 +21,9 @@ module.exports = {
   "testimonial.viktor.name": "Viktor Zeman",
   "testimonial.viktor.position": "CEO",
   "testimonial.viktor.company": "LiveAgent & Post Affiliate Pro",
-  "testimonial.viktor.quote": "Martinovo vývojárske zázemie vytvorilo základ pre implementáciu sofistikovaných stratégií, najmä iniciatív v technickom SEO. S ním náš tým výrazne zlepšil výkon dvoch vysoko navštevovaných webových stránok.",
-  "testimonial.daniel.name": "Daniel Pison",
+  "testimonial.viktor.quote": "Martinove skúsenosti v oblasti vývoja webových stránok vytvorili základ pre implementáciu sofistikovanejších stratégií, najmä v oblasti technického SEO. Náš tím s ním výrazne vylepšil rýchlosť webových stránok s vysokou návštevnosťou.",
+  "testimonial.daniel.name": "Daniel Pisoň",
   "testimonial.daniel.position": "CMO",
   "testimonial.daniel.company": "Quality Unit",
-  "testimonial.daniel.quote": "Vďaka najmä Martinovým zručnostiam a expertíze sme dlhodobo dokázali konkurovať oveľa silnejším konkurentom v kvalite webových stránok. Považujem ho za jedného z najlepších expertov na technické SEO na trhu."
+  "testimonial.daniel.quote": "Najmä vďaka Martinovým schopnostiam a odborným znalostiam sme dlhodobo schopní konkurovať oveľa silnejším spoločnostiam na medzinárodnom trhu. Považujem ho za jedného z najlepších odborníkov na technické SEO na trhu."
 };

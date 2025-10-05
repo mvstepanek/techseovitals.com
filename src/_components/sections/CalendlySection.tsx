@@ -15,7 +15,7 @@ const CalendlySection: React.FC<CalendlySectionProps> = ({ t = (key) => key }) =
       <SectionHeader
         badge={{
           icon: <Icons.lightning className="w-4 h-4" />,
-          text: t('cta.start-transformation'),
+          text: t('calendly.badge'),
         }}
         title={t('calendly.title')}
         subtitle={t('calendly.subtitle')}

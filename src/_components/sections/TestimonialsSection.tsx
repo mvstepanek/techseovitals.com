@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import TestimonialCard from '../ui/TestimonialCard';
-import { TESTIMONIALS, COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
 
 interface TestimonialsProps {
@@ -42,18 +42,18 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
 
         <div className={COMMON_STYLES.twoColumnGrid}>
           <TestimonialCard
-            name={TESTIMONIALS.VIKTOR_ZEMAN.name}
+            name={t('testimonial.viktor.name')}
             position={t('testimonials.position.ceo')}
             company={t('testimonials.company.liveagent')}
-            text={TESTIMONIALS.VIKTOR_ZEMAN.quote}
+            text={t('testimonial.viktor.quote')}
             image="/assets/images/testimonials/viktor-zeman.jpg"
           />
 
           <TestimonialCard
-            name={TESTIMONIALS.DANIEL_PISON.name}
+            name={t('testimonial.daniel.name')}
             position={t('testimonials.position.cmo')}
             company={t('testimonials.company.quality-unit')}
-            text={TESTIMONIALS.DANIEL_PISON.quote}
+            text={t('testimonial.daniel.quote')}
             image="/assets/images/testimonials/daniel-pison.jpg"
           />
         </div>

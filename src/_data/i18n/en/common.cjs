@@ -25,7 +25,7 @@ module.exports = {
   "common.cta-feature.value.description": "Actionable insights you can implement today",
   "trust.free-consultation": "Free consultation",
   "trust.no-commitment": "No commitment",
-  "trust.projects": "50+ Successful Projects",
+  "trust.projects": "50+ Websites Successfully Optimized",
   "trust.websites-optimized": "50+ Websites Successfully Optimized",
   "trust.businesses-trust": "50+ businesses trust me",
   "cta.badge": "Ready to Delight Your Users?",

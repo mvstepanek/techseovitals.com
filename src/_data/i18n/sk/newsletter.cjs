@@ -27,6 +27,8 @@ module.exports = {
   "newsletter.section.recommended": "Odporúčané najlepšími SEO expertmi",
   "newsletter.section.no-spam": "Žiadny spam. Odhlásenie kedykoľvek jedným klikom.",
   "newsletter.section.consent": "Prihlásením súhlasím so",
+  "newsletter.section.privacy-policy": "zásadami ochrany osobných údajov",
   "newsletter.section.and": "a",
+  "newsletter.section.terms": "obchodnými podmienkami",
   "newsletter.section.english-only": "Newsletter je iba v angličtine"
 };

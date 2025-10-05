@@ -93,7 +93,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <CookieConsentBar t={data.t} />
 
         {/* Calendly script for contact page */}
-        {data.permalink === '/contact/' && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
+        {(data.permalink === '/contact/' || data.permalink === '/kontakt/') && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
 
         {/* Optimized JavaScript - deferred loading */}
         <script

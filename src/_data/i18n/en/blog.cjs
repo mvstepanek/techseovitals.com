@@ -13,6 +13,7 @@ module.exports = {
   "blog.cta.title": "Turn Your Website Into a",
   "blog.cta.description": "Apply these insights to your website. Get a comprehensive technical audit that reveals exactly what's holding back your performance and how to fix it.",
   "blog.author.name": "Martin Stepanek",
+  "blog.author.title": "Technical SEO & Web Performance Consultant",
   "blog.author.bio": "With 10+ years building and optimizing websites, I've learned that technical excellence drives business success. I help companies maximize their website's potential through strategic technical SEO and performance improvements that create better experiences for users and stronger results for businesses.",
   "blog.hero.badge": "Expert Insights",
   "blog.hero.title": "Technical SEO <span>Insights</span>",

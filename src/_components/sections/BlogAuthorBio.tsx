@@ -18,7 +18,7 @@ const BlogAuthorBio: React.FC<BlogAuthorBioProps> = ({ t = (key) => key }) => (
       />
       <div className="flex-1 text-center sm:text-left">
         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">{t('blog.author.name')}</h3>
-        <p className="text-sm text-gray-500 font-semibold mb-3">{t('site.tagline')}</p>
+        <p className="text-sm text-gray-500 font-semibold mb-3">{t('blog.author.title')}</p>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed mb-4">
           {t('blog.author.bio')}
         </p>

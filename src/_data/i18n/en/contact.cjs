@@ -20,6 +20,7 @@ module.exports = {
   "contact.bluesky.handle": "@techseovitals.com",
   "contact.youtube.description": "In-depth tutorials and case studies",
   "contact.youtube.handle": "@techseovitals",
+  "calendly.badge": "Expert Consultation",
   "calendly.title": "Book Your <span>Free Consultation</span>",
   "calendly.subtitle": "Choose a time that works best for you to discuss your website's technical SEO needs and opportunities for growth.",
   "business-info.title": "Business Information",
