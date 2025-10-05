@@ -21,7 +21,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height
 
   // For SVG images, return simple img tag without WebP optimization
   if (isSvg) {
-    return <img src={src} alt={alt} width={width} height={height} className={className} loading={loading} decoding={decoding} fetchPriority={fetchpriority} />;
+    return <img src={src} alt={alt} width={width} height={height} className={className} loading={loading} decoding={decoding} fetchpriority={fetchpriority} />;
   }
 
   // Generate srcset for responsive images
@@ -64,7 +64,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height
         className={className}
         loading={loading}
         decoding={decoding}
-        fetchPriority={fetchpriority}
+        fetchpriority={fetchpriority}
         sizes={sizes}
       />
     </picture>

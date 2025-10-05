@@ -74,7 +74,7 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
           <link rel="preload" href="/assets/fonts/opensans-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         </>
       )}
-      {heroImage && <link rel="preload" as="image" href={heroImage} fetchPriority="high" />}
+      {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />
