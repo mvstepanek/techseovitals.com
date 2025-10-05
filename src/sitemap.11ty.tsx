@@ -15,6 +15,7 @@ interface EleventyData {
       data: {
         date?: Date;
         eleventyExcludeFromCollections?: boolean;
+        translationKey?: string;
       };
     }>;
   };
@@ -41,16 +42,19 @@ export default function Sitemap(data: EleventyData): string {
       return true;
     })
     .map((page) => {
-      // Get alternate URLs for hreflang
-      const alternatesRaw = data.hreflang?.getAlternates(page.url) || [];
+      // Get alternate URLs for hreflang, passing translationKey if available
+      const alternatesRaw = data.hreflang?.getAlternates(page.url, page.data.translationKey) || [];
 
-      // Deduplicate alternates by locale (safety measure)
-      const alternates = alternatesRaw.reduce((acc: any[], alt: any) => {
-        if (!acc.find((a: any) => a.locale === alt.locale)) {
-          acc.push(alt);
-        }
-        return acc;
-      }, []);
+      // Filter out current locale and deduplicate
+      const currentLocale = data.i18n?.locale;
+      const alternates = alternatesRaw
+        .filter((alt: any) => alt.locale !== currentLocale)
+        .reduce((acc: any[], alt: any) => {
+          if (!acc.find((a: any) => a.locale === alt.locale)) {
+            acc.push(alt);
+          }
+          return acc;
+        }, []);
 
       return {
         url: page.url,
