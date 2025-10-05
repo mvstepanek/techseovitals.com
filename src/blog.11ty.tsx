@@ -23,7 +23,7 @@ export const data = {
       const locale = data.i18n?.locale || 'en';
       const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
       return pageNum > 1
-        ? `${translations['meta.blog.description'] || 'Expert insights on technical optimization'} - ${translations['common.page'] || 'Page'} ${pageNum}.`
+        ? `${translations['meta.blog.description'] || 'Expert insights on technical optimization'}`
         : translations['meta.blog.description'] || 'Expert insights on creating exceptional user experiences through technical optimization. Learn actionable strategies that transform technical barriers into competitive advantages.';
     },
     permalink: (data: { pagination: { pageNumber: number } }) => {
