@@ -32,7 +32,7 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({ t = default
           },
         ]}
         ctaText={t('services.audit.cta')}
-        ctaHref="/contact/"
+        ctaHref={t('url.contact')}
         color="indigo"
         id="technical-seo-audit"
       />
@@ -58,7 +58,7 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({ t = default
           },
         ]}
         ctaText={t('services.monitoring.cta')}
-        ctaHref="/contact/"
+        ctaHref={t('url.contact')}
         color="green"
         id="technical-seo-monitoring"
         commitment={t('services.monitoring.commitment')}
@@ -84,7 +84,7 @@ const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({ t = default
           },
         ]}
         ctaText={t('services.migration.cta')}
-        ctaHref="/contact/"
+        ctaHref={t('url.contact')}
         color="purple"
         id="website-migration-plan"
       />

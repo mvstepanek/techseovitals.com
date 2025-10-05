@@ -5,7 +5,6 @@ import TestimonialsSection from './_components/sections/TestimonialsSection';
 import ServicesSection from './_components/sections/ServicesSection';
 import WhatMakesMeDifferentSection from './_components/sections/WhatMakesMeDifferentSection';
 import CTASection from './_components/sections/CTASection';
-import { BUSINESS_CONSTANTS } from './_data/constants';
 import { DEFAULT_CTA_FEATURES } from './_data/cta-features';
 import BadgeIcons from './_components/ui/BadgeIcons';
 
@@ -48,7 +47,7 @@ const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key, locale = 
       description={t('services.hero.description')}
       primaryCta={{
         text: t('services.hero.cta'),
-        href: '/contact/',
+        href: t('url.contact'),
         target: '_self',
       }}
       image={{
@@ -77,7 +76,7 @@ const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key, locale = 
       description={t('services.cta.description')}
       primaryCta={{
         text: t('services.cta.button'),
-        href: BUSINESS_CONSTANTS.CONTACT_URL,
+        href: t('url.contact'),
       }}
       trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
       features={DEFAULT_CTA_FEATURES}

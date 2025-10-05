@@ -10,5 +10,6 @@ module.exports = {
   "form.privacy.consent": "By subscribing, I agree to the",
   "form.privacy.and": "and",
   "form.privacy.privacy-policy": "Privacy Policy",
-  "form.privacy.terms": "Terms and Conditions"
+  "form.privacy.terms": "Terms and Conditions",
+  "form.processing": "Processing..."
 };

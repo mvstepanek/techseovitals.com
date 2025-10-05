@@ -1,5 +1,5 @@
 import React from 'react';
-import { BUSINESS_CONSTANTS, COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
+import { COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
 import { BadgeProps, CTAProps } from '../../_types/common';
 import Button from '../ui/Button';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
@@ -30,7 +30,7 @@ interface CTASectionProps {
 
 const defaultT = (key: string) => key;
 
-const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, primaryCta, trustSignals = BUSINESS_CONSTANTS.TRUST_SIGNALS, features, backgroundColor = 'white', t = defaultT }) => {
+const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, primaryCta, trustSignals, features, backgroundColor = 'white', t = defaultT }) => {
   const bgClass = backgroundColor === 'gray' ? getBackgroundClass('gradientBlue') : getBackgroundClass('white');
 
   return (

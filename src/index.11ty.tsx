@@ -84,7 +84,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
         description={t('hero.description')}
         primaryCta={{
           text: t('hero.cta.primary'),
-          href: '/contact/',
+          href: t('url.contact'),
         }}
         image={{
           src: '/assets/images/martin-stepanek-6.jpg',
@@ -114,7 +114,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
         subtitle={t('features.subtitle')}
         cta={{
           text: t('cta.free-check'),
-          href: '/contact/',
+          href: t('url.contact'),
           trustSignals: [t('trust.free-consultation'), t('trust.no-commitment')],
         }}
         backgroundColor="gray"
@@ -158,7 +158,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
         description={t('cta.description')}
         primaryCta={{
           text: t('cta.start-transformation'),
-          href: '/contact/',
+          href: t('url.contact'),
         }}
         trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
         features={DEFAULT_CTA_FEATURES}

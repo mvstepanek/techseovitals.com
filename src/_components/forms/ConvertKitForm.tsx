@@ -135,7 +135,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
                                   submitBtn.querySelector('span');
 
                   if (textSpan) {
-                    textSpan.innerHTML = '<span class="loading-spinner"></span> Processing...';
+                    textSpan.innerHTML = '<span class="loading-spinner"></span> ${t('form.processing')}';
                   }
                 }
 

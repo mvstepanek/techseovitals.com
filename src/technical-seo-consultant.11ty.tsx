@@ -48,7 +48,7 @@ const TechnicalSEOConsultantPage: React.FC<Props> = ({ t = (key) => key }) => {
       description={t('consultant.hero.description')}
       primaryCta={{
         text: t('consultant.hero.cta'),
-        href: '/contact/',
+        href: t('url.contact'),
         target: '_self',
       }}
       image={{
@@ -126,7 +126,7 @@ const TechnicalSEOConsultantPage: React.FC<Props> = ({ t = (key) => key }) => {
       description={t('consultant.cta.description')}
       primaryCta={{
         text: t('consultant.cta.button'),
-        href: '/contact/',
+        href: t('url.contact'),
       }}
       trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
       features={DEFAULT_CTA_FEATURES}

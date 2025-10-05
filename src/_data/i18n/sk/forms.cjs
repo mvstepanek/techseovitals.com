@@ -13,5 +13,6 @@ module.exports = {
   "form.privacy.terms": "Obchodnými podmienkami",
   "form.newsletter.success": "Skvelé! Teraz skontrolujte svoj email a potvrďte odber.",
   "form.checklist.success": "Skvelé! Teraz skontrolujte svoj email a potvrďte odber a pošlem vám kópiu kontrolného zoznamu.",
-  "form.ebook.success": "Skvelé! Teraz skontrolujte svoj email a potvrďte odber a pošlem vám kópiu e-knihy."
+  "form.ebook.success": "Skvelé! Teraz skontrolujte svoj email a potvrďte odber a pošlem vám kópiu e-knihy.",
+  "form.processing": "Spracovávam..."
 };

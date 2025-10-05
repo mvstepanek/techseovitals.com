@@ -1,7 +1,6 @@
 // Business constants and shared values
 export const BUSINESS_CONSTANTS = {
   // URLs
-  CONTACT_URL: '/contact/',
   LINKEDIN_URL: 'https://www.linkedin.com/in/techseovitals/details/recommendations/',
 
   // CTA text variations
