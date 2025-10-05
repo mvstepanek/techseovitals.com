@@ -15,7 +15,6 @@ module.exports = {
   "checklist.form.email": "Email",
   "checklist.form.success": "Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.",
   "checklist.form.submit": "Get Your Free Checklist",
-  "checklist.form.english-only": "Checklist is in English only",
   "checklist.features.title": "What's Inside",
   "checklist.features.feature1.title": "Crawling & Indexing",
   "checklist.features.feature1.description": "Ensure search engines can discover and index all your important pages",

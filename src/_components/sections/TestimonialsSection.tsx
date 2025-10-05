@@ -27,10 +27,10 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
   backgroundColor = 'bg-white',
   t = defaultT,
 }) => {
-  const actualTitle = title || t('testimonials.default.title');
-  const actualSubtitle = subtitle || t('testimonials.default.subtitle');
-  const actualBadgeText = badgeText || t('testimonials.default.badge');
-  const actualTrustText = _trustText || t('testimonials.default.trust-text');
+  const actualTitle = title || t('testimonials.title');
+  const actualSubtitle = subtitle || t('testimonials.subtitle');
+  const actualBadgeText = badgeText || t('testimonials.badge');
+  const actualTrustText = _trustText || t('testimonials.trust');
   return (
     <section className={`${backgroundColor} py-24`}>
       <div className={COMMON_STYLES.containerWidth}>
@@ -64,7 +64,7 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
               href={t('url.customers')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
-              {t('testimonials.default.cta')}
+              {t('testimonials.cta')}
               <Icons.arrowRight className="w-4 h-4" />
             </a>
           </div>

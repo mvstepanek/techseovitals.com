@@ -37,7 +37,7 @@ module.exports = {
   "services.monitoring.cta": "Objednať monitoring",
   "services.monitoring.commitment": "Minimálna viazanosť 3 mesiace",
   "services.migration.title": "Migrácia webovej stránky",
-  "services.migration.price": "4 000 €",
+  "services.migration.price": "3 500 €",
   "services.migration.description": "Ochráňte svoje peniaze, návštevnosť a pozície počas aj po migrácii webovej stránky. Komplexný migračný plán s dôkladnými auditmi pred a po migrácii garantuje minimálne riziká a maximálnu ochranu vašich tržieb.",
   "services.migration.feature1.title": "Príprava a plánovanie pred migráciou",
   "services.migration.feature1.description": "Pripravím detailný migračný plán - od presmerovania cez mapovanie URL až po technické nastavenia. Urobím maximum, aby ste si udržali svoje pozície vo vyhľadávačoch aj návštevnosť, pričom vaši zákazníci nič nepostrehnu.",

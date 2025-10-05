@@ -4,11 +4,6 @@
  */
 
 module.exports = {
-  "testimonials.default.title": "Čo hovoria <span>klienti</span>",
-  "testimonials.default.subtitle": "Skutočné hodnotenia od firiem, ktoré dosiahli lepšie konverzie, obrat a organický rast.",
-  "testimonials.default.badge": "Úspešní klienti",
-  "testimonials.default.trust-text": "Spolupracoval som už s viac ako 50 firmami",
-  "testimonials.default.cta": "Ďalšie referencie",
   "testimonials.position.ceo": "CEO",
   "testimonials.position.cmo": "CMO",
   "testimonials.company.liveagent": "LiveAgent & Post Affiliate Pro",

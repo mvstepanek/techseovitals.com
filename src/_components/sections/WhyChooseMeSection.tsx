@@ -22,9 +22,9 @@ const WhyChooseMeSection: React.FC<WhyChooseMeSectionProps> = ({ t = defaultT })
         <SectionHeader
           badge={{
             icon: <Icons.user className="w-4 h-4" />,
-            text: t('why-choose-me.badge'),
+            text: t('about.badge'),
           }}
-          title={t('why-choose-me.title')}
+          title={t('about.title')}
           subtitle={
             <>
               {aboutContent.subtitle.split('. ')[0]}.
@@ -69,7 +69,7 @@ const WhyChooseMeSection: React.FC<WhyChooseMeSectionProps> = ({ t = defaultT })
           </div>
         </div>
         <TestimonialQuoteBox
-          quote={t('why-me.testimonial')}
+          quote={t('consultant.experience.testimonial')}
           source={t('consultant.experience.testimonial.source')}
           sourceLink="https://www.linkedin.com/in/techseovitals/#recommendations"
         />

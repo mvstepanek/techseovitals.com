@@ -22,13 +22,11 @@ module.exports = {
   "newsletter.badge": "Newsletter",
   "newsletter.subscribe": "Subscribe",
   "newsletter.section.title": "Get <span class=\"text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text\">Biweekly</span> Technical SEO Insights",
-  "newsletter.section.title.part1": "Get <span class=\"text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text\">Biweekly</span> Technical SEO Insights",
   "newsletter.section.description": "Get actionable strategies that help business owners and developers create exceptional user experiences, optimize technical SEO and performance, and drive revenue growth.",
   "newsletter.section.recommended": "Recommended by industry leaders",
   "newsletter.section.no-spam": "No spam, ever. Unsubscribe at any time.",
   "newsletter.section.consent": "By subscribing, I agree to the",
   "newsletter.section.privacy-policy": "Privacy Policy",
   "newsletter.section.and": "and",
-  "newsletter.section.terms": "Terms of Service",
-  "newsletter.section.english-only": "Newsletter is in English only"
+  "newsletter.section.terms": "Terms of Service"
 };

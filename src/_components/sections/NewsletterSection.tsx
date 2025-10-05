@@ -22,7 +22,7 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className, t = (k
             {t('newsletter.badge')}
           </Badge>
 
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('newsletter.section.title.part1') }} />
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('newsletter.section.title') }} />
 
           <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
             {t('newsletter.section.description')}
