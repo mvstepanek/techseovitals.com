@@ -12,19 +12,19 @@ export const DEFAULT_CTA_FEATURES: CTAFeature[] = [
   {
     id: 'free-check',
     icon: <Icons.checkCircle className="w-8 h-8 text-white" />,
-    titleKey: 'customers.cta.feature1.title',
-    descriptionKey: 'customers.cta.feature1.description',
+    titleKey: 'common.cta-feature.free.title',
+    descriptionKey: 'common.cta-feature.free.description',
   },
   {
     id: 'quick-call',
     icon: <Icons.clock className="w-8 h-8 text-white" />,
-    titleKey: 'customers.cta.feature2.title',
-    descriptionKey: 'customers.cta.feature2.description',
+    titleKey: 'common.cta-feature.time.title',
+    descriptionKey: 'common.cta-feature.time.description',
   },
   {
     id: 'immediate-value',
     icon: <Icons.star className="w-8 h-8 text-white" />,
-    titleKey: 'customers.cta.feature3.title',
-    descriptionKey: 'customers.cta.feature3.description',
+    titleKey: 'common.cta-feature.value.title',
+    descriptionKey: 'common.cta-feature.value.description',
   },
 ];

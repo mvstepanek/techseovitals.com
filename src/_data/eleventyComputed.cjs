@@ -10,7 +10,14 @@ module.exports = {
     const translations = i18nData.translations[locale] || i18nData.translations.en;
 
     return function(key) {
-      return translations[key] || key;
+      const value = translations[key];
+
+      // Warn in development if translation is missing
+      if (!value && process.env.NODE_ENV !== 'production') {
+        console.warn(`[i18n] Missing translation for key: "${key}" in locale: "${locale}"`);
+      }
+
+      return value || key;
     };
   },
 };

@@ -22,7 +22,9 @@
     "preview": "npm run build && npx vercel dev",
     "deploy": "vercel --prod",
     "deploy:staging": "vercel",
-    "optimize:images": "node optimize-images.cjs"
+    "optimize:images": "node optimize-images.cjs",
+    "i18n:check": "node scripts/check-i18n-coverage.cjs",
+    "i18n:types": "node scripts/generate-i18n-types.cjs"
   },
   "author": "TechSEO Vitals",
   "license": "MIT",

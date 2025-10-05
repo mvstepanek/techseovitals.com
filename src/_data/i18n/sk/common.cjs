@@ -1,0 +1,44 @@
+/**
+ * Common translations - SK
+ * Auto-generated from split-i18n.cjs script
+ */
+
+module.exports = {
+  "cta.free-check": " Získať bezplatnú analýzu webu",
+  "cta.start-transformation": "Začať bezplatnou analýzou webu",
+  "cta.schedule-consultation": "Naplánujte si bezplatnú konzultáciu",
+  "cta.transform-ux": "Transformujte používateľskú skúsenosť",
+  "cta.get-checklist": "Získajte kontrolný zoznam",
+  "cta.download-ebook": "Stiahnite si bezplatnú e-knihu",
+  "cta.read-more": "Čítať viac",
+  "cta.view-all-posts": "Zobraziť všetky články",
+  "common.page": "Stránka",
+  "common.previous": "Predchádzajúca",
+  "common.next": "Ďalšia",
+  "common.alt.martin-expert": "Martin Stepanek - expert na technické SEO",
+  "common.alt.martin-consultant": "Martin Stepanek - konzultant technického SEO",
+  "common.cta-feature.free.title": "100% zadarmo",
+  "common.cta-feature.free.description": "Komplexná analýza webovej stránky bez skrytých podmienok",
+  "common.cta-feature.time.title": "30 minút",
+  "common.cta-feature.time.description": "Konzultácia o kľúčových príležitostiach vašej webovej stránky",
+  "common.cta-feature.value.title": "Okamžitá hodnota",
+  "common.cta-feature.value.description": "Odporúčania, ktoré váš tím môže okamžite implementovať",
+  "trust.free-consultation": "Bezplatná konzultácia",
+  "trust.no-commitment": "Bez záväzkov",
+  "trust.projects": "Viac ako 50 úspešných projektov",
+  "trust.websites-optimized": "Viac ako 50 úspešne optimalizovaných webov",
+  "trust.businesses-trust": "Viac ako 50 firiem mi dôveruje",
+  "cta.badge": "Pripravení premeniť návštevníkov na zákazníkov?",
+  "cta.title": "Poskytnite návštevníkom skúsenosť, <span>ktorú si zaslúžia</span>",
+  "cta.description": "Vaša webová stránka môže vyzerať dokonale, ale pod povrchom skrýva technické problémy, ktoré potichu odrádzajú potenciálnych zákazníkov. Odhaľte, čo skutočne blokuje konverzie a ako to efektívne vyriešiť.",
+  "cta.get-started": "Začať",
+  "cta.learn-more": "Dozvedieť sa viac",
+  "cta.book-call": "Rezervovať hovor",
+  "cta.get-audit": "Získať audit",
+  "cta.start-monitoring": "Začať monitorovanie",
+  "cta.plan-migration": "Naplánovať migráciu",
+  "cta.see-how": "Pozrite sa ako",
+  "cta.discover-more": "Objaviť viac",
+  "cta.contact-me": "Kontaktujte ma",
+  "cta.lets-talk": "Porozprávajme sa"
+};
