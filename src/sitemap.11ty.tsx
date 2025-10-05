@@ -35,6 +35,9 @@ export default function Sitemap(data: EleventyData): string {
       // Exclude 404 and other special pages
       if (page.url.includes('404')) return false;
 
+      // Exclude non-HTML files (CSS, XML, TXT, etc.)
+      if (page.url.match(/\.(css|xml|txt|json|js)$/)) return false;
+
       return true;
     })
     .map((page) => {
