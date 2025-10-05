@@ -19,7 +19,14 @@ const PublicSpeechesSection: React.FC<PublicSpeechesSectionProps> = ({ t = defau
           icon: <Icons.video className="w-4 h-4" />,
           text: t('speaking.badge'),
         }}
-        title={<span dangerouslySetInnerHTML={{ __html: t('speaking.title') }} />}
+        title={
+          <>
+            {t('speaking.title').replace(t('speaking.title.highlight'), '')}{' '}
+            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              {t('speaking.title.highlight')}
+            </span>
+          </>
+        }
         subtitle={t('speaking.subtitle')}
       />
       <div className="max-w-6xl mx-auto">
@@ -30,7 +37,7 @@ const PublicSpeechesSection: React.FC<PublicSpeechesSectionProps> = ({ t = defau
                 width="100%"
                 height="100%"
                 src="https://www.youtube-nocookie.com/embed/XUgiA17sMK4?si=5uspHyBCvqLjQDco"
-                title="YouTube video player"
+                title={t('speaking.video.title')}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"

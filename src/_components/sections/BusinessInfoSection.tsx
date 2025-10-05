@@ -33,9 +33,9 @@ const BusinessInfoSection: React.FC<BusinessInfoProps> = ({ backgroundColor = 'b
           <div>
             <h3 className="text-xl font-bold text-gray-900 mb-4">{t('business-info.address')}</h3>
             <div className="space-y-2 text-gray-700">
-              <p>Karpatske namestie 7770/10A</p>
-              <p>83106 Bratislava</p>
-              <p>Slovakia (European Union)</p>
+              <p>{t('business-info.street')}</p>
+              <p>{t('business-info.city')}</p>
+              <p>{t('business-info.country')}</p>
             </div>
           </div>
         </div>

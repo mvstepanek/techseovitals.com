@@ -18,6 +18,21 @@ const defaultT = (key: string) => key;
 const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName, t = defaultT }) => {
   const config = CONVERTKIT_FORMS[formType];
 
+  // Map formType to translation key for success message
+  const getSuccessMessageKey = () => {
+    switch (formType) {
+      case 'technical-seo-checklist':
+      case 'website-migration-checklist':
+        return 'form.checklist.success';
+      case '5-web-performance-metrics':
+        return 'form.ebook.success';
+      default:
+        return 'form.newsletter.success';
+    }
+  };
+
+  const successMessage = t(getSuccessMessageKey());
+
   // Default styling based on design type
   const defaultFieldClassName =
     design === 'newsletter'
@@ -213,7 +228,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
         data-uid={config.uid}
         data-format="inline"
         data-version="5"
-        data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${config.successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
+        data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
         style={{ minWidth: '320px' }}
       >
         <div data-style="clean">

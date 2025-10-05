@@ -11,5 +11,8 @@ module.exports = {
   "form.privacy.and": "and",
   "form.privacy.privacy-policy": "Privacy Policy",
   "form.privacy.terms": "Terms and Conditions",
-  "form.processing": "Processing..."
+  "form.processing": "Processing...",
+  "form.newsletter.success": "Great! Now check your email to confirm your subscription.",
+  "form.checklist.success": "Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.",
+  "form.ebook.success": "Great! Now check your email to confirm your subscription and I will send you a copy of the ebook."
 };

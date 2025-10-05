@@ -29,5 +29,8 @@ module.exports = {
   "business-info.business-name": "Názov spoločnosti",
   "business-info.business-id": "IČO",
   "business-info.vat-id": "IČ DPH",
-  "business-info.address": "Adresa"
+  "business-info.address": "Adresa",
+  "business-info.street": "Karpatské námestie 7770/10A",
+  "business-info.city": "83106 Bratislava",
+  "business-info.country": "Slovensko"
 };
