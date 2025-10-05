@@ -10,7 +10,7 @@ module.exports = {
   "brutal-truth.card1.stat": "1%",
   "brutal-truth.card1.stat-label": "stratených príjmov za každých 100ms oneskorenia",
   "brutal-truth.card1.title": "Používatelia vnímajú každé oneskorenie",
-  "brutal-truth.card1.description": "Viete, že ľudia vnímajú aj 100-milisekundové oneskorenie? Amazon na vlastnej koži zistil, že každých 100ms oneskorenia znamená mínus 1% v ich tržbách. Zákazníci sú jednoducho netrpezlivý.",
+  "brutal-truth.card1.description": "Viete, že ľudia vnímajú aj 100-milisekundové oneskorenie? Amazon na vlastnej koži zistil, že každých 100ms oneskorenia znamená mínus 1% v ich tržbách. Zákazníci sú jednoducho netrpezliví.",
   "brutal-truth.card2.badge": "Google štúdia",
   "brutal-truth.card2.stat": "53%",
   "brutal-truth.card2.stat-label": "mobilných používateľov opustí webovú stránku, ktorá sa načítava pomaly",

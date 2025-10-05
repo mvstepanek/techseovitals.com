@@ -23,7 +23,7 @@ module.exports = {
   "newsletter.subscribe": "Prihlásiť sa",
   "newsletter.section.title": "Bezplatné <span class=\"text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text\">technické SEO</span> tipy a analýzy",
   "newsletter.section.title.part1": "Bezplatné <span class=\"text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text\">technické SEO</span> tipy a analýzy",
-  "newsletter.section.description": "Každé dva týždne posielam praktické tipy na zlepšenie technického SEO a výkonu webovej stránky. Žiadne teórie, iba overené postupy s preukazateľnými výsledkami.",
+  "newsletter.section.description": "Každé dva týždne posielam praktické tipy na zlepšenie technického SEO a výkonu webovej stránky. Žiadne teórie, iba overené postupy s preukázateľnými výsledkami.",
   "newsletter.section.recommended": "Odporúčané najlepšími SEO expertmi",
   "newsletter.section.no-spam": "Žiadny spam. Odhlásenie kedykoľvek jedným klikom.",
   "newsletter.section.consent": "Prihlásením súhlasím so",

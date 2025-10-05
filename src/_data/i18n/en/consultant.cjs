@@ -6,7 +6,7 @@
 module.exports = {
   "consultant.hero.badge": "Developer-Led Technical SEO Excellence",
   "consultant.hero.title": "Martin Stepanek, <span>Technical SEO Expert</span>",
-  "consultant.hero.description": "I help businesses create websites that prioritizes both user satisfaction and revenue performance.",
+  "consultant.hero.description": "I help businesses create websites that prioritize both user satisfaction and revenue performance.",
   "consultant.hero.cta": "Get Free Website Check",
   "consultant.hero.testimonial": "I consider Martin to be one of the greatest technical SEO experts on the market.",
   "consultant.hero.testimonial.source": "Verified Client on LinkedIn",
