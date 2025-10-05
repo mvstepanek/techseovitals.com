@@ -10,18 +10,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.contact'] || '/contact/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.contact'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.contact.title'] || 'Contact';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.contact.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.contact.description'] || 'Get in touch for a free technical SEO consultation.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.contact.description'];
     },
   },
 };

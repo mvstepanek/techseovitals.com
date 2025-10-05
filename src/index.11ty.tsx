@@ -18,13 +18,13 @@ export const data = {
   eleventyComputed: {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.home.title'] || 'TechSEO Vitals - Technical SEO Expert';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.home.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.home.description'] || 'Expert technical SEO services to improve your website performance and search visibility.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.home.description'];
     },
   },
 };

@@ -9,18 +9,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.checklist'] || '/technical-seo-checklist/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.checklist'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.checklist.title'] || 'Technical SEO Checklist';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.checklist.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.checklist.description'] || 'Complete technical SEO checklist with 100+ actionable tasks.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.checklist.description'];
     },
   },
 };

@@ -8,18 +8,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.thank-you'] || '/thank-you-for-subscribing/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.thank-you'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.thank-you.title'] || 'Thank You for Subscribing!';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.thank-you.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.thank-you.description'] || 'Thank you for subscribing to TechSEO Vitals newsletter.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.thank-you.description'];
     },
   },
 };

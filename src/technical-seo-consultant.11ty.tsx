@@ -15,18 +15,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.consultant'] || '/technical-seo-consultant/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.consultant'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.consultant.title'] || 'Technical SEO Consultant';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.consultant.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.consultant.description'] || 'Expert technical SEO consultant to help improve your website performance.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.consultant.description'];
     },
   },
 };

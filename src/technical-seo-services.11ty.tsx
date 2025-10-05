@@ -13,18 +13,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.services'] || '/technical-seo-services/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.services'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.services.title'] || 'Technical SEO Services';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.services.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.services.description'] || 'Professional technical SEO services to optimize your website performance.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.services.description'];
     },
   },
 };

@@ -9,18 +9,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.newsletter'] || '/newsletter/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.newsletter'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.newsletter.title'] || 'TechSEO Vitals Newsletter';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.newsletter.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.newsletter.description'] || 'Subscribe to TechSEO Vitals newsletter for actionable technical SEO insights.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.newsletter.description'];
     },
   },
 };

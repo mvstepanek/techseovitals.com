@@ -16,18 +16,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.customers'] || '/customers/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.customers'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.customers.title'] || 'Customers';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.customers.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.customers.description'] || 'Real client results from technical SEO and performance optimization.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.customers.description'];
     },
   },
 };

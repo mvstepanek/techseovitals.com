@@ -9,13 +9,13 @@ export const data = {
   eleventyComputed: {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.404.title'] || 'Page Not Found';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.404.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.404.description'] || 'The page you are looking for could not be found.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.404.description'];
     },
   },
 };

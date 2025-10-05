@@ -9,18 +9,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.performance-metrics'] || '/5-web-performance-metrics-every-business-owner-should-track/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.performance-metrics'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.performance-metrics.title'] || '5 Web Performance Metrics Every Business Owner Should Track';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.performance-metrics.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.performance-metrics.description'] || 'Learn the 5 web performance metrics that drive conversions. Track user experience indicators that boost customer satisfaction and search rankings.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.performance-metrics.description'];
     },
   },
 };

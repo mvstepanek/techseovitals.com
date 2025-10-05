@@ -13,18 +13,18 @@ export const data = {
     title: (data: { pagination: { pageNumber: number }; i18n?: any }) => {
       const pageNum = data.pagination.pageNumber + 1;
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      const translations = data.i18n?.translations?.[locale] || {};
       return pageNum > 1
-        ? `${translations['meta.blog.title'] || 'Technical SEO Blog'} - ${translations['common.page'] || 'Page'} ${pageNum}`
-        : translations['meta.blog.title'] || 'Technical SEO Blog';
+        ? `${translations['meta.blog.title']} - ${translations['common.page']} ${pageNum}`
+        : translations['meta.blog.title'];
     },
     description: (data: { pagination: { pageNumber: number }; i18n?: any }) => {
       const pageNum = data.pagination.pageNumber + 1;
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      const translations = data.i18n?.translations?.[locale] || {};
       return pageNum > 1
-        ? `${translations['meta.blog.description'] || 'Expert insights on technical optimization'}`
-        : translations['meta.blog.description'] || 'Expert insights on creating exceptional user experiences through technical optimization. Learn actionable strategies that transform technical barriers into competitive advantages.';
+        ? `${translations['meta.blog.description']}`
+        : translations['meta.blog.description'];
     },
     permalink: (data: { pagination: { pageNumber: number } }) => {
       const pageNum = data.pagination.pageNumber;

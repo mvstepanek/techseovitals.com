@@ -9,18 +9,18 @@ export const data = {
   eleventyComputed: {
     permalink: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['url.migration'] || '/website-migration-checklist/';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['url.migration'];
     },
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.migration.title'] || 'Website Migration Checklist';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.migration.title'];
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
-      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.migration.description'] || 'Website migration checklist with 45+ essential tasks.';
+      const translations = data.i18n?.translations?.[locale] || {};
+      return translations['meta.migration.description'];
     },
   },
 };
