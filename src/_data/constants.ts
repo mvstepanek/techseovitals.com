@@ -276,9 +276,7 @@ export const SOCIAL_MEDIA = {
 // Site configuration
 // Note: DOMAIN is now dynamically determined in base layout from i18n config
 export const SITE_CONFIG = {
-  DOMAIN: process.env.NODE_ENV === 'development'
-    ? 'https://staging.techseovitals.com'
-    : (process.env.LOCALE === 'sk' ? 'https://www.technickeseo.sk' : 'https://www.techseovitals.com'),
+  DOMAIN: process.env.LOCALE === 'sk' ? 'https://www.technickeseo.sk' : 'https://www.techseovitals.com',
   EMAIL: 'martin@techseovitals.com',
   CALENDLY_URL: 'https://calendly.com/techseovitals/free-initial-consultation?primary_color=9333ea',
 };

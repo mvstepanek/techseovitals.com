@@ -7,7 +7,7 @@ export default function RSSFeed(data) {
   const i18nData = data.i18n;
   const locale = i18nData?.locale || 'en';
   const config = i18nData?.config?.[locale] || i18nData?.config?.en || {};
-  const url = process.env.NODE_ENV === 'development' ? 'https://staging.techseovitals.com' : config.domain;
+  const url = config.domain;
   const title = 'TechSEO Vitals Blog';
   const description = 'Expert insights on technical SEO, web performance, and Core Web Vitals optimization for business growth.';
   const author = 'Martin Stepanek';
