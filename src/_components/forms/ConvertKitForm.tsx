@@ -30,7 +30,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
       : `formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl ${COMMON_STYLES.gradientBg} text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full`;
 
   const defaultFormClassName =
-    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
+    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
 
   return (
     <>
@@ -214,7 +214,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
         data-format="inline"
         data-version="5"
         data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${config.successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
-        style={{ minWidth: '400px' }}
+        style={{ minWidth: '320px' }}
       >
         <div data-style="clean">
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />

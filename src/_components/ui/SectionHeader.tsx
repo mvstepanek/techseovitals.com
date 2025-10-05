@@ -7,7 +7,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ badge, title, subtitle, m
   const alignmentClasses = align === 'center' ? 'text-center' : 'text-left';
 
   return (
-    <div className={`${alignmentClasses} mb-16 ${className}`}>
+    <div className={`${alignmentClasses} mb-8 sm:mb-12 lg:mb-16 ${className}`}>
       {/* Badge */}
       {badge && (
         <Badge icon={badge.icon} variant={badge.variant}>

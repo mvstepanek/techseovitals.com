@@ -25,7 +25,7 @@ const CalendlySection: React.FC<CalendlySectionProps> = ({ t = (key) => key }) =
       <div>
         {/* Calendly inline widget begin */}
         <div
-          className="calendly-inline-widget h-[1300px] lg:h-[785px]"
+          className="calendly-inline-widget h-[600px] sm:h-[800px] md:h-[1000px] lg:h-[785px]"
           data-url="https://calendly.com/techseovitals/free-initial-consultation?primary_color=9333ea"
           style={{ minWidth: '320px' }}
         />

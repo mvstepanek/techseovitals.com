@@ -98,6 +98,41 @@
       "source": "/sitemap_index.xml",
       "destination": "/sitemap.xml",
       "permanent": true
+    },
+    {
+      "source": "/sluzby/migracny-plan-webovej-stranky/",
+      "destination": "/technicke-seo-sluzby/",
+      "permanent": true
+    },
+    {
+      "source": "/sluzby/technicky-seo-monitoring/",
+      "destination": "/technicke-seo-sluzby/",
+      "permanent": true
+    },
+    {
+      "source": "/sluzby/technicky-seo-audit/",
+      "destination": "/technicke-seo-sluzby/",
+      "permanent": true
+    },
+    {
+      "source": "/sluzby/",
+      "destination": "/technicke-seo-sluzby/",
+      "permanent": true
+    },
+    {
+      "source": "/naplanujte-si-konzultaciu/",
+      "destination": "/kontakt/",
+      "permanent": true
+    },
+    {
+      "source": "/webinar-vplyv-technickeho-seo-a-rychlosti-webovej-stranky-na-konverzie/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/technicky-seo-konzultant/",
+      "destination": "/konzultant-technicke-seo/",
+      "permanent": true
     }
   ],
   "headers": [

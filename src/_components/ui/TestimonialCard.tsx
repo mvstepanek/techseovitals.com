@@ -29,7 +29,7 @@ const TestimonialCard = React.memo<TestimonialCardProps>(({ name, position, comp
         {/* Testimonial Text */}
         <div className="relative">
           <div className="absolute -left-2 -top-2 text-6xl text-purple-600/20 font-serif">&quot;</div>
-          <blockquote className="text-gray-700 leading-relaxed pl-6">{text}</blockquote>
+          <blockquote className="text-sm sm:text-base text-gray-700 leading-relaxed pl-6">{text}</blockquote>
         </div>
       </div>
     </div>

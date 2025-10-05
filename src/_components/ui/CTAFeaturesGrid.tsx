@@ -20,7 +20,7 @@ const CTAFeaturesGrid: React.FC<CTAFeaturesGridProps> = ({ features, className =
   const colors: ColorType[] = ['blue', 'green', 'purple'];
 
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-3 gap-8 ${className}`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 ${className}`}>
       {features.map((feature, index) => {
         const color = colors[index % colors.length];
         const gradientClass = getGradientClass(color);

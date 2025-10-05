@@ -50,12 +50,12 @@ const defaultT = (key: string) => key;
 
 const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, description, trustSignals = { show: true, text: 'Trusted by website owners worldwide' }, form, t = defaultT }) => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12 sm:py-16 md:py-20 lg:py-28">
       <div className="absolute inset-0 bg-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <BackgroundDecorations variant="centered" />
 
       <div className={COMMON_STYLES.containerWidth}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           <div className="max-w-2xl">
             <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>{badge.text}</Badge>
 

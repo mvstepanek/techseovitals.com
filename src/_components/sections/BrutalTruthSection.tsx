@@ -6,10 +6,10 @@ interface BrutalTruthSectionProps {
 }
 
 const BrutalTruthSection: React.FC<BrutalTruthSectionProps> = ({ t = (key) => key }) => (
-  <section className="py-24 bg-white relative overflow-hidden">
+  <section className="py-12 sm:py-16 lg:py-24 bg-white relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-red-50/50 to-orange-50/30" />
     <div className={`${COMMON_STYLES.containerWidth} relative`}>
-      <div className="text-center mb-16">
+      <div className="text-center mb-8 sm:mb-12 lg:mb-16">
         <h2 className="text-4xl sm:text-5xl font-display font-bold text-gray-900 mb-4" dangerouslySetInnerHTML={{ __html: t('brutal-truth.title') }} />
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           {t('brutal-truth.subtitle')}

@@ -14,7 +14,7 @@ interface BlogPostHeaderProps {
 
 const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image, locale = 'en', domain = 'https://www.techseovitals.com', t = (key) => key }) => (
   <article className="bg-gradient-to-br from-primary-500/5 via-white to-primary-600/5">
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-24 2xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
         {date && (
           <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 mb-4 sm:mb-6">

@@ -25,7 +25,7 @@ const Button: React.FC<ButtonProps> = ({ variant = 'primary', size = 'md', href,
 
   const sizeClasses = {
     sm: 'px-4 py-2.5 text-sm sm:px-5 sm:py-3',
-    md: 'px-8 py-4 text-lg',
+    md: 'px-6 py-3 text-base sm:px-8 sm:py-4 sm:text-lg',
     lg: 'px-8 py-4 text-lg sm:px-10 sm:py-5 sm:text-xl',
   };
 
