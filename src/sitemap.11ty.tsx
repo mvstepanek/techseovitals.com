@@ -16,6 +16,7 @@ interface EleventyData {
         date?: Date;
         eleventyExcludeFromCollections?: boolean;
         translationKey?: string;
+        robots?: string;
       };
     }>;
   };
@@ -32,6 +33,9 @@ export default function Sitemap(data: EleventyData): string {
     .filter((page) => {
       // Exclude pages with eleventyExcludeFromCollections
       if (page.data.eleventyExcludeFromCollections) return false;
+
+      // Exclude pages with noindex robots directive
+      if (page.data.robots && page.data.robots.includes('noindex')) return false;
 
       // Exclude 404 and other special pages
       if (page.url.includes('404')) return false;
