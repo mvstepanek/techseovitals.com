@@ -3,6 +3,7 @@ title: 'Terms and Conditions'
 description: 'Terms and conditions for using TechSEO Vitals website and services. Legal agreements, policies, and user responsibilities explained.'
 permalink: '/terms-and-conditions/'
 layout: 'page'
+lang: en
 ---
 
 Welcome to www.techseovitals.com or www.technickeseo.sk (the “Website”).

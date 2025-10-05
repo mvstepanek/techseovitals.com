@@ -3,6 +3,7 @@ title: 'Obchodné podmienky'
 description: 'Obchodné podmienky pre používanie webu a služieb TechSEO Vitals. Právne dohody, pravidlá a zodpovednosti používateľov.'
 permalink: '/obchodne-podmienky/'
 layout: 'page'
+lang: sk
 ---
 
 **Tieto Obchodné podmienky sú prekladom anglického originálu dostupného na [www.techseovitals.com](https://www.techseovitals.com/terms-and-conditions/). V prípade nezrovnalosti alebo chyby prekladu je anglický originál nadradený.**

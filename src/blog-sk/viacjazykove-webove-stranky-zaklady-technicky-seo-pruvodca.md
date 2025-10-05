@@ -5,6 +5,7 @@ permalink: '/blog/viacjazykove-webove-stranky-zaklady-technicky-seo-pruvodca/'
 layout: 'blog-post'
 date: '2025-07-23'
 image: '/assets/images/blog/thumbnail-multilingual-website-essentials.jpg'
+lang: sk
 ---
 
 Viacjazykový web umožňuje návštevníkom zažiť váš obsah v ich rodnom jazyku, vytvárajúc dôveru a spojenie, ktoré zvyšuje konverzie. Avšak zatiaľ čo firmy sa zameriavajú na preklady, platobné procesory, spôsoby dodania a miestne predpisy, technický základ často zostáva prehliadaný.

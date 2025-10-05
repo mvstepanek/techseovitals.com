@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-06-26'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/techseo-checklist-migrations.jpg'
+lang: en
 ---
 
 **Website migrations** are among the most challenging aspects of technical SEO. Despite careful planning and thorough preparation, there can always be unexpected problems during the migration process. I’ve prepared a dedicated checklist that you can use to minimize these issues in your upcoming project.

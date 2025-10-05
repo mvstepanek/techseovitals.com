@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-05-01'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/invisible-drivers-ecommerce.jpg'
+lang: sk
 ---
 
 Všetci sme to zažili. V polovici pokladne sa objaví načítavací kruh a točí sa… a točí sa. Frustrovaný som opustil svoj košík a zamieril na stránku konkurenta, kde bol proces pokladne bleskovo rýchly. V priebehu minút som dokončil nákup inde.

@@ -5,6 +5,7 @@ permalink: '/blog/improving-crawlability-help-google-and-chatgpt-find-your-busin
 layout: 'blog-post'
 date: '2025-07-09'
 image: '/assets/images/blog/thumbnail-help-google-chatgpt.jpg'
+lang: en
 ---
 
 Crawlability has become a critical challenge as the number of web crawlers and their requirements grow exponentially. When you fall behind on keeping up with these evolving demands, your brand and website can disappear from major platforms, such as Google, Bing and ChatGPT.

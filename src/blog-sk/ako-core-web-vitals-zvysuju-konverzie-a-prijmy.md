@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-04-16'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/core-web-vitals-conversions.jpg'
+lang: sk
 ---
 
 Pomyslite na svoju poslednú frustrujúcu skúsenosť s webovou stránkou. Stránka, ktorá sa načítavala večnosť. Tlačidlo, ktoré odmietlo reagovať pri kliknutí. Obsah, ktorý skákal naokolo, keď sa objavovali obrázky. Toto nie sú len menšie nepríjemnosti. Predstavujú významné prekážky pre rast vášho podnikania.

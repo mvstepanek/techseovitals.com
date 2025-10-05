@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-06-12'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/technical-seo-monitoring.jpg'
+lang: sk
 ---
 
 Počas mojej kariéry ako konzultant technického SEO a výkonu webu som videl nespočetné množstvo webových stránok čeliť významným problémom kvôli chybám, ktoré urobili marketingové tímy a vývojári. Na ochranu vášho podnikania pred týmito nákladnými chybami je implementácia pravidelného monitorovania absolútne kritická.

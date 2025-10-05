@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-04-02'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/google-ai-crawling.jpg'
+lang: en
 ---
 
 You’ve put $10,000 into a website for your new business, but it’s not attracting the traffic or attention you expected.

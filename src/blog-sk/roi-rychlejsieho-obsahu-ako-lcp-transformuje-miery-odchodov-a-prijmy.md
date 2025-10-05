@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-09-17'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/how-lcp-transforms-bounce-rates-revenue.jpg'
+lang: sk
 ---
 
 Webová stránka s pomaly sa načítavajúcim obsahom môže odháňať zákazníkov z frustrácie. Jednosekúndové zlepšenie **Largest Contentful Paint (LCP)** môže znížiť miery odchodov až o **14%** a zvýšiť konverzné miery o **13%**.

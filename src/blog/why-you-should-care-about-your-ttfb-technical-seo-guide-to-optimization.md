@@ -5,6 +5,7 @@ permalink: '/blog/why-you-should-care-about-your-ttfb-technical-seo-guide-to-opt
 layout: 'blog-post'
 date: '2025-08-05'
 image: '/assets/images/blog/why-you-should-care-about-your-ttfb.jpg'
+lang: en
 ---
 
 Time to First Byte, commonly known as TTFB, stands as **the most critical metric** in technical SEO and overall web performance. Basically, it measures the wait time from when you hit enter until your browser receives its first response from the website’s server. During this time, you see nothing but a blank screen.

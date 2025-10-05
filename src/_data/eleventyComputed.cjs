@@ -20,4 +20,14 @@ module.exports = {
       return value || key;
     };
   },
+  eleventyExcludeFromCollections: (data) => {
+    const i18nData = require('./i18n.cjs');
+    const currentLocale = i18nData.locale;
+
+    // If page has no lang specified (like .11ty.tsx files), include it
+    if (!data.lang) return false;
+
+    // Exclude if lang doesn't match current locale
+    return data.lang !== currentLocale;
+  },
 };

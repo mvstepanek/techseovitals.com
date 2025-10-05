@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-10-01'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/how-cls-drives-real-business-results.jpg'
+lang: sk
 ---
 
 Vizuálne stabilná webová stránka nie je len o estetike. Ovplyvňuje aj obchodné metriky. Vezmi si napríklad [Carpe](https://performance.shopify.com/blogs/blog/how-carpe-achieved-record-breaking-sales-by-focusing-on-performance-optimization), firmu na osobnú starostlivosť e-commerce, ktorá dosiahla **nárast konverznej miery o 5%** a **skok príjmov o 15%** len s **41% zlepšením CLS**.

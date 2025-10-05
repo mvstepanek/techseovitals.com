@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-04-02'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/google-ai-crawling.jpg'
+lang: sk
 ---
 
 Investovali ste $10 000 do webovej stránky pre svoju novú firmu, ale nepriťahuje návštevnosť ani pozornosť, ktorú ste očakávali.

@@ -5,6 +5,7 @@ permalink: '/blog/zlepsenie-crawlovatelnosti-pomozte-google-a-chatgpt-najst-web-
 layout: 'blog-post'
 date: '2025-07-09'
 image: '/assets/images/blog/thumbnail-help-google-chatgpt.jpg'
+lang: sk
 ---
 
 Crawlovateľnosť sa stala kritickou výzvou, keďže počet webových crawlerov a ich požiadaviek exponenciálne rastie. Keď zaostanete v dodržiavaní týchto vyvíjajúcich sa požiadaviek, vaša značka a webová stránka môžu zmiznúť z hlavných platforiem, ako sú Google, Bing a ChatGPT.

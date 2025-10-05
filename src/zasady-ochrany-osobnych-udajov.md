@@ -3,6 +3,7 @@ title: 'Zásady ochrany osobných údajov'
 description: 'Zásady ochrany osobných údajov pre TechSEO Vitals. Zistite, ako zbieram, používam a chránim vaše osobné informácie a údaje na našom webe.'
 permalink: '/ochrana-osobnych-udajov/'
 layout: 'page'
+lang: sk
 ---
 
 **Dokument Zásady ochrany osobných údajov je prekladom anglického originálu dostupného na [www.techseovitals.com](https://www.techseovitals.com/privacy-policy/). V prípade nezrovnalosti alebo chyby prekladu je anglický originál nadradený.**

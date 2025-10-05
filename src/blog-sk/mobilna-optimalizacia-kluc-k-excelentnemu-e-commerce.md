@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-05-29'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/mobile-optimization-ecommerce.jpg'
+lang: sk
 ---
 
 Mobilný e-commerce zásadne transformoval spôsob, akým nakupujeme online. V súčasnosti **viac ako 60% webovej návštevnosti pochádza z mobilných zariadení**, vrátane nákupných aktivít. Globálne mobilné e-commerce tržby sa predpokladá, že dosiahnu ohromujúcich **4,32 bilióna dolárov v roku 2025** a **5,89 bilióna dolárov do roku 2029**.

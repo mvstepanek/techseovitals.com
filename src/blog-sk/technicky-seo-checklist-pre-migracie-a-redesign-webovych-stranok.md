@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-06-26'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/techseo-checklist-migrations.jpg'
+lang: sk
 ---
 
 **Migrácie webových stránok** patria medzi najnáročnejšie aspekty technického SEO. Napriek starostlivému plánovaniu a dôkladnej príprave môžu sa počas migračného procesu vždy vyskytnúť neočakávané problémy. Pripravil som špeciálny checklist, ktorý môžete použiť na minimalizáciu týchto problémov vo vašom nadchádzajúcom projekte.

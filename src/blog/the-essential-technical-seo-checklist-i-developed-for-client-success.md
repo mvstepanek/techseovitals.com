@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-05-15'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/essential-technical-seo-checklist.jpg'
+lang: en
 ---
 
 Over the years, I’ve refined my approach to technical SEO audits through hands-on experience.

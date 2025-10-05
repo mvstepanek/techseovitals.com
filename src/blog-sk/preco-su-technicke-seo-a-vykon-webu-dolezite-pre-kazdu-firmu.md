@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-03-19'
 author: 'Martin Stepánek'
 image: '/assets/images/blog/technical-seo-web-performance-matter.jpg'
+lang: sk
 ---
 
 Predstavte si, že ste online firma investujúca do reklám a priťahujúca tisíce návštevníkov, len aby frustrovaní odišli, pretože niečo nie je v poriadku. Môže to súvisieť s technickým SEO, výkonom webu alebo dokonca prístupnosťou, a deje sa to častejšie, než si myslíte.
