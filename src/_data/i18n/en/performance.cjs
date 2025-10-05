@@ -10,5 +10,6 @@ module.exports = {
   "performance-metrics.rating": "50+ businesses improving their business results",
   "performance-metrics.form.title": "Grab Your <span>Free Ebook</span>",
   "performance-metrics.form.subtitle": "Get the ebook delivered to your inbox",
-  "performance-metrics.form.button": "Get Your Free Ebook"
+  "performance-metrics.form.button": "Get Your Free Ebook",
+  "performance-metrics.form.english-only": "Ebook is in English only"
 };

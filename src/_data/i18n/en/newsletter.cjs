@@ -27,5 +27,8 @@ module.exports = {
   "newsletter.section.recommended": "Recommended by industry leaders",
   "newsletter.section.no-spam": "No spam, ever. Unsubscribe at any time.",
   "newsletter.section.consent": "By subscribing, I agree to the",
-  "newsletter.section.and": "and"
+  "newsletter.section.privacy-policy": "Privacy Policy",
+  "newsletter.section.and": "and",
+  "newsletter.section.terms": "Terms of Service",
+  "newsletter.section.english-only": "Newsletter is in English only"
 };
