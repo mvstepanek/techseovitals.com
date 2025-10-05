@@ -61,19 +61,6 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       {(permalink === '/contact/' || permalink === '/kontakt/') && <link rel="preconnect" href="https://assets.calendly.com" />}
 
       {/* Preload critical resources */}
-      {htmlLang === 'sk' ? (
-        <>
-          <link rel="preload" href="/assets/fonts/opensans-400-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-          <link rel="preload" href="/assets/fonts/opensans-600-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-          <link rel="preload" href="/assets/fonts/opensans-700-latin-ext.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        </>
-      ) : (
-        <>
-          <link rel="preload" href="/assets/fonts/opensans-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-          <link rel="preload" href="/assets/fonts/opensans-600.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-          <link rel="preload" href="/assets/fonts/opensans-700.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        </>
-      )}
       {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
 
       {/* Open Graph */}
