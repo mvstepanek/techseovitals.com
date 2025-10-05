@@ -30,4 +30,28 @@ module.exports = {
     // Exclude if lang doesn't match current locale
     return data.lang !== currentLocale;
   },
+  permalink: (data) => {
+    const i18nData = require('./i18n.cjs');
+    const currentLocale = i18nData.locale;
+
+    // If page has lang specified and it doesn't match current locale, skip rendering
+    if (data.lang && data.lang !== currentLocale) {
+      return false;
+    }
+
+    // Otherwise use the page's own permalink (or undefined to use default)
+    return data.permalink;
+  },
+  layout: (data) => {
+    const i18nData = require('./i18n.cjs');
+    const currentLocale = i18nData.locale;
+
+    // If page doesn't match current locale, don't render with layout
+    if (data.lang && data.lang !== currentLocale) {
+      return false;
+    }
+
+    // Otherwise use the page's own layout
+    return data.layout;
+  },
 };
