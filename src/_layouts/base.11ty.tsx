@@ -13,6 +13,8 @@ interface EleventyData {
   permalink?: string;
   content: string;
   ogImage?: string;
+  i18n?: any;
+  hreflang?: any;
   articleData?: {
     publishDate?: string;
     modifiedDate?: string;
@@ -34,24 +36,35 @@ const getHeroImage = (permalink: string): string | null => {
 };
 
 export default function BaseLayout(data: EleventyData): JSX.Element {
-  const title = data.title ? `${data.title}` : 'TechSEO Vitals - Technical SEO & Web Performance Consulting';
-  const description =
-    data.description || "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
-  const canonicalUrl = `${SITE_CONFIG.DOMAIN}${data.permalink || '/'}`;
-  const ogImage = data.ogImage || `${SITE_CONFIG.DOMAIN}/assets/og.png`;
+  const locale = data.i18n?.config?.[data.i18n?.locale];
+  const htmlLang = locale?.htmlLang || 'en';
+  const domain = locale?.domain || SITE_CONFIG.DOMAIN;
+  const t = data.t || ((key: string) => key);
+
+  const title = data.title ? `${data.title}` : t('meta.default.title');
+  const description = data.description || t('meta.default.description');
+  const canonicalUrl = `${domain}${data.permalink || '/'}`;
+  const ogImage = data.ogImage || `${domain}/assets/og.png`;
   const heroImage = getHeroImage(data.permalink || '/');
 
-  // Generate all schemas using centralized SchemaFactory
+  // Get hreflang alternates (pass translationKey if available for translated content)
+  const alternates = data.hreflang?.getAlternates(data.permalink || '/', data.translationKey) || [];
+
+  // Get translated aria labels
+  const ariaCloseMenu = t('common.aria.close-menu');
+  const ariaOpenMenu = t('common.aria.open-menu');
+
+  // Generate all schemas using centralized SchemaFactory with i18n support
   const schemas = SchemaFactory.generateSchemas({
     title: data.title,
     description: data.description,
     permalink: data.permalink,
     ogImage,
     articleData: data.articleData,
-  });
+  }, t, domain);
 
   return (
-    <html lang="en">
+    <html lang={htmlLang}>
       <HeadSection
         title={title}
         description={description}
@@ -61,21 +74,26 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         permalink={data.permalink}
         schemas={schemas}
         articleData={data.articleData}
+        alternates={alternates}
+        htmlLang={htmlLang}
+        hreflang={data.hreflang}
+        t={data.t}
+        translationKey={data.translationKey}
       />
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
-        <TopBar />
-        <Header currentPath={data.permalink} />
+        <TopBar t={data.t} />
+        <Header currentPath={data.permalink} t={data.t} />
 
         <main id="main-content" className="flex-1">
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </main>
 
-        <Footer />
+        <Footer t={data.t} />
 
-        <CookieConsentBar />
+        <CookieConsentBar t={data.t} />
 
         {/* Calendly script for contact page */}
-        {data.permalink === '/contact/' && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
+        {(data.permalink === '/contact/' || data.permalink === '/kontakt/') && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
 
         {/* Optimized JavaScript - deferred loading */}
         <script
@@ -92,7 +110,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
                   menu.classList.toggle('hidden');
                   const isOpen = !menu.classList.contains('hidden');
                   button.setAttribute('aria-expanded', isOpen);
-                  button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                  button.setAttribute('aria-label', isOpen ? '${ariaCloseMenu}' : '${ariaOpenMenu}');
 
                   // Trap focus when menu is open
                   if (isOpen) {
@@ -105,7 +123,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
                   if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
                     menu.classList.add('hidden');
                     button.setAttribute('aria-expanded', 'false');
-                    button.setAttribute('aria-label', 'Open menu');
+                    button.setAttribute('aria-label', '${ariaOpenMenu}');
                     button.focus();
                   }
                 });

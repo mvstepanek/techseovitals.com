@@ -5,33 +5,30 @@ import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
 
 interface ServicesSectionProps {
-  title?: React.ReactNode;
+  title?: React.ReactNode | string;
   badge?: {
     icon?: React.ReactNode;
     text?: string;
   };
   subtitle?: string;
+  t?: (key: string) => string;
 }
 
-const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle }) => (
+const defaultT = (key: string) => key;
+
+const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle, t = defaultT }) => (
   <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: badge?.icon || <Icons.star className="w-4 sm:w-5 h-4 sm:h-5" />,
-          text: badge?.text || 'Choose Your Service',
+          text: badge?.text || t('services.section.badge'),
         }}
-        title={
-          title || (
-            <>
-              Technical SEO <span>Services</span>
-            </>
-          )
-        }
-        subtitle={subtitle || 'Stop guessing. Start growing. Get the technical SEO expertise that turns your website into a revenue-generating machine.'}
+        title={title || t('services.section.title')}
+        subtitle={subtitle || t('services.section.subtitle')}
         className="mb-4"
       />
-      <ServicesCardsSection />
+      <ServicesCardsSection t={t} />
     </div>
   </section>
 );

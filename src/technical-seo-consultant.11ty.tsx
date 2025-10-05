@@ -11,126 +11,132 @@ import BadgeIcons from './_components/ui/BadgeIcons';
 import Icons from './_components/ui/Icons';
 
 export const data = {
-  title: 'Technical SEO Consultant',
-  description: 'Expert technical SEO consultant with 10+ years experience. Get proven strategies that boost rankings, traffic, and conversions for your business.',
-  permalink: '/technical-seo-consultant/',
   layout: 'base',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.consultant'] || '/technical-seo-consultant/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.consultant.title'] || 'Technical SEO Consultant';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.consultant.description'] || 'Expert technical SEO consultant to help improve your website performance.';
+    },
+  },
 };
 
-const TechnicalSEOConsultantPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const TechnicalSEOConsultantPage: React.FC<Props> = ({ t = (key) => key }) => {
+
+  return (
   <main className="flex-1">
     <HeroSection
       badge={{
         icon: BadgeIcons.pulsingDot,
-        text: 'Developer-Led Technical SEO Excellence',
+        text: t('consultant.hero.badge'),
       }}
-      title={
-        <>
-          Martin Stepanek, <span>Technical SEO Expert</span>
-        </>
-      }
-      description="I help businesses create websites that prioritizes both user satisfaction and revenue performance."
+      title={t('consultant.hero.title')}
+      description={t('consultant.hero.description')}
       primaryCta={{
-        text: 'Get Free Website Check',
-        href: '/contact/',
+        text: t('consultant.hero.cta'),
+        href: t('url.contact'),
         target: '_self',
       }}
       image={{
         src: '/assets/images/martin-stepanek-4.jpg',
-        alt: 'Martin Stepanek - Technical SEO Expert',
+        alt: t('common.alt.martin-expert'),
       }}
       rating={{
         show: true,
-        text: 'I consider Martin to be one of the greatest technical SEO experts on the market.',
+        text: t('consultant.hero.testimonial'),
         isTestimonial: true,
-        source: 'Verified Client on LinkedIn',
+        source: t('consultant.hero.testimonial.source'),
         sourceLink: 'https://www.linkedin.com/in/techseovitals/details/recommendations/',
       }}
       statusBadge={{
         show: true,
-        text: 'Accepting new clients',
+        text: t('consultant.hero.status'),
       }}
     />
-    <TestimonialsSection />
+    <TestimonialsSection t={t} />
     <div className="border-t border-gray-200">
       <ExperienceSection
         badge={{
           icon: BadgeIcons.pulsingDot,
-          text: 'Why Choose Martin',
+          text: t('consultant.experience.badge'),
         }}
-        title={
-          <>
-            What Makes Me <span>Different</span>
-          </>
-        }
-        subtitle="I combine deep development expertise with technical SEO knowledge. This combination allows me to solve complex optimization challenges that drive measurable business growth."
+        title={t('consultant.experience.title')}
+        subtitle={t('consultant.experience.subtitle')}
         experiencePoints={[
           {
             icon: <Icons.lightning className="w-6 h-6 text-white" />,
-            title: 'Professional Web Development Skills',
-            description:
-              'Over a decade of hands-on development experience combined with deep technical SEO expertise. I solve complex challenges from enterprise migrations to advanced JavaScript optimization.',
+            title: t('consultant.experience.point1.title'),
+            description: t('consultant.experience.point1.description'),
             color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
           },
           {
             icon: <Icons.badge className="w-6 h-6 text-white" />,
-            title: 'Actionable Implementation Guides',
-            description:
-              'Get detailed, prioritized task lists with step-by-step guidance and code examples. Your team can implement improvements immediately with clear, practical instructions.',
+            title: t('consultant.experience.point2.title'),
+            description: t('consultant.experience.point2.description'),
             color: 'bg-gradient-to-br from-green-500 to-emerald-600',
           },
           {
             icon: <Icons.growth className="w-6 h-6 text-white" />,
-            title: 'Revenue-Focused Strategy',
-            description:
-              'Every optimization targets measurable business impact. I prioritize improvements that directly increase conversions, user engagement, and bottom-line revenue growth.',
+            title: t('consultant.experience.point3.title'),
+            description: t('consultant.experience.point3.description'),
             color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
           },
         ]}
         image={{
           src: '/assets/images/martin-stepanek-1.jpg',
-          alt: 'Martin Stepanek - Technical SEO Consultant',
+          alt: t('common.alt.martin-consultant'),
         }}
         statsBadge={{
           icon: <Icons.verifiedBadge className="w-5 h-5 text-green-600" />,
-          title: '50+ Websites Successfully Optimized',
+          title: t('consultant.experience.stats'),
           subtitle: '',
         }}
         testimonial={{
-          quote:
-            "Under Martin's leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts have consistently yielded remarkable results.",
-          source: 'LinkedIn Recommendation',
+          quote: t('consultant.experience.testimonial'),
+          source: t('consultant.experience.testimonial.source'),
         }}
         backgroundColor="gray"
       />
     </div>
-    <PublicSpeechesSection />
+    <PublicSpeechesSection t={t} />
     <ServicesSection
-      title={
-        <>
-          How I Can <span>Help Your Business</span>
-        </>
-      }
+      title={t('consultant.services.title')}
+      t={t}
     />
     <CTASection
       badge={{
         icon: BadgeIcons.lightning,
-        text: 'Ready to Transform Your Business?',
+        text: t('consultant.cta.badge'),
       }}
-      title={
-        <>
-          Turn Your Website Into a <span>Revenue Engine</span>
-        </>
-      }
-      description="Your competitors are stealing your traffic while you struggle with technical issues. Get the expert help that turns your website into an unstoppable growth machine."
+      title={t('consultant.cta.title')}
+      description={t('consultant.cta.description')}
       primaryCta={{
-        text: 'Get Free Website Check',
-        href: '/contact/',
+        text: t('consultant.cta.button'),
+        href: t('url.contact'),
       }}
+      trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
       features={DEFAULT_CTA_FEATURES}
+      t={t}
     />
-    <NewsletterSection />
+    <NewsletterSection t={t} />
   </main>
-);
+  );
+};
 
-export default TechnicalSEOConsultantPage;
+export default function TechnicalSEOConsultantTemplate(data: any & { t: (key: string) => string }) {
+  return <TechnicalSEOConsultantPage t={data.t} />;
+}

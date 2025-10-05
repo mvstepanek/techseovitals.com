@@ -7,16 +7,19 @@ interface BlogPostHeaderProps {
   date?: string;
   permalink?: string;
   image?: string;
+  locale?: string;
+  domain?: string;
+  t?: (key: string) => string;
 }
 
-const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image }) => (
+const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image, locale = 'en', domain = 'https://www.techseovitals.com', t = (key) => key }) => (
   <article className="bg-gradient-to-br from-primary-500/5 via-white to-primary-600/5">
-    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-24 2xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
         {date && (
           <div className="flex items-center justify-center space-x-4 text-sm text-gray-500 mb-4 sm:mb-6">
             <time dateTime={date}>
-              {new Date(date).toLocaleDateString('en-US', {
+              {new Date(date).toLocaleDateString(locale === 'sk' ? 'sk-SK' : 'en-US', {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric',
@@ -43,14 +46,14 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
       </div>
       <div className="mt-4 flex justify-end">
         <div className="text-sm text-gray-500">
-          Share this post on{' '}
+          {t('blog.share-on')}{' '}
           <a
-            href={`https://linkedin.com/sharing/share-offsite/?url=https%2f%2fstaging.techseovitals.com${permalink}`}
+            href={`https://linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(domain + permalink)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary-500 hover:text-primary-700 font-semibold"
           >
-            LinkedIn
+            {t('footer.social.linkedin')}
           </a>
         </div>
       </div>

@@ -2,82 +2,89 @@ import React from 'react';
 import ServiceCard from '../ui/ServiceCard';
 import Icons from '../ui/Icons';
 
-const ServicesCardsSection: React.FC = () => {
+interface ServicesCardsSectionProps {
+  t?: (key: string) => string;
+}
+
+const defaultT = (key: string) => key;
+
+const ServicesCardsSection: React.FC<ServicesCardsSectionProps> = ({ t = defaultT }) => {
   return (
     <div className="space-y-12 sm:space-y-16">
       <ServiceCard
         icon={<Icons.document className="w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-white" />}
-        title="Technical SEO Audit"
-        price="$2,500"
-        description="Comprehensive technical SEO audit that uncovers what's blocking your visibility and conversions. Get a prioritized roadmap to fix critical issues and maximize your website's potential."
+        title={t('services.audit.title')}
+        price={t('services.audit.price')}
+        priceLabel={t('services.starting-at')}
+        description={t('services.audit.description')}
         features={[
           {
-            title: 'Comprehensive Technical Analysis',
-            description: 'Complete audit covering technical SEO, performance, and user experience with 50+ checkpoints to identify all issues affecting your site.',
+            title: t('services.audit.feature1.title'),
+            description: t('services.audit.feature1.description'),
           },
           {
-            title: 'Prioritized Action Plan',
-            description: 'Clear roadmap with fixes ranked by business impact. Specific recommendations your team can implement immediately to drive results.',
+            title: t('services.audit.feature2.title'),
+            description: t('services.audit.feature2.description'),
           },
           {
-            title: '90-Minute Strategy Consultation',
-            description: 'One-on-one strategy call to review findings, discuss priorities, and create your implementation roadmap.',
+            title: t('services.audit.feature3.title'),
+            description: t('services.audit.feature3.description'),
           },
         ]}
-        ctaText="Get Your Audit"
-        ctaHref="/contact/"
+        ctaText={t('services.audit.cta')}
+        ctaHref={t('url.contact')}
         color="indigo"
         id="technical-seo-audit"
       />
       <ServiceCard
         icon={<Icons.monitor className="w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-white" />}
-        title="Technical SEO Monitoring"
-        price={2000}
-        priceUnit="/month"
-        description="Ongoing monitoring and optimization to maintain peak performance. Regular analysis catches issues early and identifies new opportunities for growth."
+        title={t('services.monitoring.title')}
+        price={t('services.monitoring.price')}
+        priceUnit={t('services.monitoring.price.unit')}
+        priceLabel={t('services.starting-at')}
+        description={t('services.monitoring.description')}
         features={[
           {
-            title: 'Regular Performance Monitoring',
-            description:
-              'Weekly expert analysis to identify crawl and indexing errors and performance issues. 24/7 monitoring alerts ensure problems are caught early before they impact revenue.',
+            title: t('services.monitoring.feature1.title'),
+            description: t('services.monitoring.feature1.description'),
           },
           {
-            title: 'Monthly Optimization Reports',
-            description: 'Monthly performance reports with new optimization opportunities. Stay ahead of algorithm updates and competitor improvements.',
+            title: t('services.monitoring.feature2.title'),
+            description: t('services.monitoring.feature2.description'),
           },
           {
-            title: 'Priority Support & Consultation',
-            description: '60-minute monthly strategy calls plus priority email support for urgent issues.',
+            title: t('services.monitoring.feature3.title'),
+            description: t('services.monitoring.feature3.description'),
           },
         ]}
-        ctaText="Start Monitoring"
-        ctaHref="/contact/"
+        ctaText={t('services.monitoring.cta')}
+        ctaHref={t('url.contact')}
         color="green"
         id="technical-seo-monitoring"
-        commitment="Minimum 3 months commitment"
+        commitment={t('services.monitoring.commitment')}
       />
       <ServiceCard
         icon={<Icons.transfer className="w-6 sm:w-7 lg:w-8 h-6 sm:h-7 lg:h-8 text-white" />}
-        title="Website Migration Planning"
-        price={4500}
-        description="Protect your traffic and rankings during website migration. Comprehensive migration planning with pre and post-migration audits to ensure zero losses."
+        title={t('services.migration.title')}
+        price={t('services.migration.price')}
+        priceLabel={t('services.starting-at')}
+        description={t('services.migration.description')}
         features={[
           {
-            title: 'Pre-Migration Strategy & Planning',
-            description:
-              'Detailed pre-migration audit and strategy covering redirects, URL mapping, and technical requirements. Complete blueprint to preserve all rankings and traffic while keeping visitors happy.',
+            title: t('services.migration.feature1.title'),
+            description: t('services.migration.feature1.description'),
           },
           {
-            title: 'Post-Migration Audit & Support',
-            description: 'Comprehensive post-migration audit to verify everything transferred correctly. Ongoing optimization to improve performance beyond pre-migration levels.',
+            title: t('services.migration.feature2.title'),
+            description: t('services.migration.feature2.description'),
           },
           {
-            title: 'Continuous Support & Monitoring',
-            description: 'Ongoing support throughout the migration process and continued monitoring post-launch.',
+            title: t('services.migration.feature3.title'),
+            description: t('services.migration.feature3.description'),
           },
         ]}
-        ctaText="Plan Your Migration"
-        ctaHref="/contact/"
+        ctaText={t('services.migration.cta')}
+        ctaHref={t('url.contact')}
         color="purple"
         id="website-migration-plan"
       />

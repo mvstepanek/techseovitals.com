@@ -19,7 +19,7 @@ export interface SectionHeaderProps {
     text: string;
     variant?: BadgeProps['variant'];
   };
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   subtitle?: string;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
   align?: 'center' | 'left';

@@ -5,57 +5,59 @@ import IconContainer from '../ui/IconContainer';
 import Icons from '../ui/Icons';
 import { COMMON_STYLES } from '../../_data/constants';
 
-const NewsletterContentSection: React.FC = () => {
+interface NewsletterContentSectionProps {
+  t?: (key: string) => string;
+}
+
+const NewsletterContentSection: React.FC<NewsletterContentSectionProps> = ({ t = (key) => key }) => {
   return (
     <div className="border-t border-gray-200">
       <section className="py-24 bg-white">
         <div className={COMMON_STYLES.containerWidth}>
           <div className="text-center mb-6">
-            <Badge icon={<Icons.email className="w-4 h-4" />}>What You&apos;ll Get</Badge>
+            <Badge icon={<Icons.email className="w-4 h-4" />}>{t('newsletter-content.badge')}</Badge>
           </div>
           <div className="text-center mb-20">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              What&apos;s in Each <span>Episode</span>
-            </h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6" dangerouslySetInnerHTML={{ __html: t('newsletter-content.title') }} />
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">
-              Actionable technical SEO and performance strategies that help you create better user experiences while improving your search rankings and AI visibility.
+              {t('newsletter-content.subtitle')}
             </p>
           </div>
           <div className={COMMON_STYLES.threeColumnGrid}>
             <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
               <CardDecoration color="blue" size="lg" />
               <IconContainer icon={<Icons.document className="w-8 h-8 text-white" />} color="blue" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Analysis</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('newsletter-content.card1.title')}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Deep dives into technical SEO trends, case studies from real websites, and performance optimization techniques that actually move the needle.
+                {t('newsletter-content.card1.description')}
               </p>
               <div className="flex items-center gap-2 font-semibold text-blue-600">
                 <Icons.arrowTrendUp className="w-5 h-5" />
-                Deep insights
+                {t('newsletter-content.card1.label')}
               </div>
             </div>
             <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
               <CardDecoration color="green" size="lg" />
               <IconContainer icon={<Icons.checkCircle className="w-8 h-8 text-white" />} color="green" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Actionable Guides</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('newsletter-content.card2.title')}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Step-by-step guides you can implement immediately. No fluff, just practical instructions with clear before-and-after examples.
+                {t('newsletter-content.card2.description')}
               </p>
               <div className="flex items-center gap-2 font-semibold text-green-600">
                 <Icons.arrowTrendUp className="w-5 h-5" />
-                Ready to use
+                {t('newsletter-content.card2.label')}
               </div>
             </div>
             <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300 overflow-hidden sm:overflow-visible">
               <CardDecoration color="purple" size="lg" />
               <IconContainer icon={<Icons.clock className="w-8 h-8 text-white" />} color="purple" />
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry Trends</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('newsletter-content.card3.title')}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Latest updates on search algorithm changes, AI developments, and emerging optimization opportunities you need to know about.
+                {t('newsletter-content.card3.description')}
               </p>
               <div className="flex items-center gap-2 font-semibold text-purple-600">
                 <Icons.arrowTrendUp className="w-5 h-5" />
-                Stay current
+                {t('newsletter-content.card3.label')}
               </div>
             </div>
           </div>

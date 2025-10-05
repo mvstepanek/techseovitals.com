@@ -11,6 +11,18 @@ interface BlogPostData {
   date?: string;
   image?: string;
   content: string;
+  locale?: string;
+  i18n?: {
+    locale: string;
+    config: {
+      [key: string]: {
+        domain: string;
+        htmlLang: string;
+        label: string;
+      };
+    };
+  };
+  t?: (key: string) => string;
 }
 
 export const data = {
@@ -25,9 +37,13 @@ export const data = {
   },
 };
 
-const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
-  <main className="flex-1">
-    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} />
+const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => {
+  const locale = data.i18n?.locale || data.locale || 'en';
+  const domain = data.i18n?.config?.[locale]?.domain || 'https://www.techseovitals.com';
+
+  return (
+    <main className="flex-1">
+      <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} locale={locale} domain={domain} t={data.t} />
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div
@@ -47,12 +63,13 @@ const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
             `,
           }}
         />
-        <BlogAuthorBio />
+        <BlogAuthorBio t={data.t} />
       </div>
     </section>
-    <NewsletterSection />
+    <NewsletterSection t={data.t} />
   </main>
-);
+  );
+};
 
 export default BlogPostLayout;
 export const render = BlogPostLayout;

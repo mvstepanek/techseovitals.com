@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-05-29'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/mobile-optimization-ecommerce.jpg'
+lang: en
 ---
 
 Mobile e-commerce has fundamentally transformed how we shop online. Currently, **over 60% of web traffic comes from mobile devices**, including shopping activities. Global mobile e-commerce sales are projected to reach an astounding **$4.32 trillion in 2025** and **$5.89 trillion by 2029**.

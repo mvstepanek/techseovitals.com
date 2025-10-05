@@ -10,10 +10,28 @@ interface ConvertKitFormProps {
   className?: string;
   buttonClassName?: string;
   fieldClassName?: string;
+  t?: (key: string) => string;
 }
 
-const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName }) => {
+const defaultT = (key: string) => key;
+
+const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName, t = defaultT }) => {
   const config = CONVERTKIT_FORMS[formType];
+
+  // Map formType to translation key for success message
+  const getSuccessMessageKey = () => {
+    switch (formType) {
+      case 'technical-seo-checklist':
+      case 'website-migration-checklist':
+        return 'form.checklist.success';
+      case '5-web-performance-metrics':
+        return 'form.ebook.success';
+      default:
+        return 'form.newsletter.success';
+    }
+  };
+
+  const successMessage = t(getSuccessMessageKey());
 
   // Default styling based on design type
   const defaultFieldClassName =
@@ -27,7 +45,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
       : `formkit-submit group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-xl hover:scale-105 hover:shadow-2xl ${COMMON_STYLES.gradientBg} text-white shadow-xl focus:ring-4 focus:ring-purple-500/30 w-full`;
 
   const defaultFormClassName =
-    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
+    design === 'newsletter' ? 'seva-form formkit-form flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center items-stretch sm:items-center' : 'space-y-3 sm:space-y-4';
 
   return (
     <>
@@ -132,7 +150,7 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
                                   submitBtn.querySelector('span');
 
                   if (textSpan) {
-                    textSpan.innerHTML = '<span class="loading-spinner"></span> Processing...';
+                    textSpan.innerHTML = '<span class="loading-spinner"></span> ${t('form.processing')}';
                   }
                 }
 
@@ -210,18 +228,18 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
         data-uid={config.uid}
         data-format="inline"
         data-version="5"
-        data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${config.successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
-        style={{ minWidth: '400px' }}
+        data-options={`{"settings":{"after_subscribe":{"action":"message","success_message":"${successMessage}","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}`}
+        style={{ minWidth: '320px' }}
       >
         <div data-style="clean">
           <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert" />
 
           <div data-element="fields" data-stacked="false" className={`seva-fields formkit-fields ${design === 'newsletter' ? 'flex flex-col sm:flex-row gap-4' : 'space-y-4'}`}>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input className={fieldClassName || defaultFieldClassName} aria-label="First Name" name="fields[first_name]" placeholder="First name" />
+              <input className={fieldClassName || defaultFieldClassName} aria-label="First Name" name="fields[first_name]" placeholder={t('form.placeholder.first-name')} />
             </div>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input className={fieldClassName || defaultFieldClassName} name="email_address" aria-label="Email Address" placeholder="Email" required type="email" />
+              <input className={fieldClassName || defaultFieldClassName} name="email_address" aria-label="Email Address" placeholder={t('form.placeholder.email')} required type="email" />
             </div>
             <button
               type="submit"
@@ -249,15 +267,15 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
           {/* Privacy disclaimer for all forms except newsletter-section */}
           {formType !== 'newsletter-section' && (
             <div className="text-center mt-4 space-y-2">
-              <p className="text-sm text-gray-500">No spam, ever. Unsubscribe at any time.</p>
+              <p className="text-sm text-gray-500">{t('form.privacy.no-spam')}</p>
               <p className="text-sm text-gray-500">
-                By subscribing, I agree to the{' '}
-                <a href="/privacy-policy/" className="text-purple-600 hover:text-purple-700 underline">
-                  Privacy Policy
+                {t('form.privacy.consent')}{' '}
+                <a href={t('url.privacy-policy')} className="text-purple-600 hover:text-purple-700 underline">
+                  {t('form.privacy.privacy-policy')}
                 </a>{' '}
-                and{' '}
-                <a href="/terms-and-conditions/" className="text-purple-600 hover:text-purple-700 underline">
-                  Terms and Conditions
+                {t('form.privacy.and')}{' '}
+                <a href={t('url.terms')} className="text-purple-600 hover:text-purple-700 underline">
+                  {t('form.privacy.terms')}
                 </a>
                 .
               </p>

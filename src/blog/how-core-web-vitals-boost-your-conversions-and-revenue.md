@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-04-16'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/core-web-vitals-conversions.jpg'
+lang: en
 ---
 
 Think about your last frustrating website experience. A page that took forever to load. A button that refused to respond when clicked. Content that jumped around as images appeared. These are not just minor annoyances. They represent significant barriers to your business growth.

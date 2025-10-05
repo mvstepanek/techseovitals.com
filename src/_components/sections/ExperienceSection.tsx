@@ -32,7 +32,7 @@ interface ExperienceSectionProps {
     text: string;
     icon?: React.ReactNode;
   };
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   subtitle: string;
   experiencePoints: ExperiencePoint[];
   image: {

@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-06-12'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/technical-seo-monitoring.jpg'
+lang: en
 ---
 
 Throughout my career as a technical SEO and web performance consultant, I’ve seen countless websites face significant problems due to mistakes made by marketing teams and developers. To protect your business from these costly errors, implementing regular monitoring is absolutely critical.

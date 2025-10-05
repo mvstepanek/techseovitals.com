@@ -5,7 +5,11 @@ import BackgroundDecorations from '../ui/BackgroundDecorations';
 import CTAWithTrustSignals from '../ui/CTAWithTrustSignals';
 import { COMMON_STYLES } from '../../_data/constants';
 
-const BlogPostCTA: React.FC = () => (
+interface BlogPostCTAProps {
+  t?: (key: string) => string;
+}
+
+const BlogPostCTA: React.FC<BlogPostCTAProps> = ({ t = (key) => key }) => (
   <section className="py-24 bg-white relative overflow-hidden border-t border-gray-200">
     <BackgroundDecorations variant="default" />
     <div className={`relative ${COMMON_STYLES.containerWidth}`}>
@@ -13,17 +17,13 @@ const BlogPostCTA: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.lightning className="w-4 h-4" />,
-            text: 'Ready to Get Started?',
+            text: t('blog.cta.badge'),
           }}
-          title={
-            <>
-              Let&apos;s Transform Your Website Into a <span>Revenue Engine</span>
-            </>
-          }
-          subtitle="Don't let technical issues hold your business back. Get expert technical SEO guidance and turn your website into your most powerful sales tool."
+          title={t('blog.cta.title')}
+          subtitle={t('blog.cta.description')}
           className="mb-12"
         />
-        <CTAWithTrustSignals text="Get Free Website Check" href="/contact/" trustSignals={['Free consultation', 'No commitment']} />
+        <CTAWithTrustSignals text={t('cta.free-check')} href={t('url.contact')} trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]} />
       </div>
     </div>
   </section>

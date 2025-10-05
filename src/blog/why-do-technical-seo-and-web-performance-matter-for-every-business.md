@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-03-19'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/technical-seo-web-performance-matter.jpg'
+lang: en
 ---
 
 Imagine you’re an online business investing in ads and attracting thousands of visitors, only for them to leave frustrated because something is wrong. This can be related to technical SEO, web performance, or even accessibility, and it happens more often than you think.

@@ -7,6 +7,7 @@ layout: 'blog-post'
 date: '2025-10-01'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/how-cls-drives-real-business-results.jpg'
+lang: en
 ---
 
 A visually stable website isn't just about aesthetics. It also impacts business metrics. Take [Carpe](https://performance.shopify.com/blogs/blog/how-carpe-achieved-record-breaking-sales-by-focusing-on-performance-optimization) for example, a personal care e-commerce company that achieved a conversion **rate increase of 5%** and **revenue jump of 15%** with just **41% improvement in CLS**.

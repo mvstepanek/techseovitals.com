@@ -1,73 +1,64 @@
 import React from 'react';
 import Icons from '../_components/ui/Icons';
 
-export const TECHNICAL_SEO_BENEFITS = {
+export const getTechnicalSeoBenefits = (t: (key: string) => string) => ({
   badge: {
     icon: <Icons.checkCircle className="w-4 h-4" />,
-    text: 'Transform Your Website',
+    text: t('checklist.benefits.badge'),
   },
-  title: (
-    <>
-      Fix What&apos;s Costing You <span>Customers Every Day</span>
-    </>
-  ),
-  subtitle: 'Stop losing customers to technical issues. Get the optimization roadmap that improves user experience while driving measurable revenue growth.',
+  title: t('checklist.benefits.title'),
+  subtitle: t('checklist.benefits.subtitle'),
   benefits: [
     {
       id: 'technical-foundation',
       icon: <Icons.clock className="w-8 h-8 text-white" />,
-      title: 'Complete Technical Foundation',
-      description: 'Ensure search engines can properly crawl, index, and understand your content. Fix the technical barriers that prevent your site from ranking.',
-      tagline: 'Covers crawlability & indexability',
+      title: t('checklist.benefits.benefit1.title'),
+      description: t('checklist.benefits.benefit1.description'),
+      tagline: t('checklist.benefits.benefit1.tagline'),
       color: 'blue' as const,
     },
     {
       id: 'revenue-issues',
       icon: <Icons.lightbulb className="w-8 h-8 text-white" />,
-      title: 'Find Revenue-Killing Issues',
-      description: "Identify the technical problems costing you customers. Discover what's driving visitors away and how to fix it immediately.",
-      tagline: '100+ issues prioritized',
+      title: t('checklist.benefits.benefit2.title'),
+      description: t('checklist.benefits.benefit2.description'),
+      tagline: t('checklist.benefits.benefit2.tagline'),
       color: 'green' as const,
     },
     {
       id: 'search-visibility',
       icon: <Icons.growth className="w-8 h-8 text-white" />,
-      title: 'Search Engine Visibility',
-      description:
-        'Perfect your site architecture, Schema Markup, and technical setup to maximize search engine understanding and help your content get discovered for relevant searches.',
-      tagline: 'Enhanced search visibility',
+      title: t('checklist.benefits.benefit3.title'),
+      description: t('checklist.benefits.benefit3.description'),
+      tagline: t('checklist.benefits.benefit3.tagline'),
       color: 'purple' as const,
     },
   ],
   borderTop: true,
-};
+});
 
-export const PERFORMANCE_BENEFITS = {
+export const getPerformanceBenefits = (t: (key: string) => string) => ({
   badge: {
     icon: <Icons.lightning className="w-4 h-4" />,
-    text: 'Track What Matters',
+    text: t('performance.benefits.badge'),
   },
-  title: (
-    <>
-      The 5 Metrics That <span>Actually Matter</span>
-    </>
-  ),
-  subtitle: 'Stop losing customers to slow sites. Learn the exact 5 performance metrics that directly impact conversions and revenue, plus the target numbers you need to hit.',
+  title: t('performance.benefits.title'),
+  subtitle: t('performance.benefits.subtitle'),
   benefits: [
     {
       id: 'server-optimization',
       icon: <Icons.monitor className="w-8 h-8 text-white" />,
-      title: 'Server Response Optimization',
-      description: 'Discover the hidden server delays that kill conversions before customers even see your content. Learn the response time targets that keep visitors engaged.',
-      tagline: 'Server performance targets',
+      title: t('performance.benefits.benefit1.title'),
+      description: t('performance.benefits.benefit1.description'),
+      tagline: t('performance.benefits.benefit1.tagline'),
       color: 'blue' as const,
     },
     {
       id: 'loading-speed',
       icon: <Icons.growth className="w-8 h-8 text-white" />,
-      title: 'Loading Speed Fundamentals',
-      description: 'Learn the critical speed measurements that determine if customers stay or leave. Get specific target numbers that separate fast sites from slow ones.',
-      tagline: 'Exact target benchmarks',
+      title: t('performance.benefits.benefit2.title'),
+      description: t('performance.benefits.benefit2.description'),
+      tagline: t('performance.benefits.benefit2.tagline'),
       color: 'green' as const,
     },
     {
@@ -77,42 +68,37 @@ export const PERFORMANCE_BENEFITS = {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z" />
         </svg>
       ),
-      title: 'Revenue Recovery Blueprint',
-      description:
-        'Discover how these 5 metrics work together to stop customer abandonment. Learn the proven system to identify which speed issues are costing you the most money.',
-      tagline: 'Revenue impact analysis',
+      title: t('performance.benefits.benefit3.title'),
+      description: t('performance.benefits.benefit3.description'),
+      tagline: t('performance.benefits.benefit3.tagline'),
       color: 'purple' as const,
     },
   ],
   borderTop: false,
-};
+});
 
-export const MIGRATION_BENEFITS = {
+export const getMigrationBenefits = (t: (key: string) => string) => ({
   badge: {
     icon: <Icons.checkCircle className="w-4 h-4" />,
-    text: 'Protect Your Investment',
+    text: t('migration.benefits.badge'),
   },
-  title: (
-    <>
-      Minimize Migration <span>Risks and Losses</span>
-    </>
-  ),
-  subtitle: 'Most migrations lose significant traffic and revenue. This checklist helps minimize disruption to your search rankings, user experience, and business operations.',
+  title: t('migration.benefits.title'),
+  subtitle: t('migration.benefits.subtitle'),
   benefits: [
     {
       id: 'user-experience',
       icon: <Icons.checkCircle className="w-8 h-8 text-white" />,
-      title: 'Maintain User Experience',
-      description: 'Keep site speed, functionality, and user flows intact. Prevent the performance drops and broken features that drive customers away.',
-      tagline: 'Zero downtime strategy',
+      title: t('migration.benefits.benefit1.title'),
+      description: t('migration.benefits.benefit1.description'),
+      tagline: t('migration.benefits.benefit1.tagline'),
       color: 'blue' as const,
     },
     {
       id: 'search-rankings',
       icon: <Icons.lightbulb className="w-8 h-8 text-white" />,
-      title: 'Preserve Search Rankings',
-      description: 'Protect your hard-earned search visibility. Proper redirects, URL mapping, and technical setup prevent ranking losses that destroy organic traffic.',
-      tagline: '45+ technical checkpoints',
+      title: t('migration.benefits.benefit2.title'),
+      description: t('migration.benefits.benefit2.description'),
+      tagline: t('migration.benefits.benefit2.tagline'),
       color: 'green' as const,
     },
     {
@@ -127,11 +113,11 @@ export const MIGRATION_BENEFITS = {
           />
         </svg>
       ),
-      title: 'Revenue Protection',
-      description: 'Safeguard your business from migration disasters. Avoid the traffic drops, broken conversions, and lost revenue that destroy ROI.',
-      tagline: 'Revenue-focused approach',
+      title: t('migration.benefits.benefit3.title'),
+      description: t('migration.benefits.benefit3.description'),
+      tagline: t('migration.benefits.benefit3.tagline'),
       color: 'purple' as const,
     },
   ],
   borderTop: true,
-};
+});

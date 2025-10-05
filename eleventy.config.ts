@@ -1,11 +1,20 @@
 import "tsx/esm";
 import { renderToStaticMarkup } from "react-dom/server";
 import type { UserConfig } from "@11ty/eleventy";
+import i18n from "eleventy-plugin-i18n";
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
 export default function (eleventyConfig: any): UserConfig {
+  // Add global data for i18n
+  const i18nData = require('./src/_data/i18n.cjs');
+  eleventyConfig.addGlobalData("i18n", i18nData);
+
   // Add blog collection sorted by date (newest first)
   eleventyConfig.addCollection("blog", function(collectionApi: any) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md")
+    const locale = i18nData.locale;
+    const blogPath = locale === 'sk' ? "src/blog-sk/*.md" : "src/blog/*.md";
+    return collectionApi.getFilteredByGlob(blogPath)
       .sort((a: any, b: any) => b.date - a.date);
   });
 

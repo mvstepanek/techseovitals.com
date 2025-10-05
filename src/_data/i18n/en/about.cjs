@@ -1,0 +1,43 @@
+/**
+ * About translations - EN
+ * Auto-generated from split-i18n.cjs script
+ */
+
+module.exports = {
+  "about.subtitle": "I specialize in delivering measurable improvements that drive real business growth. 10+ years of experience optimizing websites for both search engines and exceptional user experiences.",
+  "about.point1.title": "Professional Web Development Skills",
+  "about.point1.description": "I combine development expertise with SEO knowledge. Deep understanding of technical aspects and architecture enables me to solve complex challenges.",
+  "about.point2.title": "Comprehensive Technical Approach",
+  "about.point2.description": "I specialize in both technical SEO and performance optimization. Every aspect of your site's technical foundation works together to maximize visibility across search engines and AI platforms.",
+  "about.point3.title": "Measurable Business Results",
+  "about.point3.description": "From enterprise migrations to startup growth, I have helped businesses significantly increase revenue and organic traffic by solving complex technical SEO challenges.",
+  "about.stats.title": "50+ Websites Successfully Optimized",
+  "about.stats.subtitle": "Trusted by businesses worldwide",
+  "why-choose-me.badge": "Why Me?",
+  "why-choose-me.title": "Technical SEO Expert Who <span>Delivers Real Results</span>",
+  "why-me.testimonial": "Under Martin's leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts have consistently yielded remarkable results.",
+  "why-audit.badge": "Why You Need an Audit",
+  "why-audit.title": "Stop Guessing. <span>Start Knowing</span>",
+  "why-audit.subtitle": "You can't fix what you can't see. My audit reveals the hidden technical issues killing your conversions and revenue with a clear roadmap to fix them.",
+  "why-audit.cta": "Get Free Website Check",
+  "why-audit.card1.title": "Uncover Revenue Killers",
+  "why-audit.card1.description": "Find the technical issues that are silently costing you money. Discover exactly what's preventing visitors from converting and completing purchases.",
+  "why-audit.card1.badge": "Full technical analysis",
+  "why-audit.card2.title": "Maximize Revenue Impact",
+  "why-audit.card2.description": "Focus on what matters most. I prioritize fixes by revenue impact, addressing high-conversion opportunities first to see faster ROI.",
+  "why-audit.card2.badge": "Revenue opportunities found",
+  "why-audit.card3.title": "Capture Lost Revenue",
+  "why-audit.card3.description": "Identify where competitors are stealing your customers and get the technical improvements that help you win back market share and revenue.",
+  "why-audit.card3.badge": "Competitive advantage",
+  "what-makes-me.badge": "Why Choose Me",
+  "what-makes-me.title": "What Makes Me <span>Different</span>",
+  "what-makes-me.subtitle": "Developer-led technical SEO that transforms performance issues into competitive advantages. Actionable improvements that drive revenue.",
+  "what-makes-me.card1.title": "Web Development Expertise",
+  "what-makes-me.card1.description": "10+ years experience with deep technical insight of website architecture and performance.",
+  "what-makes-me.card2.title": "Clear Action Plans",
+  "what-makes-me.card2.description": "Get actionable task lists with step-by-step guidance your team can implement immediately.",
+  "what-makes-me.card3.title": "Making Teams Self-Sufficient",
+  "what-makes-me.card3.description": "Get detailed guidance that empowers your team to maintain excellence long after our work together.",
+  "what-makes-me.card4.title": "Collaborative Approach",
+  "what-makes-me.card4.description": "Partner with your teams to build lasting improvements with sustained impact for your users."
+};

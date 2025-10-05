@@ -19,39 +19,39 @@ interface BlogCardsSectionProps {
   posts: BlogPost[];
   showBadge?: boolean;
   badgeText?: string;
+  t?: (key: string) => string;
 }
 
+const defaultT = (key: string) => key;
+
 const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
-  title = 'Latest Technical SEO Insights',
-  subtitle = 'Stay ahead with actionable technical SEO strategies, performance optimization tips, and industry best practices.',
+  title,
+  subtitle,
   posts,
   showBadge = true,
-  badgeText = 'Expert Insights',
+  badgeText,
+  t = defaultT,
 }) => {
+  const actualTitle = title === null ? null : (title || t('blog-cards.title'));
+  const actualSubtitle = subtitle === null ? null : (subtitle || t('blog-cards.subtitle'));
+  const actualBadgeText = badgeText || t('blog-cards.badge');
+  const shouldShowHeader = showBadge || (actualTitle !== null || actualSubtitle !== null);
+
   return (
     <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className={COMMON_STYLES.containerWidth}>
-        {(showBadge || title || subtitle) && (
+        {shouldShowHeader && (
           <SectionHeader
             badge={
               showBadge
                 ? {
                     icon: <Icons.document className="w-4 h-4" />,
-                    text: badgeText,
+                    text: actualBadgeText,
                   }
                 : undefined
             }
-            title={
-              title &&
-              (title.includes('Technical SEO') ? (
-                <>
-                  Latest <span>Technical SEO</span> Insights
-                </>
-              ) : (
-                title
-              ))
-            }
-            subtitle={subtitle}
+            title={actualTitle}
+            subtitle={actualSubtitle}
           />
         )}
 
@@ -59,7 +59,7 @@ const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
           {posts.map((post) => (
             <article key={post.href} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden">
               <a href={post.href}>
-                <div className="relative h-48 w-full overflow-hidden">
+                <div className="relative h-40 sm:h-48 lg:h-56 w-full overflow-hidden">
                   <OptimizedImage
                     alt={post.title}
                     width={800}

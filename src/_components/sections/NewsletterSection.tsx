@@ -8,9 +8,10 @@ import Icons from '../ui/Icons';
 
 interface NewsletterSectionProps {
   className?: string;
+  t?: (key: string) => string;
 }
 
-const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
+const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className, t = (key) => key }) => {
   return (
     <section className={`relative py-24 ${COMMON_STYLES.gradientBgTriple} overflow-hidden ${className}`}>
       <BackgroundDecorations variant="newsletter" />
@@ -18,20 +19,23 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <Badge variant="newsletter" icon={<Icons.email className="w-4 h-4" />}>
-            Newsletter
+            {t('newsletter.badge')}
           </Badge>
 
-          <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-            Get <span className="text-transparent bg-gradient-to-r from-yellow-200 to-orange-200 bg-clip-text">Biweekly</span> Technical SEO Insights
-          </h2>
+          <h2 className="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: t('newsletter.section.title.part1') }} />
 
           <p className="text-xl text-purple-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Get actionable strategies that help business owners and developers create exceptional user experiences, optimize technical SEO and performance, and drive revenue
-            growth.
+            {t('newsletter.section.description')}
           </p>
 
+          {t('newsletter.section.english-only') !== 'newsletter.section.english-only' && (
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1 mb-8">
+              <span className="text-xs font-medium text-purple-200">{t('newsletter.section.english-only')}</span>
+            </div>
+          )}
+
           <div className="max-w-3xl mx-auto mb-8">
-            <ConvertKitForm formType="newsletter-section" buttonText="Subscribe" design="newsletter" />
+            <ConvertKitForm formType="newsletter-section" buttonText={t('newsletter.subscribe')} design="newsletter" t={t} />
           </div>
 
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -48,19 +52,19 @@ const NewsletterSection: React.FC<NewsletterSectionProps> = ({ className }) => {
               />
               <OptimizedImage src="/assets/images/testimonials/aleyda-solis.jpg" alt="Aleyda Solis" className="w-10 h-10 rounded-full border-2 border-white/80 object-cover" />
             </div>
-            <span className="text-sm font-medium text-white/90">Recommended by industry leaders</span>
+            <span className="text-sm font-medium text-white/90">{t('newsletter.section.recommended')}</span>
           </div>
 
-          <p className="text-sm text-purple-300 mb-2">No spam, ever. Unsubscribe at any time.</p>
+          <p className="text-sm text-purple-300 mb-2">{t('newsletter.section.no-spam')}</p>
 
           <p className="text-xs text-purple-300">
-            By subscribing, I agree to the{' '}
-            <a className="underline hover:text-white transition-colors" href="/privacy-policy/">
-              Privacy Policy
+            {t('newsletter.section.consent')}{' '}
+            <a className="underline hover:text-white transition-colors" href={t('url.privacy-policy')}>
+              {t('footer.privacy')}
             </a>{' '}
-            and{' '}
-            <a className="underline hover:text-white transition-colors" href="/terms-and-conditions/">
-              Terms and Conditions
+            {t('newsletter.section.and')}{' '}
+            <a className="underline hover:text-white transition-colors" href={t('url.terms')}>
+              {t('footer.terms')}
             </a>
             .
           </p>

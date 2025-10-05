@@ -6,6 +6,7 @@ layout: 'blog-post'
 date: '2025-05-01'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/invisible-drivers-ecommerce.jpg'
+lang: en
 ---
 
 We’ve all been there. Halfway through checkout when the loading spinner appears and spins… and spins. Frustrated, I abandoned my cart and headed to a competitor’s site where the checkout process was lightning fast. Within minutes, I’ve completed my purchase elsewhere.

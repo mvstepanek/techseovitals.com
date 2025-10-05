@@ -6,6 +6,8 @@ layout: 'blog-post'
 date: '2025-09-17'
 author: 'Martin Stepanek'
 image: '/assets/images/blog/how-lcp-transforms-bounce-rates-revenue.jpg'
+lang: en
+translationKey: 'lcp-transforms-bounce-rates-revenue'
 ---
 
 A website with slow-loading content can drive customers away out of frustration. A one-second improvement in **Largest Contentful Paint (LCP)** can cut bounce rates up to **14%** and boost conversion rates by **13%**.

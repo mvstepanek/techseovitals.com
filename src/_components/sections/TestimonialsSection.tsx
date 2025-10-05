@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionHeader from '../ui/SectionHeader';
 import TestimonialCard from '../ui/TestimonialCard';
-import { TESTIMONIALS, COMMON_STYLES } from '../../_data/constants';
+import { COMMON_STYLES } from '../../_data/constants';
 import Icons from '../ui/Icons';
 
 interface TestimonialsProps {
@@ -12,48 +12,48 @@ interface TestimonialsProps {
   showTrustSignals?: boolean;
   trustText?: string;
   backgroundColor?: string;
+  t?: (key: string) => string;
 }
 
+const defaultT = (key: string) => key;
+
 const TestimonialsSection: React.FC<TestimonialsProps> = ({
-  title = 'Real Results from Real Clients',
-  subtitle = 'Discover how technical excellence drives real business results.',
+  title,
+  subtitle,
   showBadge = true,
-  badgeText = 'Client Success Stories',
+  badgeText,
   showTrustSignals = true,
-  trustText: _trustText = 'Trused by 50+ businesses',
+  trustText: _trustText,
   backgroundColor = 'bg-white',
+  t = defaultT,
 }) => {
+  const actualTitle = title || t('testimonials.default.title');
+  const actualSubtitle = subtitle || t('testimonials.default.subtitle');
+  const actualBadgeText = badgeText || t('testimonials.default.badge');
+  const actualTrustText = _trustText || t('testimonials.default.trust-text');
   return (
     <section className={`${backgroundColor} py-24`}>
       <div className={COMMON_STYLES.containerWidth}>
         <SectionHeader
-          badge={showBadge ? { icon: <Icons.heart className="w-4 h-4" />, text: badgeText } : undefined}
-          title={
-            title.includes('Real Clients') ? (
-              <>
-                Real Results from <span>Real Clients</span>
-              </>
-            ) : (
-              title
-            )
-          }
-          subtitle={subtitle}
+          badge={showBadge ? { icon: <Icons.heart className="w-4 h-4" />, text: actualBadgeText } : undefined}
+          title={actualTitle}
+          subtitle={actualSubtitle}
         />
 
         <div className={COMMON_STYLES.twoColumnGrid}>
           <TestimonialCard
-            name={TESTIMONIALS.VIKTOR_ZEMAN.name}
-            position="CEO"
-            company="LiveAgent & Post Affiliate Pro"
-            text={TESTIMONIALS.VIKTOR_ZEMAN.quote}
+            name={t('testimonial.viktor.name')}
+            position={t('testimonials.position.ceo')}
+            company={t('testimonials.company.liveagent')}
+            text={t('testimonial.viktor.quote')}
             image="/assets/images/testimonials/viktor-zeman.jpg"
           />
 
           <TestimonialCard
-            name={TESTIMONIALS.DANIEL_PISON.name}
-            position="CMO"
-            company="Quality Unit"
-            text={TESTIMONIALS.DANIEL_PISON.quote}
+            name={t('testimonial.daniel.name')}
+            position={t('testimonials.position.cmo')}
+            company={t('testimonials.company.quality-unit')}
+            text={t('testimonial.daniel.quote')}
             image="/assets/images/testimonials/daniel-pison.jpg"
           />
         </div>
@@ -61,10 +61,10 @@ const TestimonialsSection: React.FC<TestimonialsProps> = ({
         {showTrustSignals && (
           <div className="text-center mt-12">
             <a
-              href="/customers/"
+              href={t('url.customers')}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
-              More success stories
+              {t('testimonials.default.cta')}
               <Icons.arrowRight className="w-4 h-4" />
             </a>
           </div>

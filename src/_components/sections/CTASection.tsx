@@ -1,5 +1,5 @@
 import React from 'react';
-import { BUSINESS_CONSTANTS, COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
+import { COMMON_STYLES, getBackgroundClass } from '../../_data/constants';
 import { BadgeProps, CTAProps } from '../../_types/common';
 import Button from '../ui/Button';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
@@ -8,8 +8,8 @@ import CTAFeaturesGrid from '../ui/CTAFeaturesGrid';
 
 interface FeatureProps {
   icon: React.ReactNode;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
 }
 
 interface CTASectionBadgeProps {
@@ -19,15 +19,18 @@ interface CTASectionBadgeProps {
 
 interface CTASectionProps {
   badge: CTASectionBadgeProps;
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   description: string;
   primaryCta: CTAProps;
   trustSignals?: string[];
   features?: FeatureProps[];
   backgroundColor?: 'white' | 'gray';
+  t?: (key: string) => string;
 }
 
-const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, primaryCta, trustSignals = BUSINESS_CONSTANTS.TRUST_SIGNALS, features, backgroundColor = 'white' }) => {
+const defaultT = (key: string) => key;
+
+const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, primaryCta, trustSignals, features, backgroundColor = 'white', t = defaultT }) => {
   const bgClass = backgroundColor === 'gray' ? getBackgroundClass('gradientBlue') : getBackgroundClass('white');
 
   return (
@@ -43,7 +46,10 @@ const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, prim
           </div>
 
           {/* Title */}
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
+          <h2
+            className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+            {...(typeof title === 'string' && title.includes('<') ? { dangerouslySetInnerHTML: { __html: title } } : { children: title })}
+          />
 
           {/* Description */}
           <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">{description}</p>
@@ -59,7 +65,7 @@ const CTASection: React.FC<CTASectionProps> = ({ badge, title, description, prim
           </div>
 
           {/* Features Grid (if provided) */}
-          {features && <CTAFeaturesGrid features={features} />}
+          {features && <CTAFeaturesGrid features={features} t={t} />}
         </div>
       </div>
     </section>
