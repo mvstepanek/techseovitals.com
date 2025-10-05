@@ -16,7 +16,7 @@ export const data = {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
       const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.contact.title'] || 'Contact - TechSEO Vitals';
+      return translations['meta.contact.title'] || 'Contact';
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';

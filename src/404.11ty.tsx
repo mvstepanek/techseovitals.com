@@ -10,7 +10,7 @@ export const data = {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
       const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.404.title'] || 'Page Not Found - TechSEO Vitals';
+      return translations['meta.404.title'] || 'Page Not Found';
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';

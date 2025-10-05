@@ -20,7 +20,7 @@ export const data = {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
       const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.services.title'] || 'Technical SEO Services - TechSEO Vitals';
+      return translations['meta.services.title'] || 'Technical SEO Services';
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';

@@ -21,7 +21,7 @@ export const data = {
     title: (data: any) => {
       const locale = data.i18n?.locale || 'en';
       const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
-      return translations['meta.consultant.title'] || 'Technical SEO Consultant - TechSEO Vitals';
+      return translations['meta.consultant.title'] || 'Technical SEO Consultant';
     },
     description: (data: any) => {
       const locale = data.i18n?.locale || 'en';
