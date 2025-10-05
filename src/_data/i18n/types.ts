@@ -104,6 +104,9 @@ export type TranslationKey =
   | 'checklist.hero.trust-signals'
   | 'common.alt.martin-consultant'
   | 'common.alt.martin-expert'
+  | 'common.aria.close-menu'
+  | 'common.aria.open-menu'
+  | 'common.atom-feed'
   | 'common.cta-feature.free.description'
   | 'common.cta-feature.free.title'
   | 'common.cta-feature.time.description'
@@ -113,6 +116,7 @@ export type TranslationKey =
   | 'common.next'
   | 'common.page'
   | 'common.previous'
+  | 'common.rss-feed'
   | 'consultant.cta.badge'
   | 'consultant.cta.button'
   | 'consultant.cta.description'
@@ -390,6 +394,17 @@ export type TranslationKey =
   | 'performance.benefits.benefit3.title'
   | 'performance.benefits.subtitle'
   | 'performance.benefits.title'
+  | 'schema.blog.description'
+  | 'schema.breadcrumb.home'
+  | 'schema.contact.description'
+  | 'schema.contact.name'
+  | 'schema.contactType'
+  | 'schema.jobTitle'
+  | 'schema.newsletter.audience'
+  | 'schema.newsletter.description'
+  | 'schema.organization.description'
+  | 'schema.person.knowsAbout'
+  | 'schema.website.description'
   | 'services-cards.audit.cta'
   | 'services-cards.audit.description'
   | 'services-cards.audit.feature1.description'
@@ -545,6 +560,6 @@ export type TranslationKey =
 export type TranslationFunction = (key: TranslationKey) => string;
 
 /**
- * Number of translation keys: 535
- * Generated: 2025-10-05T04:50:48.318Z
+ * Number of translation keys: 550
+ * Generated: 2025-10-05T05:17:01.052Z
  */

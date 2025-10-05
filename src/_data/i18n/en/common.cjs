@@ -30,5 +30,9 @@ module.exports = {
   "trust.businesses-trust": "50+ businesses trust me",
   "cta.badge": "Ready to Delight Your Users?",
   "cta.title": "Give Visitors The Experience <span>They Deserve</span>",
-  "cta.description": "Your users are struggling with issues you might not even see. Get a comprehensive technical audit that reveals exactly what's frustrating visitors and how to create a seamless experience while naturally improving your visibility in search engines and AI systems."
+  "cta.description": "Your users are struggling with issues you might not even see. Get a comprehensive technical audit that reveals exactly what's frustrating visitors and how to create a seamless experience while naturally improving your visibility in search engines and AI systems.",
+  "common.rss-feed": "TechSEO Vitals Blog RSS Feed",
+  "common.atom-feed": "TechSEO Vitals Blog Atom Feed",
+  "common.aria.close-menu": "Close menu",
+  "common.aria.open-menu": "Open menu"
 };

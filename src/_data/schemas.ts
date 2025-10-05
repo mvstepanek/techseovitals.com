@@ -12,66 +12,75 @@ export interface EleventyData {
   };
 }
 
+type TranslationFunction = (key: string) => string | string[];
+
 export class SchemaFactory {
-  private static getCanonicalUrl(permalink: string): string {
-    return `${SITE_CONFIG.DOMAIN}${permalink}`;
+  private static getCanonicalUrl(permalink: string, domain?: string): string {
+    return `${domain || SITE_CONFIG.DOMAIN}${permalink}`;
   }
 
   // Organization schema - base for all pages
-  static organization() {
+  static organization(t: TranslationFunction = (key) => key, domain?: string) {
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
+    const consultantUrl = t('url.consultant') as string;
+    const contactUrl = t('url.contact') as string;
+
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       name: 'TechSEO Vitals',
-      url: SITE_CONFIG.DOMAIN,
-      logo: `${SITE_CONFIG.DOMAIN}/assets/techseovitals-logo.svg`,
-      description: 'Expert technical SEO and web performance consulting services',
+      url: siteDomain,
+      logo: `${siteDomain}/assets/techseovitals-logo.svg`,
+      description: t('schema.organization.description') as string,
       founder: {
         '@type': 'Person',
         name: 'Martin Stepanek',
-        jobTitle: 'Technical SEO Consultant',
-        url: `${SITE_CONFIG.DOMAIN}/technical-seo-consultant/`,
+        jobTitle: t('schema.jobTitle') as string,
+        url: `${siteDomain}${consultantUrl}`,
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        contactType: 'customer service',
-        url: `${SITE_CONFIG.DOMAIN}/contact/`,
+        contactType: t('schema.contactType') as string,
+        url: `${siteDomain}${contactUrl}`,
       },
       sameAs: [SOCIAL_MEDIA.LINKEDIN_PROFILE, SOCIAL_MEDIA.BLUESKY, SOCIAL_MEDIA.YOUTUBE],
     };
   }
 
   // Article schema for blog posts
-  static article(data: EleventyData) {
+  static article(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
     if (!data.articleData) return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
+    const consultantUrl = t('url.consultant') as string;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'Article',
       headline: data.title,
       description: data.description,
-      url: this.getCanonicalUrl(data.permalink || '/'),
+      url: this.getCanonicalUrl(data.permalink || '/', siteDomain),
       datePublished: data.articleData.publishDate,
       dateModified: data.articleData.modifiedDate || data.articleData.publishDate,
       author: {
         '@type': 'Person',
         name: data.articleData.author || 'Martin Stepanek',
-        url: `${SITE_CONFIG.DOMAIN}/technical-seo-consultant/`,
+        url: `${siteDomain}${consultantUrl}`,
       },
       publisher: {
         '@type': 'Organization',
         name: 'TechSEO Vitals',
         logo: {
           '@type': 'ImageObject',
-          url: `${SITE_CONFIG.DOMAIN}/assets/techseovitals-logo.svg`,
+          url: `${siteDomain}/assets/techseovitals-logo.svg`,
         },
       },
     };
   }
 
   // Breadcrumb schema
-  static breadcrumb(data: EleventyData) {
+  static breadcrumb(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
     if (!data.permalink || data.permalink === '/') return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
 
     return {
       '@context': 'https://schema.org',
@@ -80,58 +89,63 @@ export class SchemaFactory {
         {
           '@type': 'ListItem',
           position: 1,
-          name: 'Home',
-          item: SITE_CONFIG.DOMAIN,
+          name: t('schema.breadcrumb.home') as string,
+          item: siteDomain,
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: data.title,
-          item: this.getCanonicalUrl(data.permalink),
+          item: this.getCanonicalUrl(data.permalink, siteDomain),
         },
       ],
     };
   }
 
   // Website schema for homepage
-  static website(data: EleventyData) {
+  static website(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
     if (data.permalink !== '/') return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
+    const blogUrl = t('url.blog') as string;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'TechSEO Vitals',
-      url: SITE_CONFIG.DOMAIN,
-      description: 'Expert technical SEO and web performance consulting services',
+      url: siteDomain,
+      description: t('schema.website.description') as string,
       publisher: {
         '@type': 'Organization',
         name: 'TechSEO Vitals',
       },
       potentialAction: {
         '@type': 'SearchAction',
-        target: `${SITE_CONFIG.DOMAIN}/blog/?search={search_term_string}`,
+        target: `${siteDomain}${blogUrl}?search={search_term_string}`,
         'query-input': 'required name=search_term_string',
       },
     };
   }
 
   // WebPage schema for all pages
-  static webPage(data: EleventyData) {
+  static webPage(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
+    const consultantUrl = t('url.consultant') as string;
+
     return {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       name: data.title,
       description: data.description,
-      url: this.getCanonicalUrl(data.permalink || '/'),
+      url: this.getCanonicalUrl(data.permalink || '/', siteDomain),
       isPartOf: {
         '@type': 'WebSite',
         name: 'TechSEO Vitals',
-        url: SITE_CONFIG.DOMAIN,
+        url: siteDomain,
       },
       author: {
         '@type': 'Person',
         name: 'Martin Stepanek',
-        url: `${SITE_CONFIG.DOMAIN}/technical-seo-consultant/`,
+        url: `${siteDomain}${consultantUrl}`,
       },
       publisher: {
         '@type': 'Organization',
@@ -148,32 +162,38 @@ export class SchemaFactory {
   }
 
   // Person schema for Martin Stepanek
-  static person() {
+  static person(t: TranslationFunction = (key) => key, domain?: string) {
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
+    const consultantUrl = t('url.consultant') as string;
+    const knowsAbout = t('schema.person.knowsAbout') as string[];
+
     return {
       '@context': 'https://schema.org',
       '@type': 'Person',
       name: 'Martin Stepanek',
-      jobTitle: 'Technical SEO Consultant',
-      url: `${SITE_CONFIG.DOMAIN}/technical-seo-consultant/`,
+      jobTitle: t('schema.jobTitle') as string,
+      url: `${siteDomain}${consultantUrl}`,
       worksFor: {
         '@type': 'Organization',
         name: 'TechSEO Vitals',
       },
-      knowsAbout: ['Technical SEO', 'Web Performance', 'Core Web Vitals', 'Website Migration', 'Search Engine Optimization'],
+      knowsAbout,
       sameAs: [SOCIAL_MEDIA.LINKEDIN_PROFILE, SOCIAL_MEDIA.BLUESKY, SOCIAL_MEDIA.YOUTUBE],
     };
   }
 
   // Blog schema
-  static blog(data: EleventyData) {
-    if (data.permalink !== '/blog/') return null;
+  static blog(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const blogUrl = t('url.blog') as string;
+    if (data.permalink !== blogUrl) return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'Blog',
       name: 'TechSEO Vitals Blog',
-      description: 'Expert technical SEO blog with actionable insights, tips, and strategies',
-      url: `${SITE_CONFIG.DOMAIN}/blog/`,
+      description: t('schema.blog.description') as string,
+      url: `${siteDomain}${blogUrl}`,
       author: {
         '@type': 'Person',
         name: 'Martin Stepanek',
@@ -186,15 +206,17 @@ export class SchemaFactory {
   }
 
   // Newsletter schema
-  static newsletter(data: EleventyData) {
-    if (data.permalink !== '/newsletter/') return null;
+  static newsletter(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const newsletterUrl = t('url.newsletter') as string;
+    if (data.permalink !== newsletterUrl) return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'CreativeWork',
-      '@id': `${SITE_CONFIG.DOMAIN}/newsletter/`,
+      '@id': `${siteDomain}${newsletterUrl}`,
       name: 'TechSEO Vitals Newsletter',
-      description: 'Technical SEO insights and web performance strategies delivered every two weeks',
+      description: t('schema.newsletter.description') as string,
       author: {
         '@type': 'Person',
         name: 'Martin Stepanek',
@@ -206,39 +228,48 @@ export class SchemaFactory {
       creativeWorkStatus: 'Published',
       audience: {
         '@type': 'Audience',
-        audienceType: 'Business owners, SEO professionals, Web developers',
+        audienceType: t('schema.newsletter.audience') as string,
       },
     };
   }
 
   // Contact Page schema
-  static contactPage(data: EleventyData) {
-    if (data.permalink !== '/contact/') return null;
+  static contactPage(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const contactUrl = t('url.contact') as string;
+    if (data.permalink !== contactUrl) return null;
+    const siteDomain = domain || SITE_CONFIG.DOMAIN;
 
     return {
       '@context': 'https://schema.org',
       '@type': 'ContactPage',
-      name: 'Contact TechSEO Vitals',
-      description: 'Get in touch with Martin Stepanek for technical SEO consulting services',
-      url: `${SITE_CONFIG.DOMAIN}/contact/`,
+      name: t('schema.contact.name') as string,
+      description: t('schema.contact.description') as string,
+      url: `${siteDomain}${contactUrl}`,
       mainEntity: {
         '@type': 'Organization',
         name: 'TechSEO Vitals',
         contactPoint: {
           '@type': 'ContactPoint',
-          contactType: 'customer service',
-          url: `${SITE_CONFIG.DOMAIN}/contact/`,
+          contactType: t('schema.contactType') as string,
+          url: `${siteDomain}${contactUrl}`,
         },
       },
     };
   }
 
   // Generate all schemas for a page
-  static generateSchemas(data: EleventyData) {
-    const schemas = [this.organization(), this.webPage(data), this.person()];
+  static generateSchemas(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const schemas = [this.organization(t, domain), this.webPage(data, t, domain), this.person(t, domain)];
 
     // Add conditional schemas
-    const conditionalSchemas = [this.article(data), this.breadcrumb(data), this.website(data), this.blog(data), this.newsletter(data), this.contactPage(data)];
+    const conditionalSchemas = [
+      this.article(data, t, domain),
+      this.breadcrumb(data, t, domain),
+      this.website(data, t, domain),
+      this.blog(data, t, domain),
+      this.newsletter(data, t, domain),
+      this.contactPage(data, t, domain),
+    ];
 
     conditionalSchemas.forEach((schema) => {
       if (schema) schemas.push(schema);
@@ -248,8 +279,8 @@ export class SchemaFactory {
   }
 
   // Generate schema script tags for HTML
-  static generateSchemaScripts(data: EleventyData) {
-    const schemas = this.generateSchemas(data);
+  static generateSchemaScripts(data: EleventyData, t: TranslationFunction = (key) => key, domain?: string) {
+    const schemas = this.generateSchemas(data, t, domain);
     return schemas.map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`).join('\n');
   }
 }

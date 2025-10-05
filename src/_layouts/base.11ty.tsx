@@ -39,6 +39,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
   const locale = data.i18n?.config?.[data.i18n?.locale];
   const htmlLang = locale?.htmlLang || 'en';
   const domain = locale?.domain || SITE_CONFIG.DOMAIN;
+  const t = data.t || ((key: string) => key);
 
   const title = data.title ? `${data.title}` : 'TechSEO Vitals - Technical SEO & Web Performance Consulting';
   const description =
@@ -50,14 +51,18 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
   // Get hreflang alternates
   const alternates = data.hreflang?.getAlternates(data.permalink || '/') || [];
 
-  // Generate all schemas using centralized SchemaFactory
+  // Get translated aria labels
+  const ariaCloseMenu = t('common.aria.close-menu');
+  const ariaOpenMenu = t('common.aria.open-menu');
+
+  // Generate all schemas using centralized SchemaFactory with i18n support
   const schemas = SchemaFactory.generateSchemas({
     title: data.title,
     description: data.description,
     permalink: data.permalink,
     ogImage,
     articleData: data.articleData,
-  });
+  }, t, domain);
 
   return (
     <html lang={htmlLang}>
@@ -73,6 +78,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         alternates={alternates}
         htmlLang={htmlLang}
         hreflang={data.hreflang}
+        t={data.t}
       />
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
         <TopBar t={data.t} />
@@ -104,7 +110,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
                   menu.classList.toggle('hidden');
                   const isOpen = !menu.classList.contains('hidden');
                   button.setAttribute('aria-expanded', isOpen);
-                  button.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+                  button.setAttribute('aria-label', isOpen ? '${ariaCloseMenu}' : '${ariaOpenMenu}');
 
                   // Trap focus when menu is open
                   if (isOpen) {
@@ -117,7 +123,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
                   if (e.key === 'Escape' && !menu.classList.contains('hidden')) {
                     menu.classList.add('hidden');
                     button.setAttribute('aria-expanded', 'false');
-                    button.setAttribute('aria-label', 'Open menu');
+                    button.setAttribute('aria-label', '${ariaOpenMenu}');
                     button.focus();
                   }
                 });

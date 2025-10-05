@@ -25,5 +25,16 @@ module.exports = {
   "meta.migration.title": "SEO migračný checklist - TechSEO Vitals",
   "meta.migration.description": "Bezplatný SEO migračný checklist s viac ako 50 kontrolnými bodmi pre bezpečnú migráciu webovej stránky. Eliminujte riziká straty organickej návštevnosti a zachovajte svoje pozície vo vyhľadávačoch.",
   "meta.customers.title": "Príbehy úspechu zákazníkov - TechSEO Vitals",
-  "meta.customers.description": "Pozrite sa, ako sme pomohli firmám zlepšiť ich technické SEO, výkon webu a organickú návštevnosť. Skutočné výsledky od skutočných klientov."
+  "meta.customers.description": "Pozrite sa, ako sme pomohli firmám zlepšiť ich technické SEO, výkon webu a organickú návštevnosť. Skutočné výsledky od skutočných klientov.",
+  "schema.organization.description": "Expertné služby konzultácií technického SEO a výkonu webu",
+  "schema.jobTitle": "Technický SEO konzultant",
+  "schema.contactType": "zákaznícky servis",
+  "schema.breadcrumb.home": "Domov",
+  "schema.website.description": "Expertné služby konzultácií technického SEO a výkonu webu",
+  "schema.person.knowsAbout": ["Technické SEO", "Výkon webu", "Core Web Vitals", "Migrácia webovej stránky", "Optimalizácia pre vyhľadávače"],
+  "schema.blog.description": "Expertný technický SEO blog s praktickými poznatkami, tipmi a stratégiami",
+  "schema.newsletter.description": "Praktické rady z technického SEO a stratégie výkonu webu doručované každé dva týždne",
+  "schema.newsletter.audience": "Majitelia firiem, SEO profesionáli, Web vývojári",
+  "schema.contact.name": "Kontakt TechSEO Vitals",
+  "schema.contact.description": "Spojte sa s Martinom Štěpánkom pre služby konzultácií technického SEO"
 };

@@ -40,5 +40,9 @@ module.exports = {
   "cta.see-how": "Pozrite sa ako",
   "cta.discover-more": "Objaviť viac",
   "cta.contact-me": "Kontaktujte ma",
-  "cta.lets-talk": "Porozprávajme sa"
+  "cta.lets-talk": "Porozprávajme sa",
+  "common.rss-feed": "TechSEO Vitals Blog RSS kanál",
+  "common.atom-feed": "TechSEO Vitals Blog Atom kanál",
+  "common.aria.close-menu": "Zavrieť menu",
+  "common.aria.open-menu": "Otvoriť menu"
 };

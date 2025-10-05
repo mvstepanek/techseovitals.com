@@ -25,5 +25,16 @@ module.exports = {
   "meta.migration.title": "Website Migration Checklist - Free Download - TechSEO Vitals",
   "meta.migration.description": "Download our complete website migration checklist. Protect your traffic and rankings during redesigns, platform changes, and domain migrations.",
   "meta.customers.title": "Customer Success Stories - TechSEO Vitals",
-  "meta.customers.description": "See how we've helped businesses improve their technical SEO, web performance, and organic traffic. Real results from real clients."
+  "meta.customers.description": "See how we've helped businesses improve their technical SEO, web performance, and organic traffic. Real results from real clients.",
+  "schema.organization.description": "Expert technical SEO and web performance consulting services",
+  "schema.jobTitle": "Technical SEO Consultant",
+  "schema.contactType": "customer service",
+  "schema.breadcrumb.home": "Home",
+  "schema.website.description": "Expert technical SEO and web performance consulting services",
+  "schema.person.knowsAbout": ["Technical SEO", "Web Performance", "Core Web Vitals", "Website Migration", "Search Engine Optimization"],
+  "schema.blog.description": "Expert technical SEO blog with actionable insights, tips, and strategies",
+  "schema.newsletter.description": "Technical SEO insights and web performance strategies delivered every two weeks",
+  "schema.newsletter.audience": "Business owners, SEO professionals, Web developers",
+  "schema.contact.name": "Contact TechSEO Vitals",
+  "schema.contact.description": "Get in touch with Martin Stepanek for technical SEO consulting services"
 };

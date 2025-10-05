@@ -17,9 +17,10 @@ interface HeadSectionProps {
   alternates?: Array<{ locale: string; url: string; lang: string }>;
   htmlLang?: string;
   hreflang?: any;
+  t?: (key: string) => string;
 }
 
-const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonicalUrl, ogImage, heroImage, permalink, schemas, articleData, alternates = [], htmlLang = 'en', hreflang }) => {
+const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonicalUrl, ogImage, heroImage, permalink, schemas, articleData, alternates = [], htmlLang = 'en', hreflang, t = (key) => key }) => {
   // Get x-default URL (English version)
   const xDefaultUrl = hreflang?.getAlternateUrl(permalink || '/', 'en') || alternates.find(alt => alt.lang === 'en')?.url || alternates[0]?.url;
 
@@ -99,11 +100,11 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
           __html: JSON.stringify({
             prefetch: [
               {
-                where: { href_matches: '/technical-seo-services/' },
+                where: { href_matches: htmlLang === 'sk' ? '/technicke-seo-sluzby/' : '/technical-seo-services/' },
                 eagerness: 'moderate',
               },
               {
-                where: { href_matches: '/contact/' },
+                where: { href_matches: htmlLang === 'sk' ? '/kontakt/' : '/contact/' },
                 eagerness: 'moderate',
               },
               {
@@ -117,7 +118,7 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
             ],
             prerender: [
               {
-                where: { href_matches: '/contact/' },
+                where: { href_matches: htmlLang === 'sk' ? '/kontakt/' : '/contact/' },
                 eagerness: 'conservative',
               },
             ],
@@ -218,8 +219,8 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       ))}
 
       {/* RSS Feed for blog */}
-      <link rel="alternate" type="application/rss+xml" title="TechSEO Vitals Blog RSS Feed" href="/blog/rss.xml" />
-      <link rel="alternate" type="application/atom+xml" title="TechSEO Vitals Blog Atom Feed" href="/blog/atom.xml" />
+      <link rel="alternate" type="application/rss+xml" title={t('common.rss-feed')} href="/blog/rss.xml" />
+      <link rel="alternate" type="application/atom+xml" title={t('common.atom-feed')} href="/blog/atom.xml" />
 
       {/* Analytics Scripts */}
       {htmlLang === 'sk' ? (
