@@ -25,6 +25,11 @@ export default function (eleventyConfig: any): UserConfig {
     compile: function () {
       return async function (data: any) {
         let content = await this.defaultRenderer(data);
+        // Check if this is a plain text file (robots.txt, sitemap.xml, etc.)
+        const isPlainText = data.page?.outputPath?.match(/\.(txt|xml)$/);
+        if (isPlainText) {
+          return content;
+        }
         return '<!DOCTYPE html>\n' + renderToStaticMarkup(content);
       };
     },
