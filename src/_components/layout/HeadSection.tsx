@@ -21,8 +21,19 @@ interface HeadSectionProps {
 }
 
 const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonicalUrl, ogImage, heroImage, permalink, schemas, articleData, alternates = [], htmlLang = 'en', hreflang, t = (key) => key }) => {
+  // Deduplicate alternates by locale (safety measure)
+  const uniqueAlternates = alternates.reduce((acc:any[], alt) => {
+    if (!acc.find(a => a.locale === alt.locale)) {
+      acc.push(alt);
+    }
+    return acc;
+  }, []);
+
   // Get x-default URL (English version)
-  const xDefaultUrl = hreflang?.getAlternateUrl(permalink || '/', 'en') || alternates.find(alt => alt.lang === 'en')?.url || alternates[0]?.url;
+  const xDefaultUrl = hreflang?.getAlternateUrl(permalink || '/', 'en') || uniqueAlternates.find(alt => alt.lang === 'en')?.url || uniqueAlternates[0]?.url;
+
+  // Get alternate locale for og:locale:alternate
+  const alternateLocale = htmlLang === 'sk' ? 'en_US' : 'sk_SK';
 
   return (
     <head>
@@ -30,10 +41,10 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       {/* Hreflang tags */}
-      {alternates.length > 0 && alternates.map((alt) => (
+      {uniqueAlternates.length > 0 && uniqueAlternates.map((alt) => (
         <link key={alt.locale} rel="alternate" hrefLang={alt.lang} href={alt.url} />
       ))}
-      {alternates.length > 0 && xDefaultUrl && (
+      {uniqueAlternates.length > 0 && xDefaultUrl && (
         <link rel="alternate" hrefLang="x-default" href={xDefaultUrl} />
       )}
 
@@ -73,6 +84,7 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="TechSEO Vitals" />
       <meta property="og:locale" content={htmlLang === 'sk' ? 'sk_SK' : 'en_US'} />
+      <meta property="og:locale:alternate" content={alternateLocale} />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />

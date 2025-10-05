@@ -72,6 +72,8 @@ export class SchemaFactory {
         logo: {
           '@type': 'ImageObject',
           url: `${siteDomain}/assets/techseovitals-logo.svg`,
+          width: 200,
+          height: 50,
         },
       },
     };
@@ -156,6 +158,8 @@ export class SchemaFactory {
             '@type': 'ImageObject',
             url: data.ogImage,
             name: data.title,
+            width: 1200,
+            height: 630,
           }
         : null,
     };
@@ -165,7 +169,11 @@ export class SchemaFactory {
   static person(t: TranslationFunction = (key) => key, domain?: string) {
     const siteDomain = domain || SITE_CONFIG.DOMAIN;
     const consultantUrl = t('url.consultant') as string;
-    const knowsAbout = t('schema.person.knowsAbout') as string[];
+    const knowsAboutRaw = t('schema.person.knowsAbout') as string | string[];
+
+    // Ensure knowsAbout is an array and deduplicate
+    const knowsAboutArray = Array.isArray(knowsAboutRaw) ? knowsAboutRaw : [knowsAboutRaw];
+    const knowsAbout = [...new Set(knowsAboutArray)]; // Deduplicate using Set
 
     return {
       '@context': 'https://schema.org',

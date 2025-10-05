@@ -39,7 +39,15 @@ export default function Sitemap(data: EleventyData): string {
     })
     .map((page) => {
       // Get alternate URLs for hreflang
-      const alternates = data.hreflang?.getAlternates(page.url) || [];
+      const alternatesRaw = data.hreflang?.getAlternates(page.url) || [];
+
+      // Deduplicate alternates by locale (safety measure)
+      const alternates = alternatesRaw.reduce((acc: any[], alt: any) => {
+        if (!acc.find((a: any) => a.locale === alt.locale)) {
+          acc.push(alt);
+        }
+        return acc;
+      }, []);
 
       return {
         url: page.url,

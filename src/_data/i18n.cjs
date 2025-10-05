@@ -45,7 +45,7 @@ module.exports = {
   // Locale configuration
   config: {
     en: {
-      domain: 'https://techseovitals.com',
+      domain: 'https://www.techseovitals.com',
       htmlLang: 'en',
       label: 'English',
     },

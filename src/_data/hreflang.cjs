@@ -12,9 +12,21 @@ module.exports = function() {
       const config = i18nData.config[targetLocale];
       if (!config) return null;
 
-      // Remove trailing slash for consistent URLs
-      const cleanPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
+      // Normalize path - ensure it starts with /
+      let cleanPath = path;
+      if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
 
+      // Remove trailing slash except for root
+      if (cleanPath.endsWith('/') && cleanPath !== '/') {
+        cleanPath = cleanPath.slice(0, -1);
+      }
+
+      // For root path, it already has trailing slash
+      if (cleanPath === '/') {
+        return `${config.domain}/`;
+      }
+
+      // For other paths, add trailing slash
       return `${config.domain}${cleanPath}/`;
     },
 
