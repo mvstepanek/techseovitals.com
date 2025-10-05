@@ -15,7 +15,7 @@ module.exports = {
   "about.stats.subtitle": "Trusted by businesses worldwide",
   "why-choose-me.badge": "Why Me?",
   "why-choose-me.title": "Technical SEO Expert Who <span>Delivers Real Results</span>",
-  "why-me.testimonial": "Under Martin's leadership, our team significantly improved the performance of two high-traffic websites. His methodical approach to technical SEO and ability to communicate complex technical concepts continues to deliver remarkable results.",
+  "why-me.testimonial": "Under Martin's leadership, our team significantly enhanced the performance of two high-traffic websites. His methodical approach to technical SEO and aptitude for conveying complex technical concepts have consistently yielded remarkable results.",
   "why-audit.badge": "Why You Need an Audit",
   "why-audit.title": "Stop Guessing. <span>Start Knowing</span>",
   "why-audit.subtitle": "You can't fix what you can't see. My audit reveals the hidden technical issues killing your conversions and revenue with a clear roadmap to fix them.",

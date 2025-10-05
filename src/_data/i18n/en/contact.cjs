@@ -4,11 +4,11 @@
  */
 
 module.exports = {
-  "contact.hero.badge": "Get in Touch",
-  "contact.hero.title": "Let's Discuss Your <span>Technical SEO Needs</span>",
-  "contact.hero.description": "Schedule a free consultation to discuss how technical SEO can help your business grow.",
+  "contact.hero.badge": "Let's Work Together",
+  "contact.hero.title": "Get In Touch With <span>Martin</span>",
+  "contact.hero.description": "Ready to create experiences users actually love? Let's discuss how technical SEO and performance optimization can serve your visitors first while maximizing visibility in search engines and AI systems.",
   "contact.hero.cta": "Schedule Free Consultation",
-  "contact.hero.status": "Currently taking new clients",
+  "contact.hero.status": "Available for Projects",
   "contact.methods.title": "Multiple Ways to Connect",
   "contact.methods.subtitle": "Reach out directly for project inquiries or connect on social media for insights and updates",
   "contact.email.title": "Email",

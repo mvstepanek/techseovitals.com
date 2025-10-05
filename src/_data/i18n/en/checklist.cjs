@@ -7,7 +7,7 @@ module.exports = {
   "checklist.hero.badge": "Free Technical SEO Resource",
   "checklist.hero.title": "Complete Technical SEO <span>Checklist</span>",
   "checklist.hero.description": "Download our comprehensive technical SEO checklist. Step-by-step guide to optimize your website's performance, crawlability, and search rankings.",
-  "checklist.hero.trust-signals": "Trusted by 50+ businesses",
+  "checklist.hero.trust-signals": "100+ people already using the checklist",
   "checklist.hero.cta": "Download Checklist",
   "checklist.form.title": "Get Your Free Checklist",
   "checklist.form.subtitle": "Enter your details to download the checklist",

@@ -45,9 +45,9 @@ module.exports = {
   "services.starting-at": "Starting at",
   "services.hero.badge": "Results-Driven Technical SEO Services",
   "services.hero.title": "Technical SEO That <span>Drives Real Results</span>",
-  "services.hero.description": "Your website should work flawlessly for every visitor. Technical optimization removes the obstacles killing conversions. Better user experience leads to higher sales and better search rankings.",
+  "services.hero.description": "Your website should work flawlessly for every visitor. Technical optimization removes friction that kills conversions. Better user experience drives more sales and higher search rankings.",
   "services.hero.status": "Currently taking new clients",
   "services.cta.badge": "Ready to Improve Your Website?",
-  "services.cta.title": "Transform Your Website Into a <span>Revenue Engine</span>",
-  "services.cta.description": "Your competition is getting ahead while technical issues cost you customers every day. Get a technical audit that pinpoints exactly what needs fixing and start converting more visitors into paying customers."
+  "services.cta.title": "Turn Your Website Into a <span>Revenue Engine</span>",
+  "services.cta.description": "Your competitors are getting ahead while technical issues cost you customers every day. Get the technical audit that reveals exactly how to fix what's broken and start converting more visitors into paying customers."
 };

@@ -4,10 +4,10 @@
  */
 
 module.exports = {
-  "customers.hero.badge": "Customer Success Stories",
-  "customers.hero.title": "Real Results from <span>Real Clients</span>",
-  "customers.hero.description": "See how we've helped businesses improve their technical SEO, web performance, and organic traffic. Discover the impact of technical excellence.",
-  "customers.hero.cta": "Start Your Success Story",
+  "customers.hero.badge": "Proven Client Results",
+  "customers.hero.title": "Trusted by <span>Growing Businesses</span>",
+  "customers.hero.description": "From SaaS to e-commerce, businesses use technical SEO and performance optimization to create experiences that prioritize real users first. Better search and AI visibility naturally follow.",
+  "customers.hero.cta": "Start Your Transformation",
   "customers.hero.rating": "Trusted by 50+ businesses",
   "customers.case-studies.badge": "Featured Case Studies",
   "customers.case-studies.title": "Technical Excellence That <span>Serves Users First</span>",

@@ -99,7 +99,7 @@ module.exports = {
   "migration.hero.badge": "Free Website Migration Resource",
   "migration.hero.title": "Website Migration <span>Checklist</span>",
   "migration.hero.description": "Download our complete website migration checklist. Protect your traffic and rankings during redesigns, platform changes, and domain migrations.",
-  "migration.hero.trust-signals": "Trusted by 50+ businesses",
+  "migration.hero.trust-signals": "100+ people already using the checklist",
   "migration.hero.cta": "Download Checklist",
   "migration.form.title": "Get Your Free Migration Checklist",
   "migration.form.subtitle": "Enter your details to download the checklist",
