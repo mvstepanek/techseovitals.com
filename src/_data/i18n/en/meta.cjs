@@ -4,6 +4,8 @@
  */
 
 module.exports = {
+  "meta.default.title": "TechSEO Vitals - Technical SEO & Web Performance Consulting",
+  "meta.default.description": "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.",
   "meta.home.title": "TechSEO Vitals With Martin Stepanek",
   "meta.home.description": "Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.",
   "meta.services.title": "Technical SEO Services - TechSEO Vitals",

@@ -41,9 +41,8 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
   const domain = locale?.domain || SITE_CONFIG.DOMAIN;
   const t = data.t || ((key: string) => key);
 
-  const title = data.title ? `${data.title}` : 'TechSEO Vitals - Technical SEO & Web Performance Consulting';
-  const description =
-    data.description || "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
+  const title = data.title ? `${data.title}` : t('meta.default.title');
+  const description = data.description || t('meta.default.description');
   const canonicalUrl = `${domain}${data.permalink || '/'}`;
   const ogImage = data.ogImage || `${domain}/assets/og.png`;
   const heroImage = getHeroImage(data.permalink || '/');

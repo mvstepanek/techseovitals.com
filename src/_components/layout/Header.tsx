@@ -18,11 +18,11 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/', t = (key) => key }) 
 
       <div className={COMMON_STYLES.containerWidth}>
         <div className="flex items-center justify-between py-4">
-          <a className="block max-w-[180px]" href="/" aria-label="TechSEO Vitals Home">
-            <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo.svg" />
+          <a className="block max-w-[180px]" href="/" aria-label={t('common.aria.home')}>
+            <OptimizedImage alt={t('common.alt.logo')} width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo.svg" />
           </a>
 
-          <nav className="hidden lg:flex lg:items-center lg:space-x-8" aria-label="Main navigation">
+          <nav className="hidden lg:flex lg:items-center lg:space-x-8" aria-label={t('common.aria.main-nav')}>
             <div className="relative group">
               <a
                 className={`relative font-medium transition-all duration-200 py-2 ${
@@ -112,7 +112,7 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/', t = (key) => key }) 
           </button>
         </div>
 
-        <nav id="mobile-menu" className="mobile-menu hidden lg:hidden border-t border-gray-100 py-4" aria-label="Mobile navigation">
+        <nav id="mobile-menu" className="mobile-menu hidden lg:hidden border-t border-gray-100 py-4" aria-label={t('common.aria.mobile-nav')}>
           <div className="flex flex-col space-y-4">
             <a
               href={t('url.services')}

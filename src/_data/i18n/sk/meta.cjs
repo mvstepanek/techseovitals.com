@@ -4,6 +4,8 @@
  */
 
 module.exports = {
+  "meta.default.title": "TechSEO Vitals - Konzultácie technického SEO a webového výkonu",
+  "meta.default.description": "Expertné konzultácie v oblasti technického SEO a optimalizácie výkonu webu. Zvýšte viditeľnosť, rýchlosť a hodnotenie vašej webovej stránky vo vyhľadávačoch.",
   "meta.home.title": "TechSEO Vitals s Martinom Štěpánkom",
   "meta.home.description": "Pomáham firmám zvyšovať tržby s rýchlejšími a lepšie optimalizovanými webovými stránkami. Špecializujem sa na technické SEO a optimalizáciu výkonu.",
   "meta.services.title": "Technické SEO služby - TechSEO Vitals",

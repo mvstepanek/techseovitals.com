@@ -45,5 +45,9 @@ module.exports = {
   "common.atom-feed": "TechSEO Vitals Blog Atom kanál",
   "common.aria.close-menu": "Zavrieť menu",
   "common.aria.open-menu": "Otvoriť menu",
-  "common.alt.industry-leader": "Líder v odvetví"
+  "common.aria.home": "TechSEO Vitals Domov",
+  "common.aria.main-nav": "Hlavná navigácia",
+  "common.aria.mobile-nav": "Mobilná navigácia",
+  "common.alt.industry-leader": "Líder v odvetví",
+  "common.alt.logo": "TechSEO Vitals"
 };

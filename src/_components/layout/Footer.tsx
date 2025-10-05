@@ -14,8 +14,8 @@ const Footer: React.FC<FooterProps> = ({ t = (key) => key }) => (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-6 sm:space-y-8 xl:col-span-1">
-          <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label="TechSEO Vitals Home">
-            <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo-white.svg" aria-hidden="true" />
+          <a className="block max-w-[180px] sm:max-w-[200px]" href="/" aria-label={t('common.aria.home')}>
+            <OptimizedImage alt={t('common.alt.logo')} width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo-white.svg" aria-hidden="true" />
           </a>
           <p className="text-[0.9375rem] leading-6 text-gray-300 max-w-md">
             {t('footer.description')}

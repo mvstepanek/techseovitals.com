@@ -35,5 +35,9 @@ module.exports = {
   "common.atom-feed": "TechSEO Vitals Blog Atom Feed",
   "common.aria.close-menu": "Close menu",
   "common.aria.open-menu": "Open menu",
-  "common.alt.industry-leader": "Industry leader"
+  "common.aria.home": "TechSEO Vitals Home",
+  "common.aria.main-nav": "Main navigation",
+  "common.aria.mobile-nav": "Mobile navigation",
+  "common.alt.industry-leader": "Industry leader",
+  "common.alt.logo": "TechSEO Vitals"
 };

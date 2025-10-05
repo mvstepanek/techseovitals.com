@@ -287,20 +287,3 @@ export const FORM_MESSAGES = {
   EBOOK_SUCCESS: 'Great! Now check your email to confirm your subscription and I will send you a copy of the ebook.',
 };
 
-// Testimonials and social proof
-export const TESTIMONIALS = {
-  VIKTOR_ZEMAN: {
-    name: 'Viktor Zeman',
-    title: 'CEO, LiveAgent & Post Affiliate Pro',
-    quote:
-      "Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites.",
-    image: '/assets/images/testimonials/viktor-zeman.jpg',
-  },
-  DANIEL_PISON: {
-    name: 'Daniel Pison',
-    title: 'CMO, Quality Unit',
-    quote:
-      "Thanks in particular to Martin's skills and expertise, we have long been able to compete with much stronger competitors in website quality. I consider him one of the greatest technical SEO experts on the market.",
-    image: '/assets/images/testimonials/daniel-pison.jpg',
-  },
-};
