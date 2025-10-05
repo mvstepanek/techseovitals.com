@@ -2,15 +2,33 @@ import React from 'react';
 import HeroSection from './_components/sections/HeroSection';
 
 export const data = {
-  title: 'Thank You for Subscribing!',
-  description: 'Thank you for subscribing to TechSEO Vitals newsletter. Check your email to confirm your subscription.',
-  permalink: '/thank-you-for-subscribing/',
   layout: 'base',
   eleventyExcludeFromCollections: true,
   robots: 'noindex, nofollow',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.thank-you'] || '/thank-you-for-subscribing/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.thank-you.title'] || 'Thank You for Subscribing!';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.thank-you.description'] || 'Thank you for subscribing to TechSEO Vitals newsletter.';
+    },
+  },
 };
 
-const ThankYouForSubscribingPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const ThankYouForSubscribingPage: React.FC<Props> = ({ t = (key) => key }) => (
   <main className="flex-1">
     <HeroSection
       badge={{
@@ -19,30 +37,25 @@ const ThankYouForSubscribingPage: React.FC = () => (
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2A9 9 0 113 12a9 9 0 0118 0z" />
           </svg>
         ),
-        text: 'Newsletter Subscription Confirmed',
+        text: t('thank-you.hero.badge'),
       }}
-      title={
-        <>
-          Thank You for <span>Subscribing!</span>
-        </>
-      }
+      title={t('thank-you.hero.title')}
       description={
         <>
-          Your email has been confirmed and you&apos;re now subscribed to TechSEO Vitals newsletter. You&apos;ll receive expert analysis of technical SEO trends, actionable
-          step-by-step guides, and the latest industry updates on algorithm changes and AI developments.
+          {t('thank-you.hero.description')}
           <div className="mt-6 inline-block bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-700 font-medium">
-            If you subscribed to receive a free copy of the checklist, you&apos;ll get the link in your inbox soon!
+            {t('thank-you.hero.checklist-notice')}
           </div>
         </>
       }
       primaryCta={{
-        text: 'Explore Technical SEO Services',
-        href: '/technical-seo-services/',
+        text: t('thank-you.hero.cta.services'),
+        href: t('url.services'),
         target: '_self',
       }}
       secondaryCta={{
-        text: 'Read Latest Blog Posts',
-        href: '/blog/',
+        text: t('thank-you.hero.cta.blog'),
+        href: t('url.blog'),
         target: '_self',
         icon: (
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,4 +74,6 @@ const ThankYouForSubscribingPage: React.FC = () => (
   </main>
 );
 
-export default ThankYouForSubscribingPage;
+export default function ThankYouForSubscribingTemplate(data: any & { t: (key: string) => string }) {
+  return <ThankYouForSubscribingPage t={data.t} />;
+}

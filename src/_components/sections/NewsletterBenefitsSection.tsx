@@ -5,36 +5,36 @@ import Icons from '../ui/Icons';
 import GridLayout from '../ui/GridLayout';
 import { COMMON_STYLES } from '../../_data/constants';
 
-const NewsletterBenefitsSection: React.FC = () => (
+interface NewsletterBenefitsSectionProps {
+  t?: (key: string) => string;
+}
+
+const NewsletterBenefitsSection: React.FC<NewsletterBenefitsSectionProps> = ({ t = (key) => key }) => (
   <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{
           icon: <Icons.checkCircle className="w-4 h-4" />,
-          text: 'Why Subscribe',
+          text: t('newsletter-benefits.badge'),
         }}
-        title={
-          <>
-            Why Business Owners <span>Trust This Newsletter</span>
-          </>
-        }
-        subtitle="A newsletter that transforms how you think about user experience and technical optimization."
+        title={t('newsletter-benefits.title')}
+        subtitle={t('newsletter-benefits.subtitle')}
       />
       <StatsGrid
         stats={[
           {
-            value: '10+',
-            label: 'Years Experience',
+            value: t('newsletter-benefits.stat1.value'),
+            label: t('newsletter-benefits.stat1.label'),
             color: 'blue',
           },
           {
-            value: '2x',
-            label: 'Monthly Frequency',
+            value: t('newsletter-benefits.stat2.value'),
+            label: t('newsletter-benefits.stat2.label'),
             color: 'green',
           },
           {
-            value: '100%',
-            label: 'Actionable Content',
+            value: t('newsletter-benefits.stat3.value'),
+            label: t('newsletter-benefits.stat3.label'),
             color: 'purple',
           },
         ]}
@@ -44,27 +44,27 @@ const NewsletterBenefitsSection: React.FC = () => (
           <div className="mb-6">
             <Icons.lightbulb className="w-12 h-12 text-blue-500 mb-4" />
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Faster Decision Making</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">{t('newsletter-benefits.card1.title')}</h3>
           <p className="text-gray-600 mb-6">
-            Stop second-guessing your technical choices. Get clear guidance on what works, what doesn&apos;t, and why it matters for your specific situation.
+            {t('newsletter-benefits.card1.description')}
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-green-200 hover:shadow-lg transition-all duration-300">
           <div className="mb-6">
             <Icons.clock className="w-12 h-12 text-green-500 mb-4" />
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Competitive Advantage</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">{t('newsletter-benefits.card2.title')}</h3>
           <p className="text-gray-600 mb-6">
-            Learn optimization techniques most websites miss. Get ahead of changes before they impact your rankings and discover opportunities others overlook.
+            {t('newsletter-benefits.card2.description')}
           </p>
         </div>
         <div className="group relative bg-white p-8 rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
           <div className="mb-6">
             <Icons.growth className="w-12 h-12 text-purple-500 mb-4" />
           </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Growth</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">{t('newsletter-benefits.card3.title')}</h3>
           <p className="text-gray-600 mb-6">
-            Watch your website transform with better user engagement, improved search visibility, and increased revenue through proven optimization techniques.
+            {t('newsletter-benefits.card3.description')}
           </p>
         </div>
       </GridLayout>

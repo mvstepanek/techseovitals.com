@@ -11,6 +11,8 @@ interface BlogPostData {
   date?: string;
   image?: string;
   content: string;
+  locale?: string;
+  t?: (key: string) => string;
 }
 
 export const data = {
@@ -27,7 +29,7 @@ export const data = {
 
 const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
   <main className="flex-1">
-    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} />
+    <BlogPostHeader title={data.title} description={data.description} date={data.date} permalink={data.permalink} image={data.image} locale={data.locale} t={data.t} />
     <section className="bg-white py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <div
@@ -47,10 +49,10 @@ const BlogPostLayout: React.FC<BlogPostData> = (data: BlogPostData) => (
             `,
           }}
         />
-        <BlogAuthorBio />
+        <BlogAuthorBio t={data.t} />
       </div>
     </section>
-    <NewsletterSection />
+    <NewsletterSection t={data.t} />
   </main>
 );
 

@@ -2,53 +2,88 @@ import React from 'react';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutSection from './_components/sections/AboutSection';
-import { TECHNICAL_SEO_BENEFITS } from './_data/benefits';
+import { getTechnicalSeoBenefits } from './_data/benefits';
 
 export const data = {
-  title: 'Technical SEO Checklist',
-  description: 'Complete technical SEO checklist with 100+ actionable tasks. Download the free guide that helps improve website performance and search visibility.',
-  permalink: '/technical-seo-checklist/',
   layout: 'base',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.checklist'] || '/technical-seo-checklist/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.checklist.title'] || 'Technical SEO Checklist';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.checklist.description'] || 'Complete technical SEO checklist with 100+ actionable tasks.';
+    },
+  },
 };
 
-const TechnicalSEOChecklistPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const TechnicalSEOChecklistPage: React.FC<Props> = ({ t = (key) => key }) => {
+  const convertKitOptions = JSON.stringify({
+    settings: {
+      after_subscribe: {
+        action: 'message',
+        success_message: t('checklist.form.success'),
+        redirect_url: '',
+      },
+      analytics: { google: null, fathom: null, facebook: null, segment: null, pinterest: null, sparkloop: null, googletagmanager: null },
+      modal: { trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+      powered_by: { show: false, url: 'https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic' },
+      recaptcha: { enabled: false },
+      return_visitor: { action: 'show', custom_content: '' },
+      slide_in: { display_in: 'bottom_right', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+      sticky_bar: { display_in: 'top', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+    },
+    version: '5',
+  });
+
+  return (
   <main className="flex-1">
     <HeroWithFormSection
       badge={{
-        text: 'Complete Technical SEO Optimization',
+        text: t('checklist.hero.badge'),
       }}
-      title={
-        <>
-          Get Your <span>Technical SEO</span> Checklist
-        </>
-      }
-      description="Comprehensive technical SEO checklist covering crawlability, indexability, and site optimization. 100+ actionable items to fix technical issues, improve search visibility, and create experiences that keep visitors engaged and converting."
+      title={t('checklist.hero.title')}
+      description={t('checklist.hero.description')}
       trustSignals={{
         show: true,
         stars: true,
-        text: '100+ people already using the checklist',
+        text: t('checklist.hero.trust-signals'),
       }}
+      t={t}
       form={{
-        title: 'Grab Your Free Checklist',
-        subtitle: 'Get the checklist delivered to your inbox',
+        title: t('checklist.form.title'),
+        subtitle: t('checklist.form.subtitle'),
+        englishNote: t('checklist.form.english-only') !== 'checklist.form.english-only' ? t('checklist.form.english-only') : undefined,
         action: 'https://app.kit.com/forms/7969566/subscriptions',
         method: 'POST',
         fields: [
           {
-            placeholder: 'First name',
+            placeholder: t('checklist.form.first-name'),
             type: 'text',
             name: 'fields[first_name]',
             required: true,
           },
           {
-            placeholder: 'Email',
+            placeholder: t('checklist.form.email'),
             type: 'email',
             name: 'email_address',
             required: true,
           },
         ],
         submitButton: {
-          text: 'Get Your Free Checklist',
+          text: t('checklist.form.submit'),
           variant: 'primary',
         },
         dataAttributes: {
@@ -57,15 +92,17 @@ const TechnicalSEOChecklistPage: React.FC = () => (
           'data-format': 'inline',
           'data-version': '5',
         },
-        convertKitOptions:
-          '{"settings":{"after_subscribe":{"action":"message","success_message":"Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}',
+        convertKitOptions,
       }}
     />
 
-    <BenefitsSection {...TECHNICAL_SEO_BENEFITS} />
+    <BenefitsSection {...getTechnicalSeoBenefits(t)} />
 
-    <AboutSection />
+    <AboutSection t={t} />
   </main>
-);
+  );
+};
 
-export default TechnicalSEOChecklistPage;
+export default function TechnicalSEOChecklistTemplate(data: any & { t: (key: string) => string }) {
+  return <TechnicalSEOChecklistPage t={data.t} />;
+}

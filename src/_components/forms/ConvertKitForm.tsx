@@ -10,9 +10,12 @@ interface ConvertKitFormProps {
   className?: string;
   buttonClassName?: string;
   fieldClassName?: string;
+  t?: (key: string) => string;
 }
 
-const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName }) => {
+const defaultT = (key: string) => key;
+
+const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, design = 'checklist', className, buttonClassName, fieldClassName, t = defaultT }) => {
   const config = CONVERTKIT_FORMS[formType];
 
   // Default styling based on design type
@@ -218,10 +221,10 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
 
           <div data-element="fields" data-stacked="false" className={`seva-fields formkit-fields ${design === 'newsletter' ? 'flex flex-col sm:flex-row gap-4' : 'space-y-4'}`}>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input className={fieldClassName || defaultFieldClassName} aria-label="First Name" name="fields[first_name]" placeholder="First name" />
+              <input className={fieldClassName || defaultFieldClassName} aria-label="First Name" name="fields[first_name]" placeholder={t('form.placeholder.first-name')} />
             </div>
             <div className={`formkit-field ${design === 'newsletter' ? 'flex-1' : ''}`}>
-              <input className={fieldClassName || defaultFieldClassName} name="email_address" aria-label="Email Address" placeholder="Email" required type="email" />
+              <input className={fieldClassName || defaultFieldClassName} name="email_address" aria-label="Email Address" placeholder={t('form.placeholder.email')} required type="email" />
             </div>
             <button
               type="submit"
@@ -249,15 +252,15 @@ const ConvertKitForm: React.FC<ConvertKitFormProps> = ({ formType, buttonText, d
           {/* Privacy disclaimer for all forms except newsletter-section */}
           {formType !== 'newsletter-section' && (
             <div className="text-center mt-4 space-y-2">
-              <p className="text-sm text-gray-500">No spam, ever. Unsubscribe at any time.</p>
+              <p className="text-sm text-gray-500">{t('form.privacy.no-spam')}</p>
               <p className="text-sm text-gray-500">
-                By subscribing, I agree to the{' '}
-                <a href="/privacy-policy/" className="text-purple-600 hover:text-purple-700 underline">
-                  Privacy Policy
+                {t('form.privacy.consent')}{' '}
+                <a href={t('url.privacy-policy')} className="text-purple-600 hover:text-purple-700 underline">
+                  {t('form.privacy.privacy-policy')}
                 </a>{' '}
-                and{' '}
-                <a href="/terms-and-conditions/" className="text-purple-600 hover:text-purple-700 underline">
-                  Terms and Conditions
+                {t('form.privacy.and')}{' '}
+                <a href={t('url.terms')} className="text-purple-600 hover:text-purple-700 underline">
+                  {t('form.privacy.terms')}
                 </a>
                 .
               </p>

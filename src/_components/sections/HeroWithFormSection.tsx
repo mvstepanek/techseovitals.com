@@ -24,12 +24,13 @@ interface HeroWithFormProps {
   badge: {
     text: string;
   };
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   description: string;
   trustSignals?: TrustSignalsProps;
   form: {
     title: string;
     subtitle: string;
+    englishNote?: string;
     action: string;
     method?: string;
     fields: FormField[];
@@ -42,9 +43,12 @@ interface HeroWithFormProps {
     };
     convertKitOptions?: string;
   };
+  t?: (key: string) => string;
 }
 
-const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, description, trustSignals = { show: true, text: 'Trusted by website owners worldwide' }, form }) => {
+const defaultT = (key: string) => key;
+
+const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, description, trustSignals = { show: true, text: 'Trusted by website owners worldwide' }, form, t = defaultT }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
       <div className="absolute inset-0 bg-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
@@ -55,7 +59,10 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
           <div className="max-w-2xl">
             <Badge icon={<div className="w-2 h-2 bg-white rounded-full animate-pulse" />}>{badge.text}</Badge>
 
-            <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight">{title}</h1>
+            <h1
+              className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl leading-tight"
+              {...(typeof title === 'string' && title.includes('<') ? { dangerouslySetInnerHTML: { __html: title } } : { children: title })}
+            />
 
             <p className="mt-8 text-lg text-gray-600 leading-relaxed max-w-lg">{description}</p>
 
@@ -93,7 +100,12 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
                 <h3 className="text-3xl font-bold mb-3">
                   <span>{form.title}</span>
                 </h3>
-                <p className="text-gray-600 text-lg">{form.subtitle}</p>
+                <p className="text-gray-600 text-lg mb-2">{form.subtitle}</p>
+                {form.englishNote && (
+                  <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-3 py-1">
+                    <span className="text-xs font-medium text-gray-600">{form.englishNote}</span>
+                  </div>
+                )}
               </div>
 
               {form.dataAttributes && form.convertKitOptions ? (
@@ -114,6 +126,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
                     }
                   })()}
                   buttonText={form.submitButton.text}
+                  t={t}
                 />
               ) : (
                 <form action={form.action} method={form.method || 'POST'} className="space-y-4">

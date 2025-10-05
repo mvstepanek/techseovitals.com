@@ -15,8 +15,18 @@ import Icons from './_components/ui/Icons';
 
 export const data = {
   layout: 'base',
-  title: 'TechSEO Vitals With Martin Stepanek',
-  description: 'Expert technical SEO consultant helping businesses create websites that users love and search engines reward. Boost traffic and conversions today.',
+  eleventyComputed: {
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.home.title'] || 'TechSEO Vitals - Technical SEO Expert';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.home.description'] || 'Expert technical SEO services to improve your website performance and search visibility.';
+    },
+  },
 };
 
 interface EleventyData {
@@ -32,9 +42,10 @@ interface EleventyData {
       content: string;
     }>;
   };
+  t: (key: string) => string;
 }
 
-const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ collections }) => {
+const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: string) => string }> = ({ collections, t = (key) => key }) => {
   // Get latest 3 blog posts (sorted by date, newest first)
   const sortedPosts = [...collections.blog].sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
   const latestPosts = sortedPosts.slice(0, 3).map((post) => {
@@ -67,16 +78,12 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
       <HeroSection
         badge={{
           icon: BadgeIcons.checkCircle,
-          text: '10+ Years of Industry Expertise',
+          text: t('hero.badge.expertise'),
         }}
-        title={
-          <>
-            Transform Your Website Into a <span>Revenue Engine</span>
-          </>
-        }
-        description="When your site is fast, accessible, and easy to navigate, visitors stay longer and convert more. I combine technical SEO and performance optimization to create exceptional user experiences."
+        title={t('hero.title')}
+        description={t('hero.description')}
         primaryCta={{
-          text: 'Get Free Website Check',
+          text: t('hero.cta.primary'),
           href: '/contact/',
         }}
         image={{
@@ -85,95 +92,86 @@ const HomePage: React.FC<{ collections: EleventyData['collections'] }> = ({ coll
         }}
         rating={{
           show: true,
-          text: 'I consider Martin to be one of the greatest technical SEO experts on the market.',
+          text: t('hero.testimonial'),
           isTestimonial: true,
-          source: 'Verified Client on LinkedIn',
+          source: t('hero.testimonial.source'),
           sourceLink: 'https://www.linkedin.com/in/techseovitals/details/recommendations/',
         }}
         statusBadge={{
           show: true,
-          text: 'Currently taking new clients',
+          text: t('hero.status.available'),
         }}
       />
 
-      <TrustedCompaniesSection />
+      <TrustedCompaniesSection t={t} />
 
       <FeatureGrid
         badge={{
           icon: BadgeIcons.pulsingDot,
-          text: 'Why Technical Excellence Matters',
+          text: t('features.badge'),
         }}
-        title={
-          <>
-            Users First. <span>Search Engines Follow</span>
-          </>
-        }
-        subtitle="Great user experience drives everything. Technical SEO and performance optimization work together to boost engagement, and increase conversions. Websites that are technically excellent create better user experiences, leading to better visibility on search engines and AI platforms"
+        title={t('features.title')}
+        subtitle={t('features.subtitle')}
         cta={{
-          text: 'Get Free Website Check',
+          text: t('cta.free-check'),
           href: '/contact/',
-          trustSignals: ['Free consultation', 'No commitment'],
+          trustSignals: [t('trust.free-consultation'), t('trust.no-commitment')],
         }}
         backgroundColor="gray"
         columns={3}
         features={[
           {
             icon: <Icons.growth className="w-8 h-8 text-white" />,
-            title: 'Turn Visitors Into Customers',
-            description:
-              'When visitors can easily find products and pages load instantly, they convert better. Optimizing technical SEO and web performance create a positive experience that drives revenue.',
+            title: t('features.visitors-to-customers.title'),
+            description: t('features.visitors-to-customers.description'),
             color: 'blue',
           },
           {
             icon: <Icons.monitor className="w-8 h-8 text-white" />,
-            title: 'Remove User Friction',
-            description:
-              'Broken links, slow pages, and poor structure frustrate visitors. Technical optimization eliminates these barriers, ensuring every user journey is smooth from search to purchase.',
+            title: t('features.remove-friction.title'),
+            description: t('features.remove-friction.description'),
             color: 'green',
           },
           {
             icon: <Icons.eye className="w-8 h-8 text-white" />,
-            title: 'Maximize Your Visibility',
-            description:
-              'Well-structured sites rank better in Google and get recommended by AI systems like ChatGPT and Perplexity. Technical SEO excellence ensures maximum discoverability across all platforms.',
+            title: t('features.maximize-visibility.title'),
+            description: t('features.maximize-visibility.description'),
             color: 'purple',
           },
         ]}
       />
 
-      <BrutalTruthSection />
+      <BrutalTruthSection t={t} />
 
-      <WhyChooseMeSection />
+      <WhyChooseMeSection t={t} />
 
-      <WhyAuditSection />
+      <WhyAuditSection t={t} />
 
-      <TestimonialsSection backgroundColor="bg-gray-50" />
+      <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
 
       <CTASection
         badge={{
           icon: BadgeIcons.lightning,
-          text: 'Ready to Delight Your Users?',
+          text: t('cta.badge'),
         }}
-        title={
-          <>
-            Give Visitors The Experience <span>They Deserve</span>
-          </>
-        }
-        description="Your users are struggling with issues you might not even see. Get a comprehensive technical audit that reveals exactly what's frustrating visitors and how to create a seamless experience while naturally improving your visibility in search engines and AI systems."
+        title={t('cta.title')}
+        description={t('cta.description')}
         primaryCta={{
-          text: 'Start Your Transformation',
+          text: t('cta.start-transformation'),
           href: '/contact/',
         }}
+        trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
         features={DEFAULT_CTA_FEATURES}
+        t={t}
       />
 
-      <BlogCardsSection posts={latestPosts} />
+      <BlogCardsSection posts={latestPosts} t={t} />
 
-      <NewsletterSection />
+      <NewsletterSection t={t} />
     </>
   );
 };
 
-export default function IndexTemplate(data: EleventyData) {
-  return <HomePage collections={data.collections} />;
+export default function IndexTemplate(data: EleventyData & { t: (key: string) => string }) {
+  return <HomePage collections={data.collections} t={data.t} />;
 }

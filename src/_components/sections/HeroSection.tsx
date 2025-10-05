@@ -10,7 +10,7 @@ interface HeroSectionProps {
     icon?: React.ReactNode;
     text: string;
   };
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   description: string;
   primaryCta?: {
     text: string;
@@ -69,9 +69,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
             <h1
               className={`text-4xl sm:text-5xl lg:text-6xl font-display font-bold tracking-tight text-gray-900 leading-tight mt-4 sm:mt-6 ${layout === 'centered' ? 'text-center' : 'text-center sm:text-left'}`}
-            >
-              {title}
-            </h1>
+              {...(typeof title === 'string' && title.includes('<') ? { dangerouslySetInnerHTML: { __html: title } } : { children: title })}
+            />
 
             <p
               className={`mt-6 sm:mt-8 text-lg sm:text-lg text-gray-600 leading-relaxed ${layout === 'centered' ? 'max-w-4xl mx-auto text-center' : 'max-w-lg text-center sm:text-left'}`}

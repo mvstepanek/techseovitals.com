@@ -12,44 +12,58 @@ import IconContainer from './_components/ui/IconContainer';
 import TrustSignalsList from './_components/ui/TrustSignalsList';
 
 export const data = {
-  title: 'Customers',
-  description: 'Real client results from technical SEO and performance optimization. See how businesses create better user experiences and boost conversions.',
-  permalink: '/customers/',
   layout: 'base',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.customers'] || '/customers/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.customers.title'] || 'Customers';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.customers.description'] || 'Real client results from technical SEO and performance optimization.';
+    },
+  },
 };
 
-const CustomersPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const CustomersPage: React.FC<Props> = ({ t = (key) => key }) => (
   <main className="flex-1">
     <HeroSection
       badge={{
         icon: <Icons.checkCircle className="w-4 h-4" />,
-        text: 'Proven Client Results',
+        text: t('customers.hero.badge'),
       }}
-      title={
-        <>
-          Trusted by <span>Growing Businesses</span>
-        </>
-      }
-      description="From SaaS to e-commerce, businesses use technical SEO and performance optimization to create experiences that prioritize real users first. Better search and AI visibility naturally follow."
+      title={t('customers.hero.title')}
+      description={t('customers.hero.description')}
       primaryCta={{
-        text: 'Start Your Transformation',
-        href: '/contact/',
+        text: t('customers.hero.cta'),
+        href: t('url.contact'),
       }}
       image={{
         src: '/assets/images/martin-stepanek-6.jpg',
-        alt: 'Martin Stepanek - Technical SEO Expert',
+        alt: t('common.alt.martin-expert'),
       }}
       layout="centered"
       rating={{
         show: true,
         stars: 5,
-        text: 'Trused by 50+ businesses',
+        text: t('customers.hero.rating'),
         isTestimonial: false,
         center: true,
       }}
     />
 
-    <TrustedCompaniesSection />
+    <TrustedCompaniesSection t={t} />
 
     {/* Case Studies Section */}
     <section id="case-studies" className="py-24 bg-gradient-to-br from-gray-50 to-slate-100">
@@ -57,14 +71,10 @@ const CustomersPage: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.document className="w-4 h-4" />,
-            text: 'Featured Case Studies',
+            text: t('customers.case-studies.badge'),
           }}
-          title={
-            <>
-              Technical Excellence That <span>Serves Users First</span>
-            </>
-          }
-          subtitle="See how these companies transformed their websites into high-performing platforms that drive measurable business results."
+          title={t('customers.case-studies.title')}
+          subtitle={t('customers.case-studies.subtitle')}
         />
 
         <div className={COMMON_STYLES.twoColumnGrid}>
@@ -72,10 +82,10 @@ const CustomersPage: React.FC = () => (
           <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
-                <OptimizedImage src="/assets/images/clients/logo-touchit.png" alt="TOUCHIT" className="h-12 w-auto object-contain" />
+                <OptimizedImage src="/assets/images/clients/logo-touchit.png" alt={t('customers.touchit.alt')} className="h-12 w-auto object-contain" />
               </div>
-              <p className="text-purple-600 font-semibold mb-2">Technology News Portal</p>
-              <p className="text-gray-600 mb-6">Complete infrastructure modernization and performance optimization for Slovakia&apos;s leading technology news portal.</p>
+              <p className="text-purple-600 font-semibold mb-2">{t('customers.touchit.category')}</p>
+              <p className="text-gray-600 mb-6">{t('customers.touchit.description')}</p>
               <div className={`space-y-4 ${COMMON_STYLES.gradientBgVeryLight} p-6 rounded-xl border border-purple-100`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
@@ -88,13 +98,13 @@ const CustomersPage: React.FC = () => (
                       />
                     </svg>
                   </div>
-                  <span className="text-base font-semibold text-gray-900">Infrastructure & CMS Migration</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.touchit.feature1')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
                     <Icons.lightning className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-base font-semibold text-gray-900">Faster Website & Better Core Web Vitals</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.touchit.feature2')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
@@ -107,7 +117,7 @@ const CustomersPage: React.FC = () => (
                       />
                     </svg>
                   </div>
-                  <span className="text-base font-semibold text-gray-900">External Agency Supervision & Design Consulting</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.touchit.feature3')}</span>
                 </div>
               </div>
             </div>
@@ -117,10 +127,10 @@ const CustomersPage: React.FC = () => (
           <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
-                <OptimizedImage src="/assets/images/clients/logo-expertiseai.svg" alt="expertise.ai" className="h-12 w-auto object-contain" />
+                <OptimizedImage src="/assets/images/clients/logo-expertiseai.svg" alt={t('customers.expertiseai.alt')} className="h-12 w-auto object-contain" />
               </div>
-              <p className="text-purple-600 font-semibold mb-2">Demand Conversion AI Platform</p>
-              <p className="text-gray-600 mb-6">Strategic merger migration and comprehensive optimization combining two brands into a unified, high-performance platform.</p>
+              <p className="text-purple-600 font-semibold mb-2">{t('customers.expertiseai.category')}</p>
+              <p className="text-gray-600 mb-6">{t('customers.expertiseai.description')}</p>
               <div className={`space-y-4 ${COMMON_STYLES.gradientBgVeryLight} p-6 rounded-xl border border-purple-100`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
@@ -128,7 +138,7 @@ const CustomersPage: React.FC = () => (
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                     </svg>
                   </div>
-                  <span className="text-base font-semibold text-gray-900">Complete Two-Brand Merger Migration</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.expertiseai.feature1')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
@@ -141,13 +151,13 @@ const CustomersPage: React.FC = () => (
                       />
                     </svg>
                   </div>
-                  <span className="text-base font-semibold text-gray-900">New Website Architecture & SEO Strategy</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.expertiseai.feature2')}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
                     <Icons.lightning className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-base font-semibold text-gray-900">Performance Optimization & Crawl Efficiency</span>
+                  <span className="text-base font-semibold text-gray-900">{t('customers.expertiseai.feature3')}</span>
                 </div>
               </div>
             </div>
@@ -162,40 +172,35 @@ const CustomersPage: React.FC = () => (
         <SectionHeader
           badge={{
             icon: <Icons.chat className="w-4 h-4" />,
-            text: 'What Customers Say',
+            text: t('customers.testimonials.badge'),
           }}
-          title={
-            <>
-              Real Results from <span>Real Customers</span>
-            </>
-          }
-          subtitle="Direct feedback from clients who've experienced measurable improvements in conversions, revenue, and organic growth."
+          title={t('customers.testimonials.title')}
+          subtitle={t('customers.testimonials.subtitle')}
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
           <TestimonialCard
-            name="Daniel Pison"
-            position="CMO"
-            company="Quality Unit"
-            text="Martin was a key member of the team responsible for the technical condition of the liveagent.com and postaffiliatepro.com websites. Thanks in particular to his skills and expertise, we were able to compete with much stronger competitors in terms of website quality for a long time.
-I would definitely be happy to work with Martin in the future, I consider him to be one of the greatest technical SEO experts on the market. I definitely recommend working with him."
-            image="/assets/images/testimonials/daniel-pison.jpg"
+            name={t('customers.testimonial.pison.name')}
+            position={t('customers.testimonial.pison.position')}
+            company={t('customers.testimonial.pison.company')}
+            text={t('customers.testimonial.pison.text')}
+            image={t('customers.testimonial.pison.image')}
           />
 
           <TestimonialCard
-            name="Tomas Buransky"
-            position="Marketing Manager"
-            company="TOUCHIT"
-            text="We’ve been working with Martin for several years now and we truly appreciate his professional and systematic approach, which also takes our business goals into account. In addition to his deep knowledge of SEO, he’s able to break down proposed strategies into actionable steps and, thanks to his previous experience as a programmer, communicate them effectively to both our editorial team and our developers."
-            image="/assets/images/testimonials/tomas-buransky.jpg"
+            name={t('customers.testimonial.buransky.name')}
+            position={t('customers.testimonial.buransky.position')}
+            company={t('customers.testimonial.buransky.company')}
+            text={t('customers.testimonial.buransky.text')}
+            image={t('customers.testimonial.buransky.image')}
           />
 
           <TestimonialCard
-            name="Viktor Zeman"
-            position="CEO"
-            company="LiveAgent & Post Affiliate Pro"
-            text="Martin's development background established a foundation for implementing sophisticated strategies, particularly technical SEO initiatives. With him, our team significantly enhanced the performance of two high-traffic websites."
-            image="/assets/images/testimonials/viktor-zeman.jpg"
+            name={t('customers.testimonial.zeman.name')}
+            position={t('customers.testimonial.zeman.position')}
+            company={t('customers.testimonial.zeman.company')}
+            text={t('customers.testimonial.zeman.text')}
+            image={t('customers.testimonial.zeman.image')}
           />
         </div>
       </div>
@@ -209,38 +214,34 @@ I would definitely be happy to work with Martin in the future, I consider him to
           <SectionHeader
             badge={{
               icon: <Icons.checkCircle className="w-4 h-4" />,
-              text: '100% Risk-Free Consultation',
+              text: t('customers.cta.badge'),
             }}
-            title={
-              <>
-                Ready to Join These <span>Success Stories?</span>
-              </>
-            }
-            subtitle="Join these companies and transform your website into one that users love and search engines reward."
+            title={t('customers.cta.title')}
+            subtitle={t('customers.cta.subtitle')}
             className="mb-12"
           />
           <div className="flex flex-col items-center gap-4 mb-12">
-            <Button href="/contact/">Start Your Transformation</Button>
-            <TrustSignalsList signals={['Free consultation', 'No commitment']} />
+            <Button href={t('url.contact')}>{t('customers.cta.button')}</Button>
+            <TrustSignalsList signals={[t('customers.cta.trust.free'), t('customers.cta.trust.commitment')]} />
           </div>
 
           <div className={`${COMMON_STYLES.threeColumnGrid} max-w-4xl mx-auto`}>
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <IconContainer icon={<Icons.checkCircle className="w-8 h-8 text-white" />} color="blue" size="md" className="mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">100% Free</h3>
-              <p className="text-gray-600 text-center">Free website check with no hidden costs</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('customers.cta.feature1.title')}</h3>
+              <p className="text-gray-600 text-center">{t('customers.cta.feature1.description')}</p>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <IconContainer icon={<Icons.clock className="w-8 h-8 text-white" />} color="green" size="md" className="mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">30 Minutes</h3>
-              <p className="text-gray-600 text-center">Quick call to discuss your biggest opportunities</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('customers.cta.feature2.title')}</h3>
+              <p className="text-gray-600 text-center">{t('customers.cta.feature2.description')}</p>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-blue-50/50 border border-gray-200">
               <IconContainer icon={<Icons.star className="w-8 h-8 text-white" />} color="purple" size="md" className="mb-4" />
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Immediate Value</h3>
-              <p className="text-gray-600 text-center">Actionable insights you can implement today</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{t('customers.cta.feature3.title')}</h3>
+              <p className="text-gray-600 text-center">{t('customers.cta.feature3.description')}</p>
             </div>
           </div>
           <div className="mb-16" />
@@ -250,4 +251,6 @@ I would definitely be happy to work with Martin in the future, I consider him to
   </main>
 );
 
-export default CustomersPage;
+export default function CustomersTemplate(data: any & { t: (key: string) => string }) {
+  return <CustomersPage t={data.t} />;
+}

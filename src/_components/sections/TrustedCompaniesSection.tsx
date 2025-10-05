@@ -6,13 +6,19 @@ interface TrustedCompaniesProps {
   title?: string;
   subtitle?: string;
   backgroundColor?: 'white' | 'gray';
+  t?: (key: string) => string;
 }
 
+const defaultT = (key: string) => key;
+
 const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
-  title = 'Driving Growth for industry leaders',
-  subtitle = 'Trusted by innovative companies',
+  title,
+  subtitle,
   backgroundColor = 'white',
+  t = defaultT,
 }) => {
+  const displayTitle = title || t('trusted.title');
+  const displaySubtitle = subtitle || t('trusted.subtitle');
   const bgClasses = backgroundColor === 'gray' ? 'bg-gray-50' : 'bg-white';
   const borderClasses = backgroundColor === 'white' ? 'border-y border-gray-100' : '';
 
@@ -20,8 +26,8 @@ const TrustedCompaniesSection: React.FC<TrustedCompaniesProps> = ({
     <section className={`py-16 ${bgClasses} ${borderClasses}`}>
       <div className={COMMON_STYLES.containerWidth}>
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">{title}</p>
-          <h2 className="text-2xl font-display font-bold text-gray-900">{subtitle}</h2>
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">{displayTitle}</p>
+          <h2 className="text-2xl font-display font-bold text-gray-900">{displaySubtitle}</h2>
         </div>
 
         <div className="space-y-8">

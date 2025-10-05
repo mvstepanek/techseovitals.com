@@ -5,12 +5,27 @@ import NewsletterSection from './_components/sections/NewsletterSection';
 
 export const data = {
   layout: 'base.11ty.tsx',
-  title: 'Page Not Found - TechSEO Vitals',
-  description: 'The page you are looking for could not be found.',
   permalink: '/404.html',
+  eleventyComputed: {
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.404.title'] || 'Page Not Found - TechSEO Vitals';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.404.description'] || 'The page you are looking for could not be found.';
+    },
+  },
 };
 
-export function render(_data: unknown) {
+interface RenderData {
+  t?: (key: string) => string;
+}
+
+export function render(data: RenderData) {
+  const t = data.t || ((key: string) => key);
   return (
     <>
       <div className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -35,16 +50,16 @@ export function render(_data: unknown) {
           </div>
 
           {/* Error Message */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4">Oops! Page Not Found</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4">{t('404.title')}</h1>
 
           <p className="text-lg sm:text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Looks like this page took a wrong turn in the technical SEO maze. The content you&apos;re searching for might have been moved, deleted, or perhaps it never existed.
+            {t('404.description')}
           </p>
 
           {/* Helpful Links */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="/"
+              href={t('url.home')}
               className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold rounded-xl inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-500 px-8 py-4 text-lg"
             >
               <span className="relative z-10 flex items-center">
@@ -56,13 +71,13 @@ export function render(_data: unknown) {
                     d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
                   />
                 </svg>
-                Back to Home
+                {t('404.cta.home')}
               </span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>
 
             <a
-              href="/blog"
+              href={t('url.blog')}
               className="group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl hover:scale-105 hover:shadow-2xl focus:ring-4 focus:ring-purple-500/30 px-8 py-4 text-lg"
             >
               <span className="relative z-10 flex items-center">
@@ -74,7 +89,7 @@ export function render(_data: unknown) {
                     d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
                   />
                 </svg>
-                Read the Blog
+                {t('404.cta.blog')}
               </span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>
@@ -82,9 +97,9 @@ export function render(_data: unknown) {
 
           {/* Quick Links Section */}
           <div className="border-t border-gray-200 pt-8">
-            <h2 className="text-lg font-semibold text-gray-900 mb-4">Popular Pages</h2>
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{t('404.popular-pages.title')}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-3xl mx-auto">
-              <a href="/technical-seo-services" className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
+              <a href={t('url.services')} className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <svg className="w-6 h-6 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -95,10 +110,10 @@ export function render(_data: unknown) {
                     />
                   </svg>
                 </div>
-                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Services</h3>
+                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">{t('404.popular-pages.services')}</h3>
               </a>
 
-              <a href="/newsletter" className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
+              <a href={t('url.newsletter')} className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <svg className="w-6 h-6 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -109,19 +124,19 @@ export function render(_data: unknown) {
                     />
                   </svg>
                 </div>
-                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Newsletter</h3>
+                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">{t('404.popular-pages.newsletter')}</h3>
               </a>
 
-              <a href="/technical-seo-consultant" className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
+              <a href={t('url.consultant')} className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <svg className="w-6 h-6 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </div>
-                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">About</h3>
+                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">{t('404.popular-pages.about')}</h3>
               </a>
 
-              <a href="/contact" className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
+              <a href={t('url.contact')} className="group p-4 bg-gray-50 rounded-lg hover:bg-brand-50 transition-colors duration-200">
                 <div className="flex items-center justify-center mb-2">
                   <svg className="w-6 h-6 text-brand-600 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -132,7 +147,7 @@ export function render(_data: unknown) {
                     />
                   </svg>
                 </div>
-                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">Contact</h3>
+                <h3 className="font-medium text-gray-900 group-hover:text-brand-600 transition-colors">{t('404.popular-pages.contact')}</h3>
               </a>
             </div>
           </div>
@@ -144,10 +159,9 @@ export function render(_data: unknown) {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <div className="text-left">
-                <h3 className="font-semibold text-gray-900 mb-1">SEO Tip of the Day</h3>
+                <h3 className="font-semibold text-gray-900 mb-1">{t('404.seo-tip.title')}</h3>
                 <p className="text-sm text-gray-600">
-                  A well-designed 404 page with helpful navigation can reduce bounce rate and improve user experience. Always include links to popular pages and a clear path back
-                  to your homepage!
+                  {t('404.seo-tip.description')}
                 </p>
               </div>
             </div>
@@ -156,7 +170,7 @@ export function render(_data: unknown) {
       </div>
 
       {/* Newsletter Section */}
-      <NewsletterSection />
+      <NewsletterSection t={t} />
     </>
   );
 }

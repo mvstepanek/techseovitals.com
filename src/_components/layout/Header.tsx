@@ -5,14 +5,15 @@ import Icons from '../ui/Icons';
 
 interface HeaderProps {
   currentPath?: string;
+  t?: (key: string) => string;
 }
 
-const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
+const Header: React.FC<HeaderProps> = ({ currentPath = '/', t = (key) => key }) => {
   return (
     <header className="sticky top-0 z-40 bg-white shadow-sm">
       {/* Skip to content link for accessibility */}
       <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-md">
-        Skip to main content
+        {t('nav.skip-to-content')}
       </a>
 
       <div className={COMMON_STYLES.containerWidth}>
@@ -25,53 +26,53 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
             <div className="relative group">
               <a
                 className={`relative font-medium transition-all duration-200 py-2 ${
-                  currentPath === '/technical-seo-services/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'
+                  currentPath === t('url.services') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'
                 }`}
-                href="/technical-seo-services/"
+                href={t('url.services')}
               >
-                Services
+                {t('nav.services')}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-left transition-transform duration-200 ${
-                    currentPath === '/technical-seo-services/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    currentPath === t('url.services') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
               </a>
             </div>
             <div className="relative group">
               <a
-                className={`relative font-medium transition-all duration-200 py-2 ${currentPath === '/customers/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
-                href="/customers/"
+                className={`relative font-medium transition-all duration-200 py-2 ${currentPath === t('url.customers') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
+                href={t('url.customers')}
               >
-                Customers
+                {t('nav.customers')}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-left transition-transform duration-200 ${
-                    currentPath === '/customers/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    currentPath === t('url.customers') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
               </a>
             </div>
             <div className="relative group">
               <a
-                className={`relative font-medium transition-all duration-200 py-2 ${currentPath === '/newsletter/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
-                href="/newsletter/"
+                className={`relative font-medium transition-all duration-200 py-2 ${currentPath === t('url.newsletter') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
+                href={t('url.newsletter')}
               >
-                Newsletter
+                {t('nav.newsletter')}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-left transition-transform duration-200 ${
-                    currentPath === '/newsletter/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    currentPath === t('url.newsletter') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
               </a>
             </div>
             <div className="relative group">
               <a
-                className={`relative font-medium transition-all duration-200 py-2 ${currentPath?.startsWith('/blog/') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
-                href="/blog/"
+                className={`relative font-medium transition-all duration-200 py-2 ${currentPath?.startsWith(t('url.blog')) ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
+                href={t('url.blog')}
               >
-                Blog
+                {t('nav.blog')}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-left transition-transform duration-200 ${
-                    currentPath?.startsWith('/blog/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    currentPath?.startsWith(t('url.blog')) ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
               </a>
@@ -79,23 +80,23 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
             <div className="relative group">
               <a
                 className={`relative font-medium transition-all duration-200 py-2 ${
-                  currentPath === '/technical-seo-consultant/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'
+                  currentPath === t('url.consultant') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'
                 }`}
-                href="/technical-seo-consultant/"
+                href={t('url.consultant')}
               >
-                About
+                {t('nav.about')}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-purple-600 transform origin-left transition-transform duration-200 ${
-                    currentPath === '/technical-seo-consultant/' ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                    currentPath === t('url.consultant') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                   }`}
                 />
               </a>
             </div>
             <a
               className={`group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-5 py-2.5 text-sm rounded-lg hover:scale-105 hover:shadow-lg ${COMMON_STYLES.gradientBg} text-white shadow-md focus:ring-2 focus:ring-purple-500/30`}
-              href="/contact/"
+              href={t('url.contact')}
             >
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10">{t('nav.contact')}</span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>
           </nav>
@@ -105,7 +106,7 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
             className="lg:hidden rounded-lg p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 mobile-menu-toggle"
             aria-expanded="false"
             aria-controls="mobile-menu"
-            aria-label="Open menu"
+            aria-label={t('nav.open-menu')}
           >
             <Icons.menu className="h-6 w-6" aria-hidden="true" />
           </button>
@@ -114,31 +115,31 @@ const Header: React.FC<HeaderProps> = ({ currentPath = '/' }) => {
         <nav id="mobile-menu" className="mobile-menu hidden lg:hidden border-t border-gray-100 py-4" aria-label="Mobile navigation">
           <div className="flex flex-col space-y-4">
             <a
-              href="/technical-seo-services/"
-              className={`font-medium transition-colors ${currentPath === '/technical-seo-services/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
+              href={t('url.services')}
+              className={`font-medium transition-colors ${currentPath === t('url.services') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
             >
-              Services
+              {t('nav.services')}
             </a>
-            <a href="/customers/" className={`font-medium transition-colors ${currentPath === '/customers/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
-              Customers
+            <a href={t('url.customers')} className={`font-medium transition-colors ${currentPath === t('url.customers') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
+              {t('nav.customers')}
             </a>
-            <a href="/newsletter/" className={`font-medium transition-colors ${currentPath === '/newsletter/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
-              Newsletter
+            <a href={t('url.newsletter')} className={`font-medium transition-colors ${currentPath === t('url.newsletter') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
+              {t('nav.newsletter')}
             </a>
-            <a href="/blog/" className={`font-medium transition-colors ${currentPath?.startsWith('/blog/') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
-              Blog
+            <a href={t('url.blog')} className={`font-medium transition-colors ${currentPath?.startsWith(t('url.blog')) ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}>
+              {t('nav.blog')}
             </a>
             <a
-              href="/technical-seo-consultant/"
-              className={`font-medium transition-colors ${currentPath === '/technical-seo-consultant/' ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
+              href={t('url.consultant')}
+              className={`font-medium transition-colors ${currentPath === t('url.consultant') ? 'text-purple-600' : 'text-gray-700 hover:text-purple-600'}`}
             >
-              About
+              {t('nav.about')}
             </a>
             <a
-              href="/contact/"
+              href={t('url.contact')}
               className={`group relative overflow-hidden transition-all duration-300 focus:outline-none font-bold px-6 py-3 text-base rounded-lg hover:scale-105 hover:shadow-lg ${COMMON_STYLES.gradientBg} text-white shadow-md focus:ring-2 focus:ring-purple-500/30 text-center`}
             >
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10">{t('nav.contact')}</span>
               <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
             </a>
           </div>

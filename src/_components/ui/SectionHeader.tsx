@@ -16,7 +16,10 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ badge, title, subtitle, m
       )}
 
       {/* Title */}
-      <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">{title}</h2>
+      <h2
+        className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight"
+        {...(typeof title === 'string' && title.includes('<') ? { dangerouslySetInnerHTML: { __html: title } } : { children: title })}
+      />
 
       {/* Subtitle */}
       {subtitle && <p className={`text-lg text-gray-600 ${MAX_WIDTH_CLASSES[maxWidth]} ${align === 'center' ? 'mx-auto' : ''} leading-relaxed`}>{subtitle}</p>}

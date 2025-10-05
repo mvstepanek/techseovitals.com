@@ -17,7 +17,7 @@ interface FeatureGridProps {
     icon?: React.ReactNode;
     text: string;
   };
-  title: React.ReactNode;
+  title: React.ReactNode | string;
   subtitle?: string;
   cta?: {
     text: string;
@@ -72,7 +72,10 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, 
           <div className="text-center mb-16">
             {badge && <Badge icon={badge.icon}>{badge.text}</Badge>}
 
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">{title}</h2>
+            <h2
+              className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6"
+              {...(typeof title === 'string' && title.includes('<') ? { dangerouslySetInnerHTML: { __html: title } } : { children: title })}
+            />
 
             {subtitle && <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mb-10">{subtitle}</p>}
 

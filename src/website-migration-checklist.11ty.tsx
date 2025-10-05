@@ -2,53 +2,88 @@ import React from 'react';
 import HeroWithFormSection from './_components/sections/HeroWithFormSection';
 import BenefitsSection from './_components/sections/BenefitsSection';
 import AboutSection from './_components/sections/AboutSection';
-import { MIGRATION_BENEFITS } from './_data/benefits';
+import { getMigrationBenefits } from './_data/benefits';
 
 export const data = {
-  title: 'Website Migration Checklist',
-  description: 'Website migration checklist with 45+ essential tasks. Protect your search rankings and user experience during seamless website transitions.',
-  permalink: '/website-migration-checklist/',
   layout: 'base',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.migration'] || '/website-migration-checklist/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.migration.title'] || 'Website Migration Checklist';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.migration.description'] || 'Website migration checklist with 45+ essential tasks.';
+    },
+  },
 };
 
-const WebsiteMigrationChecklistPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const WebsiteMigrationChecklistPage: React.FC<Props> = ({ t = (key) => key }) => {
+  const convertKitOptions = JSON.stringify({
+    settings: {
+      after_subscribe: {
+        action: 'message',
+        success_message: t('migration.form.success'),
+        redirect_url: '',
+      },
+      analytics: { google: null, fathom: null, facebook: null, segment: null, pinterest: null, sparkloop: null, googletagmanager: null },
+      modal: { trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+      powered_by: { show: false, url: 'https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic' },
+      recaptcha: { enabled: false },
+      return_visitor: { action: 'show', custom_content: '' },
+      slide_in: { display_in: 'bottom_right', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+      sticky_bar: { display_in: 'top', trigger: 'timer', scroll_percentage: null, timer: 5, devices: 'all', show_once_every: 15 },
+    },
+    version: '5',
+  });
+
+  return (
   <main className="flex-1">
     <HeroWithFormSection
       badge={{
-        text: 'Protect Your Digital Assets',
+        text: t('migration.hero.badge'),
       }}
-      title={
-        <>
-          Get Your <span>Website Migration</span> Checklist
-        </>
-      }
-      description="Most website migrations fail due to poor planning, causing traffic drops and lost revenue. This comprehensive checklist reduces migration risks while safeguarding your search visibility and business operations."
+      title={t('migration.hero.title')}
+      description={t('migration.hero.description')}
       trustSignals={{
         show: true,
         stars: true,
-        text: '100+ people already using the checklist',
+        text: t('migration.hero.trust-signals'),
       }}
+      t={t}
       form={{
-        title: 'Grab Your Free Checklist',
-        subtitle: 'Get the checklist delivered to your inbox',
+        title: t('migration.form.title'),
+        subtitle: t('migration.form.subtitle'),
+        englishNote: t('checklist.form.english-only') !== 'checklist.form.english-only' ? t('checklist.form.english-only') : undefined,
         action: 'https://app.kit.com/forms/7945460/subscriptions',
         method: 'POST',
         fields: [
           {
-            placeholder: 'First name',
+            placeholder: t('migration.form.first-name'),
             type: 'text',
             name: 'fields[first_name]',
             required: true,
           },
           {
-            placeholder: 'Email',
+            placeholder: t('migration.form.email'),
             type: 'email',
             name: 'email_address',
             required: true,
           },
         ],
         submitButton: {
-          text: 'Get Your Free Checklist',
+          text: t('migration.form.submit'),
           variant: 'primary',
         },
         dataAttributes: {
@@ -57,15 +92,17 @@ const WebsiteMigrationChecklistPage: React.FC = () => (
           'data-format': 'inline',
           'data-version': '5',
         },
-        convertKitOptions:
-          '{"settings":{"after_subscribe":{"action":"message","success_message":"Great! Now check your email to confirm your subscription and I will send you a copy of the checklist.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}',
+        convertKitOptions,
       }}
     />
 
-    <BenefitsSection {...MIGRATION_BENEFITS} />
+    <BenefitsSection {...getMigrationBenefits(t)} />
 
-    <AboutSection />
+    <AboutSection t={t} />
   </main>
-);
+  );
+};
 
-export default WebsiteMigrationChecklistPage;
+export default function WebsiteMigrationChecklistTemplate(data: any & { t: (key: string) => string }) {
+  return <WebsiteMigrationChecklistPage t={data.t} />;
+}

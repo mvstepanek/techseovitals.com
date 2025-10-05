@@ -2,10 +2,14 @@ import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 import Icons from '../ui/Icons';
 
-const Footer: React.FC = () => (
+interface FooterProps {
+  t?: (key: string) => string;
+}
+
+const Footer: React.FC<FooterProps> = ({ t = (key) => key }) => (
   <footer className="bg-gray-900" aria-labelledby="footer-heading">
     <h2 id="footer-heading" className="sr-only">
-      Footer
+      {t('footer.heading')}
     </h2>
     <div className="mx-auto max-w-7xl px-4 py-12 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -14,7 +18,7 @@ const Footer: React.FC = () => (
             <OptimizedImage alt="TechSEO Vitals" width={200} height={50} className="h-auto w-auto" src="/assets/techseovitals-logo-white.svg" aria-hidden="true" />
           </a>
           <p className="text-[0.9375rem] leading-6 text-gray-300 max-w-md">
-            Experienced technical SEO and web performance consultant with over a decade of web development experience.
+            {t('footer.description')}
           </p>
           <div className="flex space-x-3 sm:space-x-4 -ml-[5px]">
             <a
@@ -22,9 +26,9 @@ const Footer: React.FC = () => (
               className="text-gray-400 hover:text-gray-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
+              aria-label={t('footer.social.linkedin')}
             >
-              <span className="sr-only">LinkedIn</span>
+              <span className="sr-only">{t('footer.social.linkedin')}</span>
               <Icons.linkedin className="h-10 w-10" aria-hidden="true" />
             </a>
             <a
@@ -32,9 +36,9 @@ const Footer: React.FC = () => (
               className="text-gray-400 hover:text-gray-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Bluesky Profile"
+              aria-label={t('footer.social.bluesky')}
             >
-              <span className="sr-only">Bluesky</span>
+              <span className="sr-only">{t('footer.social.bluesky')}</span>
               <Icons.bluesky className="h-10 w-10" aria-hidden="true" />
             </a>
             <a
@@ -42,9 +46,9 @@ const Footer: React.FC = () => (
               className="text-gray-400 hover:text-gray-300 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="YouTube Channel"
+              aria-label={t('footer.social.youtube')}
             >
-              <span className="sr-only">YouTube</span>
+              <span className="sr-only">{t('footer.social.youtube')}</span>
               <Icons.youtube className="h-10 w-10" aria-hidden="true" />
             </a>
           </div>
@@ -52,73 +56,73 @@ const Footer: React.FC = () => (
 
         <div className="mt-12 sm:mt-16 grid grid-cols-1 gap-6 sm:gap-8 xl:col-span-2 xl:mt-0 sm:grid-cols-2 md:grid-cols-3">
           <div>
-            <h3 className="text-sm font-bold leading-6 text-white">TechSEO Vitals</h3>
+            <h3 className="text-sm font-bold leading-6 text-white">{t('site.name')}</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-consultant/">
-                  About
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.consultant')}>
+                  {t('nav.about')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/customers/">
-                  Customers
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.customers')}>
+                  {t('nav.customers')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/blog/">
-                  Blog
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.blog')}>
+                  {t('nav.blog')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/newsletter/">
-                  Newsletter
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.newsletter')}>
+                  {t('nav.newsletter')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/contact/">
-                  Contact
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.contact')}>
+                  {t('nav.contact')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold leading-6 text-white">Services</h3>
+            <h3 className="text-sm font-bold leading-6 text-white">{t('footer.services')}</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#technical-seo-audit">
-                  Technical SEO Audit
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={`${t('url.services')}#technical-seo-audit`}>
+                  {t('services.audit.title')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#technical-seo-monitoring">
-                  Technical SEO Monitoring
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={`${t('url.services')}#technical-seo-monitoring`}>
+                  {t('services.monitoring.title')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-services/#website-migration-plan">
-                  Website Migration Plan
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={`${t('url.services')}#website-migration-plan`}>
+                  {t('services.migration.title')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold leading-6 text-white">Free Resources</h3>
+            <h3 className="text-sm font-bold leading-6 text-white">{t('footer.resources')}</h3>
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/technical-seo-checklist/">
-                  Technical SEO Checklist
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.checklist')}>
+                  {t('topbar.technical-seo-checklist')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/website-migration-checklist/">
-                  Website Migration Checklist
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.migration')}>
+                  {t('topbar.website-migration-checklist')}
                 </a>
               </li>
               <li>
-                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href="/5-web-performance-metrics-every-business-owner-should-track/">
-                  5 Web Performance Metrics Every Business Owner Should Track
+                <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.performance-metrics')}>
+                  {t('topbar.web-performance-metrics')}
                 </a>
               </li>
             </ul>
@@ -128,13 +132,13 @@ const Footer: React.FC = () => (
 
       <div className="mt-16 border-t border-gray-800 pt-8 sm:mt-20 lg:mt-24">
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
-          <p className="text-xs leading-5 text-gray-400">© 2024 - {new Date().getFullYear()} TechSEO Vitals. All rights reserved.</p>
+          <p className="text-xs leading-5 text-gray-400">{t('footer.copyright')}</p>
           <div className="mt-4 sm:mt-0 flex space-x-6">
-            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href="/privacy-policy/">
-              Privacy Policy
+            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href={t('url.privacy-policy')}>
+              {t('footer.privacy')}
             </a>
-            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href="/terms-and-conditions/">
-              Terms and Conditions
+            <a className="text-xs leading-5 text-gray-400 hover:text-gray-300 transition-colors" href={t('url.terms')}>
+              {t('footer.terms')}
             </a>
           </div>
         </div>

@@ -13,6 +13,8 @@ interface EleventyData {
   permalink?: string;
   content: string;
   ogImage?: string;
+  i18n?: any;
+  hreflang?: any;
   articleData?: {
     publishDate?: string;
     modifiedDate?: string;
@@ -34,12 +36,19 @@ const getHeroImage = (permalink: string): string | null => {
 };
 
 export default function BaseLayout(data: EleventyData): JSX.Element {
+  const locale = data.i18n?.config?.[data.i18n?.locale];
+  const htmlLang = locale?.htmlLang || 'en';
+  const domain = locale?.domain || SITE_CONFIG.DOMAIN;
+
   const title = data.title ? `${data.title}` : 'TechSEO Vitals - Technical SEO & Web Performance Consulting';
   const description =
     data.description || "Expert technical SEO and web performance consulting services. Boost your website's visibility, speed, and search rankings with TechSEO Vitals.";
-  const canonicalUrl = `${SITE_CONFIG.DOMAIN}${data.permalink || '/'}`;
-  const ogImage = data.ogImage || `${SITE_CONFIG.DOMAIN}/assets/og.png`;
+  const canonicalUrl = `${domain}${data.permalink || '/'}`;
+  const ogImage = data.ogImage || `${domain}/assets/og.png`;
   const heroImage = getHeroImage(data.permalink || '/');
+
+  // Get hreflang alternates
+  const alternates = data.hreflang?.getAlternates(data.permalink || '/') || [];
 
   // Generate all schemas using centralized SchemaFactory
   const schemas = SchemaFactory.generateSchemas({
@@ -51,7 +60,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
   });
 
   return (
-    <html lang="en">
+    <html lang={htmlLang}>
       <HeadSection
         title={title}
         description={description}
@@ -61,18 +70,21 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         permalink={data.permalink}
         schemas={schemas}
         articleData={data.articleData}
+        alternates={alternates}
+        htmlLang={htmlLang}
+        hreflang={data.hreflang}
       />
       <body className="min-h-screen flex flex-col bg-white text-gray-900">
-        <TopBar />
-        <Header currentPath={data.permalink} />
+        <TopBar t={data.t} />
+        <Header currentPath={data.permalink} t={data.t} />
 
         <main id="main-content" className="flex-1">
           <div dangerouslySetInnerHTML={{ __html: data.content }} />
         </main>
 
-        <Footer />
+        <Footer t={data.t} />
 
-        <CookieConsentBar />
+        <CookieConsentBar t={data.t} />
 
         {/* Calendly script for contact page */}
         {data.permalink === '/contact/' && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}

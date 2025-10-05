@@ -5,7 +5,11 @@ import SectionHeader from '../ui/SectionHeader';
 import BackgroundDecorations from '../ui/BackgroundDecorations';
 import ProcessStepCard from '../ui/ProcessStepCard';
 
-const SimpleStepsSection: React.FC = () => (
+interface SimpleStepsSectionProps {
+  t?: (key: string) => string;
+}
+
+const SimpleStepsSection: React.FC<SimpleStepsSectionProps> = ({ t = (key) => key }) => (
   <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
     <BackgroundDecorations variant="centered" />
 
@@ -47,7 +51,7 @@ const SimpleStepsSection: React.FC = () => (
             title="Free Discovery Call"
             description="30-minute conversation about your users' needs, pain points, and how we can create better experiences that drive business growth."
             color="bg-gradient-to-br from-blue-500 to-blue-600"
-            trustSignals={['100% free', 'No commitment']}
+            trustSignals={[t('customers.cta.feature1.title'), t('trust.no-commitment')]}
             trustSignalColor="blue"
           />
           <ProcessStepCard
@@ -72,7 +76,7 @@ const SimpleStepsSection: React.FC = () => (
       </div>
 
       <div className="text-center mt-16">
-        <Button href="/contact/">Get Free Website Check</Button>
+        <Button href={t('url.contact')}>Get Free Website Check</Button>
       </div>
     </div>
   </section>

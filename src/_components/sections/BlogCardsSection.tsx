@@ -19,39 +19,37 @@ interface BlogCardsSectionProps {
   posts: BlogPost[];
   showBadge?: boolean;
   badgeText?: string;
+  t?: (key: string) => string;
 }
 
+const defaultT = (key: string) => key;
+
 const BlogCardsSection: React.FC<BlogCardsSectionProps> = ({
-  title = 'Latest Technical SEO Insights',
-  subtitle = 'Stay ahead with actionable technical SEO strategies, performance optimization tips, and industry best practices.',
+  title,
+  subtitle,
   posts,
   showBadge = true,
-  badgeText = 'Expert Insights',
+  badgeText,
+  t = defaultT,
 }) => {
+  const actualTitle = title || t('blog-cards.title');
+  const actualSubtitle = subtitle || t('blog-cards.subtitle');
+  const actualBadgeText = badgeText || t('blog-cards.badge');
   return (
     <section className="pt-24 pb-24 bg-white border-t border-gray-200">
       <div className={COMMON_STYLES.containerWidth}>
-        {(showBadge || title || subtitle) && (
+        {(showBadge || actualTitle || actualSubtitle) && (
           <SectionHeader
             badge={
               showBadge
                 ? {
                     icon: <Icons.document className="w-4 h-4" />,
-                    text: badgeText,
+                    text: actualBadgeText,
                   }
                 : undefined
             }
-            title={
-              title &&
-              (title.includes('Technical SEO') ? (
-                <>
-                  Latest <span>Technical SEO</span> Insights
-                </>
-              ) : (
-                title
-              ))
-            }
-            subtitle={subtitle}
+            title={actualTitle}
+            subtitle={actualSubtitle}
           />
         )}
 

@@ -4,7 +4,11 @@ import SectionHeader from '../ui/SectionHeader';
 import { COMMON_STYLES } from '../../_data/constants';
 import ProcessStepCard from '../ui/ProcessStepCard';
 
-const WorkProcessSection: React.FC = () => (
+interface WorkProcessSectionProps {
+  t?: (key: string) => string;
+}
+
+const WorkProcessSection: React.FC<WorkProcessSectionProps> = ({ t = (key) => key }) => (
   <section className="py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader

@@ -10,65 +10,82 @@ import { DEFAULT_CTA_FEATURES } from './_data/cta-features';
 import BadgeIcons from './_components/ui/BadgeIcons';
 
 export const data = {
-  title: 'Technical SEO Services',
-  description: 'Professional technical SEO services that boost rankings and revenue. Get expert audits, migrations, and optimization strategies for better conversions.',
-  permalink: '/technical-seo-services/',
   layout: 'base',
+  eleventyComputed: {
+    permalink: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['url.services'] || '/technical-seo-services/';
+    },
+    title: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.services.title'] || 'Technical SEO Services - TechSEO Vitals';
+    },
+    description: (data: any) => {
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return translations['meta.services.description'] || 'Professional technical SEO services to optimize your website performance.';
+    },
+  },
 };
 
-const TechnicalSEOServicesPage: React.FC = () => (
+interface Props {
+  t?: (key: string) => string;
+}
+
+const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key }) => {
+
+  return (
   <main className="flex-1">
     <HeroSection
       badge={{
         icon: BadgeIcons.lightning,
-        text: 'Results-Driven Technical SEO Services',
+        text: t('services.hero.badge'),
       }}
-      title={
-        <>
-          Technical SEO That <span>Drives Real Results</span>
-        </>
-      }
-      description="Your website should work flawlessly for every visitor. Technical optimization removes friction that kills conversions. Better user experience drives more sales and higher search rankings."
+      title={t('services.hero.title')}
+      description={t('services.hero.description')}
       primaryCta={{
-        text: 'Get Free Website Check',
+        text: t('services.hero.cta'),
         href: '/contact/',
         target: '_self',
       }}
       image={{
         src: '/assets/images/martin-stepanek-2.jpg',
-        alt: 'Martin Stepanek - Technical SEO Expert',
+        alt: t('common.alt.martin-expert'),
       }}
       rating={{
         show: true,
-        text: 'Trused by 50+ businesses',
+        text: t('services.hero.rating'),
       }}
       statusBadge={{
         show: true,
-        text: 'Currently taking new clients',
+        text: t('services.hero.status'),
       }}
     />
-    <TrustedCompaniesSection />
-    <ServicesSection />
-    <WhatMakesMeDifferentSection />
-    <TestimonialsSection backgroundColor="bg-gray-50" />
+    <TrustedCompaniesSection t={t} />
+    <ServicesSection t={t} />
+    <WhatMakesMeDifferentSection t={t} />
+    <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
     <CTASection
       badge={{
         icon: BadgeIcons.lightning,
-        text: 'Ready to Improve Your Website?',
+        text: t('services.cta.badge'),
       }}
-      title={
-        <>
-          Turn Your Website Into a <span>Revenue Engine</span>
-        </>
-      }
-      description="Your competitors are getting ahead while technical issues cost you customers every day. Get the technical audit that reveals exactly how to fix what's broken and start converting more visitors into paying customers."
+      title={t('services.cta.title')}
+      description={t('services.cta.description')}
       primaryCta={{
-        text: 'Get Free Website Check',
+        text: t('services.cta.button'),
         href: BUSINESS_CONSTANTS.CONTACT_URL,
       }}
+      trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
       features={DEFAULT_CTA_FEATURES}
+      t={t}
     />
   </main>
-);
+  );
+};
 
-export default TechnicalSEOServicesPage;
+export default function TechnicalSEOServicesTemplate(data: any & { t: (key: string) => string }) {
+  return <TechnicalSEOServicesPage t={data.t} />;
+}

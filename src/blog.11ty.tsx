@@ -10,15 +10,21 @@ export const data = {
     alias: 'posts',
   },
   eleventyComputed: {
-    title: (data: { pagination: { pageNumber: number } }) => {
+    title: (data: { pagination: { pageNumber: number }; i18n?: any }) => {
       const pageNum = data.pagination.pageNumber + 1;
-      return pageNum > 1 ? `Technical SEO Blog - Page ${pageNum}` : 'Technical SEO Blog';
-    },
-    description: (data: { pagination: { pageNumber: number } }) => {
-      const pageNum = data.pagination.pageNumber + 1;
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
       return pageNum > 1
-        ? `Expert insights on technical optimization - Page ${pageNum}. Learn actionable strategies that transform technical barriers into competitive advantages.`
-        : 'Expert insights on creating exceptional user experiences through technical optimization. Learn actionable strategies that transform technical barriers into competitive advantages.';
+        ? `${translations['meta.blog.title'] || 'Technical SEO Blog'} - ${translations['common.page'] || 'Page'} ${pageNum}`
+        : translations['meta.blog.title'] || 'Technical SEO Blog';
+    },
+    description: (data: { pagination: { pageNumber: number }; i18n?: any }) => {
+      const pageNum = data.pagination.pageNumber + 1;
+      const locale = data.i18n?.locale || 'en';
+      const translations = data.i18n?.translations?.[locale] || data.i18n?.translations?.en || {};
+      return pageNum > 1
+        ? `${translations['meta.blog.description'] || 'Expert insights on technical optimization'} - ${translations['common.page'] || 'Page'} ${pageNum}.`
+        : translations['meta.blog.description'] || 'Expert insights on creating exceptional user experiences through technical optimization. Learn actionable strategies that transform technical barriers into competitive advantages.';
     },
     permalink: (data: { pagination: { pageNumber: number } }) => {
       const pageNum = data.pagination.pageNumber;
@@ -58,9 +64,14 @@ interface PaginationData {
 interface EleventyData {
   posts: BlogPost[];
   pagination: PaginationData;
+  t?: (key: string) => string;
+  i18n?: any;
 }
 
-const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
+const BlogPage: React.FC<EleventyData> = ({ posts, pagination, t = (key) => key, i18n }) => {
+  const locale = i18n?.locale || 'en';
+  const dateLocale = locale === 'sk' ? 'sk-SK' : 'en-US';
+
   // Process posts for display
   const processedPosts = posts.map((post) => {
     const permalink =
@@ -77,7 +88,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
       title: post.data.title,
       href: permalink,
       image: post.data.image || fallbackImage,
-      date: new Date(post.data.date).toLocaleDateString('en-US', {
+      date: new Date(post.data.date).toLocaleDateString(dateLocale, {
         year: 'numeric',
         month: 'short',
         day: 'numeric',
@@ -104,17 +115,13 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
                 />
               </svg>
             ),
-            text: 'Expert Insights',
+            text: t('blog.hero.badge'),
           }}
-          title={
-            <>
-              Technical SEO <span>Insights</span>
-            </>
-          }
-          description="Learn optimization strategies that create websites users love while driving more conversions and revenue."
+          title={t('blog.hero.title')}
+          description={t('blog.hero.description')}
           image={{
             src: '/assets/images/martin-stepanek-6.jpg',
-            alt: 'Martin Stepanek - Technical SEO Expert',
+            alt: t('common.alt.martin-expert'),
           }}
           layout="centered"
           rating={{ show: false }}
@@ -126,14 +133,14 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
         <div className="bg-gradient-to-b from-gray-50 to-white py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 text-center mb-4">
-              Technical SEO <span>Blog</span>
+              {t('blog.hero.title')}
             </h1>
-            <p className="text-lg text-gray-600 text-center">Page {pagination.pageNumber + 1}</p>
+            <p className="text-lg text-gray-600 text-center">{t('common.page')} {pagination.pageNumber + 1}</p>
           </div>
         </div>
       )}
 
-      <BlogCardsSection showBadge={false} title="" subtitle="" posts={processedPosts} />
+      <BlogCardsSection showBadge={false} title="" subtitle="" posts={processedPosts} t={t} />
 
       {/* Simple pagination navigation */}
       {pagination && pagination.pages && pagination.pages.length > 1 && (
@@ -144,7 +151,7 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
                 href={pagination.pageNumber === 1 ? '/blog/' : `/blog/${pagination.pageNumber}/`}
                 className="inline-flex items-center rounded-lg bg-purple-600 px-6 py-3 text-sm font-bold text-white hover:bg-purple-700 transition-colors duration-200 shadow-sm"
               >
-                Previous
+                {t('common.previous')}
               </a>
             ) : null}
 
@@ -153,20 +160,20 @@ const BlogPage: React.FC<EleventyData> = ({ posts, pagination }) => {
                 href={`/blog/${pagination.pageNumber + 2}/`}
                 className="inline-flex items-center rounded-lg bg-purple-600 px-6 py-3 text-sm font-bold text-white hover:bg-purple-700 transition-colors duration-200 shadow-sm"
               >
-                Next
+                {t('common.next')}
               </a>
             ) : null}
           </div>
         </nav>
       )}
 
-      {isFirstPage && <NewsletterSection />}
+      {isFirstPage && <NewsletterSection t={t} />}
     </main>
   );
 };
 
-export default function BlogTemplate(data: { posts: BlogPost[]; pagination: PaginationData }) {
+export default function BlogTemplate(data: { posts: BlogPost[]; pagination: PaginationData; t?: (key: string) => string; i18n?: any }) {
   // The pagination data creates 'posts' from the alias
   // and 'pagination' is at the root level
-  return <BlogPage posts={data.posts || []} pagination={data.pagination} />;
+  return <BlogPage posts={data.posts || []} pagination={data.pagination} t={data.t} i18n={data.i18n} />;
 }
