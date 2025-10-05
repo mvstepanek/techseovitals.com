@@ -44,5 +44,6 @@ module.exports = {
   "common.rss-feed": "TechSEO Vitals Blog RSS kanál",
   "common.atom-feed": "TechSEO Vitals Blog Atom kanál",
   "common.aria.close-menu": "Zavrieť menu",
-  "common.aria.open-menu": "Otvoriť menu"
+  "common.aria.open-menu": "Otvoriť menu",
+  "common.alt.industry-leader": "Líder v odvetví"
 };

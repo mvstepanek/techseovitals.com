@@ -70,7 +70,7 @@ const WhyChooseMeSection: React.FC<WhyChooseMeSectionProps> = ({ t = defaultT })
         </div>
         <TestimonialQuoteBox
           quote={t('why-me.testimonial')}
-          source="LinkedIn Recommendation"
+          source={t('consultant.experience.testimonial.source')}
           sourceLink="https://www.linkedin.com/in/techseovitals/#recommendations"
         />
       </div>

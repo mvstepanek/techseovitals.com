@@ -28,7 +28,7 @@ const BlogAuthorBio: React.FC<BlogAuthorBioProps> = ({ t = (key) => key }) => (
             className="text-gray-400 hover:text-gray-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn Profile"
+            aria-label={t('footer.social.linkedin')}
           >
             <Icons.linkedin className="h-8 w-8" aria-hidden="true" />
           </a>
@@ -37,7 +37,7 @@ const BlogAuthorBio: React.FC<BlogAuthorBioProps> = ({ t = (key) => key }) => (
             className="text-gray-400 hover:text-gray-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Bluesky Profile"
+            aria-label={t('footer.social.bluesky')}
           >
             <Icons.bluesky className="h-8 w-8" aria-hidden="true" />
           </a>
@@ -46,7 +46,7 @@ const BlogAuthorBio: React.FC<BlogAuthorBioProps> = ({ t = (key) => key }) => (
             className="text-gray-400 hover:text-gray-600 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="YouTube Channel"
+            aria-label={t('footer.social.youtube')}
           >
             <Icons.youtube className="h-8 w-8" aria-hidden="true" />
           </a>

@@ -34,5 +34,6 @@ module.exports = {
   "common.rss-feed": "TechSEO Vitals Blog RSS Feed",
   "common.atom-feed": "TechSEO Vitals Blog Atom Feed",
   "common.aria.close-menu": "Close menu",
-  "common.aria.open-menu": "Open menu"
+  "common.aria.open-menu": "Open menu",
+  "common.alt.industry-leader": "Industry leader"
 };

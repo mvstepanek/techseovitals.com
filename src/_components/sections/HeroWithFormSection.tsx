@@ -75,7 +75,7 @@ const HeroWithFormSection: React.FC<HeroWithFormProps> = ({ badge, title, descri
                     <div className="flex -space-x-2">
                       {trustSignals.images ? (
                         trustSignals.images.map((image) => (
-                          <OptimizedImage key={image} src={image} alt="Industry leader" className="w-12 h-12 rounded-full border-2 border-white object-cover" />
+                          <OptimizedImage key={image} src={image} alt={t('common.alt.industry-leader')} className="w-12 h-12 rounded-full border-2 border-white object-cover" />
                         ))
                       ) : (
                         <>
