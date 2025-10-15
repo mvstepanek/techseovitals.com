@@ -5,7 +5,7 @@ permalink: '/blog/the-roi-of-speed-how-website-responsiveness-drives-revenue/'
 layout: 'blog-post'
 date: '2025-10-15'
 author: 'Martin Stepanek'
-image: '/assets/images/blog/how-cls-drives-real-business-results.jpg'
+image: '/assets/images/blog/how-website-responsiveness-drives-revenue.jpg'
 lang: en
 ---
 
