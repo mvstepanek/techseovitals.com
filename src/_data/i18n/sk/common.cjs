@@ -49,5 +49,8 @@ module.exports = {
   "common.aria.main-nav": "Hlavná navigácia",
   "common.aria.mobile-nav": "Mobilná navigácia",
   "common.alt.industry-leader": "Líder v odvetví",
-  "common.alt.logo": "TechSEO Vitals"
+  "common.alt.logo": "TechSEO Vitals",
+  "linkedin-bar.text": "Získajte bezplatné tipy z oblasti technického SEO a rýchlosti webu",
+  "linkedin-bar.subtitle": "Sledujte ma na LinkedIn pre viac tipov",
+  "linkedin-bar.cta": "Sledovať"
 };

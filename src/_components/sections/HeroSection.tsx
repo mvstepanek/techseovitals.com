@@ -109,7 +109,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               <div className={`mt-8 ${layout === 'centered' ? 'text-center' : ''}`}>
                 {rating.isTestimonial ? (
                   <div className={`${COMMON_STYLES.gradientBgVeryLight} rounded-lg p-3 border-l-4 border-purple-500 inline-block`}>
-                    <p className="text-sm font-medium text-gray-800 italic">
+                    <p className="text-sm font-medium text-gray-800">
                       &quot;{rating.text}&quot;
                       {rating.source && (
                         <span className="text-gray-600 ml-1">

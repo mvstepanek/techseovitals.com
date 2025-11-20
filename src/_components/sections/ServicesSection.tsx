@@ -17,7 +17,7 @@ interface ServicesSectionProps {
 const defaultT = (key: string) => key;
 
 const ServicesSection: React.FC<ServicesSectionProps> = ({ title, badge, subtitle, t = defaultT }) => (
-  <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+  <section className="py-16 sm:py-20 lg:py-24">
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{

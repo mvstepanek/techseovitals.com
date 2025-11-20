@@ -49,5 +49,8 @@ module.exports = {
   "common.aria.main-nav": "Main navigation",
   "common.aria.mobile-nav": "Mobile navigation",
   "common.alt.industry-leader": "Industry leader",
-  "common.alt.logo": "TechSEO Vitals"
+  "common.alt.logo": "TechSEO Vitals",
+  "linkedin-bar.text": "Get Free Technical SEO & Web Performance Tips",
+  "linkedin-bar.subtitle": "Follow me on LinkedIn for more expert insights",
+  "linkedin-bar.cta": "Follow Me"
 };

@@ -3,6 +3,7 @@ import TopBar from '../_components/layout/TopBar';
 import Header from '../_components/layout/Header';
 import Footer from '../_components/layout/Footer';
 import CookieConsentBar from '../_components/layout/CookieConsentBar';
+import LinkedInFloatingBar from '../_components/ui/LinkedInFloatingBar';
 import HeadSection from '../_components/layout/HeadSection';
 import { SchemaFactory } from '../_data/schemas';
 import { SITE_CONFIG } from '../_data/constants';
@@ -91,6 +92,7 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
         <Footer t={data.t} />
 
         <CookieConsentBar t={data.t} />
+        <LinkedInFloatingBar t={data.t} />
 
         {/* Calendly script for contact page */}
         {(data.permalink === '/contact/' || data.permalink === '/kontakt/') && <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async />}
@@ -197,6 +199,47 @@ export default function BaseLayout(data: EleventyData): JSX.Element {
                   setCookie(COOKIE_NAME, 'declined', COOKIE_EXPIRY_DAYS);
                   hideCookieBar();
                 });
+              }
+
+              // LinkedIn Floating Bar Management
+              const linkedInBar = document.getElementById('linkedin-floating-bar');
+              const linkedInCloseBtn = document.getElementById('linkedin-bar-close');
+              const LINKEDIN_BAR_DISMISSED_KEY = 'linkedInBarDismissed';
+
+              if (linkedInBar) {
+                // Check if bar was dismissed in this session
+                const wasDismissed = sessionStorage.getItem(LINKEDIN_BAR_DISMISSED_KEY);
+
+                if (wasDismissed) {
+                  linkedInBar.style.display = 'none';
+                } else {
+                  // Show bar after scrolling 150px
+                  function handleLinkedInBarScroll() {
+                    if (window.scrollY > 150) {
+                      linkedInBar.classList.remove('translate-y-full');
+                      linkedInBar.classList.add('translate-y-0');
+                    } else {
+                      linkedInBar.classList.remove('translate-y-0');
+                      linkedInBar.classList.add('translate-y-full');
+                    }
+                  }
+
+                  window.addEventListener('scroll', handleLinkedInBarScroll);
+                  // Check initial position
+                  handleLinkedInBarScroll();
+                }
+
+                // Close button handler
+                if (linkedInCloseBtn) {
+                  linkedInCloseBtn.addEventListener('click', function() {
+                    sessionStorage.setItem(LINKEDIN_BAR_DISMISSED_KEY, 'true');
+                    linkedInBar.classList.remove('translate-y-0');
+                    linkedInBar.classList.add('translate-y-full');
+                    setTimeout(function() {
+                      linkedInBar.style.display = 'none';
+                    }, 300);
+                  });
+                }
               }
             });
           `,

@@ -10,7 +10,7 @@ module.exports = {
   "consultant.hero.title": "Martin Štěpánek, <span>Expert na technické SEO</span>",
   "consultant.hero.description": "Pomáham ambicióznym firmám zlepšiť výkon ich webových stránok prostredníctvom pokročalého technického SEO a optimalizácie výkonu pre lepšie výsledky z organickej návštevnosti a vyššie tržby.",
   "consultant.hero.testimonial": "Martina považujem za jedného z najlepších expertov na technické SEO na trhu.",
-  "consultant.hero.testimonial.source": "Overený klient na LinkedIn",
+  "consultant.hero.testimonial.source": "Daniel Pisoň - CMO v Quality Unit",
   "consultant.hero.status": "Prijímam nových klientov",
   "consultant.experience.badge": "Prečo si vybrať práve mňa?",
   "consultant.experience.title": "Čo ma robí <span>iným</span>",

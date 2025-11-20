@@ -105,6 +105,8 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
 
       <TrustedCompaniesSection t={t} />
 
+      <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
+
       <FeatureGrid
         badge={{
           icon: BadgeIcons.pulsingDot,
@@ -117,7 +119,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
           href: t('url.contact'),
           trustSignals: [t('trust.free-consultation'), t('trust.no-commitment')],
         }}
-        backgroundColor="gray"
+        backgroundColor="white"
         columns={3}
         features={[
           {
@@ -147,8 +149,6 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
 
       <WhyAuditSection t={t} />
 
-      <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
-
       <CTASection
         badge={{
           icon: BadgeIcons.lightning,
@@ -162,6 +162,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
         }}
         trustSignals={[t('trust.free-consultation'), t('trust.no-commitment')]}
         features={DEFAULT_CTA_FEATURES}
+        backgroundColor={'gray'}
         t={t}
       />
 

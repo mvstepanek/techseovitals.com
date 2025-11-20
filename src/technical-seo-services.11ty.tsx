@@ -64,9 +64,9 @@ const TechnicalSEOServicesPage: React.FC<Props> = ({ t = (key) => key, locale = 
       }}
     />
     <TrustedCompaniesSection t={t} />
-    <ServicesSection t={t} />
-    <WhatMakesMeDifferentSection t={t} locale={locale} />
     <TestimonialsSection backgroundColor="bg-gray-50" t={t} />
+    <ServicesSection t={t} />
+    <WhatMakesMeDifferentSection bgColor="grey" t={t} locale={locale} />
     <CTASection
       badge={{
         icon: BadgeIcons.lightning,

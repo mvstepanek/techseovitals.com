@@ -9,7 +9,7 @@ module.exports = {
   "consultant.hero.description": "I help businesses create websites that prioritize both user satisfaction and revenue performance.",
   "consultant.hero.cta": "Get Free Website Check",
   "consultant.hero.testimonial": "I consider Martin to be one of the greatest technical SEO experts on the market.",
-  "consultant.hero.testimonial.source": "Verified Client on LinkedIn",
+  "consultant.hero.testimonial.source": "Daniel Pison - CMO at Quality Unit",
   "consultant.hero.status": "Accepting new clients",
   "consultant.experience.badge": "Why Choose Martin",
   "consultant.experience.title": "What Makes Me <span>Different</span>",

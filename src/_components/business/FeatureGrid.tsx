@@ -32,7 +32,7 @@ interface FeatureGridProps {
 
 const FeatureGrid: React.FC<FeatureGridProps> = ({ badge, title, subtitle, cta, features, backgroundColor = 'gray', columns = 4, bottomText }) => {
   const bgClass = backgroundColor === 'gray' ? getBackgroundClass('gradientSlate') : getBackgroundClass('white');
-  const borderClasses = backgroundColor === 'white' ? 'border-t border-gray-200' : '';
+  const borderClasses = backgroundColor === 'white' ? 'border-t border-gray-100' : '';
 
   const getGridCols = () => {
     switch (columns) {

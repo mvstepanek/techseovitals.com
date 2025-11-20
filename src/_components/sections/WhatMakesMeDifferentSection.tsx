@@ -6,11 +6,12 @@ import SectionHeader from '../ui/SectionHeader';
 interface WhatMakesMeDifferentSectionProps {
   t?: (key: string) => string;
   locale?: string;
+  bgColor?: 'white' | 'grey';
 }
 
 const defaultT = (key: string) => key;
 
-const WhatMakesMeDifferentSection: React.FC<WhatMakesMeDifferentSectionProps> = ({ t = defaultT, locale = 'en' }) => {
+const WhatMakesMeDifferentSection: React.FC<WhatMakesMeDifferentSectionProps> = ({ t = defaultT, locale = 'en', bgColor = 'white' }) => {
   // Hide card4 for Slovak locale
   const showCard4 = locale !== 'sk';
   const gridClass = showCard4
@@ -18,7 +19,7 @@ const WhatMakesMeDifferentSection: React.FC<WhatMakesMeDifferentSectionProps> = 
     : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12";
 
   return (
-  <section className="py-16 sm:py-20 lg:py-24 bg-white">
+  <section className={`py-16 sm:py-20 lg:py-24 ${bgColor === 'grey' ? 'bg-gray-50' : 'bg-white'}`}>
     <div className={COMMON_STYLES.containerWidth}>
       <SectionHeader
         badge={{ icon: <Icons.badge className="w-3 sm:w-4 h-3 sm:h-4" />, text: t('what-makes-me.badge') }}

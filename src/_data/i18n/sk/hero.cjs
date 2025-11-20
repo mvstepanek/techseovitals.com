@@ -9,6 +9,6 @@ module.exports = {
   "hero.description": "Pomáham firmám zvyšovať tržby s rýchlejšími a lepšie optimalizovanými webovými stránkami. Špecializujem sa na technické SEO a optimalizáciu výkonu - kľúčové faktory, ktoré rozhodujú o tom, či návštevníci zostanú a nakúpia, alebo odídu ku konkurencii.",
   "hero.cta.primary": " Získať bezplatnú analýzu webu",
   "hero.testimonial": "Martina považujem za jedného z najlepších expertov na technické SEO na trhu.",
-  "hero.testimonial.source": "Overený klient na LinkedIn",
+  "hero.testimonial.source": "Daniel Pisoň - CMO v Quality Unit",
   "hero.status.available": "Prijímam nových klientov"
 };
