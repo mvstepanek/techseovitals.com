@@ -101,6 +101,7 @@ const HomePage: React.FC<{ collections: EleventyData['collections']; t?: (key: s
           show: true,
           text: t('hero.status.available'),
         }}
+        buttonVariant="secondary"
       />
 
       <TrustedCompaniesSection t={t} />

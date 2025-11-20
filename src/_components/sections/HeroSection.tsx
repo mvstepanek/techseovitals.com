@@ -43,6 +43,7 @@ interface HeroSectionProps {
     text?: string;
   };
   layout?: 'default' | 'centered';
+  buttonVariant?: 'primary' | 'secondary';
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
@@ -56,6 +57,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   rating = { show: true, text: 'Trused by 50+ businesses' },
   statusBadge = { show: true, text: 'Available for projects' },
   layout = 'default',
+  buttonVariant = 'primary',
 }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-12 sm:py-16 lg:py-28">
@@ -81,7 +83,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {primaryCta && (
               <div className={`mt-8 sm:mt-10 ${layout === 'centered' ? 'text-center' : ''}`}>
                 <div className={`flex flex-col sm:flex-row gap-4 ${layout === 'centered' ? 'justify-center items-center' : 'justify-center lg:justify-start items-center'}`}>
-                  <Button href={primaryCta.href} target={primaryCta.target}>
+                  <Button href={primaryCta.href} target={primaryCta.target} variant={buttonVariant}>
                     {primaryCta.text}
                   </Button>
 

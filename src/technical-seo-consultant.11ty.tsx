@@ -66,6 +66,7 @@ const TechnicalSEOConsultantPage: React.FC<Props> = ({ t = (key) => key }) => {
         show: true,
         text: t('consultant.hero.status'),
       }}
+      buttonVariant="secondary"
     />
     <TestimonialsSection t={t} />
     <div className="border-t border-gray-200">
