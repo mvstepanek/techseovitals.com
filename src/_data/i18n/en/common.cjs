@@ -52,5 +52,12 @@ module.exports = {
   "common.alt.logo": "TechSEO Vitals",
   "linkedin-bar.text": "Get Free Technical SEO & Web Performance Tips",
   "linkedin-bar.subtitle": "Follow me on LinkedIn for more expert insights",
-  "linkedin-bar.cta": "Follow Me"
+  "linkedin-bar.cta": "Follow Me",
+  "common.case-study": "Case Study",
+  "common.read-case-study": "Read Case Study",
+  "url.case-study.touchit": "/customers/touchit/",
+  "url.case-study.expertise": "/customers/expertise/",
+  "case-study.company": "Company",
+  "case-study.industry": "Industry",
+  "case-study.services": "Services"
 };

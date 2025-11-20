@@ -52,5 +52,12 @@ module.exports = {
   "common.alt.logo": "TechSEO Vitals",
   "linkedin-bar.text": "Získajte bezplatné tipy z oblasti technického SEO a rýchlosti webu",
   "linkedin-bar.subtitle": "Sledujte ma na LinkedIn pre viac tipov",
-  "linkedin-bar.cta": "Sledovať"
+  "linkedin-bar.cta": "Sledovať",
+  "common.case-study": "Prípadová štúdia",
+  "common.read-case-study": "Zobraziť prípadovú štúdiu",
+  "url.case-study.touchit": "/klienti/touchit/",
+  "url.case-study.expertise": "/klienti/expertise/",
+  "case-study.company": "Firma",
+  "case-study.industry": "Odvetvie",
+  "case-study.services": "Služby"
 };

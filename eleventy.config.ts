@@ -18,6 +18,14 @@ export default function (eleventyConfig: any): UserConfig {
       .sort((a: any, b: any) => b.date - a.date);
   });
 
+  // Add case studies collection sorted by date (newest first)
+  eleventyConfig.addCollection("caseStudies", function(collectionApi: any) {
+    const locale = i18nData.locale;
+    const caseStudiesPath = locale === 'sk' ? "src/case-studies-sk/*.md" : "src/case-studies/*.md";
+    return collectionApi.getFilteredByGlob(caseStudiesPath)
+      .sort((a: any, b: any) => b.date - a.date);
+  });
+
   // Add support for TSX/JSX templates
   eleventyConfig.addTemplateFormats("11ty.tsx");
   eleventyConfig.addExtension("11ty.tsx", {

@@ -79,7 +79,7 @@ const CustomersPage: React.FC<Props> = ({ t = (key) => key }) => (
 
         <div className={COMMON_STYLES.twoColumnGrid}>
           {/* TOUCHIT Case Study */}
-          <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
+          <a href={t('url.case-study.touchit')} className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible block">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
                 <OptimizedImage src="/assets/images/clients/logo-touchit.png" alt={t('customers.touchit.alt')} className="h-12 w-auto object-contain" />
@@ -120,11 +120,16 @@ const CustomersPage: React.FC<Props> = ({ t = (key) => key }) => (
                   <span className="text-base font-semibold text-gray-900">{t('customers.touchit.feature3')}</span>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* expertise.ai Case Study */}
-          <div className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-visible">
+              <div className="group relative overflow-hidden transition-all duration-300 font-bold rounded-xl inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl hover:scale-105 hover:shadow-2xl px-4 py-2.5 text-sm sm:px-5 sm:py-3 mt-6">
+                <span className="relative z-10">{t('common.read-case-study')}</span>
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+              </div>
+            </div>
+          </a>
+
+          {/* expertise.ai Case Study - Non-clickable */}
+          <div className="relative bg-white rounded-3xl shadow-lg border border-gray-100 overflow-visible">
             <div className="p-8">
               <div className="flex items-start justify-start mb-6">
                 <OptimizedImage src="/assets/images/clients/logo-expertiseai.svg" alt={t('customers.expertiseai.alt')} className="h-12 w-auto object-contain" />
