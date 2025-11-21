@@ -1,6 +1,6 @@
 ---
 title: 'Prípadová štúdia TOUCHIT'
-description: 'Ako som pomohol touchit.sk dosiahnúť 93% úspešnosť v Core Web Vitals'
+description: 'Zníženie LCP takmer o dve tretiny viedlo k 70% poklesu bounce rate a 80% nárastu zobrazení stránok na návštevu.'
 permalink: '/klienti/touchit/'
 layout: 'case-study'
 date: '2025-11-19'
@@ -12,6 +12,19 @@ services:
   - 'Website Migration Plan'
 image: '/assets/images/case-studies/touchit.jpg'
 lang: sk
+metrics:
+  - value: '65%'
+    label: 'Zníženie LCP'
+    color: 'blue'
+    prefix: '-'
+  - value: '70%'
+    label: 'Pokles bounce rate'
+    color: 'green'
+    prefix: '-'
+  - value: '80%'
+    label: 'Nárast zobrazení stránok'
+    color: 'purple'
+    prefix: '+'
 ---
 
 ## Nová výzva

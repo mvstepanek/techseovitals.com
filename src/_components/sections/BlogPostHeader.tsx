@@ -1,6 +1,13 @@
 import React from 'react';
 import OptimizedImage from '../common/OptimizedImage';
 
+interface Metric {
+  value: string;
+  label: string;
+  color: 'blue' | 'green' | 'purple';
+  prefix?: '+' | '-';
+}
+
 interface BlogPostHeaderProps {
   title?: string;
   description?: string;
@@ -10,9 +17,10 @@ interface BlogPostHeaderProps {
   locale?: string;
   domain?: string;
   t?: (key: string) => string;
+  metrics?: Metric[];
 }
 
-const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image, locale = 'en', domain = 'https://www.techseovitals.com', t = (key) => key }) => (
+const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, date, permalink, image, locale = 'en', domain = 'https://www.techseovitals.com', t = (key) => key, metrics }) => (
   <article className="bg-gradient-to-br from-primary-500/5 via-white to-primary-600/5">
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 xl:pt-24 2xl:pt-32 pb-6 sm:pb-8 lg:pb-12">
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
@@ -30,6 +38,42 @@ const BlogPostHeader: React.FC<BlogPostHeaderProps> = ({ title, description, dat
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 sm:mb-8 leading-tight">{title}</h1>
         {description && <p className="text-lg sm:text-lg text-gray-600 leading-7 sm:leading-8 max-w-3xl mx-auto">{description}</p>}
       </div>
+
+      {/* Success Metrics */}
+      {metrics && metrics.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12 lg:mb-16">
+          {metrics.map((metric, index) => {
+            const colorClasses = {
+              blue: {
+                bg: 'bg-gradient-to-br from-blue-50 to-cyan-50',
+                border: 'border-blue-200',
+                text: 'text-blue-600',
+              },
+              green: {
+                bg: 'bg-gradient-to-br from-green-50 to-emerald-50',
+                border: 'border-green-200',
+                text: 'text-green-600',
+              },
+              purple: {
+                bg: 'bg-gradient-to-br from-purple-50 to-violet-50',
+                border: 'border-purple-200',
+                text: 'text-purple-600',
+              },
+            };
+            const colors = colorClasses[metric.color];
+
+            return (
+              <div key={index} className={`text-center p-6 sm:p-8 ${colors.bg} rounded-2xl border-2 ${colors.border} shadow-lg`}>
+                <div className={`text-4xl sm:text-5xl font-bold ${colors.text} mb-2`}>
+                  {metric.prefix}{metric.value}
+                </div>
+                <div className="text-sm sm:text-base text-gray-700 font-semibold">{metric.label}</div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
       <div className="relative">
         <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-primary-500/20 to-primary-600/20 rounded-3xl blur-2xl opacity-30" />
         <div className="relative">

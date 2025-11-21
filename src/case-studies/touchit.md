@@ -1,6 +1,6 @@
 ---
 title: 'TOUCHIT Case Study'
-description: "How I Helped Slovakia's Major Technology News Portal Achieve 93% Core Web Vitals Success"
+description: "Reducing the LCP by nearly two-thirds led to almost a 70% drop in bounce rate and an 80% increase in page views per visit."
 permalink: '/customers/touchit/'
 layout: 'case-study'
 date: '2025-11-19'
@@ -12,6 +12,19 @@ services:
   - 'Website Migration Plan'
 image: '/assets/images/case-studies/touchit.jpg'
 lang: en
+metrics:
+  - value: '65%'
+    label: 'Reduction in LCP'
+    color: 'blue'
+    prefix: '-'
+  - value: '70%'
+    label: 'Drop in bounce rate'
+    color: 'green'
+    prefix: '-'
+  - value: '80%'
+    label: 'Increase in page views'
+    color: 'purple'
+    prefix: '+'
 ---
 
 ## A Different Kind of Challenge

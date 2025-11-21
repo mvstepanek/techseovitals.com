@@ -7,6 +7,13 @@ import { SITE_CONFIG } from '../_data/constants';
 // Allowed services that can be linked
 type ServiceType = 'Technical SEO Audit' | 'Technical SEO Monitoring' | 'Website Migration Plan';
 
+interface Metric {
+  value: string;
+  label: string;
+  color: 'blue' | 'green' | 'purple';
+  prefix?: '+' | '-';
+}
+
 interface CaseStudyData {
   title?: string;
   description?: string;
@@ -17,6 +24,7 @@ interface CaseStudyData {
   company?: string;
   industry?: string;
   services?: ServiceType[];
+  metrics?: Metric[];
   locale?: string;
   i18n?: {
     locale: string;
@@ -77,6 +85,7 @@ const CaseStudyLayout: React.FC<CaseStudyData> = (data: CaseStudyData) => {
         locale={locale}
         domain={domain}
         t={data.t}
+        metrics={data.metrics}
       />
 
       {/* Case Study Meta Info */}

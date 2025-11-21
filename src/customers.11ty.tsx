@@ -86,6 +86,23 @@ const CustomersPage: React.FC<Props> = ({ t = (key) => key }) => (
               </div>
               <p className="text-purple-600 font-semibold mb-2">{t('customers.touchit.category')}</p>
               <p className="text-gray-600 mb-6">{t('customers.touchit.description')}</p>
+
+              {/* Success Metrics */}
+              <div className="grid grid-cols-3 gap-4 mb-6">
+                <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border border-blue-200">
+                  <div className="text-3xl font-bold text-blue-600 mb-1">-{t('customers.touchit.metric1.value')}</div>
+                  <div className="text-xs text-gray-600 font-medium">{t('customers.touchit.metric1.label')}</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200">
+                  <div className="text-3xl font-bold text-green-600 mb-1">-{t('customers.touchit.metric2.value')}</div>
+                  <div className="text-xs text-gray-600 font-medium">{t('customers.touchit.metric2.label')}</div>
+                </div>
+                <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl border border-purple-200">
+                  <div className="text-3xl font-bold text-purple-600 mb-1">+{t('customers.touchit.metric3.value')}</div>
+                  <div className="text-xs text-gray-600 font-medium">{t('customers.touchit.metric3.label')}</div>
+                </div>
+              </div>
+
               <div className={`space-y-4 ${COMMON_STYLES.gradientBgVeryLight} p-6 rounded-xl border border-purple-100`}>
                 <div className="flex items-center gap-3">
                   <div className={`w-8 h-8 min-w-8 ${COMMON_STYLES.gradientBgDiagonal} rounded-lg flex items-center justify-center`}>
