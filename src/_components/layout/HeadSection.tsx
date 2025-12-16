@@ -58,6 +58,8 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <link rel="dns-prefetch" href="https://app.kit.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://analytics.ahrefs.com" />
+      {htmlLang !== 'sk' && <link rel="preconnect" href="https://rum.vitalsentinel.com" />}
+      {htmlLang !== 'sk' && <link rel="preconnect" href="https://analytics.vitalsentinel.com" />}
       {(permalink === '/contact/' || permalink === '/kontakt/') && <link rel="preconnect" href="https://assets.calendly.com" />}
 
       {/* Preload critical resources */}
@@ -252,6 +254,10 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       ) : (
         <>
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="/k9G/EATSZZzQJkk3e0+8g" defer />
+
+          {/* VitalSentinel RUM & Analytics */}
+          <script src="https://rum.vitalsentinel.com/rum.js" data-key="bf7a5dfa-f9a1-4fab-b041-cb102c8b3c39" async />
+          <script src="https://analytics.vitalsentinel.com/analytics.js" data-key="bf7a5dfa-f9a1-4fab-b041-cb102c8b3c39" async />
 
           {/* Google tag (gtag.js) */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GFYSSGV3W" />
