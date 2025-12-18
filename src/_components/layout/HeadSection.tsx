@@ -58,8 +58,8 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       <link rel="dns-prefetch" href="https://app.kit.com" />
       <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://analytics.ahrefs.com" />
-      {htmlLang !== 'sk' && <link rel="preconnect" href="https://rum.vitalsentinel.com" />}
-      {htmlLang !== 'sk' && <link rel="preconnect" href="https://analytics.vitalsentinel.com" />}
+      <link rel="preconnect" href="https://rum.vitalsentinel.com" />
+      <link rel="preconnect" href="https://analytics.vitalsentinel.com" />
       {(permalink === '/contact/' || permalink === '/kontakt/') && <link rel="preconnect" href="https://assets.calendly.com" />}
 
       {/* Preload critical resources */}
@@ -228,6 +228,10 @@ const HeadSection: React.FC<HeadSectionProps> = ({ title, description, canonical
       {htmlLang === 'sk' ? (
         <>
           <script src="https://analytics.ahrefs.com/analytics.js" data-key="trybAVcvEFnDxjo03EL65Q" defer />
+
+          {/* VitalSentinel RUM & Analytics */}
+          <script src="https://rum.vitalsentinel.com/rum.js" data-key="de1c163f-7c57-45ef-95ac-92abeec43bdf" async />
+          <script src="https://analytics.vitalsentinel.com/analytics.js" data-key="de1c163f-7c57-45ef-95ac-92abeec43bdf" async />
 
           {/* Google tag (gtag.js) */}
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-BRZY36WKR1" />
