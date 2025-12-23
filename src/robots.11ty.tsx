@@ -15,5 +15,8 @@ export default function Robots(data: EleventyData): string {
   return `User-agent: *
 Allow: /
 
+# Intentional test - blocking /privacy-policy/ from crawling
+Disallow: /privacy-policy/
+
 Sitemap: ${domain}/sitemap.xml`;
 }
