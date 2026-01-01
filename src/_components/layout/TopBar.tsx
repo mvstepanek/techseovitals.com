@@ -11,6 +11,14 @@ const TopBar: React.FC<TopBarProps> = ({ t = (key) => key }) => (
       <div className="flex items-center justify-center text-center text-xs sm:text-sm font-medium">
         <div className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-white bg-opacity-20 text-white mr-2 sm:mr-4 flex-shrink-0">
           <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" />
+          <span>{t('topbar.new')}</span>
+        </div>
+        <a className="hover:underline text-xs sm:text-sm px-1" href="https://www.vitalsentinel.com/" target="_blank">
+          {t('topbar.vitalsentinel')}
+        </a>
+        {/* Old free resources - temporarily commented out
+        <div className="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold bg-white bg-opacity-20 text-white mr-2 sm:mr-4 flex-shrink-0">
+          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse" />
           <span>{t('topbar.free-resources')}</span>
         </div>
         <div className="flex items-center gap-2 sm:gap-4 overflow-x-auto scrollbar-hide">
@@ -26,6 +34,7 @@ const TopBar: React.FC<TopBarProps> = ({ t = (key) => key }) => (
             {t('topbar.web-performance-metrics')}
           </a>
         </div>
+        */}
       </div>
     </div>
     <style
