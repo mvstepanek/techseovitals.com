@@ -112,17 +112,17 @@ const Footer: React.FC<FooterProps> = ({ t = (key) => key }) => (
             <ul className="mt-4 sm:mt-6 space-y-3 sm:space-y-4">
               <li>
                 <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.checklist')}>
-                  {t('topbar.technical-seo-checklist')}
+                  {t('footer.technical-seo-checklist')}
                 </a>
               </li>
               <li>
                 <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.migration')}>
-                  {t('topbar.website-migration-checklist')}
+                  {t('footer.website-migration-checklist')}
                 </a>
               </li>
               <li>
                 <a className="text-sm leading-6 text-gray-300 hover:text-white transition-colors" href={t('url.performance-metrics')}>
-                  {t('topbar.web-performance-metrics')}
+                  {t('footer.web-performance-metrics')}
                 </a>
               </li>
             </ul>
